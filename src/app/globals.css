@@ -1,0 +1,298 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --primary-red: #fb3741;
+  --dark-navy: #010d1c;
+  --light-bg: #F1F1F8;
+  --border-color: #e8e8e8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--dark-navy);
+  background: #ffffff;
+  font-family: 'Montserrat', system-ui, sans-serif;
+}
+
+/* Selection styling */
+::selection {
+  background: var(--primary-red);
+  color: white;
+}
+
+@layer components {
+  /* Primary Button - Pill shaped like vstorm */
+  .btn-primary {
+    @apply bg-primary-500 text-white px-8 py-4 rounded-pill font-semibold
+           hover:bg-primary-600 transition-all duration-400
+           hover:scale-105 inline-block text-sm tracking-wide;
+  }
+
+  /* Secondary Button - Outline style */
+  .btn-secondary {
+    @apply bg-transparent text-dark-900 border border-dark-900 px-8 py-4 rounded-pill font-semibold
+           hover:bg-dark-900 hover:text-white transition-all duration-400
+           hover:scale-105 inline-block text-sm tracking-wide;
+  }
+
+  /* Ghost Button */
+  .btn-ghost {
+    @apply text-dark-900 px-6 py-3 font-medium hover:text-primary-500
+           transition-all duration-400 inline-flex items-center gap-2;
+  }
+
+  /* Section Padding */
+  .section-padding {
+    @apply py-20 md:py-28 px-4 md:px-8;
+  }
+
+  /* Container */
+  .container-max {
+    @apply max-w-section mx-auto;
+  }
+
+  /* Card Styles - vstorm inspired */
+  .card {
+    @apply bg-white rounded-2xl p-6 md:p-8 border border-neutral-200
+           transition-all duration-400;
+  }
+
+  .card-hover {
+    @apply hover:shadow-lg hover:-translate-y-1 transition-all duration-400;
+  }
+
+  .card-dark {
+    @apply bg-dark-900 text-white rounded-2xl p-6 md:p-8;
+  }
+
+  /* Grid Layouts */
+  .grid-2 {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8;
+  }
+
+  .grid-3 {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8;
+  }
+
+  .grid-4 {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8;
+  }
+
+  /* Section Headers */
+  .section-label {
+    @apply text-primary-500 font-semibold text-sm tracking-widest uppercase mb-4;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-dark-900 mb-6;
+  }
+
+  .section-subtitle {
+    @apply text-lg md:text-xl text-dark-500 max-w-3xl;
+  }
+
+  /* Hero Styles */
+  .hero-dark {
+    @apply bg-dark-900 text-white min-h-[80vh] flex items-center relative overflow-hidden;
+  }
+
+  .hero-title {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6;
+  }
+
+  .hero-subtitle {
+    @apply text-lg md:text-xl text-dark-300 mb-8 max-w-xl;
+  }
+
+  /* Logo Card */
+  .logo-card {
+    @apply bg-neutral-150 rounded-xl p-6 flex items-center justify-center
+           border border-neutral-200 transition-all duration-400 hover:border-primary-500;
+  }
+
+  /* Stats */
+  .stat-number {
+    @apply text-4xl md:text-5xl font-bold text-primary-500;
+  }
+
+  .stat-label {
+    @apply text-dark-500 text-sm mt-2;
+  }
+
+  /* Feature Box */
+  .feature-box {
+    @apply bg-neutral-150 rounded-2xl p-8 border border-neutral-200
+           transition-all duration-400 hover:border-primary-500 hover:shadow-md;
+  }
+
+  /* Process Step */
+  .process-step {
+    @apply relative pl-16;
+  }
+
+  .process-step::before {
+    @apply absolute left-0 top-0 w-10 h-10 bg-primary-500 rounded-full
+           flex items-center justify-center text-white font-bold;
+  }
+
+  /* Tags */
+  .tag {
+    @apply inline-block bg-neutral-150 text-dark-700 px-4 py-2 rounded-pill
+           text-sm font-medium border border-neutral-200;
+  }
+
+  .tag-primary {
+    @apply inline-block bg-primary-500 text-white px-4 py-2 rounded-pill
+           text-sm font-medium;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-500 to-primary-600 bg-clip-text text-transparent;
+  }
+
+  /* Background patterns */
+  .bg-grid-pattern {
+    background-image:
+      linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  /* Glassmorphism */
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(251, 55, 65, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 15px rgba(251, 55, 65, 0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s infinite;
+}
+
+/* Stagger animations for children */
+.stagger-children > * {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-children > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-children > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
+.stagger-children > *:nth-child(5) { animation-delay: 0.5s; }
+.stagger-children > *:nth-child(6) { animation-delay: 0.6s; }
+
+/* Smooth image loading */
+img {
+  transition: opacity 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dark-navy);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-red);
+}
+
+/* Focus states */
+*:focus-visible {
+  outline: 2px solid var(--primary-red);
+  outline-offset: 2px;
+}
+
+/* Link hover effect */
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-red);
+  transition: width 0.3s ease;
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}

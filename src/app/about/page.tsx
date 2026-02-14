@@ -1,0 +1,167 @@
+import Link from 'next/link';
+
+export const metadata = {
+  title: 'About FSIT | FSIT AI',
+  description: 'FSIT was created to solve a growing problem: AI ambition is everywhere, but real execution is rare.',
+};
+
+export default function About() {
+  const beliefs = [
+    { title: 'AI is infrastructure', description: 'not innovation theatre' },
+    { title: 'Execution matters more', description: 'than strategy decks' },
+    { title: 'AI systems must be secure', description: 'observable, and accountable' },
+    { title: 'Humans remain essential', description: 'in critical AI workflows' },
+    { title: 'Global talent is only valuable', description: 'when aligned to real outcomes' },
+  ];
+
+  const notStatements = [
+    'FSIT is not a traditional consultancy.',
+    'FSIT is not a generic outsourcing provider.',
+    'FSIT is not a staffing marketplace.',
+  ];
+
+  const delivers = [
+    'AI-native engineering and delivery teams',
+    'End-to-end responsibility from build to operation',
+    'Long-term engagement models for sustained value',
+    'Systems designed to survive real-world complexity',
+  ];
+
+  const failReasons = [
+    'Isolated from core systems',
+    'Built without operational ownership',
+    'Treated as experiments rather than infrastructure',
+    'Delivered without accountability for production impact',
+  ];
+
+  return (
+    <>
+      {/* Hero */}
+      <section className="hero-dark bg-grid-pattern">
+        <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-900 to-dark-800" />
+        <div className="relative max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40">
+          <div className="max-w-3xl">
+            <p className="section-label !text-primary-500 !mb-6">About FSIT</p>
+            <h1 className="hero-title text-white">
+              AI ambition is everywhere.<br />
+              <span className="text-primary-500">Real execution is rare.</span>
+            </h1>
+            <p className="hero-subtitle">
+              FSIT was created to solve this growing problem.
+            </p>
+          </div>
+        </div>
+        <div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-primary-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+      </section>
+
+      {/* Problem Statement */}
+      <section className="section-padding bg-white">
+        <div className="container-max">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-xl text-dark-500 mb-8">
+              Enterprises and governments invest heavily in AI initiatives, yet struggle to move beyond pilots, proofs of concept, and disconnected tools.
+            </p>
+            <div className="card-dark">
+              <p className="text-xl text-white font-semibold">
+                The gap is not technology — <span className="text-primary-500">it is delivery.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why FSIT */}
+      <section className="section-padding bg-neutral-150">
+        <div className="container-max">
+          <div className="text-center mb-12">
+            <p className="section-label">The Problem</p>
+            <h2 className="section-title">AI initiatives fail when they are:</h2>
+          </div>
+          <div className="grid-2 max-w-3xl mx-auto mb-12">
+            {failReasons.map((reason, index) => (
+              <div key={index} className="flex items-center gap-3 card !p-4">
+                <svg className="w-6 h-6 text-primary-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+                <span className="text-dark-700">{reason}</span>
+              </div>
+            ))}
+          </div>
+          <div className="card-dark max-w-4xl mx-auto text-center">
+            <p className="text-lg text-dark-300">
+              FSIT was founded to deliver AI systems that operate inside real environments — embedded into workflows, governed appropriately, and built to scale.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* We Believe */}
+      <section className="section-padding bg-white">
+        <div className="container-max">
+          <div className="text-center mb-12">
+            <p className="section-label">Our Beliefs</p>
+            <h2 className="section-title">We believe that:</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {beliefs.map((belief, index) => (
+              <div key={index} className="card card-hover text-center">
+                <h3 className="text-dark-900 font-semibold mb-2">{belief.title}</h3>
+                <p className="text-dark-500 text-sm">{belief.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Not Statements */}
+      <section className="section-padding bg-dark-900">
+        <div className="container-max text-center">
+          <div className="space-y-4 mb-12">
+            {notStatements.map((statement, index) => (
+              <p key={index} className="text-xl md:text-2xl text-white font-semibold">
+                {statement}
+              </p>
+            ))}
+          </div>
+          <h3 className="text-2xl md:text-3xl font-bold text-primary-500 mb-8">
+            We operate as an AI execution partner, delivering:
+          </h3>
+          <div className="grid-2 max-w-3xl mx-auto">
+            {delivers.map((item, index) => (
+              <div key={index} className="flex items-center gap-3 bg-dark-800 p-4 rounded-xl">
+                <svg className="w-6 h-6 text-primary-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <span className="text-white">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Built for Saudi Arabia */}
+      <section className="section-padding bg-neutral-150">
+        <div className="container-max text-center">
+          <p className="section-label">Regional Focus</p>
+          <h2 className="section-title mb-6">Built for Saudi Arabia and the Middle East</h2>
+          <p className="text-xl text-dark-500 max-w-3xl mx-auto">
+            FSIT works closely with organisations across Saudi Arabia and the Middle East, supporting national and enterprise-level AI initiatives aligned with regional priorities.
+          </p>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="section-padding bg-white">
+        <div className="container-max text-center">
+          <p className="text-xl text-dark-500 mb-4">AI success is not about intent.</p>
+          <h2 className="section-title mb-8">
+            It&apos;s about <span className="text-primary-500">execution.</span>
+          </h2>
+          <Link href="/contact" className="btn-primary">
+            Start Today
+          </Link>
+        </div>
+      </section>
+    </>
+  );
+}

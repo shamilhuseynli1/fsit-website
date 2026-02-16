@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import NetworkBackground from '@/components/NetworkBackground';
 
 type FormStep = 1 | 2 | 3 | 4;
 
@@ -75,6 +76,7 @@ export default function BuildScaleAI() {
       {/* Hero */}
       <section className="hero-dark bg-grid-pattern">
         <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-900 to-dark-800" />
+        <NetworkBackground nodeCount={60} />
         <div className="relative max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
           <div className="max-w-3xl mx-auto text-center">
             <p className="section-label !text-primary-500 !mb-6">Talent Request</p>

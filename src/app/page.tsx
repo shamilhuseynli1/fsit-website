@@ -4,7 +4,7 @@ export default function Home() {
   const services = [
     {
       title: 'LLM & AI Agent Development',
-      description: 'Dedicated AI engineers and data scientists embedded directly into your organization.',
+      description: 'Custom LLM applications, model fine-tuning, and AI agents. From GPT-4 and Claude to open-source models like Llama and Mistral.',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -12,17 +12,17 @@ export default function Home() {
       ),
     },
     {
-      title: 'Managed AI Services',
-      description: 'End-to-end ownership from deployment and monitoring to optimization.',
+      title: 'Industry-Specific AI Models',
+      description: 'Targeted models fine-tuned for Government, Healthcare, Banking, Manufacturing, Energy, and Retail verticals.',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
         </svg>
       ),
     },
     {
       title: 'Custom AI & ML Systems',
-      description: 'Secure, scalable infrastructure to support production-grade AI systems.',
+      description: 'NLP, Computer Vision, Predictive Analytics — secure, scalable infrastructure for production-grade AI.',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
@@ -31,11 +31,11 @@ export default function Home() {
       ),
     },
     {
-      title: 'Intelligent Automation',
-      description: 'AI agents that streamline operations and reduce manual effort.',
+      title: 'Managed AI Services',
+      description: 'End-to-end ownership from deployment and monitoring to optimization and lifecycle management.',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
         </svg>
       ),
     },
@@ -124,7 +124,7 @@ export default function Home() {
             <p className="section-label">What We Do</p>
             <h2 className="section-title">AI Systems & Solutions</h2>
             <p className="section-subtitle mx-auto">
-              From prototype to production-grade AI embedded into your existing systems
+              From general-purpose LLMs to industry-specific AI models — production-grade systems tailored to your vertical
             </p>
           </div>
 

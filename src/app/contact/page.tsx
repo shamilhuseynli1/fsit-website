@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import NetworkBackground from '@/components/NetworkBackground';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -109,6 +110,12 @@ export default function Contact() {
       {/* Hero */}
       <section className="hero-dark bg-grid-pattern">
         <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-900 to-dark-800" />
+        <NetworkBackground
+          nodeCount={60}
+          nodeColor="rgba(0, 132, 61, 0.7)"
+          lineColor="rgba(0, 132, 61, 0.2)"
+          maxDistance={120}
+        />
         <div className="relative max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40">
           <div className="max-w-3xl">
             <p className="section-label !text-primary-500 !mb-6">Contact Us</p>

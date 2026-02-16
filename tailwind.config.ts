@@ -9,19 +9,32 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // vstorm-inspired color scheme
+        // Saudi Arabia inspired color scheme
         primary: {
-          50: '#fff1f2',
-          100: '#ffe4e6',
-          200: '#fecdd3',
-          300: '#fda4af',
-          400: '#fb7185',
-          500: '#fb3741', // Main accent red
-          600: '#e11d48',
-          700: '#be123c',
-          800: '#9f1239',
-          900: '#881337',
-          950: '#4c0519',
+          50: '#e6f5ec',
+          100: '#ccebda',
+          200: '#99d6b5',
+          300: '#66c290',
+          400: '#33ad6b',
+          500: '#00843D', // Saudi Green - national color
+          600: '#006d33',
+          700: '#005728',
+          800: '#00401e',
+          900: '#002a14',
+          950: '#00150a',
+        },
+        gold: {
+          50: '#fdf9ed',
+          100: '#faf0d1',
+          200: '#f5e0a3',
+          300: '#f0d075',
+          400: '#e6c55a',
+          500: '#C4A84B', // Gold accent - Vision 2030 prosperity
+          600: '#a38a3d',
+          700: '#826d30',
+          800: '#615023',
+          900: '#403316',
+          950: '#201a0b',
         },
         dark: {
           50: '#f8fafc',

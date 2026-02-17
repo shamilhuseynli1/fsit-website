@@ -316,15 +316,15 @@ export default function Home() {
             <p className="text-center text-sm font-semibold text-dark-700 mb-6 md:mb-8">Globally Recognized Technologies</p>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 md:gap-4">
               {technologies.map((tech, index) => (
-                <div key={index} className="bg-white rounded-xl p-4 md:p-5 border border-neutral-200 text-center hover:shadow-lg hover:border-primary-500/30 transition-all duration-300">
-                  <h4 className="font-semibold text-dark-900 text-xs sm:text-sm mb-3 md:mb-4 leading-tight min-h-[32px] md:min-h-[40px] flex items-center justify-center">{tech.name}</h4>
-                  <div className="flex justify-center items-center gap-3 md:gap-4">
+                <div key={index} className="bg-white rounded-xl p-4 md:p-6 border border-neutral-200 text-center hover:shadow-lg hover:border-primary-500/30 transition-all duration-300">
+                  <h4 className="font-semibold text-dark-900 text-xs sm:text-sm mb-4 md:mb-5 leading-tight min-h-[32px] md:min-h-[40px] flex items-center justify-center">{tech.name}</h4>
+                  <div className="flex justify-center items-center gap-2 sm:gap-3">
                     {tech.tools.map((tool, i) => (
-                      <div key={i} className="group relative flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14">
+                      <div key={i} className="group relative flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-[72px] lg:h-[72px]">
                         <img
                           src={tool.logo}
                           alt={tool.name}
-                          className="max-w-full max-h-full object-contain"
+                          className="w-full h-full object-contain p-0.5"
                         />
                         <span className="pointer-events-none absolute -bottom-8 left-1/2 -translate-x-1/2 bg-dark-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-50">
                           {tool.name}

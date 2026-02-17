@@ -8,10 +8,10 @@ export const metadata = {
 
 export default function Mission() {
   const stats = [
-    { number: '80,000+', label: 'Elite Talent In our Database and Network' },
-    { number: '50+', label: 'Businesses Served' },
-    { number: '90%', label: 'Outsource The Vetted Expert They Are Matched With' },
-    { number: '98%', label: 'Retain Clients' },
+    { number: '80,000+', label: 'Elite talent in our network' },
+    { number: '50+', label: 'Businesses served' },
+    { number: '90%', label: 'Outsourced, vetted experts' },
+    { number: '98%', label: 'Client retention' },
   ];
 
   const commitments = [

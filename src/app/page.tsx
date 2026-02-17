@@ -90,14 +90,19 @@ export default function Home() {
         <div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-primary-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
       </section>
 
-      {/* Partners Section */}
+      {/* Clients Section */}
       <section className="py-12 bg-neutral-150 border-b border-neutral-200">
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-sm font-semibold text-dark-700 mb-8">Our Trusted Partners</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-            {['AWS', 'Azure', 'Google Cloud', 'OpenAI', 'Anthropic'].map((partner, index) => (
-              <div key={index} className="logo-card !p-4 !px-6">
-                <span className="text-dark-500 font-semibold text-sm">{partner}</span>
+          <p className="text-center text-sm font-semibold text-dark-700 mb-8">Trusted By Leading Organizations</p>
+          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10">
+            {[
+              { name: 'Ministry of Health', nameAr: 'وزارة الصحة' },
+              { name: 'Arab Bank', nameAr: 'البنك العربي' },
+              { name: 'Tadawul', nameAr: 'تداول' },
+            ].map((client, index) => (
+              <div key={index} className="bg-white rounded-xl px-6 py-4 shadow-sm border border-neutral-200 hover:shadow-md transition-shadow">
+                <p className="text-dark-700 font-semibold text-sm">{client.name}</p>
+                <p className="text-dark-400 text-xs mt-0.5">{client.nameAr}</p>
               </div>
             ))}
           </div>

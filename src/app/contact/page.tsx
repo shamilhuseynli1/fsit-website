@@ -29,8 +29,8 @@ export default function Contact() {
   const contactOptions = [
     {
       title: 'Talk to an AI delivery lead',
-      description: 'Discuss your objectives, constraints, and opportunities with practitioners who build and operate AI systems.',
-      cta: 'Contact',
+      description: 'Discuss your objectives, constraints, and opportunities with practitioners who build and operate AI systems',
+      cta: 'Connect',
       href: '#contact-form',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -40,7 +40,7 @@ export default function Contact() {
     },
     {
       title: 'Start with a pilot',
-      description: 'Define a focused, production-oriented AI use case with a clear path to scale.',
+      description: 'Define a focused, production-oriented AI use case with a clear path to scale',
       cta: 'Pilot portal',
       href: '/build-scale-ai',
       icon: (
@@ -51,7 +51,7 @@ export default function Contact() {
     },
     {
       title: 'Enterprise & government enquiries',
-      description: 'Engage FSIT for long-term AI delivery, deployment, and operational support.',
+      description: 'Engage FSIT for long-term AI delivery, deployment, and operational support',
       cta: 'Get help',
       href: '#contact-form',
       icon: (

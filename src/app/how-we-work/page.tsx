@@ -54,15 +54,15 @@ export default function HowWeWork() {
       <section className="section-padding bg-white">
         <div className="container-max text-center">
           <p className="text-xl text-dark-500 mb-4 max-w-3xl mx-auto">
-            Most organisations don&apos;t fail at AI because of lack of ambition.
+            Most organisations don&apos;t fail at AI because of lack of ambition
           </p>
           <p className="text-xl text-dark-900 font-semibold max-w-3xl mx-auto mb-8">
-            They fail because AI is treated as a side project, disconnected from real systems, data, and operations.
+            They fail because AI is treated as a side project, disconnected from real systems, data, and operations
           </p>
           <div className="card-dark max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold text-primary-500 mb-3">FSIT exists to close that gap</h2>
             <p className="text-dark-300">
-              We work as an execution partner — embedding AI-native teams that design, build, deploy, and operate AI systems inside real enterprise environments.
+              We work as an execution partner — embedding AI-native teams that design, build, deploy, and operate AI systems inside real enterprise environments
             </p>
           </div>
         </div>

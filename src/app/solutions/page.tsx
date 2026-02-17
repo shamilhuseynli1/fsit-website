@@ -375,7 +375,7 @@ export default function Solutions() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {allIndustries.map((industry, index) => (
-              <div key={index} className="card card-hover text-center !p-4">
+              <div key={index} className="card card-hover text-center !p-4 flex items-center justify-center min-h-[80px]">
                 <span className="text-dark-700 font-medium text-sm">{industry}</span>
               </div>
             ))}

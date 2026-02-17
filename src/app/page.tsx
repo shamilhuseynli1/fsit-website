@@ -20,10 +20,10 @@ export default function Home() {
   ];
 
   const stats = [
-    { number: '80,000+', label: 'Elite Talent in our Network' },
-    { number: '50+', label: 'Businesses Served' },
-    { number: '90%', label: 'Outsource The Vetted Expert' },
-    { number: '98%', label: 'Retain Clients' },
+    { number: '80,000+', label: 'Elite talent in our network' },
+    { number: '50+', label: 'Businesses served' },
+    { number: '90%', label: 'Outsourced, vetted experts' },
+    { number: '98%', label: 'Client retention' },
   ];
 
   const technologies = [
@@ -235,7 +235,7 @@ export default function Home() {
           </div>
 
           {/* AI Use Cases */}
-          <div className="grid-4">
+          <div className="grid-4 max-w-5xl mx-auto">
             {aiUseCases.map((useCase, index) => (
               <div key={index} className="bg-dark-800 rounded-2xl p-6 border border-dark-700 hover:border-primary-500 transition-all">
                 <h3 className="font-semibold text-white mb-2">{useCase.title}</h3>
@@ -259,9 +259,9 @@ export default function Home() {
 
           <div className="bg-neutral-150 rounded-2xl p-8 border border-neutral-200">
             <p className="text-center text-sm font-semibold text-dark-700 mb-6">Globally Recognized Technologies</p>
-            <div className="flex justify-center gap-3 overflow-x-auto">
+            <div className="flex flex-wrap justify-center gap-3">
               {technologies.map((tech, index) => (
-                <span key={index} className="bg-white px-4 py-2 rounded-pill text-sm text-dark-700 border border-neutral-200 whitespace-nowrap flex-shrink-0">
+                <span key={index} className="bg-white px-4 py-2 rounded-pill text-sm text-dark-700 border border-neutral-200">
                   {tech}
                 </span>
               ))}

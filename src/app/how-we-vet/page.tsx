@@ -157,7 +157,8 @@ export default function HowWeVet() {
       <section className="py-16 bg-primary-500">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <p className="text-xl md:text-2xl text-white font-medium">
-            This ensures that the professionals you work with remain at the <span className="font-bold">cutting edge of AI delivery</span>.
+            This ensures that the professionals you work with remain at the<br />
+            <span className="font-bold">cutting edge of AI delivery</span>
           </p>
         </div>
       </section>

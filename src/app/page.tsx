@@ -217,18 +217,18 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex justify-between items-start mb-16 max-w-5xl mx-auto">
+          <div className="flex justify-center items-start gap-2 md:gap-4 mb-16">
             {processSteps.map((item, index) => (
-              <div key={index} className="flex items-center flex-shrink-0">
-                <div className="text-center px-4 md:px-6 py-4">
-                  <div className="w-12 h-12 md:w-14 md:h-14 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-3">
+              <div key={index} className="flex items-center">
+                <div className="text-center px-2 md:px-4 py-4">
+                  <div className="w-10 h-10 md:w-14 md:h-14 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold text-base md:text-lg mx-auto mb-3">
                     {index + 1}
                   </div>
-                  <p className="font-semibold text-white mb-1">{item.step}</p>
-                  <p className="text-xs md:text-sm text-dark-400">{item.desc}</p>
+                  <p className="font-semibold text-white mb-1 text-sm md:text-base">{item.step}</p>
+                  <p className="text-xs text-dark-400 max-w-[120px] md:max-w-[150px]">{item.desc}</p>
                 </div>
                 {index < processSteps.length - 1 && (
-                  <div className="w-8 md:w-12 h-px bg-dark-700" />
+                  <div className="w-4 md:w-8 h-px bg-dark-700 flex-shrink-0" />
                 )}
               </div>
             ))}

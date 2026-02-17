@@ -200,22 +200,22 @@ export default function Solutions() {
   return (
     <>
       {/* Hero Section */}
-      <section className="hero-dark bg-grid-pattern">
+      <section className="hero-dark bg-grid-pattern overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-900 to-dark-800" />
         <NetworkBackground nodeCount={60} />
-        <div className="relative max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40">
+        <div className="relative max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
           <div className="max-w-3xl">
-            <p className="section-label !text-primary-500 !mb-6">Our Services</p>
-            <h1 className="hero-title text-white">
+            <p className="section-label !text-primary-500 !mb-4 md:!mb-6">Our Services</p>
+            <h1 className="hero-title text-white text-3xl md:text-5xl lg:text-6xl">
               AI Systems &<br />
               <span className="text-primary-500">Solutions</span>
             </h1>
-            <p className="hero-subtitle">
+            <p className="hero-subtitle text-base md:text-lg lg:text-xl">
               From general-purpose LLMs to industry-specific AI models — we build, deploy, and operate production-grade AI systems tailored to your vertical
             </p>
           </div>
         </div>
-        <div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-primary-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+        <div className="hidden md:block absolute top-1/2 right-0 w-[600px] h-[600px] bg-primary-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
       </section>
 
       {/* Core Services */}

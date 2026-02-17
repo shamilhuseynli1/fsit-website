@@ -48,7 +48,7 @@ export default function Mission() {
               <span className="text-primary-500">real-world execution.</span>
             </h1>
             <p className="hero-subtitle !text-center mx-auto">
-              We enable organizations to access trusted AI capacity that delivers measurable outcomes.
+              We enable organizations to access trusted AI capacity that delivers measurable outcomes
             </p>
           </div>
         </div>
@@ -122,7 +122,7 @@ export default function Mission() {
             <p className="section-label">Our Values</p>
             <h2 className="section-title">We Stand for AI with Purpose</h2>
             <p className="section-subtitle mx-auto">
-              AI should deliver tangible value — not remain trapped in pilots or proofs of concept. Every FSIT engagement is designed around real operational impact.
+              AI should deliver tangible value — not remain trapped in pilots or proofs of concept. Every FSIT engagement is designed around real operational impact
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -228,7 +228,7 @@ export default function Mission() {
         <div className="container-max text-center">
           <h2 className="section-title mb-4">Ready to transform with AI?</h2>
           <p className="section-subtitle mx-auto mb-8">
-            Partner with FSIT for real AI execution.
+            Partner with FSIT for real AI execution
           </p>
           <Link href="/contact" className="btn-primary">
             Start Today

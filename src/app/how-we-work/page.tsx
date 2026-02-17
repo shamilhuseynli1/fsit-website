@@ -43,7 +43,7 @@ export default function HowWeWork() {
               How We <span className="text-primary-500">Work</span>
             </h1>
             <p className="hero-subtitle">
-              AI execution, built for production, not experimentation.
+              AI execution, built for production, not experimentation
             </p>
           </div>
         </div>

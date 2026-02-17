@@ -86,7 +86,7 @@ export default function Regions() {
               <span className="text-primary-500">Global delivery.</span>
             </h1>
             <p className="hero-subtitle">
-              FSIT operates across Saudi Arabia and the Middle East, supported by globally distributed teams across Europe, Asia, and the United States.
+              FSIT operates across Saudi Arabia and the Middle East, supported by globally distributed teams across Europe, Asia, and the United States
             </p>
           </div>
         </div>
@@ -161,7 +161,7 @@ export default function Regions() {
         <div className="container-max text-center">
           <h2 className="section-title mb-4">Ready to partner with a global AI team?</h2>
           <p className="section-subtitle mx-auto mb-8">
-            Connect with our delivery team across any region.
+            Connect with our delivery team across any region
           </p>
           <Link href="/contact" className="btn-primary">
             Contact Us

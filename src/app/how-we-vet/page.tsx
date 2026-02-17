@@ -104,7 +104,7 @@ export default function HowWeVet() {
               <span className="text-primary-500">Elite AI Talent</span>
             </h1>
             <p className="hero-subtitle">
-              At FSIT, our vetting process ensures only top-tier AI professionals become part of our augmented intelligence network.
+              At FSIT, our vetting process ensures only top-tier AI professionals become part of our augmented intelligence network
             </p>
           </div>
         </div>
@@ -201,7 +201,7 @@ export default function HowWeVet() {
             Ready to access elite AI talent?
           </h2>
           <p className="section-subtitle mx-auto !text-dark-300 mb-8">
-            Start your AI transformation with vetted experts.
+            Start your AI transformation with vetted experts
           </p>
           <Link href="/build-scale-ai" className="btn-primary">
             Build & Scale AI

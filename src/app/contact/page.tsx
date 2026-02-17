@@ -119,7 +119,7 @@ export default function Contact() {
               <span className="text-primary-500">actually runs</span>
             </h1>
             <p className="hero-subtitle">
-              Whether you are exploring your first AI initiative or scaling existing systems, FSIT works with organisations ready to move from intent to execution.
+              Whether you are exploring your first AI initiative or scaling existing systems, FSIT works with organisations ready to move from intent to execution
             </p>
           </div>
         </div>
@@ -183,7 +183,7 @@ export default function Contact() {
             <p className="section-label">Send a Message</p>
             <h2 className="section-title">Get in Touch</h2>
             <p className="section-subtitle mx-auto">
-              Fill out the form below and we&apos;ll personalize the right experience for you.
+              Fill out the form below and we&apos;ll personalize the right experience for you
             </p>
           </div>
 
@@ -298,7 +298,7 @@ export default function Contact() {
             Ready to start your AI transformation?
           </h2>
           <p className="section-subtitle mx-auto !text-dark-300 mb-8">
-            Talk to our AI delivery team today.
+            Talk to our AI delivery team today
           </p>
           <Link href="/build-scale-ai" className="btn-primary">
             Book a free consultation

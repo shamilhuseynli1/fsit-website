@@ -49,7 +49,7 @@ export default function About() {
               <span className="text-primary-500">Real execution is rare.</span>
             </h1>
             <p className="hero-subtitle">
-              FSIT was created to solve this growing problem.
+              FSIT was created to solve this growing problem
             </p>
           </div>
         </div>

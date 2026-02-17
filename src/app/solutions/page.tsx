@@ -153,7 +153,7 @@ export default function Solutions() {
               <span className="text-primary-500">Solutions</span>
             </h1>
             <p className="hero-subtitle">
-              From general-purpose LLMs to industry-specific AI models — we build, deploy, and operate production-grade AI systems tailored to your vertical.
+              From general-purpose LLMs to industry-specific AI models — we build, deploy, and operate production-grade AI systems tailored to your vertical
             </p>
           </div>
         </div>
@@ -390,7 +390,7 @@ export default function Solutions() {
             Ready to build AI systems that work?
           </h2>
           <p className="section-subtitle mx-auto !text-dark-300 mb-8">
-            Whether you need general-purpose LLMs or industry-specific AI models, our team delivers production-ready systems.
+            Whether you need general-purpose LLMs or industry-specific AI models, our team delivers production-ready systems
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/build-scale-ai" className="btn-primary">

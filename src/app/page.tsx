@@ -328,7 +328,7 @@ export default function Home() {
             Ready to build AI that actually runs?
           </h2>
           <p className="section-subtitle mx-auto !text-dark-300 mb-8">
-            Talk to our AI delivery team and start your transformation today.
+            Talk to our AI delivery team and start your transformation today
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/build-scale-ai" className="btn-primary">

@@ -19,8 +19,8 @@ interface NetworkBackgroundProps {
 
 export default function NetworkBackground({
   nodeCount = 50,
-  nodeColor = 'rgba(0, 132, 61, 0.6)',
-  lineColor = 'rgba(0, 132, 61, 0.15)',
+  nodeColor = 'rgba(255, 255, 255, 0.7)',
+  lineColor = 'rgba(255, 255, 255, 0.3)',
   maxDistance = 150,
 }: NetworkBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -70,8 +70,8 @@ export default function NetworkBackground({
       ctx.beginPath();
       ctx.moveTo(node1.x, node1.y);
       ctx.lineTo(node2.x, node2.y);
-      ctx.strokeStyle = lineColor.replace('0.15', (0.15 * opacity).toFixed(2));
-      ctx.lineWidth = 0.5;
+      ctx.strokeStyle = `rgba(255, 255, 255, ${0.4 * opacity})`;
+      ctx.lineWidth = 1;
       ctx.stroke();
     };
 
@@ -146,8 +146,8 @@ export default function NetworkBackground({
             ctx.moveTo(node.x, node.y);
             ctx.lineTo(mouseRef.current.x, mouseRef.current.y);
             const opacity = 1 - distance / (maxDistance * 1.5);
-            ctx.strokeStyle = `rgba(0, 132, 61, ${0.3 * opacity})`;
-            ctx.lineWidth = 0.5;
+            ctx.strokeStyle = `rgba(255, 255, 255, ${0.5 * opacity})`;
+            ctx.lineWidth = 1;
             ctx.stroke();
           }
         }

@@ -274,7 +274,7 @@ export default function Home() {
       <section className="py-16 bg-primary-500">
         <div className="container-max">
           <p className="text-center text-white/80 text-sm mb-8">
-            We are working extensively to build a vetted network of talents available at short notice.
+            We are working extensively to build a vetted network of talents available at short notice
           </p>
           <div className="grid-4 stagger-children">
             {stats.map((stat, index) => (

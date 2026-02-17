@@ -65,7 +65,7 @@ export default function About() {
             </p>
             <div className="card-dark">
               <p className="text-xl text-white font-semibold">
-                The gap is not technology — <span className="text-primary-500">it is delivery.</span>
+                The gap is not technology — <span className="text-primary-500">it is delivery</span>
               </p>
             </div>
           </div>

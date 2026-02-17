@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import NetworkBackground from '@/components/NetworkBackground';
 
 export default function Home() {
@@ -57,6 +58,23 @@ export default function Home() {
     { step: 'Scale', desc: 'Expand with governance' },
   ];
 
+  const clients = [
+    { name: 'Riyad Capital', logo: '/clients/Riyad-Capital-Logo.png', url: 'https://www.riyadcapital.com/en/' },
+    { name: 'Ministry of Health', logo: '/clients/Saudi-Ministry-of-Health-Logo.png', url: 'https://www.moh.gov.sa/en' },
+    { name: 'Arab Bank', logo: '/clients/Arab-Bank-Logo.png', url: 'https://www.arabbank.com/' },
+    { name: 'Tadawul', logo: '/clients/Saudi-Tadawul-Logo.png', url: 'https://www.saudiexchange.sa/' },
+    { name: 'NCB Capital', logo: '/clients/NCB-Capital-Logo.png', url: 'https://www.alahlicapital.com/' },
+    { name: 'Vision 2030', logo: '/clients/Vision-2023-Logo.png', url: 'https://www.vision2030.gov.sa/' },
+    { name: 'Multinational Consulting Firms', logo: '/clients/Multinational-Consulting-Firms.png', url: null },
+    { name: 'Jadwa Investment', logo: '/clients/Jadwa-Investment-Logo.png', url: 'https://www.jadwa.com/' },
+    { name: 'Herald Investment', logo: '/clients/Herald-Investment-Management-Logo.png', url: 'https://www.heralduk.com/' },
+    { name: 'Public Pension Agency', logo: '/clients/Public-Pension-Agency-Logo-Wide.png', url: 'https://www.pension.gov.sa/' },
+    { name: 'Emirates NBD', logo: '/clients/Emirates-NBD-Logo-Wide.png', url: 'https://www.emiratesnbd.com.sa/' },
+    { name: 'Elm', logo: '/clients/ELM-Logo-Wide.png', url: 'https://www.elm.sa/en' },
+    { name: 'Bank Al Jazira', logo: '/clients/Bank-Al-Jazira-Logo-Wide.png', url: 'https://www.bankaljazira.com/en-us' },
+    { name: 'Blom Bank', logo: '/clients/Blom-Bank-Logo.png', url: 'https://www.blombank.com/' },
+  ];
+
   return (
     <>
       {/* Hero Section */}
@@ -91,19 +109,41 @@ export default function Home() {
       </section>
 
       {/* Clients Section */}
-      <section className="py-12 bg-neutral-150 border-b border-neutral-200">
+      <section className="py-16 bg-neutral-150 border-b border-neutral-200">
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-sm font-semibold text-dark-700 mb-8">Trusted By Leading Organizations</p>
-          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10">
-            {[
-              { name: 'Ministry of Health', nameAr: 'وزارة الصحة' },
-              { name: 'Arab Bank', nameAr: 'البنك العربي' },
-              { name: 'Tadawul', nameAr: 'تداول' },
-            ].map((client, index) => (
-              <div key={index} className="bg-white rounded-xl px-6 py-4 shadow-sm border border-neutral-200 hover:shadow-md transition-shadow">
-                <p className="text-dark-700 font-semibold text-sm">{client.name}</p>
-                <p className="text-dark-400 text-xs mt-0.5">{client.nameAr}</p>
-              </div>
+          <p className="text-center text-sm font-semibold text-dark-700 mb-10">Trusted By Leading Organizations</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 items-center justify-items-center">
+            {clients.map((client, index) => (
+              client.url ? (
+                <a
+                  key={index}
+                  href={client.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white rounded-xl p-4 shadow-sm border border-neutral-200 hover:shadow-md transition-all hover:scale-105 flex items-center justify-center h-20 w-full"
+                >
+                  <Image
+                    src={client.logo}
+                    alt={client.name}
+                    width={120}
+                    height={60}
+                    className="object-contain max-h-12"
+                  />
+                </a>
+              ) : (
+                <div
+                  key={index}
+                  className="bg-white rounded-xl p-4 shadow-sm border border-neutral-200 flex items-center justify-center h-20 w-full"
+                >
+                  <Image
+                    src={client.logo}
+                    alt={client.name}
+                    width={120}
+                    height={60}
+                    className="object-contain max-h-12"
+                  />
+                </div>
+              )
             ))}
           </div>
         </div>

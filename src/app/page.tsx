@@ -217,7 +217,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex justify-center items-start gap-0 mb-16 overflow-x-auto">
+          <div className="flex justify-between items-start mb-16 max-w-5xl mx-auto">
             {processSteps.map((item, index) => (
               <div key={index} className="flex items-center flex-shrink-0">
                 <div className="text-center px-4 md:px-6 py-4">
@@ -406,14 +406,9 @@ export default function Home() {
           <p className="section-subtitle mx-auto !text-dark-300 mb-8">
             Talk to our AI delivery team and start your transformation today
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/build-scale-ai" className="btn-primary">
-              Book a free consultation
-            </Link>
-            <Link href="/contact" className="btn-secondary !border-white/30 !text-white hover:!bg-white hover:!text-dark-900">
-              Contact us
-            </Link>
-          </div>
+          <Link href="/build-scale-ai" className="btn-primary">
+            Book a free consultation
+          </Link>
         </div>
       </section>
     </>

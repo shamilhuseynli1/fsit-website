@@ -30,7 +30,7 @@ export default function Contact() {
     {
       title: 'Talk to an AI delivery lead',
       description: 'Discuss your objectives, constraints, and opportunities with practitioners who build and operate AI systems.',
-      cta: 'Connect me',
+      cta: 'Contact',
       href: '#contact-form',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -135,13 +135,13 @@ export default function Contact() {
           </div>
           <div className="grid-3">
             {contactOptions.map((option, index) => (
-              <div key={index} className="feature-box group">
+              <div key={index} className="feature-box group flex flex-col h-full">
                 <div className="w-12 h-12 bg-primary-500/10 rounded-xl flex items-center justify-center text-primary-500 mb-6 group-hover:bg-primary-500 group-hover:text-white transition-all duration-400">
                   {option.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-dark-900 mb-3">{option.title}</h3>
-                <p className="text-dark-500 mb-6">{option.description}</p>
-                <Link href={option.href} className="btn-ghost">
+                <p className="text-dark-500 mb-6 flex-grow">{option.description}</p>
+                <Link href={option.href} className="btn-ghost mt-auto">
                   {option.cta}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

@@ -116,31 +116,33 @@ export default function Home() {
       <section className="hero-dark bg-grid-pattern">
         <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-900 to-dark-800" />
         <NetworkBackground nodeCount={70} maxDistance={130} />
-        <div className="relative max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40">
+        {/* AI Glow orbs */}
+        <div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-primary-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 animate-glow-pulse" />
+        <div className="absolute top-1/4 left-0 w-[400px] h-[400px] bg-primary-500/5 rounded-full blur-3xl -translate-x-1/2 animate-glow-pulse" style={{ animationDelay: '1.5s' }} />
+        <div className="relative max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
           <div className="max-w-3xl">
-            <p className="section-label !text-primary-500 !mb-6">Future Systems for Information Technology</p>
-            <h1 className="hero-title text-white">
+            <p className="section-label !text-primary-500 !mb-4 md:!mb-6 animate-fade-in">Future Systems for Information Technology</p>
+            <h1 className="hero-title text-white animate-fade-in-up text-3xl md:text-5xl lg:text-6xl">
               On-Site AI.<br />
-              <span className="text-primary-500">Real Results.</span><br />
+              <span className="text-primary-500 text-glow">Real Results.</span><br />
               Built Capability.
             </h1>
-            <p className="text-xl md:text-2xl text-dark-300 mb-4">
+            <p className="text-lg md:text-xl lg:text-2xl text-dark-300 mb-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
               Executing AI transformation across Saudi Arabia and the Middle East
             </p>
-            <p className="hero-subtitle">
+            <p className="hero-subtitle text-base md:text-lg lg:text-xl animate-fade-in" style={{ animationDelay: '0.3s' }}>
               AI-native teams delivering production-ready systems across government and enterprise
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contact" className="btn-primary">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+              <Link href="/contact" className="btn-primary text-center">
                 Talk to our AI delivery team
               </Link>
-              <Link href="/build-scale-ai" className="btn-secondary !border-white/30 !text-white hover:!bg-white hover:!text-dark-900">
+              <Link href="/build-scale-ai" className="btn-secondary !border-white/30 !text-white hover:!bg-white hover:!text-dark-900 text-center">
                 Start with a pilot
               </Link>
             </div>
           </div>
         </div>
-        <div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-primary-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
       </section>
 
       {/* Clients Section */}
@@ -292,19 +294,19 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="bg-neutral-150 rounded-2xl p-8 border border-neutral-200">
-            <p className="text-center text-sm font-semibold text-dark-700 mb-8">Globally Recognized Technologies</p>
-            <div className="flex flex-wrap justify-center gap-4">
+          <div className="bg-neutral-150 rounded-2xl p-4 sm:p-6 md:p-8 border border-neutral-200">
+            <p className="text-center text-sm font-semibold text-dark-700 mb-6 md:mb-8">Globally Recognized Technologies</p>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 md:gap-4">
               {technologies.map((tech, index) => (
-                <div key={index} className="bg-white rounded-xl p-6 border border-neutral-200 text-center w-[180px]">
-                  <h4 className="font-semibold text-dark-900 text-sm mb-5 leading-tight min-h-[40px] flex items-center justify-center">{tech.name}</h4>
-                  <div className="flex justify-center items-center gap-3">
+                <div key={index} className="bg-white rounded-xl p-4 md:p-5 border border-neutral-200 text-center hover:shadow-lg hover:border-primary-500/30 transition-all duration-300">
+                  <h4 className="font-semibold text-dark-900 text-xs sm:text-sm mb-3 md:mb-4 leading-tight min-h-[32px] md:min-h-[40px] flex items-center justify-center">{tech.name}</h4>
+                  <div className="flex justify-center items-center gap-2 md:gap-3">
                     {tech.tools.map((tool, i) => (
                       <div key={i} className="group relative">
                         <img
                           src={tool.logo}
                           alt={tool.name}
-                          className="w-10 h-10 object-contain"
+                          className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 object-contain"
                         />
                         <span className="pointer-events-none absolute -bottom-8 left-1/2 -translate-x-1/2 bg-dark-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-50">
                           {tool.name}

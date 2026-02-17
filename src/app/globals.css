@@ -33,11 +33,12 @@ body {
 }
 
 @layer components {
-  /* Primary Button - Pill shaped like vstorm */
+  /* Primary Button - Modern AI style with glow */
   .btn-primary {
     @apply bg-primary-500 text-white px-8 py-4 rounded-pill font-semibold
            hover:bg-primary-600 transition-all duration-400
-           hover:scale-105 inline-block text-sm tracking-wide;
+           hover:scale-105 inline-block text-sm tracking-wide
+           hover:shadow-[0_0_30px_rgba(0,132,61,0.4)];
   }
 
   /* Secondary Button - Outline style */
@@ -63,14 +64,15 @@ body {
     @apply max-w-section mx-auto;
   }
 
-  /* Card Styles - vstorm inspired */
+  /* Card Styles - Modern AI inspired */
   .card {
     @apply bg-white rounded-2xl p-6 md:p-8 border border-neutral-200
            transition-all duration-400;
   }
 
   .card-hover {
-    @apply hover:shadow-lg hover:-translate-y-1 transition-all duration-400;
+    @apply hover:shadow-xl hover:-translate-y-1 transition-all duration-400
+           hover:border-primary-500/30 hover:shadow-primary-500/5;
   }
 
   .card-dark {
@@ -169,6 +171,14 @@ body {
     @apply bg-gradient-to-r from-primary-500 to-primary-600 bg-clip-text text-transparent;
   }
 
+  /* AI Gradient text - more vibrant */
+  .gradient-text-ai {
+    background: linear-gradient(135deg, #00843D 0%, #00a94f 50%, #00d062 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
   /* Background patterns */
   .bg-grid-pattern {
     background-image:
@@ -177,9 +187,30 @@ body {
     background-size: 50px 50px;
   }
 
+  /* Modern AI grid pattern */
+  .bg-ai-grid {
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(0, 132, 61, 0.15) 1px, transparent 0);
+    background-size: 40px 40px;
+  }
+
   /* Glassmorphism */
   .glass {
     @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+
+  /* AI Glow effect */
+  .glow-primary {
+    box-shadow: 0 0 20px rgba(0, 132, 61, 0.3), 0 0 40px rgba(0, 132, 61, 0.1);
+  }
+
+  .glow-primary-sm {
+    box-shadow: 0 0 10px rgba(0, 132, 61, 0.2);
+  }
+
+  /* Text glow */
+  .text-glow {
+    text-shadow: 0 0 20px rgba(0, 132, 61, 0.5);
   }
 }
 
@@ -217,6 +248,35 @@ body {
   }
   50% {
     box-shadow: 0 0 0 15px rgba(0, 132, 61, 0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
   }
 }
 
@@ -262,6 +322,20 @@ body {
 
 .animate-pulse-glow {
   animation: pulse-glow 2s infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
 }
 
 /* Stagger animations for children */

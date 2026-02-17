@@ -97,7 +97,7 @@ export default function Regions() {
       <section className="py-16 bg-primary-500">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <p className="text-xl md:text-2xl text-white font-medium">
-            This model allows us to combine regional understanding with global scale, speed, and specialised AI expertise.
+            This model allows us to combine regional understanding with global scale, speed, and specialised AI expertise
           </p>
         </div>
       </section>
@@ -148,10 +148,10 @@ export default function Regions() {
           <p className="section-label">One Standard</p>
           <h2 className="section-title !text-white mb-6">Global team, one delivery standard</h2>
           <p className="text-xl text-dark-300 mb-6 max-w-3xl mx-auto">
-            AI transformation requires both local understanding and global capability.
+            AI transformation requires both local understanding and global capability
           </p>
           <p className="text-3xl font-bold text-primary-500">
-            FSIT delivers both.
+            FSIT delivers both
           </p>
         </div>
       </section>

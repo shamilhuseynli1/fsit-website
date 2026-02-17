@@ -8,17 +8,17 @@ export const metadata = {
 
 export default function About() {
   const beliefs = [
-    { title: 'AI is infrastructure', description: 'not innovation theatre' },
-    { title: 'Execution matters more', description: 'than strategy decks' },
-    { title: 'AI systems must be secure', description: 'observable, and accountable' },
-    { title: 'Humans remain essential', description: 'in critical AI workflows' },
-    { title: 'Global talent is only valuable', description: 'when aligned to real outcomes' },
+    'AI is infrastructure, not innovation theatre',
+    'Execution matters more than strategy decks',
+    'AI systems must be secure, observable, and accountable',
+    'Humans remain essential in critical AI workflows',
+    'Global talent is only valuable when aligned to real outcomes',
   ];
 
   const notStatements = [
-    'FSIT is not a traditional consultancy.',
-    'FSIT is not a generic outsourcing provider.',
-    'FSIT is not a staffing marketplace.',
+    'FSIT is not a traditional consultancy',
+    'FSIT is not a generic outsourcing provider',
+    'FSIT is not a staffing marketplace',
   ];
 
   const delivers = [
@@ -61,7 +61,7 @@ export default function About() {
         <div className="container-max">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-xl text-dark-500 mb-8">
-              Enterprises and governments invest heavily in AI initiatives, yet struggle to move beyond pilots, proofs of concept, and disconnected tools.
+              Enterprises and governments invest heavily in AI initiatives, yet struggle to move beyond pilots, proofs of concept, and disconnected tools
             </p>
             <div className="card-dark">
               <p className="text-xl text-white font-semibold">
@@ -91,7 +91,7 @@ export default function About() {
           </div>
           <div className="card-dark max-w-4xl mx-auto text-center">
             <p className="text-lg text-dark-300">
-              FSIT was founded to deliver AI systems that operate inside real environments — embedded into workflows, governed appropriately, and built to scale.
+              FSIT was founded to deliver AI systems that operate inside real environments — embedded into workflows, governed appropriately, and built to scale
             </p>
           </div>
         </div>
@@ -106,9 +106,8 @@ export default function About() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {beliefs.map((belief, index) => (
-              <div key={index} className="card card-hover text-center">
-                <h3 className="text-dark-900 font-semibold mb-2">{belief.title}</h3>
-                <p className="text-dark-500 text-sm">{belief.description}</p>
+              <div key={index} className="card card-hover text-center flex items-center justify-center min-h-[100px]">
+                <p className="text-dark-700 font-medium text-sm">{belief}</p>
               </div>
             ))}
           </div>
@@ -147,7 +146,7 @@ export default function About() {
           <p className="section-label">Regional Focus</p>
           <h2 className="section-title mb-6">Built for Saudi Arabia and the Middle East</h2>
           <p className="text-xl text-dark-500 max-w-3xl mx-auto">
-            FSIT works closely with organisations across Saudi Arabia and the Middle East, supporting national and enterprise-level AI initiatives aligned with regional priorities.
+            FSIT works closely with organisations across Saudi Arabia and the Middle East, supporting national and enterprise-level AI initiatives aligned with regional priorities
           </p>
         </div>
       </section>
@@ -155,12 +154,12 @@ export default function About() {
       {/* CTA */}
       <section className="section-padding bg-white">
         <div className="container-max text-center">
-          <p className="text-xl text-dark-500 mb-4">AI success is not about intent.</p>
+          <p className="text-xl text-dark-500 mb-4">AI success is not about intent</p>
           <h2 className="section-title mb-8">
-            It&apos;s about <span className="text-primary-500">execution.</span>
+            It&apos;s about <span className="text-primary-500">execution</span>
           </h2>
           <Link href="/contact" className="btn-primary">
-            Start Today
+            Start today
           </Link>
         </div>
       </section>

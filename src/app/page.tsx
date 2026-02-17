@@ -109,38 +109,74 @@ export default function Home() {
       </section>
 
       {/* Clients Section */}
-      <section className="py-16 bg-neutral-150 border-b border-neutral-200">
+      <section className="py-16 bg-neutral-150 border-b border-neutral-200 overflow-hidden">
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-sm font-semibold text-dark-700 mb-10">Trusted By Leading Organizations</p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 items-center justify-items-center">
+        </div>
+        <div className="relative">
+          <div className="flex animate-scroll">
+            {/* First set of logos */}
             {clients.map((client, index) => (
               client.url ? (
                 <a
-                  key={index}
+                  key={`first-${index}`}
                   href={client.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white rounded-xl p-4 shadow-sm border border-neutral-200 hover:shadow-md transition-all hover:scale-105 flex items-center justify-center h-20 w-full"
+                  className="flex-shrink-0 bg-white rounded-xl p-6 shadow-sm border border-neutral-200 hover:shadow-md transition-all mx-3 flex items-center justify-center h-24 w-48"
                 >
                   <Image
                     src={client.logo}
                     alt={client.name}
-                    width={120}
-                    height={60}
-                    className="object-contain max-h-12"
+                    width={160}
+                    height={80}
+                    className="object-contain max-h-16"
                   />
                 </a>
               ) : (
                 <div
-                  key={index}
-                  className="bg-white rounded-xl p-4 shadow-sm border border-neutral-200 flex items-center justify-center h-20 w-full"
+                  key={`first-${index}`}
+                  className="flex-shrink-0 bg-white rounded-xl p-6 shadow-sm border border-neutral-200 mx-3 flex items-center justify-center h-24 w-48"
                 >
                   <Image
                     src={client.logo}
                     alt={client.name}
-                    width={120}
-                    height={60}
-                    className="object-contain max-h-12"
+                    width={160}
+                    height={80}
+                    className="object-contain max-h-16"
+                  />
+                </div>
+              )
+            ))}
+            {/* Duplicate set for seamless loop */}
+            {clients.map((client, index) => (
+              client.url ? (
+                <a
+                  key={`second-${index}`}
+                  href={client.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-shrink-0 bg-white rounded-xl p-6 shadow-sm border border-neutral-200 hover:shadow-md transition-all mx-3 flex items-center justify-center h-24 w-48"
+                >
+                  <Image
+                    src={client.logo}
+                    alt={client.name}
+                    width={160}
+                    height={80}
+                    className="object-contain max-h-16"
+                  />
+                </a>
+              ) : (
+                <div
+                  key={`second-${index}`}
+                  className="flex-shrink-0 bg-white rounded-xl p-6 shadow-sm border border-neutral-200 mx-3 flex items-center justify-center h-24 w-48"
+                >
+                  <Image
+                    src={client.logo}
+                    alt={client.name}
+                    width={160}
+                    height={80}
+                    className="object-contain max-h-16"
                   />
                 </div>
               )

@@ -1,12 +1,12 @@
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
 import NetworkBackground from '@/components/NetworkBackground';
 
-export const metadata = {
-  title: 'AI Systems & Solutions | FSIT AI',
-  description: 'Providing augmented intelligence capacity and managed AI services, from prototype to production-grade AI embedded into existing systems.',
-};
-
 export default function Solutions() {
+  const [selectedIndustry, setSelectedIndustry] = useState<string | null>(null);
+
   const coreServices = [
     {
       title: 'LLM & AI Agent Development',
@@ -132,12 +132,70 @@ export default function Solutions() {
     },
   ];
 
-  const allIndustries = [
-    'Government & Public Sector', 'Consulting Firms & System Integrators', 'Healthcare',
-    'Banking & Financial Services', 'Manufacturing', 'Logistics & Supply Chain',
-    'Real Estate', 'Retail', 'Automotive', 'Energy', 'Travel & Hospitality',
-    'Education', 'Agriculture', 'Entertainment & Media', 'Sports & Sports Technology',
-  ];
+  const industryUseCases: Record<string, { useCases: string[]; description: string }> = {
+    'Government & Public Sector': {
+      description: 'AI solutions aligned with Vision 2030 for digital government transformation',
+      useCases: ['Document processing & classification', 'Citizen services automation', 'Policy analysis & compliance', 'Arabic/English bilingual AI'],
+    },
+    'Consulting Firms & System Integrators': {
+      description: 'AI capabilities to enhance consulting deliverables and client solutions',
+      useCases: ['AI strategy & roadmap development', 'Solution architecture design', 'Implementation acceleration', 'Knowledge management systems'],
+    },
+    'Healthcare': {
+      description: 'Clinical AI solutions for improved patient outcomes and operational efficiency',
+      useCases: ['Clinical documentation AI', 'Diagnostic support systems', 'Patient engagement copilots', 'Medical imaging analysis'],
+    },
+    'Banking & Financial Services': {
+      description: 'Secure, compliant AI for financial operations and customer experience',
+      useCases: ['Fraud detection & prevention', 'Risk assessment models', 'Regulatory compliance automation', 'Customer service AI'],
+    },
+    'Manufacturing': {
+      description: 'AI-driven operational excellence and quality assurance',
+      useCases: ['Predictive maintenance', 'Quality control vision systems', 'Production optimization', 'Supply chain forecasting'],
+    },
+    'Logistics & Supply Chain': {
+      description: 'End-to-end supply chain visibility and optimization',
+      useCases: ['Route optimization', 'Demand forecasting', 'Warehouse automation', 'Fleet management AI'],
+    },
+    'Real Estate': {
+      description: 'AI for property management, valuation, and customer experience',
+      useCases: ['Property valuation models', 'Tenant management automation', 'Market analysis & prediction', 'Virtual property assistants'],
+    },
+    'Retail': {
+      description: 'Personalized customer experiences and operational efficiency',
+      useCases: ['Product recommendations', 'Inventory optimization', 'Customer behavior analytics', 'Dynamic pricing models'],
+    },
+    'Automotive': {
+      description: 'AI solutions for modern automotive operations and services',
+      useCases: ['Predictive vehicle maintenance', 'Sales & service optimization', 'Customer experience AI', 'Parts demand forecasting'],
+    },
+    'Energy': {
+      description: 'Smart energy management and sustainability solutions',
+      useCases: ['Grid optimization', 'Energy consumption forecasting', 'Asset monitoring & maintenance', 'ESG reporting automation'],
+    },
+    'Travel & Hospitality': {
+      description: 'Enhanced guest experiences and operational optimization',
+      useCases: ['Personalized recommendations', 'Dynamic pricing optimization', 'Customer service chatbots', 'Demand forecasting'],
+    },
+    'Education': {
+      description: 'AI-powered learning experiences and administrative efficiency',
+      useCases: ['Personalized learning paths', 'Student performance analytics', 'Administrative automation', 'Content generation & curation'],
+    },
+    'Agriculture': {
+      description: 'Precision agriculture and smart farming solutions',
+      useCases: ['Crop yield prediction', 'Disease detection & prevention', 'Resource optimization', 'Supply chain management'],
+    },
+    'Entertainment & Media': {
+      description: 'Content intelligence and audience engagement',
+      useCases: ['Content recommendations', 'Audience analytics', 'Automated content tagging', 'Sentiment & trend analysis'],
+    },
+    'Sports & Sports Technology': {
+      description: 'Performance analytics and fan engagement solutions',
+      useCases: ['Player performance analytics', 'Injury prediction models', 'Fan engagement AI', 'Game strategy optimization'],
+    },
+  };
+
+  const allIndustries = Object.keys(industryUseCases);
 
   return (
     <>
@@ -366,22 +424,78 @@ export default function Solutions() {
         </div>
       </section>
 
-      {/* All Industries */}
+      {/* All Industries with Modal */}
       <section className="section-padding bg-white">
         <div className="container-max">
           <div className="text-center mb-12">
             <p className="section-label">Industries We Serve</p>
             <h2 className="section-title">Solutions Across Verticals</h2>
+            <p className="section-subtitle mx-auto">Click on any industry to see AI use cases</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {allIndustries.map((industry, index) => (
-              <div key={index} className="card card-hover text-center !p-4 flex items-center justify-center min-h-[80px]">
+              <button
+                key={index}
+                onClick={() => setSelectedIndustry(industry)}
+                className="card card-hover text-center !p-4 flex items-center justify-center min-h-[80px] cursor-pointer hover:border-primary-500 transition-all"
+              >
                 <span className="text-dark-700 font-medium text-sm">{industry}</span>
-              </div>
+              </button>
             ))}
           </div>
         </div>
       </section>
+
+      {/* Modal */}
+      {selectedIndustry && (
+        <div
+          className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedIndustry(null)}
+        >
+          <div
+            className="bg-white rounded-2xl max-w-lg w-full p-6 md:p-8 relative animate-fade-in"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setSelectedIndustry(null)}
+              className="absolute top-4 right-4 text-dark-400 hover:text-dark-900 transition-colors"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            <div className="w-12 h-12 bg-primary-500/10 rounded-xl flex items-center justify-center text-primary-500 mb-4">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+
+            <h3 className="text-xl font-bold text-dark-900 mb-2">{selectedIndustry}</h3>
+            <p className="text-dark-500 text-sm mb-6">{industryUseCases[selectedIndustry]?.description}</p>
+
+            <div className="space-y-3 mb-6">
+              <p className="text-xs font-semibold text-dark-700 uppercase tracking-wide">AI Use Cases</p>
+              {industryUseCases[selectedIndustry]?.useCases.map((useCase, i) => (
+                <div key={i} className="flex items-start gap-3 bg-neutral-150 p-3 rounded-lg">
+                  <svg className="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-dark-700 text-sm">{useCase}</span>
+                </div>
+              ))}
+            </div>
+
+            <Link
+              href="/contact"
+              className="btn-primary w-full text-center"
+              onClick={() => setSelectedIndustry(null)}
+            >
+              Discuss {selectedIndustry} Solutions
+            </Link>
+          </div>
+        </div>
+      )}
 
       {/* CTA */}
       <section className="section-padding bg-dark-900">

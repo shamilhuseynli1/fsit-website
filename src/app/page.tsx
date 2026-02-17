@@ -109,12 +109,12 @@ export default function Home() {
       </section>
 
       {/* Clients Section */}
-      <section className="py-16 bg-neutral-150 border-b border-neutral-200 overflow-hidden">
+      <section className="py-16 bg-neutral-150 border-b border-neutral-200">
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-sm font-semibold text-dark-700 mb-10">Trusted By Leading Organizations</p>
         </div>
-        <div className="relative">
-          <div className="flex animate-scroll">
+        <div className="relative overflow-x-auto scrollbar-hide cursor-grab active:cursor-grabbing">
+          <div className="flex animate-scroll hover:pause-animation px-4 min-w-max">
             {/* First set of logos */}
             {clients.map((client, index) => (
               client.url ? (
@@ -123,27 +123,27 @@ export default function Home() {
                   href={client.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-shrink-0 bg-white rounded-xl p-6 shadow-sm border border-neutral-200 hover:shadow-md transition-all mx-3 flex items-center justify-center h-24 w-48"
+                  className="flex-shrink-0 bg-white rounded-2xl p-8 shadow-sm border border-neutral-200 hover:shadow-lg transition-all mx-4 flex items-center justify-center h-32 w-64"
                 >
                   <Image
                     src={client.logo}
                     alt={client.name}
-                    width={160}
-                    height={80}
-                    className="object-contain max-h-16"
+                    width={200}
+                    height={100}
+                    className="object-contain max-h-20"
                   />
                 </a>
               ) : (
                 <div
                   key={`first-${index}`}
-                  className="flex-shrink-0 bg-white rounded-xl p-6 shadow-sm border border-neutral-200 mx-3 flex items-center justify-center h-24 w-48"
+                  className="flex-shrink-0 bg-white rounded-2xl p-8 shadow-sm border border-neutral-200 mx-4 flex items-center justify-center h-32 w-64"
                 >
                   <Image
                     src={client.logo}
                     alt={client.name}
-                    width={160}
-                    height={80}
-                    className="object-contain max-h-16"
+                    width={200}
+                    height={100}
+                    className="object-contain max-h-20"
                   />
                 </div>
               )
@@ -156,27 +156,27 @@ export default function Home() {
                   href={client.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-shrink-0 bg-white rounded-xl p-6 shadow-sm border border-neutral-200 hover:shadow-md transition-all mx-3 flex items-center justify-center h-24 w-48"
+                  className="flex-shrink-0 bg-white rounded-2xl p-8 shadow-sm border border-neutral-200 hover:shadow-lg transition-all mx-4 flex items-center justify-center h-32 w-64"
                 >
                   <Image
                     src={client.logo}
                     alt={client.name}
-                    width={160}
-                    height={80}
-                    className="object-contain max-h-16"
+                    width={200}
+                    height={100}
+                    className="object-contain max-h-20"
                   />
                 </a>
               ) : (
                 <div
                   key={`second-${index}`}
-                  className="flex-shrink-0 bg-white rounded-xl p-6 shadow-sm border border-neutral-200 mx-3 flex items-center justify-center h-24 w-48"
+                  className="flex-shrink-0 bg-white rounded-2xl p-8 shadow-sm border border-neutral-200 mx-4 flex items-center justify-center h-32 w-64"
                 >
                   <Image
                     src={client.logo}
                     alt={client.name}
-                    width={160}
-                    height={80}
-                    className="object-contain max-h-16"
+                    width={200}
+                    height={100}
+                    className="object-contain max-h-20"
                   />
                 </div>
               )

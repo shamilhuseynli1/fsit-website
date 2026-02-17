@@ -230,11 +230,22 @@ body {
 }
 
 .animate-scroll {
-  animation: scroll 30s linear infinite;
+  animation: scroll 40s linear infinite;
 }
 
-.animate-scroll:hover {
+.animate-scroll:hover,
+.animate-scroll.pause-animation {
   animation-play-state: paused;
+}
+
+/* Hide scrollbar but allow scrolling */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
 
 .animate-fade-in-up {

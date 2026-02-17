@@ -318,13 +318,13 @@ export default function Home() {
               {technologies.map((tech, index) => (
                 <div key={index} className="bg-white rounded-xl p-4 md:p-5 border border-neutral-200 text-center hover:shadow-lg hover:border-primary-500/30 transition-all duration-300">
                   <h4 className="font-semibold text-dark-900 text-xs sm:text-sm mb-3 md:mb-4 leading-tight min-h-[32px] md:min-h-[40px] flex items-center justify-center">{tech.name}</h4>
-                  <div className="flex justify-center items-center gap-2 md:gap-3">
+                  <div className="flex justify-center items-center gap-3 md:gap-4">
                     {tech.tools.map((tool, i) => (
-                      <div key={i} className="group relative">
+                      <div key={i} className="group relative flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14">
                         <img
                           src={tool.logo}
                           alt={tool.name}
-                          className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 object-contain"
+                          className="max-w-full max-h-full object-contain"
                         />
                         <span className="pointer-events-none absolute -bottom-8 left-1/2 -translate-x-1/2 bg-dark-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-50">
                           {tool.name}

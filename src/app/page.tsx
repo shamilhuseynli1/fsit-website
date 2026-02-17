@@ -30,41 +30,41 @@ export default function Home() {
     {
       name: 'Cloud & AI Platforms',
       tools: [
-        { name: 'AWS', logo: '/tools/aws.svg', color: '#FF9900' },
-        { name: 'Azure', logo: '/tools/azure.svg', color: '#0078D4' },
-        { name: 'Google Cloud', logo: '/tools/googlecloud.svg', color: '#4285F4' },
+        { name: 'AWS', logo: '/tools/aws.png' },
+        { name: 'Azure', logo: '/tools/azure.png' },
+        { name: 'Google Cloud', logo: '/tools/googlecloud.png' },
       ],
     },
     {
       name: 'Large Language Models',
       tools: [
-        { name: 'OpenAI', logo: '/tools/openai.svg', color: '#412991' },
-        { name: 'Anthropic', logo: '/tools/anthropic.svg', color: '#D4A27F' },
-        { name: 'Meta', logo: '/tools/meta.svg', color: '#0668E1' },
+        { name: 'OpenAI', logo: '/tools/openai.webp' },
+        { name: 'Anthropic', logo: '/tools/anthropic.png' },
+        { name: 'Meta', logo: '/tools/meta.png' },
       ],
     },
     {
       name: 'Data & BI Platforms',
       tools: [
-        { name: 'Tableau', logo: '/tools/tableau.svg', color: '#E97627' },
-        { name: 'Power BI', logo: '/tools/powerbi.svg', color: '#F2C811' },
-        { name: 'Snowflake', logo: '/tools/snowflake.svg', color: '#29B5E8' },
+        { name: 'Tableau', logo: '/tools/tableau.png' },
+        { name: 'Power BI', logo: '/tools/powerbi.png' },
+        { name: 'Snowflake', logo: '/tools/snowflake.png' },
       ],
     },
     {
       name: 'AI Deployment',
       tools: [
-        { name: 'MLflow', logo: '/tools/mlflow.svg', color: '#0194E2' },
-        { name: 'Kubernetes', logo: '/tools/kubernetes.svg', color: '#326CE5' },
-        { name: 'Docker', logo: '/tools/docker.svg', color: '#2496ED' },
+        { name: 'MLflow', logo: '/tools/mlflow.png' },
+        { name: 'Kubernetes', logo: '/tools/kubernetes.png' },
+        { name: 'Docker', logo: '/tools/docker.png' },
       ],
     },
     {
       name: 'Enterprise Security',
       tools: [
-        { name: 'Okta', logo: '/tools/okta.svg', color: '#007DC1' },
-        { name: 'Auth0', logo: '/tools/auth0.svg', color: '#EB5424' },
-        { name: 'Azure AD', logo: '/tools/azuread.svg', color: '#0078D4' },
+        { name: 'Okta', logo: '/tools/okta.png' },
+        { name: 'Auth0', logo: '/tools/auth0.png' },
+        { name: 'Azure AD', logo: '/tools/azuread.png' },
       ],
     },
   ];
@@ -296,17 +296,17 @@ export default function Home() {
             <p className="text-center text-sm font-semibold text-dark-700 mb-8">Globally Recognized Technologies</p>
             <div className="flex flex-wrap justify-center gap-4">
               {technologies.map((tech, index) => (
-                <div key={index} className="bg-white rounded-xl p-5 pb-8 border border-neutral-200 text-center min-w-[160px] flex-1 max-w-[200px]">
-                  <h4 className="font-semibold text-dark-900 text-sm mb-4">{tech.name}</h4>
-                  <div className="flex justify-center gap-4">
+                <div key={index} className="bg-white rounded-xl p-6 border border-neutral-200 text-center w-[180px]">
+                  <h4 className="font-semibold text-dark-900 text-sm mb-5 leading-tight min-h-[40px] flex items-center justify-center">{tech.name}</h4>
+                  <div className="flex justify-center items-center gap-3">
                     {tech.tools.map((tool, i) => (
-                      <div key={i} className="group relative flex flex-col items-center">
+                      <div key={i} className="group relative">
                         <img
                           src={tool.logo}
                           alt={tool.name}
-                          className="w-8 h-8"
+                          className="w-10 h-10 object-contain"
                         />
-                        <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-dark-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">
+                        <span className="pointer-events-none absolute -bottom-8 left-1/2 -translate-x-1/2 bg-dark-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-50">
                           {tool.name}
                         </span>
                       </div>

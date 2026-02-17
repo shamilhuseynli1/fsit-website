@@ -109,15 +109,8 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center gap-4">
-            <Link
-              href="/contact"
-              className="font-medium text-sm transition-colors duration-300 hover:text-primary-500"
-              style={{ color: scrolled ? '#374151' : 'rgba(255,255,255,0.9)' }}
-            >
-              Contact us
-            </Link>
+          {/* CTA Button */}
+          <div className="hidden lg:flex items-center">
             <Link href="/build-scale-ai" className="btn-primary !py-3 !px-6">
               Book a consultation
             </Link>
@@ -168,14 +161,7 @@ export default function Navbar() {
                   )}
                 </div>
               ))}
-              <div className="pt-4 border-t border-neutral-100 space-y-2">
-                <Link
-                  href="/contact"
-                  className="block px-4 py-3 text-dark-700 font-medium hover:text-primary-500 transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Contact us
-                </Link>
+              <div className="pt-4 border-t border-neutral-100">
                 <Link
                   href="/build-scale-ai"
                   className="block btn-primary text-center"

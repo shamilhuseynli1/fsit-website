@@ -48,11 +48,11 @@ export default function Navbar() {
       href: '/industries',
       dropdown: [
         { name: 'All Industries', href: '/industries' },
-        { name: 'Financial Services', href: '/industries#financial-services' },
-        { name: 'Healthcare', href: '/industries#healthcare' },
-        { name: 'Retail & E-Commerce', href: '/industries#retail' },
-        { name: 'Manufacturing', href: '/industries#manufacturing' },
-        { name: 'Technology & SaaS', href: '/industries#technology' },
+        { name: 'Financial Services', href: '/industries/financial-services' },
+        { name: 'Healthcare', href: '/industries/healthcare' },
+        { name: 'Retail & E-Commerce', href: '/industries/retail' },
+        { name: 'Manufacturing', href: '/industries/manufacturing' },
+        { name: 'Technology & SaaS', href: '/industries/technology' },
       ],
     },
     {

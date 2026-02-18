@@ -25,8 +25,43 @@ export default function Navbar() {
       href: '/solutions',
       dropdown: [
         { name: 'AI Systems & Solutions', href: '/solutions' },
+        { name: 'Staff Augmentation', href: '/staff-augmentation' },
+        { name: 'AI Agents', href: '/ai-agents' },
+        { name: 'AI Operations', href: '/ai-operations' },
         { name: 'How We Work', href: '/how-we-work' },
         { name: 'How We Vet', href: '/how-we-vet' },
+      ],
+    },
+    {
+      name: 'Solutions',
+      href: '/build-innovate',
+      dropdown: [
+        { name: 'Build & Innovate', href: '/build-innovate' },
+        { name: 'Manage & Optimize', href: '/manage-optimize' },
+        { name: 'Protect & Scale', href: '/protect-scale' },
+        { name: 'Leverage AI', href: '/leverage-ai' },
+        { name: 'AI Transformation', href: '/ai-transformation' },
+      ],
+    },
+    {
+      name: 'Industries',
+      href: '/industries',
+      dropdown: [
+        { name: 'All Industries', href: '/industries' },
+        { name: 'Financial Services', href: '/industries#financial-services' },
+        { name: 'Healthcare', href: '/industries#healthcare' },
+        { name: 'Retail & E-Commerce', href: '/industries#retail' },
+        { name: 'Manufacturing', href: '/industries#manufacturing' },
+        { name: 'Technology & SaaS', href: '/industries#technology' },
+      ],
+    },
+    {
+      name: 'Insights',
+      href: '/case-studies',
+      dropdown: [
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'Blog', href: '/blog' },
+        { name: 'Whitepapers', href: '/whitepapers' },
       ],
     },
     {
@@ -36,6 +71,7 @@ export default function Navbar() {
         { name: 'About FSIT', href: '/about' },
         { name: 'Mission & Vision', href: '/mission' },
         { name: 'Regions & Delivery', href: '/regions' },
+        { name: 'Careers', href: '/careers' },
       ],
     },
     { name: 'Contact', href: '/contact' },

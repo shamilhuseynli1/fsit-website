@@ -81,7 +81,6 @@ export default function Navbar() {
         { name: 'About FSIT', href: '/about' },
         { name: 'Mission & Vision', href: '/mission' },
         { name: 'Regions & Delivery', href: '/regions' },
-        { name: 'Careers', href: '/careers' },
       ],
     },
     { name: 'Contact', href: '/contact' },

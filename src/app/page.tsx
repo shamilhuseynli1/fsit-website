@@ -459,8 +459,8 @@ export default function Home() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-xl mb-4">
                 <img
-                  src="https://images.unsplash.com/photo-1733757361453-5f493624a734?auto=format&fit=crop&w=600&q=80"
-                  alt="Saudi Arabia Vision 2030 pyramid"
+                  src="https://images.unsplash.com/photo-1663900108404-a05e8bf82cda?auto=format&fit=crop&w=600&q=80"
+                  alt="Saudi Arabia city at night"
                   className="w-full h-48 object-cover"
                 />
               </div>

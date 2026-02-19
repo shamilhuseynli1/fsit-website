@@ -119,7 +119,7 @@ export default function Home() {
         <div
           className="absolute inset-0 opacity-20"
           style={{
-            backgroundImage: 'url(https://source.unsplash.com/9cbkE8kNUBA/1920x1080)',
+            backgroundImage: 'url(https://images.unsplash.com/photo-1672257694085-3a5c603cda1a?auto=format&fit=crop&w=1920&q=80)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
@@ -316,7 +316,7 @@ export default function Home() {
         {/* Kingdom Tower Background */}
         <div className="absolute right-0 top-0 w-1/3 h-full opacity-5 hidden lg:block"
           style={{
-            backgroundImage: 'url(https://source.unsplash.com/9cbkE8kNUBA/1920x1080)',
+            backgroundImage: 'url(https://images.unsplash.com/photo-1672257694085-3a5c603cda1a?auto=format&fit=crop&w=1920&q=80)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
@@ -331,7 +331,7 @@ export default function Home() {
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-xl hidden lg:block">
               <img
-                src="https://source.unsplash.com/PYOHfWTYkzA/1920x1080"
+                src="https://images.unsplash.com/photo-1733757361453-5f493624a734?auto=format&fit=crop&w=1920&q=80"
                 alt="Riyadh Saudi Arabia modern cityscape"
                 className="w-full h-64 object-cover"
               />
@@ -511,7 +511,7 @@ export default function Home() {
         <div
           className="absolute inset-0 opacity-20"
           style={{
-            backgroundImage: 'url(https://source.unsplash.com/9cbkE8kNUBA/1920x1080)',
+            backgroundImage: 'url(https://images.unsplash.com/photo-1672257694085-3a5c603cda1a?auto=format&fit=crop&w=1920&q=80)',
             backgroundSize: 'cover',
             backgroundPosition: 'center bottom',
           }}

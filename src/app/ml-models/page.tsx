@@ -211,7 +211,7 @@ export default function MLModelsPage() {
         <div
           className="absolute inset-0 opacity-30"
           style={{
-            backgroundImage: 'url(https://source.unsplash.com/9cbkE8kNUBA/1920x1080)',
+            backgroundImage: 'url(https://images.unsplash.com/photo-1672257694085-3a5c603cda1a?auto=format&fit=crop&w=1920&q=80)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
@@ -348,7 +348,7 @@ export default function MLModelsPage() {
         <div
           className="absolute inset-0 opacity-25"
           style={{
-            backgroundImage: 'url(https://source.unsplash.com/PYOHfWTYkzA/1920x1080)',
+            backgroundImage: 'url(https://images.unsplash.com/photo-1733757361453-5f493624a734?auto=format&fit=crop&w=1920&q=80)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}

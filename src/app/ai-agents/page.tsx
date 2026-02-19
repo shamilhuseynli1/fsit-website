@@ -131,7 +131,7 @@ export default function AIAgents() {
         <div
           className="absolute inset-0 opacity-30"
           style={{
-            backgroundImage: 'url(https://source.unsplash.com/9cbkE8kNUBA/1920x1080)',
+            backgroundImage: 'url(https://images.unsplash.com/photo-1672257694085-3a5c603cda1a?auto=format&fit=crop&w=1920&q=80)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
@@ -349,7 +349,7 @@ export default function AIAgents() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <img
-                src="https://source.unsplash.com/9cbkE8kNUBA/1920x1080"
+                src="https://images.unsplash.com/photo-1672257694085-3a5c603cda1a?auto=format&fit=crop&w=1920&q=80"
                 alt="Riyadh Saudi Arabia cityscape"
                 className="rounded-2xl shadow-2xl w-full h-80 object-cover"
               />
@@ -392,7 +392,7 @@ export default function AIAgents() {
         <div
           className="absolute inset-0 opacity-20"
           style={{
-            backgroundImage: 'url(https://source.unsplash.com/PYOHfWTYkzA/1920x1080)',
+            backgroundImage: 'url(https://images.unsplash.com/photo-1733757361453-5f493624a734?auto=format&fit=crop&w=1920&q=80)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}

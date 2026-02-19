@@ -241,9 +241,9 @@ export default function About() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             {[
               { name: 'Haitham Saead', role: 'CEO', image: '/team/Haitam Said.jpg', position: 'top' },
-              { name: 'Fahed Alenezi', role: 'Managing Director', image: '/team/Fahed Alenezi.png', position: 'top' },
+              { name: 'Fahed Alenezi', role: 'Managing Director', image: '/team/Fahed Alenezi.png', position: '50% 15%' },
               { name: 'Khalil Jaouni', role: 'Executive Director', image: '/team/Khalil Jaouni.png', position: '50% 10%' },
-              { name: 'Ritesh Raj', role: 'Executive Director', image: '/team/Ritesh Raj.png', position: 'top' },
+              { name: 'Ritesh Raj', role: 'Executive Director', image: '/team/Ritesh Raj.png', position: '50% 5%' },
               { name: 'Rula Jouhar', role: 'COO', image: '/team/Rula.png', position: 'top' },
               { name: 'Ismail Katanani', role: 'Senior Director', image: '/team/Ismail Katanani.png', position: 'top' },
             ].map((member, index) => (

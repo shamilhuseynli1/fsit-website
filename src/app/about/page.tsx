@@ -243,7 +243,7 @@ export default function About() {
               { name: 'Haitham Saead', role: 'CEO', image: '/team/Haitam Said.jpg', position: 'center top' },
               { name: 'Fahed Alenezi', role: 'Managing Director', image: '/team/Fahed Alenezi.png', position: 'center top' },
               { name: 'Khalil Jaouni', role: 'Executive Director', image: '/team/Khalil Jaouni.png', position: 'center top' },
-              { name: 'Ritesh Raj', role: 'Executive Director', image: '/team/Ritesh Raj.png', position: 'center top' },
+              { name: 'Ritesh Raj', role: 'Executive Director', image: '/team/Ritesh Raj.png', position: 'center 15%' },
               { name: 'Rula Jouhar', role: 'COO', image: '/team/Rula.png', position: 'center top' },
               { name: 'Ismail Katanani', role: 'Senior Director', image: '/team/Ismail Katanani.png', position: 'center top' },
             ].map((member, index) => (

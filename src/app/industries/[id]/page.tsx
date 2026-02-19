@@ -328,7 +328,6 @@ export default function IndustryPage() {
         <div className="relative z-10 max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-32">
           <div className="max-w-4xl">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
-              <span className="text-4xl mr-3">{industry.icon}</span>
               <span className="text-primary-400 text-sm font-medium">{industry.name}</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
@@ -482,12 +481,12 @@ export default function IndustryPage() {
 
           <div className="grid lg:grid-cols-3 gap-8">
             {industry.useCases.map((useCase, index) => (
-              <div key={index} className="bg-neutral-50 rounded-2xl overflow-hidden">
-                <div className="bg-gradient-to-br from-primary-600 to-primary-800 p-6">
+              <div key={index} className="bg-neutral-50 rounded-2xl overflow-hidden flex flex-col h-full">
+                <div className="bg-gradient-to-br from-primary-600 to-primary-800 p-6 h-20 flex items-center">
                   <h3 className="text-xl font-bold text-white">{useCase.title}</h3>
                 </div>
-                <div className="p-6">
-                  <p className="text-dark-600 mb-4">{useCase.desc}</p>
+                <div className="p-6 flex flex-col flex-1">
+                  <p className="text-dark-600 mb-4 flex-1">{useCase.desc}</p>
                   <div className="bg-primary-50 rounded-lg p-4">
                     <div className="text-sm text-primary-600 font-medium mb-1">Results</div>
                     <div className="text-dark-900 font-semibold">{useCase.results}</div>

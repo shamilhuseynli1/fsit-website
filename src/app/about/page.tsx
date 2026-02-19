@@ -231,6 +231,34 @@ export default function About() {
         </div>
       </section>
 
+      {/* Leadership Team */}
+      <section className="section-padding bg-neutral-150">
+        <div className="container-max">
+          <div className="text-center mb-12">
+            <p className="section-label">Our Team</p>
+            <h2 className="section-title">Leadership</h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {[
+              { name: 'Haitham', role: 'CEO' },
+              { name: 'Khalil', role: 'Executive Director' },
+              { name: 'Ritesh Raj', role: 'Executive Director' },
+              { name: 'Fahed', role: 'Managing Director' },
+              { name: 'Rula', role: 'COO' },
+              { name: 'Ismail', role: 'Senior Director' },
+            ].map((member, index) => (
+              <div key={index} className="text-center">
+                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center">
+                  <span className="text-3xl font-bold text-white">{member.name.charAt(0)}</span>
+                </div>
+                <h3 className="text-lg font-bold text-dark-900">{member.name}</h3>
+                <p className="text-dark-500 text-sm">{member.role}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="section-padding bg-dark-900 relative overflow-hidden">
         {/* Saudi Background */}

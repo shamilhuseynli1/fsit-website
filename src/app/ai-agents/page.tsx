@@ -127,11 +127,11 @@ export default function AIAgents() {
       {/* Hero Section */}
       <section className="hero-dark bg-grid-pattern overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-900 to-dark-800" />
-        {/* Modern Technology Background */}
+        {/* Saudi Riyadh Skyline Background */}
         <div
-          className="absolute inset-0 opacity-10"
+          className="absolute inset-0 opacity-30"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80)',
+            backgroundImage: 'url(https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?auto=format&fit=crop&w=1920&q=80)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
@@ -343,9 +343,61 @@ export default function AIAgents() {
         </div>
       </section>
 
+      {/* Saudi Arabia Presence Section */}
+      <section className="section-padding bg-white">
+        <div className="container-max">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="relative">
+              <img
+                src="https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?auto=format&fit=crop&w=800&q=80"
+                alt="Riyadh Saudi Arabia cityscape"
+                className="rounded-2xl shadow-2xl w-full h-80 object-cover"
+              />
+              <div className="absolute -bottom-6 -right-6 bg-primary-500 text-white p-6 rounded-2xl shadow-xl">
+                <p className="text-3xl font-bold">50+</p>
+                <p className="text-sm">AI Agents Deployed in KSA</p>
+              </div>
+            </div>
+            <div>
+              <p className="section-label">Powering Saudi Arabia</p>
+              <h2 className="section-title">AI Agents for the Kingdom</h2>
+              <p className="text-dark-500 mb-6">
+                Our AI agents are actively transforming operations across Saudi government entities and enterprises, aligned with Vision 2030 digital transformation goals.
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-neutral-100 rounded-xl p-4">
+                  <p className="font-bold text-dark-900">Government</p>
+                  <p className="text-sm text-dark-500">Citizen services automation</p>
+                </div>
+                <div className="bg-neutral-100 rounded-xl p-4">
+                  <p className="font-bold text-dark-900">Banking</p>
+                  <p className="text-sm text-dark-500">Financial process agents</p>
+                </div>
+                <div className="bg-neutral-100 rounded-xl p-4">
+                  <p className="font-bold text-dark-900">Healthcare</p>
+                  <p className="text-sm text-dark-500">Patient engagement AI</p>
+                </div>
+                <div className="bg-neutral-100 rounded-xl p-4">
+                  <p className="font-bold text-dark-900">Energy</p>
+                  <p className="text-sm text-dark-500">Operations automation</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="section-padding bg-dark-900">
-        <div className="container-max text-center">
+      <section className="section-padding bg-dark-900 relative overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: 'url(https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&w=1920&q=80)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+        <div className="container-max text-center relative z-10">
           <h2 className="section-title !text-white mb-4">
             Ready to deploy AI agents?
           </h2>

@@ -150,11 +150,11 @@ export default function CaseStudiesPage() {
     <main className="min-h-screen">
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center bg-dark-900 overflow-hidden">
-        {/* Saudi Business Background */}
+        {/* Saudi Riyadh Background */}
         <div
-          className="absolute inset-0 opacity-15"
+          className="absolute inset-0 opacity-30"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1920&q=80)',
+            backgroundImage: 'url(https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?auto=format&fit=crop&w=1920&q=80)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}

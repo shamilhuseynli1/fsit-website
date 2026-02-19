@@ -84,7 +84,7 @@ export default function IndustriesPage() {
       <section className="relative min-h-[60vh] flex items-center bg-dark-900 overflow-hidden">
         {/* Saudi Modern Architecture Background */}
         <div
-          className="absolute inset-0 opacity-15"
+          className="absolute inset-0 opacity-30"
           style={{
             backgroundImage: 'url(https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&w=1920&q=80)',
             backgroundSize: 'cover',

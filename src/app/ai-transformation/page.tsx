@@ -106,7 +106,7 @@ export default function AITransformation() {
         <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-900 to-dark-800" />
         {/* Saudi Modern City Background */}
         <div
-          className="absolute inset-0 opacity-15"
+          className="absolute inset-0 opacity-30"
           style={{
             backgroundImage: 'url(https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&w=1920&q=80)',
             backgroundSize: 'cover',
@@ -343,9 +343,54 @@ export default function AITransformation() {
         </div>
       </section>
 
+      {/* Vision 2030 Transformation */}
+      <section className="section-padding bg-white relative overflow-hidden">
+        <div className="container-max">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="relative order-2 lg:order-1">
+              <img
+                src="https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?auto=format&fit=crop&w=800&q=80"
+                alt="Riyadh Saudi Arabia skyline representing Vision 2030"
+                className="rounded-2xl shadow-2xl w-full h-96 object-cover"
+              />
+              <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg">
+                <p className="text-primary-600 font-bold">Vision 2030</p>
+              </div>
+            </div>
+            <div className="order-1 lg:order-2">
+              <p className="section-label">Saudi Arabia Focus</p>
+              <h2 className="section-title">Transforming the Kingdom with AI</h2>
+              <p className="text-dark-500 mb-6">
+                We're proud partners in Saudi Arabia's Vision 2030, helping government entities and enterprises embrace AI transformation that drives real economic impact.
+              </p>
+              <div className="bg-primary-50 rounded-2xl p-6">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="text-center">
+                    <p className="text-3xl font-bold text-primary-600">90%</p>
+                    <p className="text-sm text-dark-500">of companies adopting AI by 2026</p>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-3xl font-bold text-primary-600">$20B+</p>
+                    <p className="text-sm text-dark-500">Saudi AI investment by 2030</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="section-padding bg-dark-900">
-        <div className="container-max text-center">
+      <section className="section-padding bg-dark-900 relative overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-25"
+          style={{
+            backgroundImage: 'url(https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&w=1920&q=80)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+        <div className="container-max text-center relative z-10">
           <h2 className="section-title !text-white mb-4">
             Ready to start your AI transformation?
           </h2>

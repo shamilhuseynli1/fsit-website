@@ -118,7 +118,7 @@ export default function BuildInnovate() {
         <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-900 to-dark-800" />
         {/* Saudi Futuristic Architecture Background */}
         <div
-          className="absolute inset-0 opacity-15"
+          className="absolute inset-0 opacity-30"
           style={{
             backgroundImage: 'url(https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&w=1920&q=80)',
             backgroundSize: 'cover',

@@ -42,7 +42,7 @@ export default function About() {
         <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-900 to-dark-800" />
         {/* Saudi Riyadh Skyline Background */}
         <div
-          className="absolute inset-0 opacity-15"
+          className="absolute inset-0 opacity-30"
           style={{
             backgroundImage: 'url(https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?auto=format&fit=crop&w=1920&q=80)',
             backgroundSize: 'cover',
@@ -124,8 +124,17 @@ export default function About() {
       </section>
 
       {/* Not Statements */}
-      <section className="section-padding bg-dark-900">
-        <div className="container-max text-center">
+      <section className="section-padding bg-dark-900 relative overflow-hidden">
+        {/* Saudi Night Cityscape Background */}
+        <div
+          className="absolute inset-0 opacity-25"
+          style={{
+            backgroundImage: 'url(https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?auto=format&fit=crop&w=1920&q=80)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+        <div className="container-max text-center relative z-10">
           <div className="space-y-4 mb-12">
             {notStatements.map((statement, index) => (
               <p key={index} className="text-xl md:text-2xl text-white font-semibold">
@@ -138,7 +147,7 @@ export default function About() {
           </h3>
           <div className="grid-2 max-w-3xl mx-auto">
             {delivers.map((item, index) => (
-              <div key={index} className="flex items-center gap-3 bg-dark-800 p-4 rounded-xl">
+              <div key={index} className="flex items-center gap-3 bg-dark-800/80 backdrop-blur-sm p-4 rounded-xl">
                 <svg className="w-6 h-6 text-primary-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
@@ -174,11 +183,68 @@ export default function About() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Saudi Presence */}
       <section className="section-padding bg-white">
-        <div className="container-max text-center">
-          <p className="text-xl text-dark-500 mb-4">AI success is not about intent</p>
-          <h2 className="section-title mb-8">
+        <div className="container-max">
+          <div className="text-center mb-12">
+            <p className="section-label">Our Presence</p>
+            <h2 className="section-title">Across the Kingdom</h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl group">
+              <img
+                src="https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?auto=format&fit=crop&w=600&q=80"
+                alt="Riyadh Saudi Arabia"
+                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-dark-900/80 to-transparent" />
+              <div className="absolute bottom-4 left-4">
+                <p className="text-white font-bold text-xl">Riyadh</p>
+                <p className="text-white/70 text-sm">Headquarters</p>
+              </div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden shadow-xl group">
+              <img
+                src="https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&w=600&q=80"
+                alt="Saudi Arabia modern architecture"
+                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-dark-900/80 to-transparent" />
+              <div className="absolute bottom-4 left-4">
+                <p className="text-white font-bold text-xl">Jeddah</p>
+                <p className="text-white/70 text-sm">Regional Office</p>
+              </div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden shadow-xl group">
+              <img
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80"
+                alt="Saudi Arabia landscape"
+                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-dark-900/80 to-transparent" />
+              <div className="absolute bottom-4 left-4">
+                <p className="text-white font-bold text-xl">NEOM</p>
+                <p className="text-white/70 text-sm">Future Projects</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="section-padding bg-dark-900 relative overflow-hidden">
+        {/* Saudi Background */}
+        <div
+          className="absolute inset-0 opacity-25"
+          style={{
+            backgroundImage: 'url(https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&w=1920&q=80)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+        <div className="container-max text-center relative z-10">
+          <p className="text-xl text-dark-300 mb-4">AI success is not about intent</p>
+          <h2 className="section-title !text-white mb-8">
             It&apos;s about <span className="text-primary-500">execution</span>
           </h2>
           <Link href="/contact" className="btn-primary">

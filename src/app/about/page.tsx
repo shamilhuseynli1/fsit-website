@@ -240,8 +240,8 @@ export default function About() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             {[
-              { name: 'Haitham Saead', role: 'CEO', image: '/team/Haitam Said.jpg', scale: 1, position: 'center 20%' },
-              { name: 'Fahed Alenezi', role: 'Managing Director', image: '/team/Fahed Alenezi.png', scale: 0.85, position: 'center 25%' },
+              { name: 'Haitham Saead', role: 'CEO', image: '/team/Haitam Said.jpg', scale: 1, position: 'center 35%' },
+              { name: 'Fahed Alenezi', role: 'Managing Director', image: '/team/Fahed Alenezi.png', scale: 0.85, position: 'center 40%' },
               { name: 'Khalil Jaouni', role: 'Executive Director', image: '/team/Khalil Jaouni.png', scale: 1, position: 'center 15%' },
               { name: 'Ritesh Raj', role: 'Executive Director', image: '/team/Ritesh Raj.png', scale: 1.1, position: 'center 10%' },
               { name: 'Rula Jouhar', role: 'COO', image: '/team/Rula.png', scale: 1, position: 'center 20%' },

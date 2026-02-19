@@ -24,7 +24,7 @@ const industriesData: Record<string, {
     headline: 'AI for Banking, Insurance & Fintech',
     description: 'Deploy AI systems that meet the strictest regulatory requirements while delivering measurable business impact. From fraud detection to algorithmic trading, we build AI that financial institutions can trust.',
     heroImage: 'https://source.unsplash.com/7-gaPkhIgqs/1920x1080',
-    sectionImage: '/industries/finance.jpg',
+    sectionImage: 'https://source.unsplash.com/7-gaPkhIgqs/800x600',
     imageAlt: 'Saudi Arabia Financial District Riyadh',
     challenges: [
       'Regulatory compliance (SOC2, PCI-DSS, GDPR)',
@@ -58,7 +58,7 @@ const industriesData: Record<string, {
     headline: 'HIPAA-Compliant AI for Healthcare',
     description: 'Build AI systems that improve patient outcomes while maintaining the highest standards of privacy and compliance. From diagnostic support to operational efficiency, we help healthcare organizations harness AI responsibly.',
     heroImage: 'https://source.unsplash.com/GofYo51GQ_4/1920x1080',
-    sectionImage: '/industries/healthcare.png',
+    sectionImage: 'https://source.unsplash.com/GofYo51GQ_4/800x600',
     imageAlt: 'Modern Healthcare Facility Saudi Arabia',
     challenges: [
       'HIPAA compliance and patient privacy',
@@ -92,7 +92,7 @@ const industriesData: Record<string, {
     headline: 'AI-Powered Retail Experiences',
     description: 'Transform customer experiences and optimize operations with AI. From hyper-personalization to demand forecasting, we help retailers compete in the age of AI-first commerce.',
     heroImage: 'https://source.unsplash.com/g7GFCIXVkN0/1920x1080',
-    sectionImage: '/industries/retail.webp',
+    sectionImage: 'https://source.unsplash.com/g7GFCIXVkN0/800x600',
     imageAlt: 'Modern Retail Shopping Mall Saudi Arabia',
     challenges: [
       'Real-time personalization at scale',
@@ -126,7 +126,7 @@ const industriesData: Record<string, {
     headline: 'Smart Factory AI Solutions',
     description: 'Bring intelligence to your manufacturing operations. From predictive maintenance to quality control, we help manufacturers reduce downtime, improve quality, and optimize production.',
     heroImage: 'https://source.unsplash.com/8KfCR12oeUM/1920x1080',
-    sectionImage: '/industries/manufactiring.jpeg',
+    sectionImage: 'https://source.unsplash.com/8KfCR12oeUM/800x600',
     imageAlt: 'Industrial Manufacturing Facility Saudi Arabia',
     challenges: [
       'Legacy equipment integration',
@@ -160,7 +160,7 @@ const industriesData: Record<string, {
     headline: 'AI for Software Companies',
     description: 'Embed AI into your products and operations. From intelligent features to automated development workflows, we help technology companies build and operate AI-powered products.',
     heroImage: 'https://source.unsplash.com/Y4HWROCYQ8Q/1920x1080',
-    sectionImage: '/industries/technology.png',
+    sectionImage: 'https://source.unsplash.com/Y4HWROCYQ8Q/800x600',
     imageAlt: 'Modern Technology Office Saudi Arabia',
     challenges: [
       'Rapid iteration and deployment',

@@ -117,7 +117,7 @@ export default function Navbar() {
               >
                 <Link
                   href={link.href}
-                  className="px-5 py-2 font-medium text-sm transition-colors duration-300 flex items-center gap-1 hover:text-primary-500 whitespace-nowrap"
+                  className="px-3 py-2 font-medium text-sm transition-colors duration-300 flex items-center gap-1 hover:text-primary-500 whitespace-nowrap"
                   style={{ color: scrolled ? '#374151' : 'rgba(255,255,255,0.9)' }}
                 >
                   {link.name}
@@ -156,9 +156,9 @@ export default function Navbar() {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:flex items-center">
-            <Link href="/build-scale-ai" className="btn-primary !py-3 !px-6">
-              Book a consultation
+          <div className="hidden lg:flex items-center flex-shrink-0">
+            <Link href="/build-scale-ai" className="btn-primary !py-2.5 !px-5 whitespace-nowrap text-sm">
+              Book consultation
             </Link>
           </div>
 

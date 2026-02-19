@@ -76,7 +76,14 @@ export default function Regions() {
     <>
       {/* Hero */}
       <section className="hero-dark bg-grid-pattern overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-900 to-dark-800" />
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1674386491555-5b92161e4d04?auto=format&fit=crop&w=1920&q=80"
+            alt="Aerial view of city"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-dark-900/80" />
+        </div>
         <NetworkBackground nodeCount={60} />
         <div className="relative max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
           <div className="max-w-3xl">

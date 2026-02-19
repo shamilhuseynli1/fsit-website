@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import NetworkBackground from '@/components/NetworkBackground';
 
@@ -202,6 +202,14 @@ const categories = [
 export default function MLModelsPage() {
   const [activeCategory, setActiveCategory] = useState('finance');
   const activeData = categories.find(c => c.id === activeCategory);
+
+  // Handle hash navigation from navbar dropdown
+  useEffect(() => {
+    const hash = window.location.hash.replace('#', '');
+    if (hash && categories.find(c => c.id === hash)) {
+      setActiveCategory(hash);
+    }
+  }, []);
 
   return (
     <main className="min-h-screen">

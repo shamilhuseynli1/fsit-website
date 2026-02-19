@@ -43,7 +43,18 @@ export default function Navbar() {
         { name: 'AI Transformation', href: '/ai-transformation' },
       ],
     },
-    { name: 'ML Models', href: '/ml-models' },
+    {
+      name: 'ML Models',
+      href: '/ml-models',
+      dropdown: [
+        { name: 'Finance', href: '/ml-models#finance' },
+        { name: 'Logistics', href: '/ml-models#logistics' },
+        { name: 'Business', href: '/ml-models#business' },
+        { name: 'Management', href: '/ml-models#management' },
+        { name: 'Consulting', href: '/ml-models#consulting' },
+        { name: 'Data Governance', href: '/ml-models#data-governance' },
+      ],
+    },
     {
       name: 'Industries',
       href: '/industries',

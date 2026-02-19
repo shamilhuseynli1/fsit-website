@@ -479,17 +479,17 @@ export default function IndustryPage() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-3 gap-8 items-stretch">
             {industry.useCases.map((useCase, index) => (
-              <div key={index} className="bg-neutral-50 rounded-2xl overflow-hidden flex flex-col h-full">
-                <div className="bg-gradient-to-br from-primary-600 to-primary-800 p-6 h-20 flex items-center">
+              <div key={index} className="bg-neutral-50 rounded-2xl overflow-hidden flex flex-col">
+                <div className="bg-gradient-to-br from-primary-600 to-primary-800 p-6">
                   <h3 className="text-xl font-bold text-white">{useCase.title}</h3>
                 </div>
                 <div className="p-6 flex flex-col flex-1">
-                  <p className="text-dark-600 mb-4 flex-1">{useCase.desc}</p>
-                  <div className="bg-primary-50 rounded-lg p-4">
+                  <p className="text-dark-600 mb-4 min-h-[60px]">{useCase.desc}</p>
+                  <div className="bg-primary-50 rounded-lg p-4 mt-auto">
                     <div className="text-sm text-primary-600 font-medium mb-1">Results</div>
-                    <div className="text-dark-900 font-semibold">{useCase.results}</div>
+                    <div className="text-dark-900 font-semibold min-h-[48px]">{useCase.results}</div>
                   </div>
                 </div>
               </div>

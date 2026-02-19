@@ -205,8 +205,8 @@ export default function About() {
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-xl group">
               <img
-                src="https://images.unsplash.com/photo-1733757361453-5f493624a734?auto=format&fit=crop&w=1920&q=80"
-                alt="Saudi Arabia modern architecture"
+                src="https://images.unsplash.com/photo-1641935886235-d5deab1625f5?auto=format&fit=crop&w=1920&q=80"
+                alt="Jeddah ocean view"
                 className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-dark-900/80 to-transparent" />
@@ -217,8 +217,8 @@ export default function About() {
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-xl group">
               <img
-                src="https://images.unsplash.com/photo-1707386910260-a0e999662858?auto=format&fit=crop&w=1920&q=80"
-                alt="Saudi Arabia landscape"
+                src="https://images.unsplash.com/photo-1682687221080-5cb261c645cb?auto=format&fit=crop&w=1920&q=80"
+                alt="NEOM rock formation"
                 className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-dark-900/80 to-transparent" />

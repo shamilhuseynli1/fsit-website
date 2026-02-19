@@ -134,9 +134,8 @@ export default function Home() {
           <div className="max-w-3xl">
             <p className="section-label !text-primary-500 !mb-4 md:!mb-6 animate-fade-in">Future Systems for Information Technology</p>
             <h1 className="hero-title text-white animate-fade-in-up text-3xl md:text-5xl lg:text-6xl">
-              On-Site AI.<br />
-              <span className="text-primary-500 text-glow">Real Results.</span><br />
-              Built Capability.
+              Augmented Intelligence.<br />
+              <span className="text-primary-500 text-glow">Human and Machine.</span>
             </h1>
             <p className="text-lg md:text-xl lg:text-2xl text-dark-300 mb-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
               Pioneering AI transformation across Saudi Arabia and the Middle East

@@ -24,7 +24,7 @@ const industriesData: Record<string, {
     headline: 'AI for Banking, Insurance & Fintech',
     description: 'Deploy AI systems that meet the strictest regulatory requirements while delivering measurable business impact. From fraud detection to algorithmic trading, we build AI that financial institutions can trust.',
     heroImage: 'https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?auto=format&fit=crop&w=1920&q=80',
-    sectionImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80',
+    sectionImage: '/industries/finance.jpg',
     imageAlt: 'Saudi Arabia Financial District Riyadh',
     challenges: [
       'Regulatory compliance (SOC2, PCI-DSS, GDPR)',
@@ -58,7 +58,7 @@ const industriesData: Record<string, {
     headline: 'HIPAA-Compliant AI for Healthcare',
     description: 'Build AI systems that improve patient outcomes while maintaining the highest standards of privacy and compliance. From diagnostic support to operational efficiency, we help healthcare organizations harness AI responsibly.',
     heroImage: 'https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?auto=format&fit=crop&w=1920&q=80',
-    sectionImage: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80',
+    sectionImage: '/industries/healthcare.png',
     imageAlt: 'Modern Healthcare Facility Saudi Arabia',
     challenges: [
       'HIPAA compliance and patient privacy',
@@ -92,7 +92,7 @@ const industriesData: Record<string, {
     headline: 'AI-Powered Retail Experiences',
     description: 'Transform customer experiences and optimize operations with AI. From hyper-personalization to demand forecasting, we help retailers compete in the age of AI-first commerce.',
     heroImage: 'https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&w=1920&q=80',
-    sectionImage: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80',
+    sectionImage: '/industries/retail.webp',
     imageAlt: 'Modern Retail Shopping Mall Saudi Arabia',
     challenges: [
       'Real-time personalization at scale',
@@ -126,7 +126,7 @@ const industriesData: Record<string, {
     headline: 'Smart Factory AI Solutions',
     description: 'Bring intelligence to your manufacturing operations. From predictive maintenance to quality control, we help manufacturers reduce downtime, improve quality, and optimize production.',
     heroImage: 'https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?auto=format&fit=crop&w=1920&q=80',
-    sectionImage: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=800&q=80',
+    sectionImage: '/industries/manufactiring.jpeg',
     imageAlt: 'Industrial Manufacturing Facility Saudi Arabia',
     challenges: [
       'Legacy equipment integration',
@@ -160,7 +160,7 @@ const industriesData: Record<string, {
     headline: 'AI for Software Companies',
     description: 'Embed AI into your products and operations. From intelligent features to automated development workflows, we help technology companies build and operate AI-powered products.',
     heroImage: 'https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&w=1920&q=80',
-    sectionImage: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80',
+    sectionImage: '/industries/technology.png',
     imageAlt: 'Modern Technology Office Saudi Arabia',
     challenges: [
       'Rapid iteration and deployment',

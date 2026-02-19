@@ -240,22 +240,25 @@ export default function About() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { name: 'Haitham Saead', role: 'CEO', image: '/team/Haitam Said.jpg', scale: 1.5 },
-              { name: 'Fahed Alenezi', role: 'Managing Director', image: '/team/Fahed Alenezi.png', scale: 1 },
-              { name: 'Khalil Jaouni', role: 'Executive Director', image: '/team/Khalil Jaouni.png', scale: 1 },
-              { name: 'Ritesh Raj', role: 'Executive Director', image: '/team/Ritesh Raj.png', scale: 1.5 },
-              { name: 'Rula Jouhar', role: 'COO', image: '/team/Rula.png', scale: 1 },
-              { name: 'AlMutasm Al Shayyab', role: 'Business Development', image: '/team/AlMutasm Al Shayyab.png', scale: 1 },
-              { name: 'Ismail Katanani', role: 'Senior Director', image: '/team/Ismail Katanani.png', scale: 1 },
-              { name: 'Arwa Muhie Eddin', role: 'Talent Acquisition Director', image: '/team/Arwa Muhie Eddin.png', scale: 1.5 },
+              { name: 'Haitham Saead', role: 'CEO', image: '/team/Haitam Said.jpg', scale: 1.6, position: '50% 20%' },
+              { name: 'Fahed Alenezi', role: 'Managing Director', image: '/team/Fahed Alenezi.png', scale: 1, position: '50% 0%' },
+              { name: 'Khalil Jaouni', role: 'Executive Director', image: '/team/Khalil Jaouni.png', scale: 1, position: '50% 20%' },
+              { name: 'Ritesh Raj', role: 'Executive Director', image: '/team/Ritesh Raj.png', scale: 1.6, position: '50% 30%' },
+              { name: 'Rula Jouhar', role: 'COO', image: '/team/Rula.png', scale: 1, position: '50% 0%' },
+              { name: 'AlMutasm Al Shayyab', role: 'Business Development', image: '/team/AlMutasm Al Shayyab.png', scale: 1, position: '50% 15%' },
+              { name: 'Ismail Katanani', role: 'Senior Director', image: '/team/Ismail Katanani.png', scale: 1, position: '50% 10%' },
+              { name: 'Arwa Muhie Eddin', role: 'Talent Acquisition Director', image: '/team/Arwa Muhie Eddin.png', scale: 1.5, position: '50% 15%' },
             ].map((member, index) => (
               <div key={index} className="text-center">
                 <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-white shadow-lg bg-neutral-100">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover object-top"
-                    style={{ transform: `scale(${member.scale})` }}
+                    className="w-full h-full object-cover"
+                    style={{
+                      transform: `scale(${member.scale})`,
+                      objectPosition: member.position,
+                    }}
                   />
                 </div>
                 <h3 className="text-lg font-bold text-dark-900">{member.name}</h3>

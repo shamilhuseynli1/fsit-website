@@ -159,7 +159,7 @@ export default function Home() {
       {/* Clients Section */}
       <section className="py-16 bg-neutral-150 border-b border-neutral-200">
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-sm font-semibold text-dark-700 mb-10">Trusted By Leading Organizations</p>
+          <p className="text-center text-sm font-semibold text-dark-700 mb-10">Proven performance across government and enterprise environments.</p>
         </div>
         <div className="relative overflow-x-auto scrollbar-hide cursor-grab active:cursor-grabbing">
           <div className="flex animate-scroll hover:pause-animation px-4 min-w-max">
@@ -336,7 +336,7 @@ export default function Home() {
                 className="w-full h-64 object-cover"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-dark-900/80 to-transparent p-4">
-                <p className="text-white font-semibold">Riyadh, Saudi Arabia</p>
+                <p className="text-white font-semibold">AlUla, Saudi Arabia</p>
                 <p className="text-white/70 text-sm">Powering digital transformation</p>
               </div>
             </div>

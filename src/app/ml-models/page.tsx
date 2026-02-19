@@ -205,10 +205,23 @@ export default function MLModelsPage() {
 
   // Handle hash navigation from navbar dropdown
   useEffect(() => {
-    const hash = window.location.hash.replace('#', '');
-    if (hash && categories.find(c => c.id === hash)) {
-      setActiveCategory(hash);
-    }
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace('#', '');
+      if (hash && categories.find(c => c.id === hash)) {
+        setActiveCategory(hash);
+        // Scroll to content section
+        setTimeout(() => {
+          window.scrollTo({ top: 400, behavior: 'smooth' });
+        }, 100);
+      }
+    };
+
+    // Check on mount
+    handleHashChange();
+
+    // Listen for hash changes
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
   return (

@@ -117,7 +117,7 @@ export default function Navbar() {
               >
                 <Link
                   href={link.href}
-                  className="px-5 py-2 font-medium text-sm transition-colors duration-300 flex items-center gap-1 hover:text-primary-500"
+                  className="px-5 py-2 font-medium text-sm transition-colors duration-300 flex items-center gap-1 hover:text-primary-500 whitespace-nowrap"
                   style={{ color: scrolled ? '#374151' : 'rgba(255,255,255,0.9)' }}
                 >
                   {link.name}

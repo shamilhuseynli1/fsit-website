@@ -240,12 +240,12 @@ export default function About() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             {[
-              { name: 'Haitham Saead', role: 'CEO', image: '/team/Haitam Said.jpg' },
-              { name: 'Fahed Alenezi', role: 'Managing Director', image: '/team/Fahed Alenezi.png' },
-              { name: 'Khalil Jaouni', role: 'Executive Director', image: '/team/Khalil Jaouni.png' },
-              { name: 'Ritesh Raj', role: 'Executive Director', image: '/team/Ritesh Raj.png', position: '50% -15%' },
-              { name: 'Rula Jouhar', role: 'COO', image: '/team/Rula.png' },
-              { name: 'Ismail Katanani', role: 'Senior Director', image: '/team/Ismail Katanani.png' },
+              { name: 'Haitham Saead', role: 'CEO', image: '/team/Haitam Said.jpg', scale: 1, position: 'center 20%' },
+              { name: 'Fahed Alenezi', role: 'Managing Director', image: '/team/Fahed Alenezi.png', scale: 0.85, position: 'center 25%' },
+              { name: 'Khalil Jaouni', role: 'Executive Director', image: '/team/Khalil Jaouni.png', scale: 1, position: 'center 15%' },
+              { name: 'Ritesh Raj', role: 'Executive Director', image: '/team/Ritesh Raj.png', scale: 1.1, position: 'center 10%' },
+              { name: 'Rula Jouhar', role: 'COO', image: '/team/Rula.png', scale: 1, position: 'center 20%' },
+              { name: 'Ismail Katanani', role: 'Senior Director', image: '/team/Ismail Katanani.png', scale: 1, position: 'center 20%' },
             ].map((member, index) => (
               <div key={index} className="text-center">
                 <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-white shadow-lg bg-neutral-100">
@@ -253,7 +253,10 @@ export default function About() {
                     src={member.image}
                     alt={member.name}
                     className="w-full h-full object-cover"
-                    style={{ objectPosition: member.position || 'top' }}
+                    style={{
+                      objectPosition: member.position,
+                      transform: `scale(${member.scale})`,
+                    }}
                   />
                 </div>
                 <h3 className="text-lg font-bold text-dark-900">{member.name}</h3>

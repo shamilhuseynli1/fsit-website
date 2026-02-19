@@ -240,21 +240,21 @@ export default function About() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { name: 'Haitham Saead', role: 'CEO', image: '/team/Haitam Said.jpg' },
-              { name: 'Fahed Alenezi', role: 'Managing Director', image: '/team/Fahed Alenezi.png' },
-              { name: 'Khalil Jaouni', role: 'Executive Director', image: '/team/Khalil Jaouni.png' },
-              { name: 'Ritesh Raj', role: 'Executive Director', image: '/team/Ritesh Raj.png' },
-              { name: 'Rula Jouhar', role: 'COO', image: '/team/Rula.png' },
-              { name: 'AlMutasm Al Shayyab', role: 'Business Development', image: '/team/AlMutasm Al Shayyab.png' },
-              { name: 'Ismail Katanani', role: 'Senior Director', image: '/team/Ismail Katanani.png' },
-              { name: 'Arwa Muhie Eddin', role: 'Talent Acquisition Director', image: '/team/Arwa Muhie Eddin.png' },
+              { name: 'Haitham Saead', role: 'CEO', image: '/team/Haitam Said.jpg', scale: 'scale-150' },
+              { name: 'Fahed Alenezi', role: 'Managing Director', image: '/team/Fahed Alenezi.png', scale: '' },
+              { name: 'Khalil Jaouni', role: 'Executive Director', image: '/team/Khalil Jaouni.png', scale: '' },
+              { name: 'Ritesh Raj', role: 'Executive Director', image: '/team/Ritesh Raj.png', scale: 'scale-150' },
+              { name: 'Rula Jouhar', role: 'COO', image: '/team/Rula.png', scale: '' },
+              { name: 'AlMutasm Al Shayyab', role: 'Business Development', image: '/team/AlMutasm Al Shayyab.png', scale: '' },
+              { name: 'Ismail Katanani', role: 'Senior Director', image: '/team/Ismail Katanani.png', scale: '' },
+              { name: 'Arwa Muhie Eddin', role: 'Talent Acquisition Director', image: '/team/Arwa Muhie Eddin.png', scale: 'scale-150' },
             ].map((member, index) => (
               <div key={index} className="text-center">
                 <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-white shadow-lg bg-neutral-100">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover object-top"
+                    className={`w-full h-full object-cover object-top ${member.scale}`}
                   />
                 </div>
                 <h3 className="text-lg font-bold text-dark-900">{member.name}</h3>

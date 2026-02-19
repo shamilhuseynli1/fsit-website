@@ -139,10 +139,10 @@ export default function Home() {
               Built Capability.
             </h1>
             <p className="text-lg md:text-xl lg:text-2xl text-dark-300 mb-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              Executing AI transformation across Saudi Arabia and the Middle East
+              Pioneering AI transformation across Saudi Arabia and the Middle East
             </p>
             <p className="hero-subtitle text-base md:text-lg lg:text-xl animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              AI-native teams delivering production-ready systems across government and enterprise
+              AI-native teams delivering production-ready systems across government and enterprise since 2020
             </p>
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
               <Link href="/contact" className="btn-primary text-center">
@@ -459,8 +459,8 @@ export default function Home() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-xl mb-4">
                 <img
-                  src="https://images.unsplash.com/photo-1466442929976-97f336a657be?auto=format&fit=crop&w=600&q=80"
-                  alt="Saudi Arabia mosque architecture"
+                  src="https://images.unsplash.com/photo-1733757361453-5f493624a734?auto=format&fit=crop&w=600&q=80"
+                  alt="Saudi Arabia Vision 2030 pyramid"
                   className="w-full h-48 object-cover"
                 />
               </div>

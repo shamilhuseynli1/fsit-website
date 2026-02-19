@@ -34,7 +34,7 @@ export default function Footer() {
               <span className="text-2xl font-bold text-primary-500 ml-1">AI</span>
             </Link>
             <p className="text-dark-400 text-sm mb-6 max-w-sm">
-              On-Site AI. Real Results. Built Capability. Executing AI transformation across Saudi Arabia and the Middle East.
+              On-Site AI. Real Results. Built Capability. Pioneering AI transformation across Saudi Arabia and the Middle East.
             </p>
             <div className="flex gap-4">
               <a

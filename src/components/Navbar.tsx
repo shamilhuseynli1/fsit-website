@@ -41,6 +41,7 @@ export default function Navbar() {
         { name: 'Protect & Scale', href: '/protect-scale' },
         { name: 'Leverage AI', href: '/leverage-ai' },
         { name: 'AI Transformation', href: '/ai-transformation' },
+        { name: 'ML Models', href: '/ml-models' },
       ],
     },
     {

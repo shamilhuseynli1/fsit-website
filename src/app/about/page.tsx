@@ -243,7 +243,7 @@ export default function About() {
               { name: 'Haitham Saead', role: 'CEO', image: '/team/Haitam Said.jpg' },
               { name: 'Fahed Alenezi', role: 'Managing Director', image: '/team/Fahed Alenezi.png' },
               { name: 'Khalil Jaouni', role: 'Executive Director', image: '/team/Khalil Jaouni.png' },
-              { name: 'Ritesh Raj', role: 'Executive Director', image: '/team/Ritesh Raj.png' },
+              { name: 'Ritesh Raj', role: 'Executive Director', image: '/team/Ritesh Raj.png', position: '50% -15%' },
               { name: 'Rula Jouhar', role: 'COO', image: '/team/Rula.png' },
               { name: 'Ismail Katanani', role: 'Senior Director', image: '/team/Ismail Katanani.png' },
             ].map((member, index) => (
@@ -252,7 +252,8 @@ export default function About() {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover object-top"
+                    className="w-full h-full object-cover"
+                    style={{ objectPosition: member.position || 'top' }}
                   />
                 </div>
                 <h3 className="text-lg font-bold text-dark-900">{member.name}</h3>

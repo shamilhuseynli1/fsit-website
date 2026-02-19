@@ -202,6 +202,15 @@ export default function Solutions() {
       {/* Hero Section */}
       <section className="hero-dark bg-grid-pattern overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-900 to-dark-800" />
+        {/* Saudi Arabia Riyadh Night Skyline Background */}
+        <div
+          className="absolute inset-0 opacity-15"
+          style={{
+            backgroundImage: 'url(https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?auto=format&fit=crop&w=1920&q=80)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
         <NetworkBackground nodeCount={60} />
         <div className="relative max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
           <div className="max-w-3xl">

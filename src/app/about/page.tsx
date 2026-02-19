@@ -142,12 +142,26 @@ export default function About() {
 
       {/* Built for Saudi Arabia */}
       <section className="section-padding bg-neutral-150">
-        <div className="container-max text-center">
-          <p className="section-label">Regional Focus</p>
-          <h2 className="section-title mb-6">Built for Saudi Arabia and the Middle East</h2>
-          <p className="text-xl text-dark-500 max-w-3xl mx-auto">
-            FSIT works closely with organisations across Saudi Arabia and the Middle East, supporting national and enterprise-level AI initiatives aligned with regional priorities
-          </p>
+        <div className="container-max">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <p className="section-label">Regional Focus</p>
+              <h2 className="section-title mb-6">Built for Saudi Arabia and the Middle East</h2>
+              <p className="text-xl text-dark-500">
+                FSIT works closely with organisations across Saudi Arabia and the Middle East, supporting national and enterprise-level AI initiatives aligned with regional priorities
+              </p>
+            </div>
+            <div className="relative">
+              <img
+                src="https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&w=800&q=80"
+                alt="Riyadh, Saudi Arabia skyline at sunset"
+                className="rounded-2xl shadow-xl w-full h-80 object-cover"
+              />
+              <div className="absolute -bottom-4 -right-4 bg-primary-500 text-white px-6 py-3 rounded-xl shadow-lg">
+                <p className="font-bold">Vision 2030 Aligned</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

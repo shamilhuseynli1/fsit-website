@@ -60,8 +60,6 @@ export default function Navbar() {
       href: '/case-studies',
       dropdown: [
         { name: 'Case Studies', href: '/case-studies' },
-        { name: 'Blog', href: '/blog' },
-        { name: 'Whitepapers', href: '/whitepapers' },
       ],
     },
     {

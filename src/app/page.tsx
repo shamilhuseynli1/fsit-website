@@ -159,7 +159,7 @@ export default function Home() {
       {/* Clients Section */}
       <section className="py-16 bg-neutral-150 border-b border-neutral-200">
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-sm font-semibold text-dark-700 mb-10">Proven performance across government and enterprise environments.</p>
+          <p className="text-center text-sm font-semibold text-dark-700 mb-10">Proven performance across government and enterprise environments</p>
         </div>
         <div className="relative overflow-x-auto scrollbar-hide cursor-grab active:cursor-grabbing">
           <div className="flex animate-scroll hover:pause-animation px-4 min-w-max">

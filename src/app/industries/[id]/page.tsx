@@ -9,6 +9,9 @@ const industriesData: Record<string, {
   icon: string;
   headline: string;
   description: string;
+  heroImage: string;
+  sectionImage: string;
+  imageAlt: string;
   challenges: string[];
   solutions: { title: string; desc: string }[];
   useCases: { title: string; desc: string; results: string }[];
@@ -20,6 +23,9 @@ const industriesData: Record<string, {
     icon: '🏦',
     headline: 'AI for Banking, Insurance & Fintech',
     description: 'Deploy AI systems that meet the strictest regulatory requirements while delivering measurable business impact. From fraud detection to algorithmic trading, we build AI that financial institutions can trust.',
+    heroImage: 'https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?auto=format&fit=crop&w=1920&q=80',
+    sectionImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80',
+    imageAlt: 'Saudi Arabia Financial District Riyadh',
     challenges: [
       'Regulatory compliance (SOC2, PCI-DSS, GDPR)',
       'Real-time transaction processing at scale',
@@ -51,6 +57,9 @@ const industriesData: Record<string, {
     icon: '🏥',
     headline: 'HIPAA-Compliant AI for Healthcare',
     description: 'Build AI systems that improve patient outcomes while maintaining the highest standards of privacy and compliance. From diagnostic support to operational efficiency, we help healthcare organizations harness AI responsibly.',
+    heroImage: 'https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?auto=format&fit=crop&w=1920&q=80',
+    sectionImage: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80',
+    imageAlt: 'Modern Healthcare Facility Saudi Arabia',
     challenges: [
       'HIPAA compliance and patient privacy',
       'Integration with EHR systems',
@@ -82,6 +91,9 @@ const industriesData: Record<string, {
     icon: '🛒',
     headline: 'AI-Powered Retail Experiences',
     description: 'Transform customer experiences and optimize operations with AI. From hyper-personalization to demand forecasting, we help retailers compete in the age of AI-first commerce.',
+    heroImage: 'https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&w=1920&q=80',
+    sectionImage: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80',
+    imageAlt: 'Modern Retail Shopping Mall Saudi Arabia',
     challenges: [
       'Real-time personalization at scale',
       'Inventory optimization across channels',
@@ -113,6 +125,9 @@ const industriesData: Record<string, {
     icon: '🏭',
     headline: 'Smart Factory AI Solutions',
     description: 'Bring intelligence to your manufacturing operations. From predictive maintenance to quality control, we help manufacturers reduce downtime, improve quality, and optimize production.',
+    heroImage: 'https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?auto=format&fit=crop&w=1920&q=80',
+    sectionImage: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=800&q=80',
+    imageAlt: 'Industrial Manufacturing Facility Saudi Arabia',
     challenges: [
       'Legacy equipment integration',
       'Real-time sensor data processing',
@@ -144,6 +159,9 @@ const industriesData: Record<string, {
     icon: '💻',
     headline: 'AI for Software Companies',
     description: 'Embed AI into your products and operations. From intelligent features to automated development workflows, we help technology companies build and operate AI-powered products.',
+    heroImage: 'https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&w=1920&q=80',
+    sectionImage: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80',
+    imageAlt: 'Modern Technology Office Saudi Arabia',
     challenges: [
       'Rapid iteration and deployment',
       'Scaling ML infrastructure',
@@ -175,6 +193,9 @@ const industriesData: Record<string, {
     icon: '⚡',
     headline: 'AI for the Energy Transition',
     description: 'Optimize grid operations, predict demand, and accelerate the transition to sustainable energy. We help energy companies harness AI for efficiency, reliability, and sustainability.',
+    heroImage: 'https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?auto=format&fit=crop&w=1920&q=80',
+    sectionImage: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=800&q=80',
+    imageAlt: 'Energy Infrastructure Saudi Arabia',
     challenges: [
       'Grid stability with renewable integration',
       'Demand forecasting accuracy',
@@ -206,6 +227,9 @@ const industriesData: Record<string, {
     icon: '🚚',
     headline: 'AI-Powered Supply Chain',
     description: 'End-to-end supply chain visibility with AI. From route optimization to demand prediction, we help logistics companies move faster, smarter, and more efficiently.',
+    heroImage: 'https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&w=1920&q=80',
+    sectionImage: 'https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=800&q=80',
+    imageAlt: 'Modern Port and Logistics Hub Saudi Arabia',
     challenges: [
       'Real-time visibility across networks',
       'Dynamic route optimization',
@@ -237,6 +261,9 @@ const industriesData: Record<string, {
     icon: '🏛️',
     headline: 'Secure AI for Public Service',
     description: 'Deploy AI systems that serve citizens while meeting the strictest security and compliance requirements. From document processing to fraud detection, we help government agencies modernize with AI.',
+    heroImage: 'https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?auto=format&fit=crop&w=1920&q=80',
+    sectionImage: 'https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&w=800&q=80',
+    imageAlt: 'Government Buildings Saudi Arabia Riyadh',
     challenges: [
       'FedRAMP and security requirements',
       'Legacy system modernization',
@@ -288,6 +315,15 @@ export default function IndustryPage() {
     <main className="min-h-screen">
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center bg-dark-900 overflow-hidden">
+        {/* Saudi Industry Background */}
+        <div
+          className="absolute inset-0 opacity-30"
+          style={{
+            backgroundImage: `url(${industry.heroImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
         <NetworkBackground />
         <div className="relative z-10 max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-32">
           <div className="max-w-4xl">
@@ -386,6 +422,52 @@ export default function IndustryPage() {
         </div>
       </section>
 
+      {/* Saudi Arabia Focus Section */}
+      <section className="py-24 bg-dark-900 relative overflow-hidden">
+        {/* Saudi Background */}
+        <div
+          className="absolute inset-0 opacity-25"
+          style={{
+            backgroundImage: `url(${industry.heroImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+        <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-primary-400 text-sm font-medium mb-4">Regional Excellence</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                {industry.name} AI in Saudi Arabia
+              </h2>
+              <p className="text-lg text-neutral-300 mb-6">
+                FSIT delivers specialized AI solutions for {industry.name.toLowerCase()} organizations across Saudi Arabia and the Middle East. Our solutions are aligned with Vision 2030 and designed for regional requirements.
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                  <div className="text-2xl font-bold text-primary-400 mb-1">Vision 2030</div>
+                  <div className="text-neutral-300 text-sm">Aligned</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                  <div className="text-2xl font-bold text-primary-400 mb-1">Local</div>
+                  <div className="text-neutral-300 text-sm">Expertise</div>
+                </div>
+              </div>
+            </div>
+            <div className="relative">
+              <img
+                src={industry.sectionImage}
+                alt={industry.imageAlt}
+                className="rounded-2xl shadow-2xl w-full h-80 object-cover"
+              />
+              <div className="absolute -bottom-4 -right-4 bg-primary-500 text-white px-6 py-3 rounded-xl shadow-lg">
+                <p className="font-bold">{industry.name}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Case Studies Section */}
       <section className="py-24 bg-white">
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8">
@@ -424,8 +506,17 @@ export default function IndustryPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-dark-900">
-        <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-24 bg-dark-900 relative overflow-hidden">
+        {/* Saudi Background */}
+        <div
+          className="absolute inset-0 opacity-25"
+          style={{
+            backgroundImage: `url(${industry.heroImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+        <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your {industry.name} Operations?
           </h2>

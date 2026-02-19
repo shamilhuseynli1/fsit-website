@@ -238,16 +238,14 @@ export default function About() {
             <p className="section-label">Our Team</p>
             <h2 className="section-title">Leadership</h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             {[
               { name: 'Haitham Saead', role: 'CEO', image: '/team/Haitam Said.jpg', position: 'top' },
               { name: 'Fahed Alenezi', role: 'Managing Director', image: '/team/Fahed Alenezi.png', position: 'top' },
               { name: 'Khalil Jaouni', role: 'Executive Director', image: '/team/Khalil Jaouni.png', position: '50% 10%' },
               { name: 'Ritesh Raj', role: 'Executive Director', image: '/team/Ritesh Raj.png', position: 'top' },
               { name: 'Rula Jouhar', role: 'COO', image: '/team/Rula.png', position: 'top' },
-              { name: 'AlMutasm Al Shayyab', role: 'Business Development', image: '/team/AlMutasm Al Shayyab.png', position: 'top' },
               { name: 'Ismail Katanani', role: 'Senior Director', image: '/team/Ismail Katanani.png', position: 'top' },
-              { name: 'Arwa Muhie Eddin', role: 'Talent Acquisition Director', image: '/team/Arwa Muhie Eddin.png', position: 'top' },
             ].map((member, index) => (
               <div key={index} className="text-center">
                 <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-white shadow-lg bg-neutral-100">

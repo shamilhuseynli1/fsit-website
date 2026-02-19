@@ -138,15 +138,37 @@ export default function Navbar() {
                 {link.dropdown && activeDropdown === link.name && (
                   <div className="absolute top-full left-0 pt-2 w-56 animate-fade-in">
                     <div className="bg-white rounded-xl shadow-xl border border-neutral-100 py-2">
-                      {link.dropdown.map((item) => (
-                        <Link
-                          key={item.name}
-                          href={item.href}
-                          className="block px-5 py-3 text-sm text-dark-700 hover:bg-neutral-50 hover:text-primary-500 transition-colors"
-                        >
-                          {item.name}
-                        </Link>
-                      ))}
+                      {link.dropdown.map((item) => {
+                        const hasHash = item.href.includes('#');
+                        return hasHash ? (
+                          <a
+                            key={item.name}
+                            href={item.href}
+                            onClick={(e) => {
+                              e.preventDefault();
+                              const [path, hash] = item.href.split('#');
+                              if (window.location.pathname === path || window.location.pathname === path + '/') {
+                                window.location.hash = hash;
+                                window.dispatchEvent(new HashChangeEvent('hashchange'));
+                              } else {
+                                window.location.href = item.href;
+                              }
+                              setActiveDropdown(null);
+                            }}
+                            className="block px-5 py-3 text-sm text-dark-700 hover:bg-neutral-50 hover:text-primary-500 transition-colors cursor-pointer"
+                          >
+                            {item.name}
+                          </a>
+                        ) : (
+                          <Link
+                            key={item.name}
+                            href={item.href}
+                            className="block px-5 py-3 text-sm text-dark-700 hover:bg-neutral-50 hover:text-primary-500 transition-colors"
+                          >
+                            {item.name}
+                          </Link>
+                        );
+                      })}
                     </div>
                   </div>
                 )}
@@ -192,16 +214,38 @@ export default function Navbar() {
                   </Link>
                   {link.dropdown && (
                     <div className="pl-4 space-y-1">
-                      {link.dropdown.map((item) => (
-                        <Link
-                          key={item.name}
-                          href={item.href}
-                          className="block px-4 py-2 text-sm text-dark-500 hover:text-primary-500 hover:bg-neutral-50 rounded-lg transition-colors"
-                          onClick={() => setIsOpen(false)}
-                        >
-                          {item.name}
-                        </Link>
-                      ))}
+                      {link.dropdown.map((item) => {
+                        const hasHash = item.href.includes('#');
+                        return hasHash ? (
+                          <a
+                            key={item.name}
+                            href={item.href}
+                            onClick={(e) => {
+                              e.preventDefault();
+                              const [path, hash] = item.href.split('#');
+                              if (window.location.pathname === path || window.location.pathname === path + '/') {
+                                window.location.hash = hash;
+                                window.dispatchEvent(new HashChangeEvent('hashchange'));
+                              } else {
+                                window.location.href = item.href;
+                              }
+                              setIsOpen(false);
+                            }}
+                            className="block px-4 py-2 text-sm text-dark-500 hover:text-primary-500 hover:bg-neutral-50 rounded-lg transition-colors cursor-pointer"
+                          >
+                            {item.name}
+                          </a>
+                        ) : (
+                          <Link
+                            key={item.name}
+                            href={item.href}
+                            className="block px-4 py-2 text-sm text-dark-500 hover:text-primary-500 hover:bg-neutral-50 rounded-lg transition-colors"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            {item.name}
+                          </Link>
+                        );
+                      })}
                     </div>
                   )}
                 </div>

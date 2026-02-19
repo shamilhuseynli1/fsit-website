@@ -240,12 +240,12 @@ export default function About() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             {[
-              { name: 'Haitham Saead', role: 'CEO', image: '/team/Haitam Said.jpg', scale: 1, position: 'center 35%' },
-              { name: 'Fahed Alenezi', role: 'Managing Director', image: '/team/Fahed Alenezi.png', scale: 0.85, position: 'center 40%' },
-              { name: 'Khalil Jaouni', role: 'Executive Director', image: '/team/Khalil Jaouni.png', scale: 1, position: 'center 15%' },
+              { name: 'Haitham Saead', role: 'CEO', image: '/team/Haitam Said.jpg', scale: 1.15, position: 'center 20%' },
+              { name: 'Fahed Alenezi', role: 'Managing Director', image: '/team/Fahed Alenezi.png', scale: 1.1, position: 'center 5%' },
+              { name: 'Khalil Jaouni', role: 'Executive Director', image: '/team/Khalil Jaouni.png', scale: 1.1, position: 'center 10%' },
               { name: 'Ritesh Raj', role: 'Executive Director', image: '/team/Ritesh Raj.png', scale: 1.1, position: 'center 10%' },
-              { name: 'Rula Jouhar', role: 'COO', image: '/team/Rula.png', scale: 1, position: 'center 20%' },
-              { name: 'Ismail Katanani', role: 'Senior Director', image: '/team/Ismail Katanani.png', scale: 1, position: 'center 20%' },
+              { name: 'Rula Jouhar', role: 'COO', image: '/team/Rula.png', scale: 1.1, position: 'center 10%' },
+              { name: 'Ismail Katanani', role: 'Senior Director', image: '/team/Ismail Katanani.png', scale: 1.1, position: 'center 10%' },
             ].map((member, index) => (
               <div key={index} className="text-center">
                 <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-white shadow-lg bg-neutral-100">

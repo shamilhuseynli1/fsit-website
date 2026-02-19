@@ -102,6 +102,15 @@ export default function Contact() {
       {/* Hero */}
       <section className="hero-dark bg-grid-pattern overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-900 to-dark-800" />
+        {/* Saudi Arabia Mosque Background */}
+        <div
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: 'url(https://images.unsplash.com/photo-1466442929976-97f336a657be?auto=format&fit=crop&w=1920&q=80)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
         <NetworkBackground nodeCount={60} maxDistance={120} />
         <div className="relative max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
           <div className="max-w-3xl">

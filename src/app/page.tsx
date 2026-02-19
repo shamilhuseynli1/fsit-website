@@ -312,13 +312,34 @@ export default function Home() {
       </section>
 
       {/* Aligned with Vision 2030 */}
-      <section className="section-padding bg-white">
-        <div className="container-max">
-          <div className="text-center mb-12">
-            <h2 className="section-title">Aligned with Vision 2030</h2>
-            <p className="section-subtitle mx-auto">
-              With a strong regional presence and global reach, FSIT supports national transformation initiatives and enterprise AI programs
-            </p>
+      <section className="section-padding bg-white relative overflow-hidden">
+        {/* Kingdom Tower Background */}
+        <div className="absolute right-0 top-0 w-1/3 h-full opacity-5 hidden lg:block"
+          style={{
+            backgroundImage: 'url(https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?auto=format&fit=crop&w=800&q=80)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+        <div className="container-max relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+            <div>
+              <h2 className="section-title">Aligned with Vision 2030</h2>
+              <p className="section-subtitle">
+                With a strong regional presence and global reach, FSIT supports national transformation initiatives and enterprise AI programs
+              </p>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden shadow-xl hidden lg:block">
+              <img
+                src="https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&w=600&q=80"
+                alt="Riyadh Saudi Arabia modern cityscape"
+                className="w-full h-64 object-cover"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-dark-900/80 to-transparent p-4">
+                <p className="text-white font-semibold">Riyadh, Saudi Arabia</p>
+                <p className="text-white/70 text-sm">Powering digital transformation</p>
+              </div>
+            </div>
           </div>
 
           <div className="bg-neutral-150 rounded-2xl p-4 sm:p-6 md:p-8 border border-neutral-200">
@@ -415,9 +436,9 @@ export default function Home() {
       </section>
 
       {/* Case Study Section */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-white relative overflow-hidden">
         <div className="container-max">
-          <div className="grid-2 items-center">
+          <div className="grid-2 items-center gap-12">
             <div>
               <p className="section-label">Case Study</p>
               <h2 className="section-title">AI Operations Copilot</h2>
@@ -428,23 +449,32 @@ export default function Home() {
                 <span className="text-5xl font-bold text-primary-500">-45%</span>
                 <span className="text-dark-500">manual processing time</span>
               </div>
-              <Link href="/solutions" className="btn-ghost">
+              <Link href="/case-studies" className="btn-ghost">
                 View more case studies
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
             </div>
-            <div className="bg-neutral-150 rounded-2xl p-8 md:p-12 border border-neutral-200">
-              <div className="space-y-4">
-                {['Workflow automation', 'Knowledge management', 'Decision intelligence', 'Governance compliant'].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <svg className="w-5 h-5 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-dark-700">{item}</span>
-                  </div>
-                ))}
+            <div className="relative">
+              <div className="rounded-2xl overflow-hidden shadow-xl mb-4">
+                <img
+                  src="https://images.unsplash.com/photo-1466442929976-97f336a657be?auto=format&fit=crop&w=600&q=80"
+                  alt="Saudi Arabia mosque architecture"
+                  className="w-full h-48 object-cover"
+                />
+              </div>
+              <div className="bg-neutral-150 rounded-2xl p-6 border border-neutral-200">
+                <div className="space-y-3">
+                  {['Workflow automation', 'Knowledge management', 'Decision intelligence', 'Governance compliant'].map((item, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <svg className="w-5 h-5 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span className="text-dark-700">{item}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -476,8 +506,18 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-dark-900">
-        <div className="container-max text-center">
+      <section className="section-padding bg-dark-900 relative overflow-hidden">
+        {/* Saudi Night Skyline Background */}
+        <div
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: 'url(https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?auto=format&fit=crop&w=1920&q=80)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center bottom',
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/80 to-dark-900/60" />
+        <div className="container-max text-center relative z-10">
           <h2 className="section-title !text-white mb-4">
             Ready to build AI that actually runs?
           </h2>

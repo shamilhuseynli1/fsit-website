@@ -116,6 +116,15 @@ export default function BuildInnovate() {
       {/* Hero Section */}
       <section className="hero-dark bg-grid-pattern overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-900 to-dark-800" />
+        {/* Saudi Futuristic Architecture Background */}
+        <div
+          className="absolute inset-0 opacity-15"
+          style={{
+            backgroundImage: 'url(https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&w=1920&q=80)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
         <NetworkBackground nodeCount={70} maxDistance={130} />
         <div className="hidden md:block absolute top-1/2 right-0 w-[600px] h-[600px] bg-primary-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 animate-glow-pulse" />
 

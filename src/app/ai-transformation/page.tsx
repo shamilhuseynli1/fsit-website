@@ -108,7 +108,7 @@ export default function AITransformation() {
         <div
           className="absolute inset-0 opacity-30"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-PYOHfWTYkzA?auto=format&fit=crop&w=1920&q=80)',
+            backgroundImage: 'url(https://source.unsplash.com/PYOHfWTYkzA/1920x1080)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
@@ -349,7 +349,7 @@ export default function AITransformation() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative order-2 lg:order-1">
               <img
-                src="https://images.unsplash.com/photo-9cbkE8kNUBA?auto=format&fit=crop&w=800&q=80"
+                src="https://source.unsplash.com/9cbkE8kNUBA/1920x1080"
                 alt="Riyadh Saudi Arabia skyline representing Vision 2030"
                 className="rounded-2xl shadow-2xl w-full h-96 object-cover"
               />
@@ -385,7 +385,7 @@ export default function AITransformation() {
         <div
           className="absolute inset-0 opacity-25"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-PYOHfWTYkzA?auto=format&fit=crop&w=1920&q=80)',
+            backgroundImage: 'url(https://source.unsplash.com/PYOHfWTYkzA/1920x1080)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}

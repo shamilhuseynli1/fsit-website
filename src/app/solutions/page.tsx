@@ -206,7 +206,7 @@ export default function Solutions() {
         <div
           className="absolute inset-0 opacity-15"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-9cbkE8kNUBA?auto=format&fit=crop&w=1920&q=80)',
+            backgroundImage: 'url(https://source.unsplash.com/9cbkE8kNUBA/1920x1080)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}

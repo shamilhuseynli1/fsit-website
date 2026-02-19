@@ -23,7 +23,7 @@ const industriesData: Record<string, {
     icon: '🏦',
     headline: 'AI for Banking, Insurance & Fintech',
     description: 'Deploy AI systems that meet the strictest regulatory requirements while delivering measurable business impact. From fraud detection to algorithmic trading, we build AI that financial institutions can trust.',
-    heroImage: 'https://images.unsplash.com/photo-7-gaPkhIgqs?auto=format&fit=crop&w=1920&q=80',
+    heroImage: 'https://source.unsplash.com/7-gaPkhIgqs/1920x1080',
     sectionImage: '/industries/finance.jpg',
     imageAlt: 'Saudi Arabia Financial District Riyadh',
     challenges: [
@@ -57,7 +57,7 @@ const industriesData: Record<string, {
     icon: '🏥',
     headline: 'HIPAA-Compliant AI for Healthcare',
     description: 'Build AI systems that improve patient outcomes while maintaining the highest standards of privacy and compliance. From diagnostic support to operational efficiency, we help healthcare organizations harness AI responsibly.',
-    heroImage: 'https://images.unsplash.com/photo-GofYo51GQ_4?auto=format&fit=crop&w=1920&q=80',
+    heroImage: 'https://source.unsplash.com/GofYo51GQ_4/1920x1080',
     sectionImage: '/industries/healthcare.png',
     imageAlt: 'Modern Healthcare Facility Saudi Arabia',
     challenges: [
@@ -91,7 +91,7 @@ const industriesData: Record<string, {
     icon: '🛒',
     headline: 'AI-Powered Retail Experiences',
     description: 'Transform customer experiences and optimize operations with AI. From hyper-personalization to demand forecasting, we help retailers compete in the age of AI-first commerce.',
-    heroImage: 'https://images.unsplash.com/photo-g7GFCIXVkN0?auto=format&fit=crop&w=1920&q=80',
+    heroImage: 'https://source.unsplash.com/g7GFCIXVkN0/1920x1080',
     sectionImage: '/industries/retail.webp',
     imageAlt: 'Modern Retail Shopping Mall Saudi Arabia',
     challenges: [
@@ -125,7 +125,7 @@ const industriesData: Record<string, {
     icon: '🏭',
     headline: 'Smart Factory AI Solutions',
     description: 'Bring intelligence to your manufacturing operations. From predictive maintenance to quality control, we help manufacturers reduce downtime, improve quality, and optimize production.',
-    heroImage: 'https://images.unsplash.com/photo-8KfCR12oeUM?auto=format&fit=crop&w=1920&q=80',
+    heroImage: 'https://source.unsplash.com/8KfCR12oeUM/1920x1080',
     sectionImage: '/industries/manufactiring.jpeg',
     imageAlt: 'Industrial Manufacturing Facility Saudi Arabia',
     challenges: [
@@ -159,7 +159,7 @@ const industriesData: Record<string, {
     icon: '💻',
     headline: 'AI for Software Companies',
     description: 'Embed AI into your products and operations. From intelligent features to automated development workflows, we help technology companies build and operate AI-powered products.',
-    heroImage: 'https://images.unsplash.com/photo-Y4HWROCYQ8Q?auto=format&fit=crop&w=1920&q=80',
+    heroImage: 'https://source.unsplash.com/Y4HWROCYQ8Q/1920x1080',
     sectionImage: '/industries/technology.png',
     imageAlt: 'Modern Technology Office Saudi Arabia',
     challenges: [
@@ -193,8 +193,8 @@ const industriesData: Record<string, {
     icon: '⚡',
     headline: 'AI for the Energy Transition',
     description: 'Optimize grid operations, predict demand, and accelerate the transition to sustainable energy. We help energy companies harness AI for efficiency, reliability, and sustainability.',
-    heroImage: 'https://images.unsplash.com/photo-9cbkE8kNUBA?auto=format&fit=crop&w=1920&q=80',
-    sectionImage: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=800&q=80',
+    heroImage: 'https://source.unsplash.com/9cbkE8kNUBA/1920x1080',
+    sectionImage: 'https://source.unsplash.com/PYOHfWTYkzA/1920x1080',
     imageAlt: 'Energy Infrastructure Saudi Arabia',
     challenges: [
       'Grid stability with renewable integration',
@@ -227,8 +227,8 @@ const industriesData: Record<string, {
     icon: '🚚',
     headline: 'AI-Powered Supply Chain',
     description: 'End-to-end supply chain visibility with AI. From route optimization to demand prediction, we help logistics companies move faster, smarter, and more efficiently.',
-    heroImage: 'https://images.unsplash.com/photo-PYOHfWTYkzA?auto=format&fit=crop&w=1920&q=80',
-    sectionImage: 'https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=800&q=80',
+    heroImage: 'https://source.unsplash.com/PYOHfWTYkzA/1920x1080',
+    sectionImage: 'https://source.unsplash.com/9cbkE8kNUBA/1920x1080',
     imageAlt: 'Modern Port and Logistics Hub Saudi Arabia',
     challenges: [
       'Real-time visibility across networks',
@@ -261,8 +261,8 @@ const industriesData: Record<string, {
     icon: '🏛️',
     headline: 'Secure AI for Public Service',
     description: 'Deploy AI systems that serve citizens while meeting the strictest security and compliance requirements. From document processing to fraud detection, we help government agencies modernize with AI.',
-    heroImage: 'https://images.unsplash.com/photo-9cbkE8kNUBA?auto=format&fit=crop&w=1920&q=80',
-    sectionImage: 'https://images.unsplash.com/photo-PYOHfWTYkzA?auto=format&fit=crop&w=800&q=80',
+    heroImage: 'https://source.unsplash.com/9cbkE8kNUBA/1920x1080',
+    sectionImage: 'https://source.unsplash.com/PYOHfWTYkzA/1920x1080',
     imageAlt: 'Government Buildings Saudi Arabia Riyadh',
     challenges: [
       'FedRAMP and security requirements',

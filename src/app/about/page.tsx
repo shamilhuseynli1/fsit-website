@@ -44,7 +44,7 @@ export default function About() {
         <div
           className="absolute inset-0 opacity-30"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?auto=format&fit=crop&w=1920&q=80)',
+            backgroundImage: 'url(https://images.unsplash.com/photo-9cbkE8kNUBA?auto=format&fit=crop&w=1920&q=80)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
@@ -129,7 +129,7 @@ export default function About() {
         <div
           className="absolute inset-0 opacity-25"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?auto=format&fit=crop&w=1920&q=80)',
+            backgroundImage: 'url(https://images.unsplash.com/photo-9cbkE8kNUBA?auto=format&fit=crop&w=1920&q=80)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
@@ -171,7 +171,7 @@ export default function About() {
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&w=800&q=80"
+                src="https://images.unsplash.com/photo-PYOHfWTYkzA?auto=format&fit=crop&w=800&q=80"
                 alt="Riyadh, Saudi Arabia skyline at sunset"
                 className="rounded-2xl shadow-xl w-full h-80 object-cover"
               />
@@ -193,7 +193,7 @@ export default function About() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="relative rounded-2xl overflow-hidden shadow-xl group">
               <img
-                src="https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?auto=format&fit=crop&w=600&q=80"
+                src="https://images.unsplash.com/photo-9cbkE8kNUBA?auto=format&fit=crop&w=600&q=80"
                 alt="Riyadh Saudi Arabia"
                 className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -205,7 +205,7 @@ export default function About() {
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-xl group">
               <img
-                src="https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&w=600&q=80"
+                src="https://images.unsplash.com/photo-PYOHfWTYkzA?auto=format&fit=crop&w=600&q=80"
                 alt="Saudi Arabia modern architecture"
                 className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -217,7 +217,7 @@ export default function About() {
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-xl group">
               <img
-                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80"
+                src="https://images.unsplash.com/photo-1ZTf8czcwUU?auto=format&fit=crop&w=600&q=80"
                 alt="Saudi Arabia landscape"
                 className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -265,7 +265,7 @@ export default function About() {
         <div
           className="absolute inset-0 opacity-25"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&w=1920&q=80)',
+            backgroundImage: 'url(https://images.unsplash.com/photo-PYOHfWTYkzA?auto=format&fit=crop&w=1920&q=80)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}

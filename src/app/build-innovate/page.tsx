@@ -57,25 +57,21 @@ export default function BuildInnovate() {
 
   const buildProcess = [
     {
-      phase: '01',
       title: 'Discovery & Strategy',
       description: 'Understand your business objectives, technical landscape, and define the AI opportunity',
       deliverables: ['Requirements document', 'Technical assessment', 'AI roadmap'],
     },
     {
-      phase: '02',
       title: 'Design & Architecture',
       description: 'Design the solution architecture, data flows, and integration points',
       deliverables: ['System architecture', 'Data model', 'API specifications'],
     },
     {
-      phase: '03',
       title: 'Build & Iterate',
       description: 'Agile development with regular demos and feedback loops',
       deliverables: ['Working software', 'Test coverage', 'Documentation'],
     },
     {
-      phase: '04',
       title: 'Deploy & Launch',
       description: 'Production deployment with monitoring, testing, and go-live support',
       deliverables: ['Production system', 'Runbooks', 'Training materials'],

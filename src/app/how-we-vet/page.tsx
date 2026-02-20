@@ -8,7 +8,6 @@ import HeroVettingVisual from '@/components/HeroVettingVisual';
 export default function HowWeVet() {
   const vettingSteps = [
     {
-      number: '1',
       title: 'Comprehensive Technical Evaluation',
       description: 'Candidates are assessed across:',
       items: [
@@ -22,7 +21,6 @@ export default function HowWeVet() {
       color: 'from-primary-500 to-primary-400',
     },
     {
-      number: '2',
       title: 'AI Delivery & Product Experience',
       description: 'We evaluate:',
       items: [
@@ -35,7 +33,6 @@ export default function HowWeVet() {
       color: 'from-primary-500 to-green-500',
     },
     {
-      number: '3',
       title: 'Behavioral & Cultural Fit',
       description: 'We assess:',
       items: [
@@ -48,7 +45,6 @@ export default function HowWeVet() {
       color: 'from-primary-600 to-primary-500',
     },
     {
-      number: '4',
       title: 'Practical Test Assignments',
       description: 'Senior candidates complete scenario-based exercises to validate:',
       items: [
@@ -60,7 +56,6 @@ export default function HowWeVet() {
       color: 'from-gold-500 to-orange-500',
     },
     {
-      number: '5',
       title: 'Continuous Performance Monitoring',
       description: 'Once deployed, we maintain quality through:',
       items: [
@@ -204,7 +199,9 @@ export default function HowWeVet() {
                   <div className="flex flex-col md:flex-row gap-6">
                     <div className="flex-shrink-0">
                       <div className={`w-16 h-16 bg-gradient-to-br ${step.color} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                        <span className="text-white font-bold text-2xl">{step.number}</span>
+                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
                       </div>
                     </div>
 

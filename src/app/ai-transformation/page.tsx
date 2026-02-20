@@ -58,25 +58,21 @@ export default function AITransformation() {
 
   const journeyPhases = [
     {
-      phase: '01',
       title: 'Assess',
       description: 'Evaluate your current state, identify opportunities, and build the business case for AI transformation.',
       activities: ['AI readiness assessment', 'Opportunity identification', 'ROI modeling', 'Roadmap development'],
     },
     {
-      phase: '02',
       title: 'Pilot',
       description: 'Validate AI feasibility with focused proof-of-concepts that demonstrate value quickly.',
       activities: ['Use case selection', 'PoC development', 'Results measurement', 'Stakeholder alignment'],
     },
     {
-      phase: '03',
       title: 'Scale',
       description: 'Expand successful pilots to production systems across the organization.',
       activities: ['Production deployment', 'Integration', 'Change management', 'Training'],
     },
     {
-      phase: '04',
       title: 'Transform',
       description: 'Embed AI into your organizational DNA with governance, culture, and continuous innovation.',
       activities: ['AI governance', 'Center of excellence', 'Continuous improvement', 'Innovation pipeline'],
@@ -209,8 +205,10 @@ export default function AITransformation() {
           <div className="grid-2 lg:grid-cols-4">
             {journeyPhases.map((phase, index) => (
               <div key={index} className="bg-dark-800 rounded-2xl p-6 border border-dark-700 hover:border-primary-500 transition-all">
-                <div className="w-12 h-12 bg-primary-500 rounded-xl flex items-center justify-center text-white font-bold text-xl mb-4">
-                  {phase.phase}
+                <div className="w-12 h-12 bg-primary-500 rounded-xl flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{phase.title}</h3>
                 <p className="text-dark-300 text-sm mb-4">{phase.description}</p>

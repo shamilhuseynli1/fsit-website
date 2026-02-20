@@ -300,10 +300,10 @@ export default function StaffAugmentation() {
 
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { step: '1', title: 'Define Requirements', description: 'Share your project needs, required skills, and team dynamics', icon: '📋' },
-              { step: '2', title: 'Match Specialists', description: 'We identify pre-vetted AI professionals that fit your needs', icon: '🎯' },
-              { step: '3', title: 'Interview & Select', description: 'Review candidates and select the best fit for your team', icon: '👥' },
-              { step: '4', title: 'Seamless Integration', description: 'Specialists integrate into your team and start contributing', icon: '🚀' },
+              { title: 'Define Requirements', description: 'Share your project needs, required skills, and team dynamics', icon: '📋' },
+              { title: 'Match Specialists', description: 'We identify pre-vetted AI professionals that fit your needs', icon: '🎯' },
+              { title: 'Interview & Select', description: 'Review candidates and select the best fit for your team', icon: '👥' },
+              { title: 'Seamless Integration', description: 'Specialists integrate into your team and start contributing', icon: '🚀' },
             ].map((item, index) => (
               <div key={index} className="relative text-center">
                 {/* Connector line */}
@@ -312,7 +312,9 @@ export default function StaffAugmentation() {
                 )}
                 <div className="relative">
                   <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-400 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg relative z-10">
-                    <span className="text-white font-bold text-xl">{item.step}</span>
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
                   </div>
                   <div className="text-3xl mb-3">{item.icon}</div>
                   <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>

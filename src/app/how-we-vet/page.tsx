@@ -198,11 +198,7 @@ export default function HowWeVet() {
                 <div className="relative bg-dark-800/80 backdrop-blur-sm border border-dark-700 rounded-2xl p-6 md:p-8 hover:border-primary-500/50 transition-all duration-500">
                   <div className="flex flex-col md:flex-row gap-6">
                     <div className="flex-shrink-0">
-                      <div className={`w-16 h-16 bg-gradient-to-br ${step.color} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
+                      
                     </div>
 
                     <div className="flex-1">
@@ -215,9 +211,7 @@ export default function HowWeVet() {
                       <div className="grid md:grid-cols-2 gap-3">
                         {step.items.map((item, i) => (
                           <div key={i} className="flex items-center gap-3 bg-dark-700/40 p-3 rounded-lg border border-dark-600/50 hover:border-primary-500/30 transition-all">
-                            <span className="w-6 h-6 bg-gradient-to-br from-primary-500 to-primary-400 rounded-md flex items-center justify-center text-[10px] font-bold text-white flex-shrink-0">
-                              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                            </span>
+                            
                             <span className="text-neutral-300 text-sm leading-relaxed">{item}</span>
                           </div>
                         ))}
@@ -306,9 +300,7 @@ export default function HowWeVet() {
                   'No ongoing performance monitoring',
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3 bg-dark-700/40 p-3 rounded-lg border border-red-500/20">
-                    <span className="w-6 h-6 bg-gradient-to-br from-red-500 to-orange-500 rounded-md flex items-center justify-center text-[10px] font-bold text-white flex-shrink-0">
-                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                    </span>
+                    
                     <span className="text-neutral-400 text-sm">{item}</span>
                   </div>
                 ))}
@@ -330,9 +322,7 @@ export default function HowWeVet() {
                   'Continuous performance monitoring & upskilling',
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3 bg-dark-800/60 p-3 rounded-lg border border-primary-500/20 hover:border-primary-500/40 transition-all">
-                    <span className="w-6 h-6 bg-gradient-to-br from-primary-500 to-primary-400 rounded-md flex items-center justify-center text-[10px] font-bold text-white flex-shrink-0">
-                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                    </span>
+                    
                     <span className="text-neutral-300 text-sm">{item}</span>
                   </div>
                 ))}

@@ -368,9 +368,7 @@ export default function IndustryPage() {
               <div className="space-y-3">
                 {industry.challenges.map((challenge, index) => (
                   <div key={index} className="flex items-center gap-4 bg-neutral-50 p-3 rounded-xl border border-neutral-200 hover:border-primary-500/30 transition-all">
-                    <span className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-400 rounded-lg flex items-center justify-center text-xs font-bold text-white shadow-sm">
-                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                    </span>
+                    
                     <span className="text-dark-700 font-medium">{challenge}</span>
                   </div>
                 ))}
@@ -408,11 +406,7 @@ export default function IndustryPage() {
           <div className="grid md:grid-cols-2 gap-8">
             {industry.solutions.map((solution, index) => (
               <div key={index} className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
-                <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
+                
                 <h3 className="text-xl font-bold text-dark-900 mb-3">{solution.title}</h3>
                 <p className="text-dark-500">{solution.desc}</p>
               </div>

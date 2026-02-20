@@ -124,7 +124,7 @@ const trustSafety = [
   { title: 'Bias Detection', desc: 'Monitor for and mitigate bias in AI decisions', icon: '⚖️' },
   { title: 'PII Protection', desc: 'Safeguard sensitive data throughout the AI pipeline', icon: '🔒' },
   { title: 'Audit Trails', desc: 'Complete logging of all AI decisions and actions', icon: '📋' },
-  { title: 'Compliance Monitoring', desc: 'Ensure adherence to industry regulations', icon: '✓' },
+  { title: 'Compliance Monitoring', desc: 'Ensure adherence to industry regulations', icon: '📜' },
   { title: 'Incident Response', desc: 'Rapid response to AI failures or safety issues', icon: '🚨' },
 ];
 
@@ -288,7 +288,7 @@ export default function AIOperations() {
 
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { title: 'Quality Assurance', desc: 'Human reviewers validate AI outputs', icon: '✓' },
+                  { title: 'Quality Assurance', desc: 'Human reviewers validate AI outputs', icon: '⭐' },
                   { title: 'Escalation Handling', desc: 'Complex decisions routed to experts', icon: '↑' },
                   { title: 'Training Data Curation', desc: 'Humans label and annotate data', icon: '◉' },
                   { title: 'Feedback Loops', desc: 'Continuous feedback to refine AI', icon: '⟲' },
@@ -412,11 +412,7 @@ export default function AIOperations() {
               { phase: 'Operate', title: 'Managed Operations', desc: 'Ongoing management and optimization' },
             ].map((step, index) => (
               <div key={index} className="group bg-dark-800 rounded-xl p-6 border border-dark-700 hover:border-gold-500/30 transition-all text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-gold-500 to-primary-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
+                
                 <p className="text-xs font-semibold text-gold-400 uppercase tracking-wide mb-2">{step.phase}</p>
                 <h3 className="font-semibold text-white mb-2">{step.title}</h3>
                 <p className="text-neutral-500 text-sm">{step.desc}</p>

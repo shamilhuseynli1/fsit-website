@@ -170,11 +170,7 @@ export default function Mission() {
           <div className="grid-4">
             {lifecycle.map((item, index) => (
               <div key={index} className="card card-hover text-center">
-                <div className="w-14 h-14 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
+                
                 <p className="text-dark-700 font-medium">{item.title}</p>
               </div>
             ))}
@@ -195,9 +191,7 @@ export default function Mission() {
           <div className="grid-2 max-w-4xl mx-auto mb-12">
             {commitments.map((item, index) => (
               <div key={index} className="flex items-center gap-4 bg-dark-800 p-4 rounded-xl border border-dark-700 hover:border-primary-500/40 transition-all">
-                <span className="w-9 h-9 bg-gradient-to-br from-primary-500 to-primary-400 rounded-lg flex items-center justify-center text-xs font-bold text-white shadow-lg shadow-primary-500/20 flex-shrink-0">
-                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                </span>
+                
                 <span className="text-white font-medium">{item}</span>
               </div>
             ))}

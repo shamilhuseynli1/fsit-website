@@ -272,9 +272,7 @@ export default function StaffAugmentation() {
                   <div className="space-y-2">
                     {model.features.map((feature, i) => (
                       <div key={i} className="flex items-center gap-3 bg-dark-700/40 p-2.5 rounded-lg border border-dark-600/50">
-                        <span className="w-6 h-6 bg-gradient-to-br from-primary-500 to-primary-400 rounded-md flex items-center justify-center text-[10px] font-bold text-white flex-shrink-0">
-                          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                        </span>
+                        
                         <span className="text-neutral-300 text-sm">{feature}</span>
                       </div>
                     ))}
@@ -311,11 +309,7 @@ export default function StaffAugmentation() {
                   <div className="hidden md:block absolute top-8 left-1/2 w-full h-0.5 bg-gradient-to-r from-primary-500/50 to-transparent" />
                 )}
                 <div className="relative">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-400 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg relative z-10">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
+                  
                   <div className="text-3xl mb-3">{item.icon}</div>
                   <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
                   <p className="text-neutral-400 text-sm leading-relaxed">{item.description}</p>

@@ -184,11 +184,7 @@ export default function HowWeWork() {
                 <div className="relative bg-dark-800/80 backdrop-blur-sm border border-dark-700 rounded-2xl p-6 md:p-8 hover:border-primary-500/50 transition-all duration-500">
                   <div className="flex flex-col md:flex-row gap-6 items-start">
                     <div className="flex-shrink-0">
-                      <div className={`w-16 h-16 bg-gradient-to-br ${item.color} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
+                      
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-2">
@@ -229,9 +225,7 @@ export default function HowWeWork() {
                 <div className="flex items-start gap-4">
                   <div className="text-3xl">{item.icon}</div>
                   <div className="flex-1">
-                    <span className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-400 rounded-lg flex items-center justify-center text-xs font-bold text-white shadow-lg shadow-primary-500/20 mb-3">
-                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                    </span>
+                    
                     <p className="text-neutral-300 font-medium leading-relaxed">{item.text}</p>
                   </div>
                 </div>

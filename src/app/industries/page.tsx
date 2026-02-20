@@ -210,9 +210,7 @@ export default function IndustriesPage() {
                   { title: 'Proven Playbooks', desc: "We don't experiment with your production systems. We apply what's worked before." },
                 ].map((item, index) => (
                   <div key={index} className="flex gap-4 bg-neutral-50 p-4 rounded-xl border border-neutral-200 hover:border-primary-500/30 transition-all">
-                    <span className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-400 rounded-xl flex items-center justify-center text-sm font-bold text-white shadow-sm">
-                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                    </span>
+                    
                     <div>
                       <h4 className="font-bold text-dark-900 mb-1">{item.title}</h4>
                       <p className="text-dark-500">{item.desc}</p>

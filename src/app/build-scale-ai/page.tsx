@@ -113,17 +113,7 @@ export default function BuildScaleAI() {
                         ? 'bg-primary-500 text-white'
                         : 'bg-neutral-200 text-dark-400'
                   }`}>
-                    {currentStep > index + 1 ? (
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                    ) : currentStep === index + 1 ? (
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                    ) : (
-                      <div className="w-3 h-3 bg-dark-300 rounded-full" />
-                    )}
+                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: currentStep > index + 1 ? 'white' : currentStep === index + 1 ? 'white' : '#9CA3AF' }} />
                   </div>
                   <p className={`text-xs hidden md:block ${currentStep === index + 1 ? 'text-primary-500 font-semibold' : 'text-dark-400'}`}>
                     {label}

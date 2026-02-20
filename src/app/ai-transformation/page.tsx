@@ -205,19 +205,13 @@ export default function AITransformation() {
           <div className="grid-2 lg:grid-cols-4">
             {journeyPhases.map((phase, index) => (
               <div key={index} className="bg-dark-800 rounded-2xl p-6 border border-dark-700 hover:border-primary-500 transition-all">
-                <div className="w-12 h-12 bg-primary-500 rounded-xl flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
+                
                 <h3 className="text-xl font-semibold text-white mb-2">{phase.title}</h3>
                 <p className="text-dark-300 text-sm mb-4">{phase.description}</p>
                 <div className="space-y-2">
                   {phase.activities.map((activity, i) => (
                     <div key={i} className="flex items-center gap-2 bg-dark-700/50 p-2 rounded-lg border border-dark-600/50">
-                      <span className="w-5 h-5 bg-gradient-to-br from-primary-500 to-primary-400 rounded flex items-center justify-center text-[9px] font-bold text-white flex-shrink-0">
-                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                      </span>
+                      
                       <span className="text-xs text-dark-300">{activity}</span>
                     </div>
                   ))}
@@ -275,14 +269,11 @@ export default function AITransformation() {
               <div key={index} className="card card-hover">
                 <div className="flex items-center gap-3 mb-3">
                   <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-orange-500 rounded-lg flex items-center justify-center shadow-sm">
-                    <span className="text-white font-bold text-sm"><svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg></span>
+                    <span className="text-white font-bold text-sm"></span>
                   </div>
                   <h3 className="font-semibold text-dark-900">{item.barrier}</h3>
                 </div>
-                <div className="flex items-start gap-3 bg-primary-50 p-3 rounded-xl">
-                  <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-400 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-xs">✓</span>
-                  </div>
+                <div className="bg-primary-50 p-3 rounded-xl">
                   <p className="text-dark-600 text-sm">{item.solution}</p>
                 </div>
               </div>
@@ -310,9 +301,7 @@ export default function AITransformation() {
                   'Vision 2030 aligned for Saudi organizations',
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-4 bg-neutral-100 p-3 rounded-xl border border-neutral-200 hover:border-primary-500/30 transition-all">
-                    <span className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-400 rounded-lg flex items-center justify-center text-xs font-bold text-white shadow-sm flex-shrink-0">
-                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                    </span>
+                    
                     <span className="text-dark-700 font-medium">{item}</span>
                   </div>
                 ))}
@@ -331,9 +320,7 @@ export default function AITransformation() {
                   'Building capabilities you\'ll need to catch up on',
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-4 bg-dark-800/60 p-3 rounded-xl border border-dark-700 hover:border-primary-500/40 transition-all">
-                    <span className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-400 rounded-lg flex items-center justify-center text-xs font-bold text-white shadow-lg shadow-primary-500/20 flex-shrink-0">
-                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                    </span>
+                    
                     <span className="text-dark-200 font-medium">{item}</span>
                   </div>
                 ))}

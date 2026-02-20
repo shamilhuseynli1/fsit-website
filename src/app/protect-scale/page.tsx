@@ -237,9 +237,7 @@ export default function ProtectScale() {
                 <div className="space-y-2">
                   {layer.controls.map((control, i) => (
                     <div key={i} className="flex items-center gap-2 bg-dark-700/50 p-2 rounded-lg border border-dark-600/50">
-                      <span className="w-5 h-5 bg-gradient-to-br from-primary-500 to-primary-400 rounded flex items-center justify-center text-[9px] font-bold text-white flex-shrink-0">
-                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                      </span>
+                      
                       <span className="text-sm text-dark-300">{control}</span>
                     </div>
                   ))}
@@ -318,9 +316,7 @@ export default function ProtectScale() {
                 <div className="space-y-2">
                   {industry.requirements.map((req, i) => (
                     <div key={i} className="flex items-center gap-2 bg-neutral-50 p-2 rounded-lg border border-neutral-100">
-                      <span className="w-5 h-5 bg-gradient-to-br from-primary-500 to-primary-400 rounded flex items-center justify-center text-[9px] font-bold text-white flex-shrink-0">
-                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                      </span>
+                      
                       <span className="text-sm text-dark-600">{req}</span>
                     </div>
                   ))}
@@ -350,9 +346,7 @@ export default function ProtectScale() {
                   'Continuous security monitoring',
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-4 bg-neutral-100 p-3 rounded-xl border border-neutral-200 hover:border-primary-500/30 transition-all">
-                    <span className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-400 rounded-lg flex items-center justify-center text-xs font-bold text-white shadow-sm flex-shrink-0">
-                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                    </span>
+                    
                     <span className="text-dark-700 font-medium">{item}</span>
                   </div>
                 ))}

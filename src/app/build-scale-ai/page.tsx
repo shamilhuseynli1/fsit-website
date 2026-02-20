@@ -106,7 +106,7 @@ export default function BuildScaleAI() {
             <div className="flex justify-between items-center mb-10">
               {stepLabels.map((label, index) => (
                 <div key={index} className="flex-1 text-center">
-                  <div className={`w-10 h-10 rounded-full mx-auto mb-2 flex items-center justify-center text-sm font-semibold transition-all duration-300 ${
+                  <div className={`w-10 h-10 rounded-full mx-auto mb-2 flex items-center justify-center transition-all duration-300 ${
                     currentStep > index + 1
                       ? 'bg-green-500 text-white'
                       : currentStep === index + 1
@@ -117,8 +117,12 @@ export default function BuildScaleAI() {
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
+                    ) : currentStep === index + 1 ? (
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
                     ) : (
-                      index + 1
+                      <div className="w-3 h-3 bg-dark-300 rounded-full" />
                     )}
                   </div>
                   <p className={`text-xs hidden md:block ${currentStep === index + 1 ? 'text-primary-500 font-semibold' : 'text-dark-400'}`}>

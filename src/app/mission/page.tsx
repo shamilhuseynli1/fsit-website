@@ -22,10 +22,10 @@ export default function Mission() {
   ];
 
   const lifecycle = [
-    { title: 'AI strategy and solution design', icon: '1' },
-    { title: 'AI product and platform engineering', icon: '2' },
-    { title: 'Deployment, monitoring, and optimisation', icon: '3' },
-    { title: 'AI operations, governance, and compliance', icon: '4' },
+    { title: 'AI strategy and solution design' },
+    { title: 'AI product and platform engineering' },
+    { title: 'Deployment, monitoring, and optimisation' },
+    { title: 'AI operations, governance, and compliance' },
   ];
 
   const enablers = [
@@ -170,8 +170,10 @@ export default function Mission() {
           <div className="grid-4">
             {lifecycle.map((item, index) => (
               <div key={index} className="card card-hover text-center">
-                <div className="w-14 h-14 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4">
-                  {item.icon}
+                <div className="w-14 h-14 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
                 </div>
                 <p className="text-dark-700 font-medium">{item.title}</p>
               </div>

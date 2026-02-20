@@ -132,7 +132,7 @@ export default function Regions() {
                       {region.focus.map((item, i) => (
                         <div key={i} className="flex items-center gap-3 bg-neutral-50 p-3 rounded-lg border border-neutral-200 hover:border-primary-500/30 transition-all">
                           <span className="w-7 h-7 bg-gradient-to-br from-primary-500 to-primary-400 rounded-lg flex items-center justify-center text-[10px] font-bold text-white flex-shrink-0">
-                            {String(i + 1).padStart(2, '0')}
+                            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                           </span>
                           <span className="text-dark-700">{item}</span>
                         </div>

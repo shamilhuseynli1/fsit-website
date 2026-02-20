@@ -333,7 +333,7 @@ export default function Solutions() {
                       {service.features.map((feature, i) => (
                         <div key={i} className="flex items-center gap-2 bg-gradient-to-r from-primary-500/10 to-primary-400/10 px-4 py-2 rounded-lg border border-primary-500/20">
                           <span className="w-5 h-5 bg-gradient-to-br from-primary-500 to-primary-400 rounded-md flex items-center justify-center text-[10px] font-bold text-white shadow-sm">
-                            {String(i + 1).padStart(2, '0')}
+                            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                           </span>
                           <span className="text-sm text-gray-700 font-medium">{feature}</span>
                         </div>
@@ -471,7 +471,7 @@ export default function Solutions() {
                   {cap.items.map((item, i) => (
                     <div key={i} className="flex items-center gap-3 bg-dark-700/30 p-2.5 rounded-lg border border-dark-600/50 hover:border-primary-500/30 transition-colors">
                       <span className="w-7 h-7 bg-gradient-to-br from-primary-500/20 to-primary-400/20 border border-primary-500/30 rounded-lg flex items-center justify-center text-xs font-semibold text-primary-400">
-                        {String(i + 1).padStart(2, '0')}
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                       </span>
                       <span className="text-sm text-neutral-300">{item}</span>
                     </div>
@@ -517,7 +517,7 @@ export default function Solutions() {
                 {['Custom LLM', 'Arabic NLP', 'RAG System', 'On-premise'].map((tag, i) => (
                   <div key={i} className="flex items-center gap-2 bg-gradient-to-r from-primary-500/15 to-primary-400/15 px-4 py-2 rounded-lg border border-primary-500/30">
                     <span className="w-5 h-5 bg-gradient-to-br from-primary-500 to-primary-400 rounded-md flex items-center justify-center text-[10px] font-bold text-white">
-                      {String(i + 1).padStart(2, '0')}
+                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                     </span>
                     <span className="text-sm text-primary-300 font-medium">{tag}</span>
                   </div>
@@ -537,7 +537,7 @@ export default function Solutions() {
                   <div key={i} className="group flex items-center gap-4 bg-gradient-to-r from-dark-800/80 to-dark-800/40 rounded-xl p-4 border border-dark-700 hover:border-primary-500/40 transition-all">
                     <div className="relative">
                       <span className="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-400 rounded-xl flex items-center justify-center text-sm font-bold text-white shadow-lg shadow-primary-500/20">
-                        {String(i + 1).padStart(2, '0')}
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                       </span>
                       <span className="absolute -top-1 -right-1 w-3 h-3 bg-primary-400 rounded-full animate-pulse" />
                     </div>
@@ -609,7 +609,7 @@ export default function Solutions() {
               {industryUseCases[selectedIndustry]?.useCases.map((useCase, i) => (
                 <div key={i} className="flex items-center gap-4 bg-gradient-to-r from-dark-900/80 to-dark-800/60 p-4 rounded-xl border border-dark-700 hover:border-primary-500/30 transition-all">
                   <span className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-400 rounded-lg flex items-center justify-center text-xs font-bold text-white shadow-md">
-                    {String(i + 1).padStart(2, '0')}
+                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                   </span>
                   <span className="text-neutral-200 text-sm font-medium">{useCase}</span>
                 </div>

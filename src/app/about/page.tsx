@@ -92,7 +92,7 @@ export default function About() {
             {failReasons.map((reason, index) => (
               <div key={index} className="flex items-center gap-4 card !p-4 hover:border-red-500/30 transition-all">
                 <span className="w-9 h-9 bg-gradient-to-br from-red-500 to-orange-500 rounded-lg flex items-center justify-center text-xs font-bold text-white shadow-sm flex-shrink-0">
-                  {String(index + 1).padStart(2, '0')}
+                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                 </span>
                 <span className="text-dark-700 font-medium">{reason}</span>
               </div>
@@ -149,7 +149,7 @@ export default function About() {
             {delivers.map((item, index) => (
               <div key={index} className="flex items-center gap-4 bg-dark-800/80 backdrop-blur-sm p-4 rounded-xl border border-dark-700 hover:border-primary-500/40 transition-all">
                 <span className="w-9 h-9 bg-gradient-to-br from-primary-500 to-primary-400 rounded-lg flex items-center justify-center text-xs font-bold text-white shadow-lg shadow-primary-500/20 flex-shrink-0">
-                  {String(index + 1).padStart(2, '0')}
+                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                 </span>
                 <span className="text-white font-medium">{item}</span>
               </div>

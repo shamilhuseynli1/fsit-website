@@ -335,7 +335,7 @@ export default function AIAgents() {
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-4 bg-dark-800/60 p-4 rounded-xl border border-dark-700 hover:border-primary-500/40 transition-all">
                     <span className="w-9 h-9 bg-gradient-to-br from-primary-500 to-primary-500 rounded-lg flex items-center justify-center text-xs font-bold text-white shadow-lg shadow-primary-500/20 flex-shrink-0">
-                      {String(i + 1).padStart(2, '0')}
+                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                     </span>
                     <span className="text-neutral-200 font-medium">{item}</span>
                   </div>
@@ -434,7 +434,7 @@ export default function AIAgents() {
                   {industry.agents.map((agent, i) => (
                     <div key={i} className="flex items-center gap-3 bg-dark-800/60 p-2.5 rounded-lg border border-dark-700/50 hover:border-primary-500/30 transition-all">
                       <span className="w-6 h-6 bg-gradient-to-br from-primary-500/80 to-primary-400/80 rounded-md flex items-center justify-center text-[10px] font-bold text-white flex-shrink-0">
-                        {String(i + 1).padStart(2, '0')}
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                       </span>
                       <span className="text-sm text-neutral-300">{agent}</span>
                     </div>

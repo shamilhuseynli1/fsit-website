@@ -227,7 +227,7 @@ export default function LeverageAI() {
                   {useCase.examples.map((example, i) => (
                     <div key={i} className="flex items-center gap-3 bg-dark-700/40 p-2 rounded-lg border border-dark-600/50">
                       <span className="w-5 h-5 bg-gradient-to-br from-primary-500 to-primary-400 rounded flex items-center justify-center text-[9px] font-bold text-white flex-shrink-0">
-                        {String(i + 1).padStart(2, '0')}
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                       </span>
                       <span className="text-sm text-dark-300">{example}</span>
                     </div>
@@ -262,7 +262,7 @@ export default function LeverageAI() {
                 {readinessFactors.map((item, i) => (
                   <div key={i} className="flex items-start gap-4 bg-neutral-50 p-3 rounded-xl border border-neutral-200 hover:border-primary-500/30 transition-all">
                     <span className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-400 rounded-lg flex items-center justify-center text-xs font-bold text-white shadow-sm flex-shrink-0">
-                      {String(i + 1).padStart(2, '0')}
+                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                     </span>
                     <div>
                       <p className="font-medium text-dark-900">{item.factor}</p>
@@ -297,7 +297,7 @@ export default function LeverageAI() {
                   {tier.includes.map((item, i) => (
                     <div key={i} className="flex items-center gap-3 bg-neutral-50 p-2 rounded-lg border border-neutral-200">
                       <span className="w-5 h-5 bg-gradient-to-br from-primary-500 to-primary-400 rounded flex items-center justify-center text-[9px] font-bold text-white flex-shrink-0">
-                        {String(i + 1).padStart(2, '0')}
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                       </span>
                       <span className="text-sm text-dark-600">{item}</span>
                     </div>
@@ -333,7 +333,7 @@ export default function LeverageAI() {
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-4 bg-neutral-100 p-3 rounded-xl border border-neutral-200 hover:border-primary-500/30 transition-all">
                     <span className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-400 rounded-lg flex items-center justify-center text-xs font-bold text-white shadow-sm flex-shrink-0">
-                      {String(i + 1).padStart(2, '0')}
+                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                     </span>
                     <span className="text-dark-700 font-medium">{item}</span>
                   </div>

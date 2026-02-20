@@ -219,7 +219,7 @@ export default function HowWeVet() {
                         {step.items.map((item, i) => (
                           <div key={i} className="flex items-center gap-3 bg-dark-700/40 p-3 rounded-lg border border-dark-600/50 hover:border-primary-500/30 transition-all">
                             <span className="w-6 h-6 bg-gradient-to-br from-primary-500 to-primary-400 rounded-md flex items-center justify-center text-[10px] font-bold text-white flex-shrink-0">
-                              {String(i + 1).padStart(2, '0')}
+                              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                             </span>
                             <span className="text-neutral-300 text-sm leading-relaxed">{item}</span>
                           </div>
@@ -310,7 +310,7 @@ export default function HowWeVet() {
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3 bg-dark-700/40 p-3 rounded-lg border border-red-500/20">
                     <span className="w-6 h-6 bg-gradient-to-br from-red-500 to-orange-500 rounded-md flex items-center justify-center text-[10px] font-bold text-white flex-shrink-0">
-                      {String(i + 1).padStart(2, '0')}
+                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                     </span>
                     <span className="text-neutral-400 text-sm">{item}</span>
                   </div>
@@ -334,7 +334,7 @@ export default function HowWeVet() {
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3 bg-dark-800/60 p-3 rounded-lg border border-primary-500/20 hover:border-primary-500/40 transition-all">
                     <span className="w-6 h-6 bg-gradient-to-br from-primary-500 to-primary-400 rounded-md flex items-center justify-center text-[10px] font-bold text-white flex-shrink-0">
-                      {String(i + 1).padStart(2, '0')}
+                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                     </span>
                     <span className="text-neutral-300 text-sm">{item}</span>
                   </div>

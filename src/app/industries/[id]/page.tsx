@@ -369,7 +369,7 @@ export default function IndustryPage() {
                 {industry.challenges.map((challenge, index) => (
                   <div key={index} className="flex items-center gap-4 bg-neutral-50 p-3 rounded-xl border border-neutral-200 hover:border-primary-500/30 transition-all">
                     <span className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-400 rounded-lg flex items-center justify-center text-xs font-bold text-white shadow-sm">
-                      {String(index + 1).padStart(2, '0')}
+                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                     </span>
                     <span className="text-dark-700 font-medium">{challenge}</span>
                   </div>

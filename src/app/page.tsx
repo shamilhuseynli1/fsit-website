@@ -79,10 +79,10 @@ export default function Home() {
   ];
 
   const experts = [
-    { name: 'Sarah', role: 'UX (AI) Designer', company: 'Previously at Google', location: 'San Francisco', rating: '4.9', skills: ['User Research', 'Figma'], image: '/experts/sarah.jpg' },
-    { name: 'Amir Al-Hassan', role: 'Machine Learning Engineer', company: 'Previously at Meta', location: 'Riyadh', rating: '4.9', skills: ['Python', 'TensorFlow'], image: '/experts/amir.jpg' },
-    { name: 'Leila Farouk', role: 'AI Product Manager', company: 'Previously at Apple', location: 'Dubai', rating: '4.8', skills: ['Product Strategy', 'Data Analytics'], image: '/experts/leila.jpg' },
-    { name: 'James', role: 'Applied AI Engineer', company: 'Previously at Goldman Sachs', location: 'Chicago', rating: '4.9', skills: ['Financial Modeling', 'M&A'], image: '/experts/james.jpg' },
+    { name: 'Sarah', role: 'UX (AI) Designer', company: 'Previously at Google', location: 'Riyadh', rating: '4.9', skills: ['User Research', 'Figma'], image: '/experts/sarah.jpg' },
+    { name: 'Amir Al-Hassan', role: 'Machine Learning Engineer', company: 'Previously at Meta', location: 'Dubai', rating: '4.9', skills: ['Python', 'TensorFlow'], image: '/experts/amir.jpg' },
+    { name: 'Leila Farouk', role: 'AI Product Manager', company: 'Previously at Apple', location: 'Doha', rating: '4.8', skills: ['Product Strategy', 'Data Analytics'], image: '/experts/leila.jpg' },
+    { name: 'James', role: 'Applied AI Engineer', company: 'Previously at Goldman Sachs', location: 'Riyadh', rating: '4.9', skills: ['Financial Modeling', 'M&A'], image: '/experts/james.jpg' },
   ];
 
   const processSteps = [
@@ -241,8 +241,10 @@ export default function Home() {
           <div className="grid-4">
             {talentPillars.map((pillar, index) => (
               <div key={index} className="card card-hover text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-400 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-primary-500/20">
-                  <span className="text-white font-bold text-lg">{String(index + 1).padStart(2, '0')}</span>
+                <div className="w-12 h-12 bg-primary-500/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-6 h-6 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 13l4 4L19 7" />
+                  </svg>
                 </div>
                 <h3 className="font-semibold text-dark-900 mb-2">{pillar.title}</h3>
                 <p className="text-dark-500 text-sm">{pillar.desc}</p>

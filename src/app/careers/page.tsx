@@ -171,7 +171,9 @@ export default function CareersPage() {
             {values.map((value, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-primary-600">{index + 1}</span>
+                  <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
                 </div>
                 <h3 className="text-xl font-bold text-dark-900 mb-2">{value.title}</h3>
                 <p className="text-dark-500">{value.desc}</p>

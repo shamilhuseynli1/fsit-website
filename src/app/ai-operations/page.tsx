@@ -412,8 +412,10 @@ export default function AIOperations() {
               { phase: 'Operate', title: 'Managed Operations', desc: 'Ongoing management and optimization' },
             ].map((step, index) => (
               <div key={index} className="group bg-dark-800 rounded-xl p-6 border border-dark-700 hover:border-gold-500/30 transition-all text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-gold-500 to-primary-500 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-4 group-hover:scale-110 transition-transform">
-                  {index + 1}
+                <div className="w-12 h-12 bg-gradient-to-br from-gold-500 to-primary-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
                 </div>
                 <p className="text-xs font-semibold text-gold-400 uppercase tracking-wide mb-2">{step.phase}</p>
                 <h3 className="font-semibold text-white mb-2">{step.title}</h3>

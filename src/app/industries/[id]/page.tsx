@@ -409,7 +409,9 @@ export default function IndustryPage() {
             {industry.solutions.map((solution, index) => (
               <div key={index} className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
                 <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
-                  <span className="text-2xl font-bold text-primary-600">{index + 1}</span>
+                  <svg className="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
                 </div>
                 <h3 className="text-xl font-bold text-dark-900 mb-3">{solution.title}</h3>
                 <p className="text-dark-500">{solution.desc}</p>

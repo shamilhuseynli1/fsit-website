@@ -268,8 +268,10 @@ export default function Home() {
           <div className="md:hidden space-y-4 mb-12">
             {processSteps.map((item, index) => (
               <div key={index} className="flex items-center gap-4 bg-dark-800 rounded-xl p-4">
-                <div className="w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
-                  {index + 1}
+                <div className="w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
                 </div>
                 <div>
                   <p className="font-semibold text-white">{item.step}</p>
@@ -284,8 +286,10 @@ export default function Home() {
             {processSteps.map((item, index) => (
               <div key={index} className="flex items-center">
                 <div className="text-center px-4 py-4">
-                  <div className="w-14 h-14 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-3">
-                    {index + 1}
+                  <div className="w-14 h-14 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
                   </div>
                   <p className="font-semibold text-white mb-1">{item.step}</p>
                   <p className="text-xs text-dark-400 max-w-[150px]">{item.desc}</p>

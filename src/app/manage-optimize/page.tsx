@@ -148,7 +148,7 @@ export default function ManageOptimize() {
                 </Link>
               </div>
             </div>
-            <div className="hidden lg:block">
+            <div className="mt-8 lg:mt-0">
               <HeroOptimizeVisual />
             </div>
           </div>

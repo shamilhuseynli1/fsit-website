@@ -492,7 +492,7 @@ export default function MLModelsPage() {
             </div>
 
             {/* Right - 3D Isometric Stack Visual */}
-            <div className="hidden lg:block">
+            <div className="mt-8 lg:mt-0">
               <HeroModelStack />
             </div>
           </div>

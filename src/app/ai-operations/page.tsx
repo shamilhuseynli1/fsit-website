@@ -220,7 +220,7 @@ export default function AIOperations() {
             </div>
 
             {/* Right visual */}
-            <div className="relative hidden lg:block">
+            <div className="relative mt-8 lg:mt-0">
               <HeroOperationsVisual />
             </div>
           </div>

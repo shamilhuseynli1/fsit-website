@@ -147,7 +147,7 @@ export default function StaffAugmentation() {
             </div>
 
             {/* Hero Visual */}
-            <div className="hidden lg:block">
+            <div className="mt-8 lg:mt-0">
               <HeroStaffVisual />
             </div>
           </div>

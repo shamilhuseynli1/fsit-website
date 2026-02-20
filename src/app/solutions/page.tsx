@@ -297,7 +297,7 @@ export default function Solutions() {
             </div>
 
             {/* Hero Visual */}
-            <div className="hidden lg:block">
+            <div className="mt-8 lg:mt-0">
               <HeroSolutionsVisual />
             </div>
           </div>

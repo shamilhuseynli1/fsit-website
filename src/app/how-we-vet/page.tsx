@@ -148,7 +148,7 @@ export default function HowWeVet() {
             </div>
 
             {/* Hero Visual */}
-            <div className="hidden lg:block">
+            <div className="mt-8 lg:mt-0">
               <HeroVettingVisual />
             </div>
           </div>

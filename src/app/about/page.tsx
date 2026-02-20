@@ -90,11 +90,11 @@ export default function About() {
           </div>
           <div className="grid-2 max-w-3xl mx-auto mb-12">
             {failReasons.map((reason, index) => (
-              <div key={index} className="flex items-center gap-3 card !p-4">
-                <svg className="w-6 h-6 text-primary-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-                <span className="text-dark-700">{reason}</span>
+              <div key={index} className="flex items-center gap-4 card !p-4 hover:border-red-500/30 transition-all">
+                <span className="w-9 h-9 bg-gradient-to-br from-red-500 to-orange-500 rounded-lg flex items-center justify-center text-xs font-bold text-white shadow-sm flex-shrink-0">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <span className="text-dark-700 font-medium">{reason}</span>
               </div>
             ))}
           </div>
@@ -147,11 +147,11 @@ export default function About() {
           </h3>
           <div className="grid-2 max-w-3xl mx-auto">
             {delivers.map((item, index) => (
-              <div key={index} className="flex items-center gap-3 bg-dark-800/80 backdrop-blur-sm p-4 rounded-xl">
-                <svg className="w-6 h-6 text-primary-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-                <span className="text-white">{item}</span>
+              <div key={index} className="flex items-center gap-4 bg-dark-800/80 backdrop-blur-sm p-4 rounded-xl border border-dark-700 hover:border-primary-500/40 transition-all">
+                <span className="w-9 h-9 bg-gradient-to-br from-primary-500 to-primary-400 rounded-lg flex items-center justify-center text-xs font-bold text-white shadow-lg shadow-primary-500/20 flex-shrink-0">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <span className="text-white font-medium">{item}</span>
               </div>
             ))}
           </div>
@@ -241,10 +241,10 @@ export default function About() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             {[
               { name: 'Haitham Saead', role: 'CEO', image: '/team/Haitam Said.jpg', position: 'center top' },
-              { name: 'Fahed Alenezi', role: 'Managing Director', image: '/team/Fahed Alenezi.png', position: 'center top' },
-              { name: 'Khalil Jaouni', role: 'Executive Director', image: '/team/Khalil Jaouni.png', position: 'center top' },
-              { name: 'Ritesh Raj', role: 'Executive Director', image: '/team/Ritesh Raj.png', position: 'center 15%' },
               { name: 'Rula Jouhar', role: 'COO', image: '/team/Rula.png', position: 'center top' },
+              { name: 'Fahed Alenezi', role: 'Managing Director', image: '/team/Fahed Alenezi.png', position: 'center top' },
+              { name: 'Ritesh Raj', role: 'Executive Director', image: '/team/Ritesh Raj.png', position: 'center 15%' },
+              { name: 'Khalil Jaouni', role: 'Executive Director', image: '/team/Khalil Jaouni.png', position: 'center top' },
               { name: 'Ismail Katanani', role: 'Senior Director', image: '/team/Ismail Katanani.png', position: 'center top' },
             ].map((member, index) => (
               <div key={index} className="text-center">

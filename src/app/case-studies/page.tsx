@@ -167,7 +167,7 @@ export default function CaseStudiesPage() {
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Real Results from{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-gold-400">
                 Real Projects
               </span>
             </h1>

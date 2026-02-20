@@ -22,7 +22,7 @@ export default function Home() {
   const stats = [
     { number: '80,000+', label: 'Elite talent in our network' },
     { number: '50+', label: 'Businesses served' },
-    { number: '90%', label: 'Outsourced, vetted experts' },
+    { number: '100%', label: 'Vetted experts' },
     { number: '98%', label: 'Client retention' },
   ];
 
@@ -79,18 +79,18 @@ export default function Home() {
   ];
 
   const experts = [
-    { initials: 'SC', name: 'Sarah Chen', role: 'Senior AI Engineer', company: 'Previously at Google', location: 'San Francisco', rating: '4.9', skills: ['React', 'Node.js'] },
-    { initials: 'MW', name: 'Marcus Williams', role: 'Product Manager', company: 'Previously at Meta', location: 'New York', rating: '4.8', skills: ['Product Strategy', 'Data Analytics'] },
-    { initials: 'ER', name: 'Emily Rodriguez', role: 'UX Design Lead', company: 'Previously at Apple', location: 'Austin', rating: '5', skills: ['User Research', 'Figma'] },
-    { initials: 'JP', name: 'James Park', role: 'Investment Analyst', company: 'Previously at Goldman Sachs', location: 'Chicago', rating: '4.9', skills: ['Financial Modeling', 'M&A'] },
+    { name: 'Sarah', role: 'UX (AI) Designer', company: 'Previously at Google', location: 'San Francisco', rating: '4.9', skills: ['User Research', 'Figma'], image: '/experts/sarah.jpg' },
+    { name: 'Amir Al-Hassan', role: 'Machine Learning Engineer', company: 'Previously at Meta', location: 'Riyadh', rating: '4.9', skills: ['Python', 'TensorFlow'], image: '/experts/amir.jpg' },
+    { name: 'Leila Farouk', role: 'AI Product Manager', company: 'Previously at Apple', location: 'Dubai', rating: '4.8', skills: ['Product Strategy', 'Data Analytics'], image: '/experts/leila.jpg' },
+    { name: 'James', role: 'Applied AI Engineer', company: 'Previously at Goldman Sachs', location: 'Chicago', rating: '4.9', skills: ['Financial Modeling', 'M&A'], image: '/experts/james.jpg' },
   ];
 
   const processSteps = [
-    { step: 'Define', desc: 'align on outcomes and priorities' },
-    { step: 'Embed', desc: 'deploy dedicated AI teams' },
-    { step: 'Build', desc: 'develop integrated systems' },
-    { step: 'Operate', desc: 'ensure reliability in production' },
-    { step: 'Scale', desc: 'expand with governance' },
+    { step: 'Define', desc: 'Align on outcomes and priorities' },
+    { step: 'Embed', desc: 'Deploy dedicated AI teams' },
+    { step: 'Build', desc: 'Develop integrated systems' },
+    { step: 'Operate', desc: 'Ensure reliability in production' },
+    { step: 'Scale', desc: 'Expand with governance' },
   ];
 
   const clients = [
@@ -241,10 +241,8 @@ export default function Home() {
           <div className="grid-4">
             {talentPillars.map((pillar, index) => (
               <div key={index} className="card card-hover text-center">
-                <div className="w-12 h-12 bg-primary-500/10 rounded-xl flex items-center justify-center text-primary-500 mx-auto mb-4">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
+                <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-400 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-primary-500/20">
+                  <span className="text-white font-bold text-lg">{String(index + 1).padStart(2, '0')}</span>
                 </div>
                 <h3 className="font-semibold text-dark-900 mb-2">{pillar.title}</h3>
                 <p className="text-dark-500 text-sm">{pillar.desc}</p>
@@ -395,27 +393,29 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid-4 mb-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             {experts.map((expert, index) => (
-              <div key={index} className="card card-hover">
-                <div className="w-16 h-16 bg-primary-500/10 rounded-full flex items-center justify-center text-primary-500 font-bold text-xl mx-auto mb-4">
-                  {expert.initials}
+              <div key={index} className="card card-hover text-center">
+                <div className="w-16 h-16 mx-auto mb-3 rounded-full overflow-hidden border-2 border-primary-500/20 bg-neutral-100">
+                  <img
+                    src={expert.image}
+                    alt={expert.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <div className="text-center">
-                  <h3 className="font-semibold text-dark-900">{expert.name}</h3>
-                  <p className="text-dark-500 text-sm">{expert.role}</p>
-                  <p className="text-dark-400 text-xs mt-1">{expert.company}</p>
-                  <div className="flex items-center justify-center gap-2 mt-2">
-                    <span className="text-xs text-dark-400">{expert.location}</span>
-                    <span className="text-xs text-gold-500">★ {expert.rating}</span>
-                  </div>
-                  <div className="flex flex-wrap justify-center gap-1 mt-3">
-                    {expert.skills.map((skill, i) => (
-                      <span key={i} className="text-xs bg-neutral-150 text-dark-600 px-2 py-1 rounded">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
+                <h3 className="font-semibold text-dark-900 text-sm">{expert.name}</h3>
+                <p className="text-dark-500 text-xs">{expert.role}</p>
+                <p className="text-dark-400 text-[10px] mt-1">{expert.company}</p>
+                <div className="flex items-center justify-center gap-1 mt-2">
+                  <span className="text-[10px] text-dark-400">{expert.location}</span>
+                  <span className="text-[10px] text-gold-500">★ {expert.rating}</span>
+                </div>
+                <div className="flex flex-wrap justify-center gap-1 mt-2">
+                  {expert.skills.map((skill, i) => (
+                    <span key={i} className="text-[10px] bg-neutral-150 text-dark-600 px-1.5 py-0.5 rounded">
+                      {skill}
+                    </span>
+                  ))}
                 </div>
               </div>
             ))}
@@ -466,11 +466,11 @@ export default function Home() {
               <div className="bg-neutral-150 rounded-2xl p-6 border border-neutral-200">
                 <div className="space-y-3">
                   {['Workflow automation', 'Knowledge management', 'Decision intelligence', 'Governance compliant'].map((item, i) => (
-                    <div key={i} className="flex items-center gap-3">
-                      <svg className="w-5 h-5 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span className="text-dark-700">{item}</span>
+                    <div key={i} className="flex items-center gap-4 bg-white p-3 rounded-xl border border-neutral-200 hover:border-primary-500/30 transition-all">
+                      <span className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-400 rounded-lg flex items-center justify-center text-xs font-bold text-white shadow-sm">
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+                      <span className="text-dark-700 font-medium">{item}</span>
                     </div>
                   ))}
                 </div>

@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import NetworkBackground from '@/components/NetworkBackground';
+import HeroLeverageVisual from '@/components/HeroLeverageVisual';
 
 export default function LeverageAI() {
   const services = [
@@ -130,22 +131,27 @@ export default function LeverageAI() {
         <div className="hidden md:block absolute top-1/2 right-0 w-[600px] h-[600px] bg-primary-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 animate-glow-pulse" />
 
         <div className="relative max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
-          <div className="max-w-3xl">
-            <p className="section-label !text-primary-500 !mb-4 md:!mb-6 animate-fade-in">Leverage AI for Your Business</p>
-            <h1 className="hero-title text-white animate-fade-in-up text-3xl md:text-5xl lg:text-6xl">
-              Adopt AI.<br />
-              <span className="text-primary-500 text-glow">Scale with Confidence.</span>
-            </h1>
-            <p className="hero-subtitle text-base md:text-lg lg:text-xl animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              From strategy to production — we help organizations adopt and scale AI through consulting, custom development, and seamless system integration. Business-driven AI that aligns with your existing IT ecosystem.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              <Link href="/contact" className="btn-primary text-center">
-                Get AI readiness assessment
-              </Link>
-              <Link href="/solutions" className="btn-secondary !border-white/30 !text-white hover:!bg-white hover:!text-dark-900 text-center">
-                View AI solutions
-              </Link>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="section-label !text-primary-500 !mb-4 md:!mb-6 animate-fade-in">Leverage AI for Your Business</p>
+              <h1 className="hero-title text-white animate-fade-in-up text-3xl md:text-5xl lg:text-6xl">
+                Adopt AI.<br />
+                <span className="text-primary-500 text-glow">Scale with Confidence.</span>
+              </h1>
+              <p className="hero-subtitle text-base md:text-lg lg:text-xl animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                From strategy to production — we help organizations adopt and scale AI through consulting, custom development, and seamless system integration. Business-driven AI that aligns with your existing IT ecosystem.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+                <Link href="/contact" className="btn-primary text-center">
+                  Get AI readiness assessment
+                </Link>
+                <Link href="/solutions" className="btn-secondary !border-white/30 !text-white hover:!bg-white hover:!text-dark-900 text-center">
+                  View AI solutions
+                </Link>
+              </div>
+            </div>
+            <div className="hidden lg:block">
+              <HeroLeverageVisual />
             </div>
           </div>
         </div>
@@ -217,16 +223,16 @@ export default function LeverageAI() {
               <div key={index} className="bg-dark-800 rounded-2xl p-6 border border-dark-700 hover:border-primary-500 transition-all">
                 <span className="text-xs font-semibold text-primary-500 uppercase tracking-wide">{useCase.category}</span>
                 <h3 className="text-xl font-semibold text-white mt-2 mb-3">{useCase.title}</h3>
-                <ul className="space-y-2 mb-4">
+                <div className="space-y-2 mb-4">
                   {useCase.examples.map((example, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm text-dark-300">
-                      <svg className="w-4 h-4 text-primary-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      {example}
-                    </li>
+                    <div key={i} className="flex items-center gap-3 bg-dark-700/40 p-2 rounded-lg border border-dark-600/50">
+                      <span className="w-5 h-5 bg-gradient-to-br from-primary-500 to-primary-400 rounded flex items-center justify-center text-[9px] font-bold text-white flex-shrink-0">
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+                      <span className="text-sm text-dark-300">{example}</span>
+                    </div>
                   ))}
-                </ul>
+                </div>
                 <div className="pt-4 border-t border-dark-700">
                   <span className="text-primary-500 font-semibold">{useCase.impact}</span>
                 </div>
@@ -252,14 +258,12 @@ export default function LeverageAI() {
             </div>
             <div className="bg-white rounded-2xl p-6 border border-neutral-200">
               <h3 className="font-semibold text-dark-900 mb-4">Key Readiness Factors</h3>
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {readinessFactors.map((item, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <div className="w-8 h-8 bg-primary-500/10 rounded-lg flex items-center justify-center text-primary-500 flex-shrink-0 mt-0.5">
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                    </div>
+                  <div key={i} className="flex items-start gap-4 bg-neutral-50 p-3 rounded-xl border border-neutral-200 hover:border-primary-500/30 transition-all">
+                    <span className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-400 rounded-lg flex items-center justify-center text-xs font-bold text-white shadow-sm flex-shrink-0">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
                     <div>
                       <p className="font-medium text-dark-900">{item.factor}</p>
                       <p className="text-dark-500 text-sm">{item.question}</p>
@@ -289,16 +293,16 @@ export default function LeverageAI() {
                 <h3 className="text-xl font-semibold text-dark-900 mb-2">{tier.tier}</h3>
                 <p className="text-3xl font-bold text-primary-500 mb-3">{tier.range}</p>
                 <p className="text-dark-500 text-sm mb-4">{tier.description}</p>
-                <ul className="space-y-2 text-left">
+                <div className="space-y-2 text-left">
                   {tier.includes.map((item, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm text-dark-600">
-                      <svg className="w-4 h-4 text-primary-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      {item}
-                    </li>
+                    <div key={i} className="flex items-center gap-3 bg-neutral-50 p-2 rounded-lg border border-neutral-200">
+                      <span className="w-5 h-5 bg-gradient-to-br from-primary-500 to-primary-400 rounded flex items-center justify-center text-[9px] font-bold text-white flex-shrink-0">
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+                      <span className="text-sm text-dark-600">{item}</span>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
             ))}
           </div>
@@ -319,7 +323,7 @@ export default function LeverageAI() {
               <p className="text-dark-500 mb-6">
                 We're not traditional consultants who hand over reports and leave. We embed vetted AI engineers directly into your organization to build, deploy, and scale real AI systems — focusing on execution, speed, and production impact.
               </p>
-              <ul className="space-y-4">
+              <div className="space-y-3">
                 {[
                   '98% project success rate vs 59% industry standard',
                   'Teams deployed in 3 weeks, not 6 months',
@@ -327,14 +331,14 @@ export default function LeverageAI() {
                   'Focus on production systems, not just PoCs',
                   'Knowledge transfer built into every engagement',
                 ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-dark-700">{item}</span>
-                  </li>
+                  <div key={i} className="flex items-center gap-4 bg-neutral-100 p-3 rounded-xl border border-neutral-200 hover:border-primary-500/30 transition-all">
+                    <span className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-400 rounded-lg flex items-center justify-center text-xs font-bold text-white shadow-sm flex-shrink-0">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                    <span className="text-dark-700 font-medium">{item}</span>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
             <div className="bg-dark-900 rounded-2xl p-8 text-white">
               <h3 className="text-xl font-semibold mb-6">Traditional vs FSIT</h3>

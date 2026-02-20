@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import NetworkBackground from '@/components/NetworkBackground';
+import HeroTransformVisual from '@/components/HeroTransformVisual';
 
 export default function AITransformation() {
   const marketStats = [
@@ -117,22 +118,27 @@ export default function AITransformation() {
         <div className="hidden md:block absolute top-1/2 right-0 w-[600px] h-[600px] bg-primary-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 animate-glow-pulse" />
 
         <div className="relative max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
-          <div className="max-w-3xl">
-            <p className="section-label !text-primary-500 !mb-4 md:!mb-6 animate-fade-in">Business Transformation with AI</p>
-            <h1 className="hero-title text-white animate-fade-in-up text-3xl md:text-5xl lg:text-6xl">
-              The AI Era<br />
-              <span className="text-primary-500 text-glow">Is Here. Are You Ready?</span>
-            </h1>
-            <p className="hero-subtitle text-base md:text-lg lg:text-xl animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              By 2026, 90% of companies will use AI. 83% of business leaders already view AI as their top investment priority. The question isn't whether to adopt AI — it's how fast you can transform.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              <Link href="/contact" className="btn-primary text-center">
-                Start your transformation
-              </Link>
-              <Link href="/leverage-ai" className="btn-secondary !border-white/30 !text-white hover:!bg-white hover:!text-dark-900 text-center">
-                Explore AI services
-              </Link>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="section-label !text-primary-500 !mb-4 md:!mb-6 animate-fade-in">Business Transformation with AI</p>
+              <h1 className="hero-title text-white animate-fade-in-up text-3xl md:text-5xl lg:text-6xl">
+                The AI Era<br />
+                <span className="text-primary-500 text-glow">Is Here. Are You Ready?</span>
+              </h1>
+              <p className="hero-subtitle text-base md:text-lg lg:text-xl animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                By 2026, 90% of companies will use AI. 83% of business leaders already view AI as their top investment priority. The question isn't whether to adopt AI — it's how fast you can transform.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+                <Link href="/contact" className="btn-primary text-center">
+                  Start your transformation
+                </Link>
+                <Link href="/leverage-ai" className="btn-secondary !border-white/30 !text-white hover:!bg-white hover:!text-dark-900 text-center">
+                  Explore AI services
+                </Link>
+              </div>
+            </div>
+            <div className="hidden lg:block">
+              <HeroTransformVisual />
             </div>
           </div>
         </div>
@@ -208,16 +214,16 @@ export default function AITransformation() {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{phase.title}</h3>
                 <p className="text-dark-300 text-sm mb-4">{phase.description}</p>
-                <ul className="space-y-2">
+                <div className="space-y-2">
                   {phase.activities.map((activity, i) => (
-                    <li key={i} className="flex items-center gap-2 text-xs text-dark-400">
-                      <svg className="w-3 h-3 text-primary-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      {activity}
-                    </li>
+                    <div key={i} className="flex items-center gap-2 bg-dark-700/50 p-2 rounded-lg border border-dark-600/50">
+                      <span className="w-5 h-5 bg-gradient-to-br from-primary-500 to-primary-400 rounded flex items-center justify-center text-[9px] font-bold text-white flex-shrink-0">
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+                      <span className="text-xs text-dark-300">{activity}</span>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
             ))}
           </div>
@@ -270,20 +276,16 @@ export default function AITransformation() {
             {barriers.map((item, index) => (
               <div key={index} className="card card-hover">
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
-                    <svg className="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                    </svg>
+                  <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-orange-500 rounded-lg flex items-center justify-center shadow-sm">
+                    <span className="text-white font-bold text-sm">{String(index + 1).padStart(2, '0')}</span>
                   </div>
                   <h3 className="font-semibold text-dark-900">{item.barrier}</h3>
                 </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 bg-primary-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg className="w-5 h-5 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
+                <div className="flex items-start gap-3 bg-primary-50 p-3 rounded-xl">
+                  <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-400 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-bold text-xs">✓</span>
                   </div>
-                  <p className="text-dark-500 text-sm">{item.solution}</p>
+                  <p className="text-dark-600 text-sm">{item.solution}</p>
                 </div>
               </div>
             ))}
@@ -301,7 +303,7 @@ export default function AITransformation() {
               <p className="text-dark-500 mb-6">
                 We're not consultants who deliver reports and leave. We're an AI-native delivery platform that embeds vetted AI specialists directly into your organization to build, deploy, and scale real AI systems.
               </p>
-              <ul className="space-y-4">
+              <div className="space-y-3">
                 {[
                   '98% project success rate vs industry 59%',
                   'Teams deployed in weeks, not months',
@@ -309,35 +311,35 @@ export default function AITransformation() {
                   'Enterprise-grade security and governance',
                   'Vision 2030 aligned for Saudi organizations',
                 ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-dark-700">{item}</span>
-                  </li>
+                  <div key={i} className="flex items-center gap-4 bg-neutral-100 p-3 rounded-xl border border-neutral-200 hover:border-primary-500/30 transition-all">
+                    <span className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-400 rounded-lg flex items-center justify-center text-xs font-bold text-white shadow-sm flex-shrink-0">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                    <span className="text-dark-700 font-medium">{item}</span>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
             <div className="bg-dark-900 rounded-2xl p-8 text-white">
               <h3 className="text-xl font-semibold mb-4">The Cost of Waiting</h3>
               <p className="text-dark-300 mb-6">
                 Every month you delay AI transformation, your competitors are:
               </p>
-              <ul className="space-y-3">
+              <div className="space-y-3">
                 {[
                   'Automating processes you do manually',
                   'Delivering experiences you can\'t match',
                   'Making decisions faster than you',
                   'Building capabilities you\'ll need to catch up on',
                 ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3">
-                    <svg className="w-5 h-5 text-primary-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                    <span className="text-dark-200">{item}</span>
-                  </li>
+                  <div key={i} className="flex items-center gap-4 bg-dark-800/60 p-3 rounded-xl border border-dark-700 hover:border-primary-500/40 transition-all">
+                    <span className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-400 rounded-lg flex items-center justify-center text-xs font-bold text-white shadow-lg shadow-primary-500/20 flex-shrink-0">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                    <span className="text-dark-200 font-medium">{item}</span>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
           </div>
         </div>

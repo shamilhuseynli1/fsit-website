@@ -192,11 +192,11 @@ export default function Mission() {
           </div>
           <div className="grid-2 max-w-4xl mx-auto mb-12">
             {commitments.map((item, index) => (
-              <div key={index} className="flex items-start gap-3 bg-dark-800 p-4 rounded-xl">
-                <svg className="w-6 h-6 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-                <span className="text-white">{item}</span>
+              <div key={index} className="flex items-center gap-4 bg-dark-800 p-4 rounded-xl border border-dark-700 hover:border-primary-500/40 transition-all">
+                <span className="w-9 h-9 bg-gradient-to-br from-primary-500 to-primary-400 rounded-lg flex items-center justify-center text-xs font-bold text-white shadow-lg shadow-primary-500/20 flex-shrink-0">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <span className="text-white font-medium">{item}</span>
               </div>
             ))}
           </div>

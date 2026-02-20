@@ -436,7 +436,7 @@ export default function BuildScaleAI() {
             </div>
             <div className="card card-hover text-center">
               <p className="stat-number">99%</p>
-              <p className="stat-label">Rigorous Vetting Process</p>
+              <p className="stat-label">Applicants vetted out</p>
             </div>
             <div className="card card-hover text-center">
               <p className="stat-number">98%</p>

@@ -125,7 +125,7 @@ export default function CareersPage() {
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Build AI That{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-gold-400">
                 Actually Works
               </span>
             </h1>
@@ -299,7 +299,7 @@ export default function CareersPage() {
       </section>
 
       {/* Don't See Your Role */}
-      <section className="py-24 bg-gradient-to-br from-primary-50 to-accent-50">
+      <section className="py-24 bg-gradient-to-br from-primary-50 to-neutral-50">
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-6">

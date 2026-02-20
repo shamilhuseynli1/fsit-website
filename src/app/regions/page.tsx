@@ -128,16 +128,16 @@ export default function Regions() {
                   <div className="flex-1">
                     <h3 className="text-xl md:text-2xl font-bold text-dark-900 mb-3">{region.name}</h3>
                     <p className="text-dark-500 mb-4">{region.description}</p>
-                    <ul className="space-y-2 mb-4">
+                    <div className="space-y-2 mb-4">
                       {region.focus.map((item, i) => (
-                        <li key={i} className="flex items-start gap-3">
-                          <svg className="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                          </svg>
+                        <div key={i} className="flex items-center gap-3 bg-neutral-50 p-3 rounded-lg border border-neutral-200 hover:border-primary-500/30 transition-all">
+                          <span className="w-7 h-7 bg-gradient-to-br from-primary-500 to-primary-400 rounded-lg flex items-center justify-center text-[10px] font-bold text-white flex-shrink-0">
+                            {String(i + 1).padStart(2, '0')}
+                          </span>
                           <span className="text-dark-700">{item}</span>
-                        </li>
+                        </div>
                       ))}
-                    </ul>
+                    </div>
                     {region.note && (
                       <p className="text-dark-500 text-sm italic border-l-2 border-primary-500 pl-4">{region.note}</p>
                     )}

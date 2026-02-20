@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import NetworkBackground from '@/components/NetworkBackground';
+import HeroBuildVisual from '@/components/HeroBuildVisual';
 
 export default function BuildInnovate() {
   const capabilities = [
@@ -129,22 +130,27 @@ export default function BuildInnovate() {
         <div className="hidden md:block absolute top-1/2 right-0 w-[600px] h-[600px] bg-primary-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 animate-glow-pulse" />
 
         <div className="relative max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
-          <div className="max-w-3xl">
-            <p className="section-label !text-primary-500 !mb-4 md:!mb-6 animate-fade-in">Build & Innovate</p>
-            <h1 className="hero-title text-white animate-fade-in-up text-3xl md:text-5xl lg:text-6xl">
-              Build AI Systems<br />
-              <span className="text-primary-500 text-glow">That Actually Work</span>
-            </h1>
-            <p className="hero-subtitle text-base md:text-lg lg:text-xl animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              Operationalize AI at scale, not just experiment with it. We embed AI into mission-critical systems with strong governance, security, and industry compliance — built for regulated sectors.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              <Link href="/contact" className="btn-primary text-center">
-                Start your AI project
-              </Link>
-              <Link href="/solutions" className="btn-secondary !border-white/30 !text-white hover:!bg-white hover:!text-dark-900 text-center">
-                Explore solutions
-              </Link>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="section-label !text-primary-500 !mb-4 md:!mb-6 animate-fade-in">Build & Innovate</p>
+              <h1 className="hero-title text-white animate-fade-in-up text-3xl md:text-5xl lg:text-6xl">
+                Build AI Systems<br />
+                <span className="text-primary-500 text-glow">That Actually Work</span>
+              </h1>
+              <p className="hero-subtitle text-base md:text-lg lg:text-xl animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                Operationalize AI at scale, not just experiment with it. We embed AI into mission-critical systems with strong governance, security, and industry compliance — built for regulated sectors.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+                <Link href="/contact" className="btn-primary text-center">
+                  Start your AI project
+                </Link>
+                <Link href="/solutions" className="btn-secondary !border-white/30 !text-white hover:!bg-white hover:!text-dark-900 text-center">
+                  Explore solutions
+                </Link>
+              </div>
+            </div>
+            <div className="hidden lg:block">
+              <HeroBuildVisual />
             </div>
           </div>
         </div>
@@ -279,16 +285,16 @@ export default function BuildInnovate() {
             {techStack.map((tech, index) => (
               <div key={index} className="card">
                 <h3 className="font-semibold text-dark-900 mb-4 text-sm">{tech.category}</h3>
-                <ul className="space-y-2">
+                <div className="space-y-2">
                   {tech.tools.map((tool, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm text-dark-600">
-                      <svg className="w-4 h-4 text-primary-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      {tool}
-                    </li>
+                    <div key={i} className="flex items-center gap-2 bg-neutral-50 p-2 rounded-lg border border-neutral-100">
+                      <span className="w-5 h-5 bg-gradient-to-br from-primary-500 to-primary-400 rounded flex items-center justify-center text-[9px] font-bold text-white flex-shrink-0">
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+                      <span className="text-sm text-dark-600">{tool}</span>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
             ))}
           </div>
@@ -305,7 +311,7 @@ export default function BuildInnovate() {
               <p className="text-dark-500 mb-6">
                 We're not a traditional consulting firm that hands over a report and leaves. We build alongside you, with engineers who've shipped AI at scale.
               </p>
-              <ul className="space-y-4">
+              <div className="space-y-3">
                 {[
                   'Engineers with production AI experience',
                   'Not just prototypes — we ship to production',
@@ -313,14 +319,14 @@ export default function BuildInnovate() {
                   'Focus on outcomes, not billable hours',
                   'Long-term partnership approach',
                 ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-dark-700">{item}</span>
-                  </li>
+                  <div key={i} className="flex items-center gap-4 bg-white p-3 rounded-xl border border-neutral-200 hover:border-primary-500/30 transition-all">
+                    <span className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-400 rounded-lg flex items-center justify-center text-xs font-bold text-white shadow-sm flex-shrink-0">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                    <span className="text-dark-700 font-medium">{item}</span>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
             <div className="bg-dark-900 rounded-2xl p-8 text-white">
               <h3 className="text-xl font-semibold mb-6">Consulting vs FSIT</h3>

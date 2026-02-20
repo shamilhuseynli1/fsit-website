@@ -99,7 +99,7 @@ export default function IndustriesPage() {
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               AI Solutions for{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-gold-400">
                 Every Industry
               </span>
             </h1>
@@ -203,18 +203,16 @@ export default function IndustriesPage() {
               <p className="text-lg text-dark-600 mb-8">
                 Generic AI solutions fail in production. We have learned this across 300+ projects. That is why every engagement starts with deep domain understanding — your regulations, your data patterns, your competitive landscape.
               </p>
-              <div className="space-y-6">
+              <div className="space-y-4">
                 {[
                   { title: 'Regulatory Compliance', desc: 'SOC2, HIPAA, GDPR, PCI-DSS — we build compliant from day one, not as an afterthought.' },
                   { title: 'Domain-Specific Models', desc: 'Pre-trained on industry data, fine-tuned for your use case, validated by domain experts.' },
                   { title: 'Proven Playbooks', desc: "We don't experiment with your production systems. We apply what's worked before." },
                 ].map((item, index) => (
-                  <div key={index} className="flex gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary-100 flex items-center justify-center">
-                      <svg className="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
+                  <div key={index} className="flex gap-4 bg-neutral-50 p-4 rounded-xl border border-neutral-200 hover:border-primary-500/30 transition-all">
+                    <span className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-400 rounded-xl flex items-center justify-center text-sm font-bold text-white shadow-sm">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
                     <div>
                       <h4 className="font-bold text-dark-900 mb-1">{item.title}</h4>
                       <p className="text-dark-500">{item.desc}</p>
@@ -223,7 +221,7 @@ export default function IndustriesPage() {
                 ))}
               </div>
             </div>
-            <div className="bg-gradient-to-br from-primary-50 to-accent-50 rounded-3xl p-8 lg:p-12">
+            <div className="bg-gradient-to-br from-primary-50 to-neutral-50 rounded-3xl p-8 lg:p-12">
               <h3 className="text-2xl font-bold text-dark-900 mb-6">The FSIT Difference</h3>
               <div className="space-y-4">
                 <div className="bg-white rounded-xl p-4 shadow-sm">

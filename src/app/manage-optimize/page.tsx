@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import NetworkBackground from '@/components/NetworkBackground';
+import HeroOptimizeVisual from '@/components/HeroOptimizeVisual';
 
 export default function ManageOptimize() {
   const services = [
@@ -128,22 +129,27 @@ export default function ManageOptimize() {
         <div className="hidden md:block absolute top-1/2 right-0 w-[600px] h-[600px] bg-primary-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 animate-glow-pulse" />
 
         <div className="relative max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
-          <div className="max-w-3xl">
-            <p className="section-label !text-primary-500 !mb-4 md:!mb-6 animate-fade-in">Manage & Optimize</p>
-            <h1 className="hero-title text-white animate-fade-in-up text-3xl md:text-5xl lg:text-6xl">
-              Keep AI Running<br />
-              <span className="text-primary-500 text-glow">At Peak Performance</span>
-            </h1>
-            <p className="hero-subtitle text-base md:text-lg lg:text-xl animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              Continuous management and optimization of your AI systems. We ensure your AI stays accurate, fast, and cost-effective as your business evolves.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              <Link href="/contact" className="btn-primary text-center">
-                Optimize your AI
-              </Link>
-              <Link href="/ai-operations" className="btn-secondary !border-white/30 !text-white hover:!bg-white hover:!text-dark-900 text-center">
-                View AI operations
-              </Link>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="section-label !text-primary-500 !mb-4 md:!mb-6 animate-fade-in">Manage & Optimize</p>
+              <h1 className="hero-title text-white animate-fade-in-up text-3xl md:text-5xl lg:text-6xl">
+                Keep AI Running<br />
+                <span className="text-primary-500 text-glow">At Peak Performance</span>
+              </h1>
+              <p className="hero-subtitle text-base md:text-lg lg:text-xl animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                Continuous management and optimization of your AI systems. We ensure your AI stays accurate, fast, and cost-effective as your business evolves.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+                <Link href="/contact" className="btn-primary text-center">
+                  Optimize your AI
+                </Link>
+                <Link href="/ai-operations" className="btn-secondary !border-white/30 !text-white hover:!bg-white hover:!text-dark-900 text-center">
+                  View AI operations
+                </Link>
+              </div>
+            </div>
+            <div className="hidden lg:block">
+              <HeroOptimizeVisual />
             </div>
           </div>
         </div>
@@ -243,16 +249,16 @@ export default function ManageOptimize() {
             {monitoringCapabilities.map((cap, index) => (
               <div key={index} className="card">
                 <h3 className="font-semibold text-dark-900 mb-4">{cap.title}</h3>
-                <ul className="space-y-2">
+                <div className="space-y-2">
                   {cap.items.map((item, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm text-dark-600">
-                      <svg className="w-4 h-4 text-primary-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      {item}
-                    </li>
+                    <div key={i} className="flex items-center gap-2 bg-neutral-50 p-2 rounded-lg border border-neutral-100">
+                      <span className="w-5 h-5 bg-gradient-to-br from-primary-500 to-primary-400 rounded flex items-center justify-center text-[9px] font-bold text-white flex-shrink-0">
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+                      <span className="text-sm text-dark-600">{item}</span>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
             ))}
           </div>
@@ -285,16 +291,16 @@ export default function ManageOptimize() {
                 )}
                 <h3 className="text-xl font-semibold text-dark-900 mb-2 mt-2">{tier.tier}</h3>
                 <p className="text-dark-500 text-sm mb-4">{tier.description}</p>
-                <ul className="space-y-2">
+                <div className="space-y-2">
                   {tier.features.map((feature, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm text-dark-600">
-                      <svg className="w-4 h-4 text-primary-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      {feature}
-                    </li>
+                    <div key={i} className="flex items-center gap-2 bg-neutral-50 p-2 rounded-lg border border-neutral-100">
+                      <span className="w-5 h-5 bg-gradient-to-br from-primary-500 to-primary-400 rounded flex items-center justify-center text-[9px] font-bold text-white flex-shrink-0">
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+                      <span className="text-sm text-dark-600">{feature}</span>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
             ))}
           </div>
@@ -311,7 +317,7 @@ export default function ManageOptimize() {
               <p className="text-dark-500 mb-6">
                 We don't wait for things to break. Our proactive approach identifies and resolves issues before they impact your business.
               </p>
-              <ul className="space-y-4">
+              <div className="space-y-3">
                 {[
                   'Proactive monitoring catches issues early',
                   'Continuous optimization, not just maintenance',
@@ -319,14 +325,14 @@ export default function ManageOptimize() {
                   'Business-aligned SLAs and metrics',
                   'Regular reporting and recommendations',
                 ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-dark-700">{item}</span>
-                  </li>
+                  <div key={i} className="flex items-center gap-4 bg-white p-3 rounded-xl border border-neutral-200 hover:border-primary-500/30 transition-all">
+                    <span className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-400 rounded-lg flex items-center justify-center text-xs font-bold text-white shadow-sm flex-shrink-0">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                    <span className="text-dark-700 font-medium">{item}</span>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
             <div className="bg-white rounded-2xl p-8 border border-neutral-200">
               <h3 className="font-semibold text-dark-900 mb-6">Included With Management</h3>
@@ -337,10 +343,10 @@ export default function ManageOptimize() {
                   { title: 'Optimization Reviews', desc: 'Regular analysis for improvement opportunities' },
                   { title: 'Incident Response', desc: 'Rapid resolution when issues arise' },
                 ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-3 bg-neutral-150 rounded-lg p-4">
-                    <svg className="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
+                  <div key={i} className="flex items-start gap-4 bg-neutral-150 rounded-xl p-4 border border-neutral-200 hover:border-primary-500/30 transition-all">
+                    <span className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-400 rounded-lg flex items-center justify-center text-xs font-bold text-white shadow-sm flex-shrink-0">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
                     <div>
                       <h4 className="font-medium text-dark-900">{item.title}</h4>
                       <p className="text-dark-500 text-sm">{item.desc}</p>

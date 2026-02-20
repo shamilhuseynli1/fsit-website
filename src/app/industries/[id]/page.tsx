@@ -365,20 +365,18 @@ export default function IndustryPage() {
               <p className="text-lg text-dark-600 mb-8">
                 We understand the unique challenges facing {industry.name.toLowerCase()}. Our solutions are built specifically for your regulatory environment, data requirements, and operational constraints.
               </p>
-              <ul className="space-y-4">
+              <div className="space-y-3">
                 {industry.challenges.map((challenge, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary-100 flex items-center justify-center mt-0.5">
-                      <svg className="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                    <span className="text-dark-700">{challenge}</span>
-                  </li>
+                  <div key={index} className="flex items-center gap-4 bg-neutral-50 p-3 rounded-xl border border-neutral-200 hover:border-primary-500/30 transition-all">
+                    <span className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-400 rounded-lg flex items-center justify-center text-xs font-bold text-white shadow-sm">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                    <span className="text-dark-700 font-medium">{challenge}</span>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
-            <div className="bg-gradient-to-br from-primary-50 to-accent-50 rounded-3xl p-8">
+            <div className="bg-gradient-to-br from-primary-50 to-neutral-50 rounded-3xl p-8">
               <h3 className="text-xl font-bold text-dark-900 mb-6">Compliance & Security</h3>
               <p className="text-dark-600 mb-6">
                 All our {industry.name.toLowerCase()} solutions are built with compliance in mind from day one.

@@ -93,7 +93,10 @@ export default function Regions() {
               <span className="text-primary-500">Global delivery.</span>
             </h1>
             <p className="hero-subtitle">
-              FSIT operates across Saudi Arabia and the Middle East, supported by globally distributed teams across Europe, Asia, and the United States
+              Our teams and projects operate across multiple regions, working seamlessly across time zones and markets. This global presence allows us to deliver locally informed, internationally aligned solutions.
+            </p>
+            <p className="text-lg text-white/90 mt-6 font-medium">
+              Riyadh · Doha · Dubai · Bangalore · Ho Chi Minh City · Singapore · Manila · Amman · Lebanon · Barcelona · Milan · London · Berlin · Zagreb
             </p>
           </div>
         </div>

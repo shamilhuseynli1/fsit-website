@@ -195,10 +195,10 @@ export default function AIOperations() {
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url(/hero-neom.jpg)' }}
+          style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1629667051607-e412f1c493c0?auto=format&fit=crop&w=1920&q=80)' }}
         />
         {/* Light overlay - reduced for NEOM visibility */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/60 to-white/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/50 via-white/30 to-white/10" />
 
         {/* Network pattern overlay */}
         <div className="absolute inset-0 opacity-30">

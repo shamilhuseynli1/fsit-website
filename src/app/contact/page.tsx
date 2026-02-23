@@ -109,11 +109,11 @@ export default function Contact() {
       {/* Hero */}
       <section className="relative min-h-[80vh] flex items-center bg-cream-50 overflow-hidden">
         <img
-          src="/hero-faisaliyah.jpg"
+          src="https://images.unsplash.com/photo-1694018359679-49465b4c0d61?auto=format&fit=crop&w=1920&q=80"
           alt="Riyadh Skyline"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-white/40 to-white/20" />
         <div className="relative max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
           <div className="max-w-3xl">
             <p className="text-primary-500 font-bold text-lg tracking-wide uppercase mb-4">Contact Us</p>

@@ -115,35 +115,31 @@ export default function AITransformation() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center bg-cream-50 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-white via-cream-50 to-neutral-50" />
-        {/* Saudi Modern City Background */}
-        <div
-          className="absolute inset-0 opacity-30"
-          style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1733757361453-5f493624a734?auto=format&fit=crop&w=1920&q=80)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
+      <section className="relative min-h-[80vh] flex items-center overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1629667051607-e412f1c493c0?auto=format&fit=crop&w=1920&q=80"
+          alt="AI Transformation"
+          className="absolute inset-0 w-full h-full object-cover"
         />
+        <div className="absolute inset-0 bg-black/60" />
         <NetworkBackground nodeCount={70} maxDistance={130} />
         <div className="hidden md:block absolute top-1/2 right-0 w-[600px] h-[600px] bg-primary-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 animate-glow-pulse" />
 
         <div className="relative max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h1 className="hero-title text-dark-900 animate-fade-in-up text-3xl md:text-5xl lg:text-6xl">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-8 leading-tight animate-fade-in-up" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                 The AI Era<br />
-                <span className="text-primary-500 text-glow">Is Here. Are You Ready?</span>
+                <span className="text-green-400" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>Is Here. Are You Ready?</span>
               </h1>
-              <p className="hero-subtitle text-base md:text-lg lg:text-xl animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <p className="text-xl md:text-2xl text-white mb-10 leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s', textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
                 By 2026, 90% of companies will use AI. 83% of business leaders already view AI as their top investment priority. The question isn't whether to adopt AI — it's how fast you can transform.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-                <Link href="/contact" className="btn-primary text-center">
+              <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+                <Link href="/contact" className="btn-primary text-lg px-8 py-4">
                   Start your transformation
                 </Link>
-                <Link href="/leverage-ai" className="btn-secondary text-center">
+                <Link href="/leverage-ai" className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-dark-900 transition-all text-lg">
                   Explore AI services
                 </Link>
               </div>

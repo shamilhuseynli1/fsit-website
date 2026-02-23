@@ -40,7 +40,12 @@ export default function Mission() {
     <>
       {/* Hero */}
       <section className="relative min-h-[80vh] flex items-center bg-cream-50 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-white via-cream-50 to-neutral-50" />
+        <img
+          src="https://images.unsplash.com/photo-1682695796795-cc287af78a2b?auto=format&fit=crop&w=1920&q=80"
+          alt="Mission"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/50 to-white/30" />
         <NetworkBackground nodeCount={60} />
         <div className="relative max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
           <div className="max-w-4xl mx-auto text-center">

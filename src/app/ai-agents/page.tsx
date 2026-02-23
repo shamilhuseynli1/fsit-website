@@ -211,10 +211,10 @@ export default function AIAgents() {
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url(/hero-neom.jpg)' }}
+          style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1629667051607-e412f1c493c0?auto=format&fit=crop&w=1920&q=80)' }}
         />
         {/* Light overlay - reduced for NEOM visibility */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/60 to-white/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/50 via-white/30 to-white/10" />
 
         {/* Network pattern overlay */}
         <div className="absolute inset-0 opacity-30">
@@ -344,40 +344,25 @@ export default function AIAgents() {
             </svg>
           </div>
 
-          {/* Cards grid */}
-          <div className="relative">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 relative">
-              {/* Vertical dashed separator lines between columns */}
-              <div className="absolute top-6 bottom-0 left-1/3 w-px hidden lg:block" style={{ borderLeft: '2px dashed #00A651', opacity: 0.3 }} />
-              <div className="absolute top-6 bottom-0 left-2/3 w-px hidden lg:block" style={{ borderLeft: '2px dashed #00A651', opacity: 0.3 }} />
-
-              {/* Horizontal dashed line between rows */}
-              <div className="absolute left-0 right-0 top-1/2 h-px hidden lg:block" style={{ borderTop: '2px dashed #00A651', opacity: 0.3 }} />
-
-              {capabilities.map((cap, index) => (
-                <div
-                  key={index}
-                  className="group relative p-6 rounded-2xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-white z-10"
-                  style={{ border: '1px solid var(--gray-100)' }}
-                >
-                  {/* Icon */}
-                  <div className="w-14 h-14 min-w-[56px] max-w-[56px] min-h-[56px] max-h-[56px] rounded-xl flex items-center justify-center mb-4 overflow-hidden" style={{ background: 'rgba(0, 166, 81, 0.1)' }}>
-                    <div className="w-7 h-7 flex-shrink-0">
-                      {cap.icon}
-                    </div>
-                  </div>
-
-                  {/* Content */}
-                  <h3 className="text-lg font-bold mb-2 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
-                    {cap.title}
-                  </h3>
-                  <p className="text-sm" style={{ color: 'var(--gray-500)' }}>{cap.desc}</p>
-
-                  {/* Hover border effect */}
-                  <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-green-500/30 transition-all duration-300 pointer-events-none" />
+          {/* Cards grid with dividing lines - 3 columns for 6 items (2x3) */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#00A651]/20 rounded-2xl overflow-hidden">
+            {capabilities.map((cap, index) => (
+              <div
+                key={index}
+                className="group relative p-8 bg-white hover:bg-[#F5F3F0] transition-all duration-300"
+              >
+                {/* Icon */}
+                <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(0, 166, 81, 0.1)' }}>
+                  {cap.icon}
                 </div>
-              ))}
-            </div>
+
+                {/* Content */}
+                <h3 className="text-xl font-bold mb-3 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+                  {cap.title}
+                </h3>
+                <p className="text-base" style={{ color: 'var(--gray-600)' }}>{cap.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -542,76 +527,65 @@ export default function AIAgents() {
             </svg>
           </div>
 
-          {/* Cards grid with vertical connector lines */}
-          <div className="relative">
-            {/* Vertical lines from horizontal line to center of each card */}
-            <div className="hidden lg:block absolute top-0 left-[12.5%] w-px h-8" style={{ background: '#00A651' }} />
-            <div className="hidden lg:block absolute top-0 left-[37.5%] w-px h-8" style={{ background: '#00A651' }} />
-            <div className="hidden lg:block absolute top-0 left-[62.5%] w-px h-8" style={{ background: '#00A651' }} />
-            <div className="hidden lg:block absolute top-0 left-[87.5%] w-px h-8" style={{ background: '#00A651' }} />
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 pt-8">
-              {[
-                {
-                  name: 'Financial Services',
-                  agents: ['Compliance monitoring', 'Fraud detection', 'Customer onboarding'],
-                  icon: (
-                    <svg className="w-7 h-7" fill="none" stroke="#00A651" strokeWidth="1.5" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
-                    </svg>
-                  ),
-                },
-                {
-                  name: 'Healthcare',
-                  agents: ['Clinical documentation', 'Appointment scheduling', 'Patient follow-up'],
-                  icon: (
-                    <svg className="w-7 h-7" fill="none" stroke="#00A651" strokeWidth="1.5" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                    </svg>
-                  ),
-                },
-                {
-                  name: 'Government',
-                  agents: ['Citizen inquiry', 'Document processing', 'Policy research'],
-                  icon: (
-                    <svg className="w-7 h-7" fill="none" stroke="#00A651" strokeWidth="1.5" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
-                    </svg>
-                  ),
-                },
-                {
-                  name: 'Manufacturing',
-                  agents: ['Quality inspection', 'Maintenance scheduling', 'Supply chain'],
-                  icon: (
-                    <svg className="w-7 h-7" fill="none" stroke="#00A651" strokeWidth="1.5" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" />
-                    </svg>
-                  ),
-                },
-              ].map((industry, index) => (
-                <div
-                  key={index}
-                  className="group relative p-6 rounded-2xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
-                  style={{ background: 'var(--white)', border: '1px solid var(--gray-100)' }}
-                >
-                  {/* Icon */}
-                  <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4" style={{ background: 'rgba(0, 166, 81, 0.1)' }}>
-                    {industry.icon}
-                  </div>
-                  <h3 className="font-semibold text-dark-900 mb-4 text-lg">{industry.name}</h3>
-                  <div className="space-y-2">
-                    {industry.agents.map((agent, i) => (
-                      <div key={i} className="flex items-center gap-3 p-3 rounded-xl transition-all hover:bg-green-50" style={{ background: '#F5F3F0' }}>
-                        <div className="w-2 h-2 rounded-full" style={{ background: '#00A651' }} />
-                        <span className="text-sm text-dark-700 font-medium">{agent}</span>
-                      </div>
-                    ))}
-                  </div>
-                  {/* Hover border effect */}
-                  <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-green-500/30 transition-all duration-300 pointer-events-none" />
+          {/* Cards grid with dividing lines - 4 columns */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-[#00A651]/20 rounded-2xl overflow-hidden mt-8">
+            {[
+              {
+                name: 'Financial Services',
+                agents: ['Compliance monitoring', 'Fraud detection', 'Customer onboarding'],
+                icon: (
+                  <svg className="w-7 h-7" fill="none" stroke="#00A651" strokeWidth="1.5" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
+                  </svg>
+                ),
+              },
+              {
+                name: 'Healthcare',
+                agents: ['Clinical documentation', 'Appointment scheduling', 'Patient follow-up'],
+                icon: (
+                  <svg className="w-7 h-7" fill="none" stroke="#00A651" strokeWidth="1.5" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                  </svg>
+                ),
+              },
+              {
+                name: 'Government',
+                agents: ['Citizen inquiry', 'Document processing', 'Policy research'],
+                icon: (
+                  <svg className="w-7 h-7" fill="none" stroke="#00A651" strokeWidth="1.5" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
+                  </svg>
+                ),
+              },
+              {
+                name: 'Manufacturing',
+                agents: ['Quality inspection', 'Maintenance scheduling', 'Supply chain'],
+                icon: (
+                  <svg className="w-7 h-7" fill="none" stroke="#00A651" strokeWidth="1.5" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" />
+                  </svg>
+                ),
+              },
+            ].map((industry, index) => (
+              <div
+                key={index}
+                className="group bg-white p-8 hover:bg-[#F5F3F0] transition-all duration-300"
+              >
+                {/* Icon */}
+                <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(0, 166, 81, 0.1)' }}>
+                  {industry.icon}
                 </div>
-              ))}
-            </div>
+                <h3 className="font-bold text-xl mb-4" style={{ color: 'var(--black)' }}>{industry.name}</h3>
+                <div className="space-y-3">
+                  {industry.agents.map((agent, i) => (
+                    <div key={i} className="flex items-center gap-3 p-3 rounded-xl transition-all hover:bg-green-50" style={{ background: '#F5F3F0' }}>
+                      <div className="w-2 h-2 rounded-full" style={{ background: '#00A651' }} />
+                      <span className="text-base font-medium" style={{ color: 'var(--gray-700)' }}>{agent}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

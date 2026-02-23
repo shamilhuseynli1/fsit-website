@@ -491,7 +491,7 @@ export default function MLModelsPage() {
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         {/* Background Image */}
         <img
-          src="/hero-neom.jpg"
+          src="https://images.unsplash.com/photo-1629667051607-e412f1c493c0?auto=format&fit=crop&w=1920&q=80"
           alt="NEOM - Vision 2030 Saudi Arabia"
           className="absolute inset-0 w-full h-full object-cover"
         />

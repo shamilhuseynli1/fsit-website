@@ -99,9 +99,9 @@ export default function BuildInnovate() {
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-white via-cream-50 to-neutral-50" />
         <div
-          className="absolute inset-0 opacity-20"
+          className="absolute inset-0 opacity-50"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1733757361453-5f493624a734?auto=format&fit=crop&w=1920&q=80)',
+            backgroundImage: 'url(https://images.unsplash.com/photo-1738410775719-9f237adb266d?auto=format&fit=crop&w=1920&q=80)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}

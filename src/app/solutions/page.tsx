@@ -164,7 +164,7 @@ export default function Solutions() {
       <section className="relative overflow-hidden min-h-[90vh] flex items-center">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url(/hero-neom.jpg)' }}
+          style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1590959914819-b767b9fe4cfb?auto=format&fit=crop&w=1920&q=80)' }}
         />
         {/* Cream overlay for better text visibility */}
         <div className="absolute inset-0" style={{ background: 'rgba(245, 243, 240, 0.75)' }} />
@@ -291,14 +291,14 @@ export default function Solutions() {
             </svg>
           </div>
 
-          {/* Items grid - aligned with branches */}
-          <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 -mt-4">
+          {/* Items grid with dividing lines - 5 columns for 5 services */}
+          <div className="grid grid-cols-2 lg:grid-cols-5 gap-px bg-[#00A651]/20 rounded-2xl overflow-hidden -mt-4">
             {coreServices.map((item, index) => (
-              <div key={index} className="group text-center p-4 rounded-xl hover:bg-neutral-50 transition-all duration-300">
-                <h3 className="text-base font-bold mb-2 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+              <div key={index} className="group text-center p-6 bg-white hover:bg-[#F5F3F0] transition-all duration-300">
+                <h3 className="text-lg font-bold mb-3 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
                   {item.title}
                 </h3>
-                <p className="text-xs" style={{ color: 'var(--gray-500)' }}>
+                <p className="text-base" style={{ color: 'var(--gray-600)' }}>
                   {item.description.split('.')[0]}
                 </p>
               </div>
@@ -323,15 +323,12 @@ export default function Solutions() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          {/* Grid with dividing lines - 3 columns for 3 models */}
+          <div className="grid md:grid-cols-3 gap-px bg-[#00A651]/20 rounded-2xl overflow-hidden">
             {generalModels.map((model, index) => (
               <div
                 key={index}
-                className="group relative p-8 rounded-2xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
-                style={{
-                  background: 'var(--white)',
-                  border: '1px solid var(--gray-100)'
-                }}
+                className="group relative p-8 bg-white hover:bg-[#F5F3F0] transition-all duration-300"
               >
                 {/* Icon */}
                 <div
@@ -396,13 +393,6 @@ export default function Solutions() {
                   </div>
                 </div>
 
-                {/* Hover glow effect */}
-                <div
-                  className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                  style={{
-                    background: 'linear-gradient(135deg, rgba(0, 166, 81, 0.03) 0%, transparent 50%)',
-                  }}
-                />
               </div>
             ))}
           </div>

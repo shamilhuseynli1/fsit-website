@@ -138,10 +138,10 @@ export default function StaffAugmentation() {
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url(/hero-faisaliyah.jpg)' }}
+          style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1590959914819-b767b9fe4cfb?auto=format&fit=crop&w=1920&q=80)' }}
         />
         {/* Light overlay */}
-        <div className="absolute inset-0 bg-cream-50/90" />
+        <div className="absolute inset-0 bg-cream-50/50" />
 
         {/* Network pattern overlay */}
         <div className="absolute inset-0 opacity-30">

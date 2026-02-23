@@ -80,11 +80,11 @@ export default function About() {
       {/* Hero - Vision Statement */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden" style={{ background: 'var(--cream)' }}>
         <img
-          src="https://images.unsplash.com/photo-1659241869140-3cb7cdff42fd?auto=format&fit=crop&w=1920&q=80"
+          src="https://images.unsplash.com/photo-1694018359679-49465b4c0d61?auto=format&fit=crop&w=1920&q=80"
           alt="FSIT Team"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/90 to-white/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-white/40 to-white/20" />
         <div className="container-max relative py-24 lg:py-32">
           <div className="max-w-3xl">
             <p className="label mb-4">About FSIT</p>

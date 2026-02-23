@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import BranchingList from '@/components/BranchingList';
@@ -11,6 +11,28 @@ import VideoPlaceholder from '@/components/VideoPlaceholder';
 export default function Home() {
   const [activeFilter, setActiveFilter] = useState('all');
   const [expertFilter, setExpertFilter] = useState('saudi');
+  const [heroImage, setHeroImage] = useState('/hero-riyadh.jpg');
+  const [isNight, setIsNight] = useState(false);
+
+  // Automatic day/night image switching based on local time
+  useEffect(() => {
+    const updateHeroImage = () => {
+      const hour = new Date().getHours();
+      // Night: 6 PM (18:00) to 6 AM (05:59)
+      const isNightTime = hour >= 18 || hour < 6;
+      setIsNight(isNightTime);
+      if (isNightTime) {
+        setHeroImage('https://images.unsplash.com/photo-1663900108404-a05e8bf82cda?auto=format&fit=crop&w=1920&q=80');
+      } else {
+        setHeroImage('/hero-riyadh.jpg');
+      }
+    };
+
+    updateHeroImage();
+    // Update every minute to catch day/night transition
+    const interval = setInterval(updateHeroImage, 60000);
+    return () => clearInterval(interval);
+  }, []);
 
   const capabilities = [
     {
@@ -137,7 +159,6 @@ export default function Home() {
     { id: 'government', label: 'Government' },
     { id: 'financial', label: 'Financial' },
     { id: 'pif', label: 'PIF Companies' },
-    { id: 'healthcare', label: 'Healthcare' },
   ];
 
   const filteredClients = activeFilter === 'all'
@@ -164,31 +185,30 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <img
-          src="/hero-kingdom-tower-night.jpg"
-          alt="Kingdom Tower at Night - Riyadh, Saudi Arabia"
-          className="absolute inset-0 w-full h-full object-cover"
+          src={heroImage}
+          alt={isNight ? "Riyadh Skyline at Night - Saudi Arabia" : "Riyadh Skyline - Saudi Arabia"}
+          className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
         />
-        {/* Dark overlay for text contrast */}
-        <div className="absolute inset-0 bg-black/50" />
+        {/* Overlay for text contrast - slightly darker at night */}
+        <div className={`absolute inset-0 transition-colors duration-1000 ${isNight ? 'bg-black/60' : 'bg-black/50'}`} />
 
         <div className="container-lg relative py-32 lg:py-40">
-          <div className="max-w-3xl">
+          <div className="max-w-5xl">
             {/* Small tagline */}
             <p className="text-sm md:text-base font-bold tracking-widest uppercase mb-6" style={{ color: 'var(--green)' }}>
               AI Transformation Partner
             </p>
 
-            <h1 className="text-5xl md:text-6xl lg:text-8xl font-black mb-8 leading-[1.1] tracking-tight text-white">
-              Augmented
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-10 leading-[1.05] tracking-tight text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5), 0 4px 12px rgba(0,0,0,0.3)' }}>
+              Augmented Intelligence
               <br />
-              Intelligence.
-              <br />
-              <span style={{ color: 'var(--green)' }}>Human + Machine.</span>
+              <span style={{ color: 'var(--green)', textShadow: '0 2px 4px rgba(0,0,0,0.5), 0 4px 12px rgba(0,0,0,0.3)' }}>Human + Machine</span>
             </h1>
 
-            <p className="text-lg md:text-xl lg:text-2xl mb-12 max-w-2xl font-normal leading-relaxed text-white/90">
-              AI-native teams delivering production-ready systems across government and enterprise in Saudi Arabia and the Middle East.
-            </p>
+            <div className="mb-14 max-w-4xl">
+              <p className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5), 0 4px 12px rgba(0,0,0,0.3)' }}>Pioneering AI transformation across Saudi Arabia and the Middle East</p>
+              <p className="text-xl md:text-2xl lg:text-3xl font-medium text-white/90" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5), 0 3px 8px rgba(0,0,0,0.3)' }}>AI-native teams delivering production-ready systems across government and enterprise since 2020</p>
+            </div>
 
             <div className="flex flex-col sm:flex-row gap-4 items-start">
               <Link href="/contact" className="btn-primary text-lg px-8 py-4">
@@ -340,25 +360,49 @@ export default function Home() {
           </div>
         </div>
         <div className="relative overflow-hidden">
-          <div className="flex animate-scroll">
-            {[...filteredClients, ...filteredClients].map((client, index) => (
-              <a
-                key={index}
-                href={client.url || '#'}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-shrink-0 mx-8 flex items-center justify-center h-16 w-40 logo-item"
-              >
-                <Image
-                  src={client.logo}
-                  alt={client.name}
-                  width={160}
-                  height={60}
-                  className="object-contain max-h-12"
-                />
-              </a>
-            ))}
-          </div>
+          {filteredClients.length <= 5 ? (
+            /* Static centered layout for few clients */
+            <div className="flex justify-center flex-wrap gap-8">
+              {filteredClients.map((client, index) => (
+                <a
+                  key={index}
+                  href={client.url || '#'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-shrink-0 flex items-center justify-center h-16 w-40 logo-item"
+                >
+                  <Image
+                    src={client.logo}
+                    alt={client.name}
+                    width={160}
+                    height={60}
+                    className="object-contain max-h-12"
+                  />
+                </a>
+              ))}
+            </div>
+          ) : (
+            /* Scrolling animation for many clients */
+            <div className="flex animate-scroll">
+              {[...filteredClients, ...filteredClients].map((client, index) => (
+                <a
+                  key={index}
+                  href={client.url || '#'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-shrink-0 mx-8 flex items-center justify-center h-16 w-40 logo-item"
+                >
+                  <Image
+                    src={client.logo}
+                    alt={client.name}
+                    width={160}
+                    height={60}
+                    className="object-contain max-h-12"
+                  />
+                </a>
+              ))}
+            </div>
+          )}
         </div>
         {/* Client Stats Counter */}
         <div className="container-lg mt-8">
@@ -437,16 +481,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Client Testimonial Video */}
-          <div className="mt-12 max-w-2xl mx-auto">
-            <h3 className="text-center text-lg font-semibold mb-6" style={{ color: 'var(--gray-600)' }}>Hear From Our Clients</h3>
-            <VideoPlaceholder
-              title="Client Success Stories"
-              description="Saudi government leaders share their AI transformation journey"
-              duration="0:30"
-              thumbnailUrl="/hero-faisaliyah.jpg"
-            />
-          </div>
         </div>
       </section>
 
@@ -502,41 +536,41 @@ export default function Home() {
               {
                 title: 'Cloud & AI Platforms',
                 logos: [
-                  { name: 'AWS', icon: 'aws' },
-                  { name: 'Azure', icon: 'azure' },
-                  { name: 'Google Cloud', icon: 'gcp' }
+                  { name: 'AWS', src: '/tools/Amazon_Web_Services_Logo.svg.png' },
+                  { name: 'Azure', src: '/tools/Microsoft_Azure.svg.png' },
+                  { name: 'Google Cloud', src: '/tools/gcp.svg' }
                 ]
               },
               {
                 title: 'Large Language Models',
                 logos: [
-                  { name: 'OpenAI', icon: 'openai' },
-                  { name: 'Anthropic', icon: 'anthropic' },
-                  { name: 'Meta', icon: 'meta' }
+                  { name: 'OpenAI', src: '/tools/openai.svg' },
+                  { name: 'Anthropic', src: '/tools/anthropic-icon-tdvkiqisswbrmtkiygb0ia.webp' },
+                  { name: 'Meta', src: '/tools/meta-logo-facebook.svg' }
                 ]
               },
               {
                 title: 'Data & BI Platforms',
                 logos: [
-                  { name: 'Tableau', icon: 'tableau' },
-                  { name: 'Databricks', icon: 'databricks' },
-                  { name: 'Snowflake', icon: 'snowflake' }
+                  { name: 'Tableau', src: '/tools/tableau-software.svg' },
+                  { name: 'Databricks', src: '/tools/Databricks-Emblem.png' },
+                  { name: 'Power BI', src: '/tools/New_Power_BI_Logo.svg.png' }
                 ]
               },
               {
                 title: 'AI Deployment',
                 logos: [
-                  { name: 'MLflow', icon: 'mlflow' },
-                  { name: 'Kubernetes', icon: 'k8s' },
-                  { name: 'Docker', icon: 'docker' }
+                  { name: 'MLflow', src: '/tools/mlflow.png' },
+                  { name: 'Kubernetes', src: '/tools/Kubernetes_logo_without_workmark.svg.png' },
+                  { name: 'Docker', src: '/tools/Docker-svgrepo-com.svg.png' }
                 ]
               },
               {
                 title: 'Enterprise Security',
                 logos: [
-                  { name: 'Okta', icon: 'okta' },
-                  { name: 'Auth0', icon: 'auth0' },
-                  { name: 'Vault', icon: 'vault' }
+                  { name: 'Okta', src: '/tools/Okta_logo.svg.png' },
+                  { name: 'Auth0', src: '/tools/auth0-logo-png-transparent.png' },
+                  { name: 'Vault', src: '/tools/vault-icon.svg' }
                 ]
               }
             ].map((category, index) => (
@@ -544,8 +578,14 @@ export default function Home() {
                 <h3 className="text-sm font-semibold text-dark-900 mb-3 text-center">{category.title}</h3>
                 <div className="flex justify-center gap-3">
                   {category.logos.map((logo, i) => (
-                    <div key={i} className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-sm" title={logo.name}>
-                      <span className="text-xs font-bold text-gray-600">{logo.name.substring(0, 2)}</span>
+                    <div key={i} className="w-10 h-10 rounded-lg bg-white flex items-center justify-center shadow-sm p-1.5" title={logo.name}>
+                      <Image
+                        src={logo.src}
+                        alt={logo.name}
+                        width={28}
+                        height={28}
+                        className="object-contain w-full h-full"
+                      />
                     </div>
                   ))}
                 </div>

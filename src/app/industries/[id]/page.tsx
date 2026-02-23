@@ -296,7 +296,7 @@ const industriesData: Record<string, {
     icon: '🏟️',
     headline: 'AI for Sports, Events & Entertainment',
     description: 'Power the future of sports and entertainment with AI. From fan analytics to player performance, we help organizations in Saudi Arabia\'s rapidly growing $38B+ sports economy leverage AI for competitive advantage.',
-    heroImage: 'https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=1920&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1694018359679-49465b4c0d61?auto=format&fit=crop&w=1920&q=80',
     sectionImage: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1920&q=80',
     imageAlt: 'Modern Sports Stadium Saudi Arabia',
     featuredClients: [
@@ -358,20 +358,21 @@ export default function IndustryPage() {
       <section className="relative min-h-[60vh] flex items-center bg-neutral-50 overflow-hidden">
         {/* Saudi Industry Background */}
         <div
-          className="absolute inset-0 opacity-30"
+          className="absolute inset-0"
           style={{
             backgroundImage: `url(${industry.heroImage})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
         />
-        <NetworkBackground />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-32">
           <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark-900 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5), 0 4px 12px rgba(0,0,0,0.3)' }}>
               {industry.headline}
             </h1>
-            <p className="text-xl text-dark-500 leading-relaxed max-w-3xl">
+            <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl font-medium" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
               {industry.description}
             </p>
           </div>
@@ -380,12 +381,12 @@ export default function IndustryPage() {
 
       {/* Stats Bar */}
       <section className="bg-white border-y border-neutral-200">
-        <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {industry.stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-primary-600 mb-2">{stat.value}</div>
-                <div className="text-dark-500 text-sm">{stat.label}</div>
+                <div className="text-4xl md:text-5xl font-bold mb-2" style={{ color: 'var(--green)' }}>{stat.value}</div>
+                <div className="text-base font-medium" style={{ color: 'var(--gray-700)' }}>{stat.label}</div>
               </div>
             ))}
           </div>
@@ -450,10 +451,11 @@ export default function IndustryPage() {
             </svg>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 mb-16">
+          {/* Grid with dividing lines - 5 columns for 5 challenges */}
+          <div className="grid grid-cols-2 lg:grid-cols-5 gap-px bg-[#00A651]/20 rounded-2xl overflow-hidden mb-16">
             {industry.challenges.map((challenge, index) => (
-              <div key={index} className="group text-center p-4 rounded-xl hover:bg-neutral-50 transition-all duration-300">
-                <h3 className="text-sm font-bold group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+              <div key={index} className="group text-center p-6 bg-white hover:bg-[#F5F3F0] transition-all duration-300">
+                <h3 className="text-base font-bold group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
                   {challenge}
                 </h3>
               </div>
@@ -512,13 +514,14 @@ export default function IndustryPage() {
             </svg>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Grid with dividing lines - 4 columns */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-[#00A651]/20 rounded-2xl overflow-hidden">
             {industry.solutions.map((solution, index) => (
-              <div key={index} className="group text-center p-6 rounded-xl hover:bg-white transition-all duration-300">
-                <h3 className="text-lg font-bold mb-2 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+              <div key={index} className="group text-center p-8 bg-white hover:bg-[#F5F3F0] transition-all duration-300">
+                <h3 className="text-xl font-bold mb-3 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
                   {solution.title}
                 </h3>
-                <p className="text-sm" style={{ color: 'var(--gray-500)' }}>{solution.desc}</p>
+                <p className="text-base" style={{ color: 'var(--gray-600)' }}>{solution.desc}</p>
               </div>
             ))}
           </div>

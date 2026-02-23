@@ -94,25 +94,24 @@ export default function IndustriesPage() {
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
         {/* Saudi Modern Architecture Background */}
         <div
-          className="absolute inset-0 opacity-30"
+          className="absolute inset-0"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1733757361453-5f493624a734?auto=format&fit=crop&w=1920&q=80)',
+            backgroundImage: 'url(https://images.unsplash.com/photo-1682687219573-3fd75f982217?auto=format&fit=crop&w=1920&q=80)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
         />
-        {/* Light overlay */}
-        <div className="absolute inset-0 bg-cream-50/90" />
-        <NetworkBackground />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-32">
           <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark-900 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
               AI Solutions for{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-gold-500">
+              <span style={{ color: 'var(--green)', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
                 Every Industry
               </span>
             </h1>
-            <p className="text-xl text-dark-500 leading-relaxed max-w-3xl">
+            <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl font-medium" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
               Deep domain expertise combined with AI-native development. We understand the unique challenges, regulations, and opportunities in your industry — delivering solutions that work in production.
             </p>
           </div>
@@ -121,12 +120,12 @@ export default function IndustriesPage() {
 
       {/* Stats Bar */}
       <section className="border-y border-neutral-200" style={{ background: 'var(--cream)' }}>
-        <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-primary-600 mb-2">{stat.number}</div>
-                <div className="text-dark-500 text-sm">{stat.label}</div>
+                <div className="text-4xl md:text-5xl font-bold mb-2" style={{ color: 'var(--green)' }}>{stat.number}</div>
+                <div className="text-base font-medium" style={{ color: 'var(--gray-700)' }}>{stat.label}</div>
               </div>
             ))}
           </div>
@@ -145,28 +144,29 @@ export default function IndustriesPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          {/* Grid with dividing lines - 3 columns for 9 items (3x3) */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#00A651]/20 rounded-2xl overflow-hidden">
             {industries.map((industry) => (
               <Link
                 key={industry.id}
                 href={`/industries/${industry.id}`}
-                className="group bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl p-5 hover:border-[#00A651] hover:shadow-lg transition-all duration-300"
+                className="group bg-white p-8 hover:bg-[#F5F3F0] transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#00A651]/10 flex items-center justify-center text-[#00A651] mb-4">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <div className="w-14 h-14 rounded-xl bg-[#00A651]/10 flex items-center justify-center text-[#00A651] mb-5">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
                   </svg>
                 </div>
-                <h3 className="text-base font-bold text-dark-900 mb-2 group-hover:text-[#00A651] transition-colors">
+                <h3 className="text-xl font-bold mb-3 group-hover:text-[#00A651] transition-colors" style={{ color: 'var(--black)' }}>
                   {industry.name}
                 </h3>
-                <p className="text-dark-500 text-xs mb-4 line-clamp-2">
+                <p className="text-base mb-5 line-clamp-2" style={{ color: 'var(--gray-600)' }}>
                   {industry.description}
                 </p>
-                <div className="flex items-center gap-2 text-xs">
-                  <span className="text-[#00A651] font-semibold">{industry.stats.projects}</span>
-                  <span className="text-dark-400">|</span>
-                  <span className="text-dark-500">{industry.stats.accuracy}</span>
+                <div className="flex items-center gap-3 text-base font-semibold">
+                  <span style={{ color: 'var(--green)' }}>{industry.stats.projects}</span>
+                  <span style={{ color: 'var(--gray-300)' }}>|</span>
+                  <span style={{ color: 'var(--gray-600)' }}>{industry.stats.accuracy}</span>
                 </div>
               </Link>
             ))}
@@ -193,7 +193,8 @@ export default function IndustriesPage() {
             { title: 'Computer Vision', desc: 'Visual intelligence at scale' },
           ]} />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+          {/* Grid with dividing lines - 3 columns for 6 items (2x3) */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#00A651]/20 rounded-2xl overflow-hidden mt-8">
             {[
               { title: 'Intelligent Document Processing', desc: 'Extract, classify, and process documents with 98%+ accuracy. From invoices to medical records.' },
               { title: 'Predictive Analytics', desc: 'Forecast demand, predict churn, and anticipate maintenance needs before they happen.' },
@@ -202,14 +203,14 @@ export default function IndustriesPage() {
               { title: 'Recommendation Systems', desc: 'Product recommendations, content personalization, and next-best-action engines.' },
               { title: 'Process Automation', desc: 'End-to-end workflow automation with AI decision-making at every step.' },
             ].map((useCase, index) => (
-              <div key={index} className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl p-6 hover:border-[#00A651] hover:shadow-lg transition-all duration-300">
-                <div className="w-10 h-10 rounded-lg bg-[#00A651]/10 flex items-center justify-center text-[#00A651] mb-4">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <div key={index} className="bg-white p-8 hover:bg-[#F5F3F0] transition-all duration-300">
+                <div className="w-14 h-14 rounded-xl bg-[#00A651]/10 flex items-center justify-center text-[#00A651] mb-5">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
                   </svg>
                 </div>
-                <h3 className="text-base font-bold text-dark-900 mb-2">{useCase.title}</h3>
-                <p className="text-dark-500 text-sm">{useCase.desc}</p>
+                <h3 className="text-xl font-bold mb-3" style={{ color: 'var(--black)' }}>{useCase.title}</h3>
+                <p className="text-base" style={{ color: 'var(--gray-600)' }}>{useCase.desc}</p>
               </div>
             ))}
           </div>
@@ -251,18 +252,18 @@ export default function IndustriesPage() {
             </svg>
           </div>
 
-          {/* Items grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+          {/* Items grid with dividing lines */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-px bg-[#00A651]/20 rounded-2xl overflow-hidden">
             {[
               { title: 'Regulatory Compliance', desc: 'SOC2, HIPAA, GDPR, PCI-DSS — we build compliant from day one, not as an afterthought.' },
               { title: 'Domain-Specific Models', desc: 'Pre-trained on industry data, fine-tuned for your use case, validated by domain experts.' },
               { title: 'Proven Playbooks', desc: "We don't experiment with your production systems. We apply what's worked before." },
             ].map((item, index) => (
-              <div key={index} className="group text-center p-5 bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl hover:border-[#00A651] hover:shadow-lg transition-all duration-300">
-                <h3 className="text-base font-bold mb-2 group-hover:text-[#00A651] transition-colors" style={{ color: 'var(--black)' }}>
+              <div key={index} className="group text-center p-8 bg-white hover:bg-[#F5F3F0] transition-all duration-300">
+                <h3 className="text-xl font-bold mb-3 group-hover:text-[#00A651] transition-colors" style={{ color: 'var(--black)' }}>
                   {item.title}
                 </h3>
-                <p className="text-sm" style={{ color: 'var(--gray-500)' }}>
+                <p className="text-base" style={{ color: 'var(--gray-600)' }}>
                   {item.desc}
                 </p>
               </div>

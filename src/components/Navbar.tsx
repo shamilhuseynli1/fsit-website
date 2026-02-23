@@ -149,19 +149,19 @@ export default function Navbar() {
                   {link.megaDropdown && activeDropdown === link.name && (
                     <div className="absolute top-full left-0 pt-2 animate-fade-in">
                       <div
-                        className="rounded-xl py-4 px-2 overflow-hidden flex gap-6"
+                        className="rounded-xl py-5 px-4 overflow-hidden flex gap-8"
                         style={{
                           background: 'var(--white)',
                           boxShadow: '0 20px 40px -12px rgba(0, 0, 0, 0.15)',
                           border: '1px solid var(--gray-100)',
-                          minWidth: '540px'
+                          minWidth: '620px'
                         }}
                       >
                         {link.megaDropdown.sections.map((section, sectionIdx) => (
-                          <div key={sectionIdx} className="flex-1 min-w-[160px]">
+                          <div key={sectionIdx} className="flex-1 min-w-[180px]">
                             <p
-                              className="px-3 py-2 text-xs font-semibold uppercase tracking-wider"
-                              style={{ color: 'var(--gray-400)' }}
+                              className="px-3 py-2 text-sm font-bold uppercase tracking-wider"
+                              style={{ color: 'var(--gray-500)' }}
                             >
                               {section.title}
                             </p>
@@ -169,8 +169,8 @@ export default function Navbar() {
                               <Link
                                 key={item.name}
                                 href={item.href}
-                                className="block px-3 py-2 text-sm rounded-lg transition-all duration-200"
-                                style={{ color: 'var(--gray-600)' }}
+                                className="block px-3 py-2.5 text-base font-medium rounded-lg transition-all duration-200"
+                                style={{ color: 'var(--gray-700)' }}
                                 onClick={() => setActiveDropdown(null)}
                                 onMouseEnter={(e) => {
                                   e.currentTarget.style.background = 'var(--cream)';
@@ -178,7 +178,7 @@ export default function Navbar() {
                                 }}
                                 onMouseLeave={(e) => {
                                   e.currentTarget.style.background = 'transparent';
-                                  e.currentTarget.style.color = 'var(--gray-600)';
+                                  e.currentTarget.style.color = 'var(--gray-700)';
                                 }}
                               >
                                 {item.name}
@@ -192,9 +192,9 @@ export default function Navbar() {
 
                   {/* Regular Dropdown Menu */}
                   {link.dropdown && activeDropdown === link.name && (
-                    <div className="absolute top-full left-0 pt-2 w-56 animate-fade-in">
+                    <div className="absolute top-full left-0 pt-2 w-64 animate-fade-in">
                       <div
-                        className="rounded-xl py-2 overflow-hidden"
+                        className="rounded-xl py-3 overflow-hidden"
                         style={{
                           background: 'var(--white)',
                           boxShadow: '0 20px 40px -12px rgba(0, 0, 0, 0.15)',
@@ -204,7 +204,7 @@ export default function Navbar() {
                         {link.dropdown.map((item) => {
                           const hasHash = item.href.includes('#');
                           const itemStyle = {
-                            color: 'var(--gray-600)',
+                            color: 'var(--gray-700)',
                           };
                           return hasHash ? (
                             <a
@@ -221,7 +221,7 @@ export default function Navbar() {
                                 }
                                 setActiveDropdown(null);
                               }}
-                              className="block px-4 py-2.5 text-sm transition-all duration-200 cursor-pointer"
+                              className="block px-5 py-3 text-base font-medium transition-all duration-200 cursor-pointer"
                               style={itemStyle}
                               onMouseEnter={(e) => {
                                 e.currentTarget.style.background = 'var(--cream)';
@@ -229,7 +229,7 @@ export default function Navbar() {
                               }}
                               onMouseLeave={(e) => {
                                 e.currentTarget.style.background = 'transparent';
-                                e.currentTarget.style.color = 'var(--gray-600)';
+                                e.currentTarget.style.color = 'var(--gray-700)';
                               }}
                             >
                               {item.name}
@@ -238,7 +238,7 @@ export default function Navbar() {
                             <Link
                               key={item.name}
                               href={item.href}
-                              className="block px-4 py-2.5 text-sm transition-all duration-200"
+                              className="block px-5 py-3 text-base font-medium transition-all duration-200"
                               style={itemStyle}
                               onClick={() => setActiveDropdown(null)}
                               onMouseEnter={(e) => {
@@ -247,7 +247,7 @@ export default function Navbar() {
                               }}
                               onMouseLeave={(e) => {
                                 e.currentTarget.style.background = 'transparent';
-                                e.currentTarget.style.color = 'var(--gray-600)';
+                                e.currentTarget.style.color = 'var(--gray-700)';
                               }}
                             >
                               {item.name}
@@ -325,12 +325,12 @@ export default function Navbar() {
                     </Link>
                     {/* Mega dropdown items for mobile */}
                     {link.megaDropdown && (
-                      <div className="pl-4 space-y-3">
+                      <div className="pl-4 space-y-4">
                         {link.megaDropdown.sections.map((section, sectionIdx) => (
                           <div key={sectionIdx}>
                             <p
-                              className="px-4 py-1 text-xs font-semibold uppercase tracking-wider"
-                              style={{ color: 'var(--gray-400)' }}
+                              className="px-4 py-2 text-sm font-bold uppercase tracking-wider"
+                              style={{ color: 'var(--gray-500)' }}
                             >
                               {section.title}
                             </p>
@@ -338,8 +338,8 @@ export default function Navbar() {
                               <Link
                                 key={item.name}
                                 href={item.href}
-                                className="block px-4 py-2 text-sm rounded-lg transition-colors"
-                                style={{ color: 'var(--gray-500)' }}
+                                className="block px-4 py-3 text-base font-medium rounded-lg transition-colors"
+                                style={{ color: 'var(--gray-700)' }}
                                 onClick={() => setIsOpen(false)}
                               >
                                 {item.name}
@@ -369,8 +369,8 @@ export default function Navbar() {
                                 }
                                 setIsOpen(false);
                               }}
-                              className="block px-4 py-2 text-sm rounded-lg transition-colors cursor-pointer"
-                              style={{ color: 'var(--gray-500)' }}
+                              className="block px-4 py-3 text-base font-medium rounded-lg transition-colors cursor-pointer"
+                              style={{ color: 'var(--gray-700)' }}
                             >
                               {item.name}
                             </a>
@@ -378,8 +378,8 @@ export default function Navbar() {
                             <Link
                               key={item.name}
                               href={item.href}
-                              className="block px-4 py-2 text-sm rounded-lg transition-colors"
-                              style={{ color: 'var(--gray-500)' }}
+                              className="block px-4 py-3 text-base font-medium rounded-lg transition-colors"
+                              style={{ color: 'var(--gray-700)' }}
                               onClick={() => setIsOpen(false)}
                             >
                               {item.name}

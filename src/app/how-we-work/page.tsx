@@ -133,10 +133,10 @@ export default function HowWeWork() {
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url(/hero-faisaliyah.jpg)' }}
+          style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1682695796795-cc287af78a2b?auto=format&fit=crop&w=1920&q=80)' }}
         />
         {/* Light overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/50 to-white/30" />
 
         {/* Network pattern overlay */}
         <div className="absolute inset-0 opacity-30">

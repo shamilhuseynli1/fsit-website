@@ -112,13 +112,13 @@ export default function CareersPage() {
         <div
           className="absolute inset-0 opacity-30"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1672257694085-3a5c603cda1a?auto=format&fit=crop&w=1920&q=80)',
+            backgroundImage: 'url(https://images.unsplash.com/photo-1694018359679-49465b4c0d61?auto=format&fit=crop&w=1920&q=80)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
         />
         {/* Light overlay */}
-        <div className="absolute inset-0 bg-cream-50/90" />
+        <div className="absolute inset-0 bg-cream-50/50" />
         <NetworkBackground />
         <div className="relative z-10 max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-32">
           <div className="max-w-4xl">

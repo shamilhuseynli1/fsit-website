@@ -74,25 +74,21 @@ export default function BuildScaleAI() {
   return (
     <>
       {/* Hero */}
-      <section className="hero-dark bg-grid-pattern overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-900 to-dark-800" />
-        <NetworkBackground nodeCount={60} />
+      <section className="relative min-h-[60vh] flex items-center overflow-hidden" style={{ background: 'var(--cream)' }}>
         <div className="relative max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="section-label !text-primary-500 !mb-6">Talent Request</p>
-            <h1 className="hero-title text-white !text-3xl md:!text-4xl lg:!text-5xl">
+            <h1 className="hero-title text-dark-900 !text-3xl md:!text-4xl lg:!text-5xl">
               Build and Scale <span className="text-primary-500">AI</span>
             </h1>
-            <p className="hero-subtitle !text-center mx-auto">
+            <p className="text-xl text-dark-600 text-center mx-auto">
               Access elite AI talent to accelerate your AI transformation
             </p>
           </div>
         </div>
-        <div className="hidden md:block absolute top-1/2 right-0 w-[600px] h-[600px] bg-primary-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
       </section>
 
       {/* Form Section */}
-      <section className="section-padding bg-neutral-150">
+      <section className="section bg-neutral-150">
         <div className="max-w-3xl mx-auto px-4">
           <div className="card !p-8 md:!p-12">
             <h2 className="text-2xl font-bold text-dark-900 text-center mb-2">
@@ -111,11 +107,11 @@ export default function BuildScaleAI() {
                       ? 'bg-green-500 text-white'
                       : currentStep === index + 1
                         ? 'bg-primary-500 text-white'
-                        : 'bg-neutral-200 text-dark-400'
+                        : 'bg-neutral-200 text-dark-500'
                   }`}>
                     <div className="w-3 h-3 rounded-full" style={{ backgroundColor: currentStep > index + 1 ? 'white' : currentStep === index + 1 ? 'white' : '#9CA3AF' }} />
                   </div>
-                  <p className={`text-xs hidden md:block ${currentStep === index + 1 ? 'text-primary-500 font-semibold' : 'text-dark-400'}`}>
+                  <p className={`text-xs hidden md:block ${currentStep === index + 1 ? 'text-primary-500 font-semibold' : 'text-dark-500'}`}>
                     {label}
                   </p>
                 </div>
@@ -417,11 +413,10 @@ export default function BuildScaleAI() {
       </section>
 
       {/* Trust Indicators */}
-      <section className="section-padding bg-white">
+      <section className="section bg-white">
         <div className="container-max">
           <div className="text-center mb-12">
-            <p className="section-label">Why Choose FSIT</p>
-            <h2 className="section-title">Trusted by Leading Organizations</h2>
+            <h2 className="h2">Trusted by Leading Organizations</h2>
           </div>
           <div className="grid-3">
             <div className="card card-hover text-center">

@@ -9,32 +9,39 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Saudi Arabia inspired color scheme
+        // Ewaa-inspired warm color scheme
         primary: {
-          50: '#e6f5ec',
-          100: '#ccebda',
-          200: '#99d6b5',
-          300: '#66c290',
-          400: '#33ad6b',
-          500: '#00843D', // Saudi Green - national color
-          600: '#006d33',
-          700: '#005728',
-          800: '#00401e',
-          900: '#002a14',
-          950: '#00150a',
+          50: '#e8f7ee',
+          100: '#d1efdd',
+          200: '#a3dfbb',
+          300: '#75cf99',
+          400: '#47bf77',
+          500: '#19AB5D', // Ewaa Green - vibrant
+          600: '#148c4c',
+          700: '#106d3b',
+          800: '#0b4e2a',
+          900: '#072f19',
+          950: '#03170c',
         },
         gold: {
-          50: '#fdf9ed',
-          100: '#faf0d1',
-          200: '#f5e0a3',
-          300: '#f0d075',
+          50: '#fefdfb',
+          100: '#fdf9ed',
+          200: '#faf0d1',
+          300: '#f5e0a3',
           400: '#e6c55a',
-          500: '#C4A84B', // Gold accent - Vision 2030 prosperity
+          500: '#C4A84B', // Gold accent
           600: '#a38a3d',
           700: '#826d30',
           800: '#615023',
           900: '#403316',
           950: '#201a0b',
+        },
+        cream: {
+          50: '#FFFEF5', // Ewaa warm background
+          100: '#F7EFE4', // Ewaa footer beige
+          200: '#f0e6d6',
+          300: '#e8dcc7',
+          400: '#d9c9ad',
         },
         dark: {
           50: '#f8fafc',
@@ -46,13 +53,13 @@ const config: Config = {
           600: '#475569',
           700: '#334155',
           800: '#1e293b',
-          900: '#010d1c', // Main dark navy
-          950: '#000509',
+          900: '#1a1a2e', // Softer dark
+          950: '#0f0f1a',
         },
         neutral: {
           50: '#fafafa',
           100: '#f5f5f5',
-          150: '#F1F1F8', // Light background
+          150: '#FFFEF5', // Warm cream background (Ewaa style)
           200: '#e5e5e5',
           300: '#d4d4d4',
           400: '#a3a3a3',

@@ -3,8 +3,17 @@
 import Link from 'next/link';
 import NetworkBackground from '@/components/NetworkBackground';
 import HeroLeverageVisual from '@/components/HeroLeverageVisual';
+import ProcessFlow from '@/components/ProcessFlow';
+import BranchingFromTitle from '@/components/BranchingFromTitle';
 
 export default function LeverageAI() {
+  const whyLeverage = [
+    { title: 'Reduce operational costs', desc: 'AI-powered efficiency gains' },
+    { title: 'Accelerate decision making', desc: 'Real-time insights at scale' },
+    { title: 'Enhance customer experience', desc: 'Personalized AI interactions' },
+    { title: 'Automate repetitive tasks', desc: 'Focus on high-value work' },
+    { title: 'Gain competitive advantage', desc: 'Stay ahead with AI' },
+  ];
   const services = [
     {
       title: 'AI Consulting & Strategy',
@@ -116,8 +125,8 @@ export default function LeverageAI() {
   return (
     <>
       {/* Hero Section */}
-      <section className="hero-dark bg-grid-pattern overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-900 to-dark-800" />
+      <section className="relative min-h-[80vh] flex items-center bg-cream-50 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-cream-50 to-neutral-50" />
         {/* Riyadh Skyline Background */}
         <div
           className="absolute inset-0 opacity-30"
@@ -133,8 +142,7 @@ export default function LeverageAI() {
         <div className="relative max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="section-label !text-primary-500 !mb-4 md:!mb-6 animate-fade-in">Leverage AI for Your Business</p>
-              <h1 className="hero-title text-white animate-fade-in-up text-3xl md:text-5xl lg:text-6xl">
+              <h1 className="hero-title text-dark-900 animate-fade-in-up text-3xl md:text-5xl lg:text-6xl">
                 Adopt AI.<br />
                 <span className="text-primary-500 text-glow">Scale with Confidence.</span>
               </h1>
@@ -145,7 +153,7 @@ export default function LeverageAI() {
                 <Link href="/contact" className="btn-primary text-center">
                   Get AI readiness assessment
                 </Link>
-                <Link href="/solutions" className="btn-secondary !border-white/30 !text-white hover:!bg-white hover:!text-dark-900 text-center">
+                <Link href="/solutions" className="btn-secondary text-center">
                   View AI solutions
                 </Link>
               </div>
@@ -158,13 +166,13 @@ export default function LeverageAI() {
       </section>
 
       {/* Stats - Outforce style */}
-      <section className="py-12 bg-primary-500">
+      <section className="section-sm" style={{ background: 'var(--cream)' }}>
         <div className="container-max">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <p className="text-3xl md:text-4xl font-bold text-white">{stat.value}</p>
-                <p className="text-white/80 text-sm mt-1">{stat.label}</p>
+                <p className="text-3xl md:text-4xl font-bold text-dark-900">{stat.value}</p>
+                <p className="text-dark-500 text-sm mt-1">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -172,34 +180,38 @@ export default function LeverageAI() {
       </section>
 
       {/* Services */}
-      <section className="section-padding bg-white">
+      <section className="section" style={{ background: 'var(--white)' }}>
         <div className="container-max">
-          <div className="text-center mb-16">
-            <p className="section-label">Our Services</p>
-            <h2 className="section-title">End-to-End AI Services</h2>
-            <p className="section-subtitle mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="h2">End-to-End AI Services</h2>
+            <p className="text-body mx-auto" style={{ maxWidth: '42rem' }}>
               From initial assessment to production operations — we deliver AI that works
             </p>
           </div>
 
-          <div className="grid-2">
+          <div className="mb-12">
+            <ProcessFlow steps={[
+              { num: '01', title: 'Assess', desc: 'Strategy & Roadmap' },
+              { num: '02', title: 'Develop', desc: 'Custom AI Solutions' },
+              { num: '03', title: 'Integrate', desc: 'System Connectivity' },
+              { num: '04', title: 'Operate', desc: 'Support & Optimize' },
+            ]} />
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mt-12">
             {services.map((service, index) => (
-              <div key={index} className="card card-hover">
-                <div className="flex items-start gap-4">
-                  <div className="w-14 h-14 bg-primary-500/10 rounded-xl flex items-center justify-center text-primary-500 flex-shrink-0">
-                    {service.icon}
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-dark-900 mb-2">{service.title}</h3>
-                    <p className="text-dark-500 text-sm mb-4">{service.description}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {service.deliverables.map((item, i) => (
-                        <span key={i} className="text-xs bg-neutral-150 text-dark-600 px-2 py-1 rounded">
-                          {item}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+              <div key={index} className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-lg p-4 hover:border-[#00A651] hover:shadow-md transition-all duration-300">
+                <div className="w-10 h-10 bg-primary-500/10 rounded-lg flex items-center justify-center text-primary-500 mb-3">
+                  {service.icon}
+                </div>
+                <h3 className="text-sm font-semibold text-dark-900 mb-1">{service.title}</h3>
+                <p className="text-dark-500 text-xs mb-3 line-clamp-2">{service.description}</p>
+                <div className="flex flex-wrap gap-1">
+                  {service.deliverables.slice(0, 3).map((item, i) => (
+                    <span key={i} className="text-[10px] bg-white text-dark-600 px-1.5 py-0.5 rounded">
+                      {item}
+                    </span>
+                  ))}
                 </div>
               </div>
             ))}
@@ -208,31 +220,29 @@ export default function LeverageAI() {
       </section>
 
       {/* Business Use Cases */}
-      <section className="section-padding bg-dark-900">
+      <section className="section-sm" style={{ background: 'var(--cream)' }}>
         <div className="container-max">
-          <div className="text-center mb-16">
-            <p className="section-label !text-primary-500">Use Cases</p>
-            <h2 className="section-title !text-white">Business-Driven AI Applications</h2>
-            <p className="section-subtitle mx-auto !text-dark-300">
+          <div className="text-center mb-8">
+            <h2 className="h3">Business-Driven AI Applications</h2>
+            <p className="text-small mx-auto" style={{ maxWidth: '42rem' }}>
               Practical AI solutions that deliver measurable business outcomes
             </p>
           </div>
 
-          <div className="grid-2">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
             {useCases.map((useCase, index) => (
-              <div key={index} className="bg-dark-800 rounded-2xl p-6 border border-dark-700 hover:border-primary-500 transition-all">
-                <span className="text-xs font-semibold text-primary-500 uppercase tracking-wide">{useCase.category}</span>
-                <h3 className="text-xl font-semibold text-white mt-2 mb-3">{useCase.title}</h3>
-                <div className="space-y-2 mb-4">
-                  {useCase.examples.map((example, i) => (
-                    <div key={i} className="flex items-center gap-3 bg-dark-700/40 p-2 rounded-lg border border-dark-600/50">
-                      
-                      <span className="text-sm text-dark-300">{example}</span>
+              <div key={index} className="bg-white rounded-lg p-4 border border-neutral-200 hover:border-primary-500 transition-all">
+                <span className="text-[10px] font-semibold text-primary-600 uppercase tracking-wide">{useCase.category}</span>
+                <h3 className="text-sm font-semibold text-dark-900 mt-1 mb-2">{useCase.title}</h3>
+                <div className="space-y-1 mb-3">
+                  {useCase.examples.slice(0, 3).map((example, i) => (
+                    <div key={i} className="flex items-center gap-2 bg-neutral-50 p-1.5 rounded border border-neutral-100">
+                      <span className="text-xs text-dark-600">{example}</span>
                     </div>
                   ))}
                 </div>
-                <div className="pt-4 border-t border-dark-700">
-                  <span className="text-primary-500 font-semibold">{useCase.impact}</span>
+                <div className="pt-2 border-t border-neutral-200">
+                  <span className="text-primary-600 font-semibold text-xs">{useCase.impact}</span>
                 </div>
               </div>
             ))}
@@ -241,59 +251,79 @@ export default function LeverageAI() {
       </section>
 
       {/* AI Readiness */}
-      <section className="section-padding bg-neutral-150">
-        <div className="container-max">
-          <div className="grid-2 items-center">
-            <div>
-              <p className="section-label">AI Readiness</p>
-              <h2 className="section-title">Are You Ready for AI?</h2>
-              <p className="text-dark-500 mb-6">
-                Successful AI implementation depends on several key factors. We assess your readiness and help you address gaps before investing in development.
-              </p>
-              <Link href="/contact" className="btn-primary">
-                Get your readiness assessment
-              </Link>
-            </div>
-            <div className="bg-white rounded-2xl p-6 border border-neutral-200">
-              <h3 className="font-semibold text-dark-900 mb-4">Key Readiness Factors</h3>
-              <div className="space-y-3">
-                {readinessFactors.map((item, i) => (
-                  <div key={i} className="flex items-start gap-4 bg-neutral-50 p-3 rounded-xl border border-neutral-200 hover:border-primary-500/30 transition-all">
-                    
-                    <div>
-                      <p className="font-medium text-dark-900">{item.factor}</p>
-                      <p className="text-dark-500 text-sm">{item.question}</p>
-                    </div>
-                  </div>
-                ))}
+      <section className="section" style={{ background: 'var(--white)' }}>
+        <div className="container-lg">
+          <div className="text-center mb-6">
+            <h2 className="h2">Are You Ready for AI?</h2>
+            <p className="text-body mx-auto">
+              Successful AI implementation depends on several key factors. We assess your readiness and help you address gaps before investing in development.
+            </p>
+          </div>
+
+          {/* Simple horizontal line animation */}
+          <div className="relative mb-8">
+            <svg className="w-full h-8 pointer-events-none" viewBox="0 0 1000 32" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="leverageReadyLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="var(--green)" stopOpacity="0" />
+                  <stop offset="20%" stopColor="var(--green)" stopOpacity="0.3" />
+                  <stop offset="50%" stopColor="var(--green)" stopOpacity="0.5" />
+                  <stop offset="80%" stopColor="var(--green)" stopOpacity="0.3" />
+                  <stop offset="100%" stopColor="var(--green)" stopOpacity="0" />
+                </linearGradient>
+                <linearGradient id="leverageReadyPulseGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="var(--green)" stopOpacity="0" />
+                  <stop offset="45%" stopColor="var(--green)" stopOpacity="1" />
+                  <stop offset="55%" stopColor="var(--green)" stopOpacity="1" />
+                  <stop offset="100%" stopColor="var(--green)" stopOpacity="0" />
+                </linearGradient>
+              </defs>
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="var(--gray-200)" strokeWidth="2" />
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="url(#leverageReadyLineGradient)" strokeWidth="2" />
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="url(#leverageReadyPulseGradient)" strokeWidth="3" strokeLinecap="round"
+                style={{ strokeDasharray: '150 850', animation: 'flowHorizontal 3s linear infinite' }} />
+            </svg>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
+            {readinessFactors.map((item, i) => (
+              <div key={i} className="group text-center p-4 bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl hover:border-[#00A651] hover:shadow-lg transition-all duration-300">
+                <h3 className="text-sm font-bold mb-2 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+                  {item.factor}
+                </h3>
+                <p className="text-dark-500 text-xs">{item.question}</p>
               </div>
-            </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link href="/contact" className="btn-primary">
+              Get your readiness assessment
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Investment Tiers */}
-      <section className="section-padding bg-white">
+      <section className="section-sm" style={{ background: 'var(--cream)' }}>
         <div className="container-max">
-          <div className="text-center mb-16">
-            <p className="section-label">Investment</p>
-            <h2 className="section-title">Transparent Pricing</h2>
-            <p className="section-subtitle mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="h3">Transparent Pricing</h2>
+            <p className="text-small mx-auto" style={{ maxWidth: '42rem' }}>
               Clear investment ranges based on project scope and complexity
             </p>
           </div>
 
-          <div className="grid-3">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             {investmentTiers.map((tier, index) => (
-              <div key={index} className="card card-hover text-center">
-                <h3 className="text-xl font-semibold text-dark-900 mb-2">{tier.tier}</h3>
-                <p className="text-3xl font-bold text-primary-500 mb-3">{tier.range}</p>
-                <p className="text-dark-500 text-sm mb-4">{tier.description}</p>
-                <div className="space-y-2 text-left">
+              <div key={index} className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-lg p-4 hover:border-[#00A651] hover:shadow-md transition-all duration-300 text-center">
+                <h3 className="text-base font-semibold text-dark-900 mb-1">{tier.tier}</h3>
+                <p className="text-xl font-bold text-primary-500 mb-2">{tier.range}</p>
+                <p className="text-dark-500 text-xs mb-3">{tier.description}</p>
+                <div className="space-y-1 text-left">
                   {tier.includes.map((item, i) => (
-                    <div key={i} className="flex items-center gap-3 bg-neutral-50 p-2 rounded-lg border border-neutral-200">
-                      
-                      <span className="text-sm text-dark-600">{item}</span>
+                    <div key={i} className="flex items-center gap-2 bg-neutral-50 p-1.5 rounded border border-neutral-200">
+                      <span className="text-xs text-dark-600">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -301,74 +331,110 @@ export default function LeverageAI() {
             ))}
           </div>
 
-          <p className="text-center text-dark-400 text-sm mt-8">
+          <p className="text-center text-dark-500 text-xs mt-6">
             Final pricing depends on specific requirements. Contact us for a detailed quote.
           </p>
         </div>
       </section>
 
       {/* Why FSIT - Outforce positioning */}
-      <section className="section-padding bg-neutral-150">
-        <div className="container-max">
-          <div className="grid-2 items-center">
-            <div>
-              <p className="section-label">Why FSIT</p>
-              <h2 className="section-title">AI-Native Delivery</h2>
-              <p className="text-dark-500 mb-6">
-                We're not traditional consultants who hand over reports and leave. We embed vetted AI engineers directly into your organization to build, deploy, and scale real AI systems — focusing on execution, speed, and production impact.
-              </p>
-              <div className="space-y-3">
-                {[
-                  '98% project success rate vs 59% industry standard',
-                  'Teams deployed in 3 weeks, not 6 months',
-                  'Vetted AI specialists, not generalist contractors',
-                  'Focus on production systems, not just PoCs',
-                  'Knowledge transfer built into every engagement',
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-4 bg-neutral-100 p-3 rounded-xl border border-neutral-200 hover:border-primary-500/30 transition-all">
-                    
-                    <span className="text-dark-700 font-medium">{item}</span>
-                  </div>
-                ))}
+      <section className="section" style={{ background: 'var(--white)' }}>
+        <div className="container-lg">
+          <div className="text-center mb-6">
+            <h2 className="h2">AI-Native Delivery</h2>
+            <p className="text-body mx-auto">
+              We're not traditional consultants who hand over reports and leave. We embed vetted AI engineers directly into your organization to build, deploy, and scale real AI systems — focusing on execution, speed, and production impact.
+            </p>
+          </div>
+
+          {/* Simple horizontal line animation */}
+          <div className="relative mb-8">
+            <svg className="w-full h-8 pointer-events-none" viewBox="0 0 1000 32" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="leverageWhyLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="var(--green)" stopOpacity="0" />
+                  <stop offset="20%" stopColor="var(--green)" stopOpacity="0.3" />
+                  <stop offset="50%" stopColor="var(--green)" stopOpacity="0.5" />
+                  <stop offset="80%" stopColor="var(--green)" stopOpacity="0.3" />
+                  <stop offset="100%" stopColor="var(--green)" stopOpacity="0" />
+                </linearGradient>
+                <linearGradient id="leverageWhyPulseGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="var(--green)" stopOpacity="0" />
+                  <stop offset="45%" stopColor="var(--green)" stopOpacity="1" />
+                  <stop offset="55%" stopColor="var(--green)" stopOpacity="1" />
+                  <stop offset="100%" stopColor="var(--green)" stopOpacity="0" />
+                </linearGradient>
+              </defs>
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="var(--gray-200)" strokeWidth="2" />
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="url(#leverageWhyLineGradient)" strokeWidth="2" />
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="url(#leverageWhyPulseGradient)" strokeWidth="3" strokeLinecap="round"
+                style={{ strokeDasharray: '150 850', animation: 'flowHorizontal 3s linear infinite' }} />
+            </svg>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-16">
+            {[
+              '98% project success rate vs 59% industry standard',
+              'Teams deployed in 3 weeks, not 6 months',
+              'Vetted AI specialists, not generalist contractors',
+              'Focus on production systems, not just PoCs',
+              'Knowledge transfer built into every engagement',
+            ].map((item, i) => (
+              <div key={i} className="group text-center p-4 bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl hover:border-[#00A651] hover:shadow-lg transition-all duration-300">
+                <h3 className="text-sm font-bold group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+                  {item}
+                </h3>
               </div>
-            </div>
-            <div className="bg-dark-900 rounded-2xl p-8 text-white">
-              <h3 className="text-xl font-semibold mb-6">Traditional vs FSIT</h3>
-              <div className="space-y-4">
-                {[
-                  { label: 'Approach', old: 'Consulting reports', new: 'Working software' },
-                  { label: 'Team', old: 'Generalists', new: 'AI specialists' },
-                  { label: 'Timeline', old: '6+ months', new: '3 weeks' },
-                  { label: 'Success rate', old: '59%', new: '98%' },
-                ].map((item, i) => (
-                  <div key={i} className="flex justify-between items-center pb-4 border-b border-dark-700 last:border-0 last:pb-0">
-                    <span className="text-dark-300">{item.label}</span>
-                    <div className="text-right">
-                      <span className="text-dark-400 line-through mr-3">{item.old}</span>
-                      <span className="text-primary-500 font-semibold">{item.new}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
+            ))}
+          </div>
+
+          {/* Comparison Grid */}
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-xl font-semibold text-dark-900 mb-6 text-center">Traditional vs FSIT</h3>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                { label: 'Approach', old: 'Consulting reports', new: 'Working software' },
+                { label: 'Team', old: 'Generalists', new: 'AI specialists' },
+                { label: 'Timeline', old: '6+ months', new: '3 weeks' },
+                { label: 'Success rate', old: '59%', new: '98%' },
+              ].map((item, i) => (
+                <div key={i} className="group text-center p-4 rounded-xl bg-neutral-100 hover:bg-primary-50 transition-all duration-300">
+                  <p className="text-dark-600 text-xs mb-2">{item.label}</p>
+                  <p className="text-dark-400 line-through text-sm">{item.old}</p>
+                  <p className="text-primary-600 font-bold">{item.new}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
+      {/* Why Leverage AI - Animated Branching */}
+      <section className="py-16" style={{ background: 'var(--cream)' }}>
+        <div className="container-lg">
+          <div className="text-center mb-2">
+            <h2 className="h2">Why organizations leverage AI with FSIT</h2>
+          </div>
+          <BranchingFromTitle items={whyLeverage} />
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="section-padding bg-dark-900">
-        <div className="container-max text-center">
-          <h2 className="section-title !text-white mb-4">
-            Ready to leverage AI for your business?
+      <section className="section" style={{ background: 'var(--white)' }}>
+        <div className="container-md text-center">
+          <h2 className="h1 mb-6">
+            Ready to leverage
+            <br />
+            <span style={{ color: 'var(--green)' }}>AI?</span>
           </h2>
-          <p className="section-subtitle mx-auto !text-dark-300 mb-8">
+          <p className="text-large mb-10 max-w-xl mx-auto">
             Start with a free AI readiness assessment and discover your highest-impact opportunities
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="btn-primary">
               Get your free assessment
             </Link>
-            <Link href="/staff-augmentation" className="btn-secondary !border-white/30 !text-white hover:!bg-white hover:!text-dark-900">
+            <Link href="/staff-augmentation" className="btn-secondary">
               Build your AI team
             </Link>
           </div>

@@ -90,9 +90,9 @@ export default function HeroOperationsVisual() {
         {/* Central Pipeline visualization */}
         {/* Data Pipeline - Top */}
         <g className="float-slow">
-          <rect x="50" y="40" width="300" height="50" rx="8" fill="#1e293b" stroke="#3b82f6" strokeWidth="1.5" />
+          <rect x="50" y="40" width="300" height="50" rx="8" fill="#F5F3F0" stroke="#3b82f6" strokeWidth="1.5" />
           <text x="200" y="60" textAnchor="middle" fill="#3b82f6" fontSize="10" fontFamily="monospace" fontWeight="600">DATA PIPELINE</text>
-          <text x="200" y="78" textAnchor="middle" fill="#64748b" fontSize="8" fontFamily="monospace">ETL • Feature Store • Streaming</text>
+          <text x="200" y="78" textAnchor="middle" fill="#1e293b" fontSize="8" fontFamily="monospace">ETL • Feature Store • Streaming</text>
 
           {/* Data flow dots */}
           <circle r="4" fill="#3b82f6" className="ping-pong">
@@ -105,16 +105,16 @@ export default function HeroOperationsVisual() {
 
         {/* Model Training Box */}
         <g className="float-slow float-delay-1" style={{ transformOrigin: '200px 155px' }}>
-          <rect x="80" y="120" width="240" height="70" rx="10" fill="#1e293b" stroke="#22c55e" strokeWidth="2" />
+          <rect x="80" y="120" width="240" height="70" rx="10" fill="#F5F3F0" stroke="#22c55e" strokeWidth="2" />
 
           {/* Inner boxes */}
-          <rect x="95" y="135" width="60" height="40" rx="4" fill="#22c55e" fillOpacity="0.1" stroke="#22c55e" strokeWidth="1" />
+          <rect x="95" y="135" width="60" height="40" rx="4" fill="#ffffff" stroke="#22c55e" strokeWidth="1" />
           <text x="125" y="158" textAnchor="middle" fill="#22c55e" fontSize="8" fontFamily="monospace">TRAIN</text>
 
-          <rect x="170" y="135" width="60" height="40" rx="4" fill="#3b82f6" fillOpacity="0.1" stroke="#3b82f6" strokeWidth="1" />
+          <rect x="170" y="135" width="60" height="40" rx="4" fill="#ffffff" stroke="#3b82f6" strokeWidth="1" />
           <text x="200" y="158" textAnchor="middle" fill="#3b82f6" fontSize="8" fontFamily="monospace">VALIDATE</text>
 
-          <rect x="245" y="135" width="60" height="40" rx="4" fill="#8b5cf6" fillOpacity="0.1" stroke="#8b5cf6" strokeWidth="1" />
+          <rect x="245" y="135" width="60" height="40" rx="4" fill="#ffffff" stroke="#8b5cf6" strokeWidth="1" />
           <text x="275" y="158" textAnchor="middle" fill="#8b5cf6" fontSize="8" fontFamily="monospace">OPTIMIZE</text>
 
           {/* Flow arrows */}
@@ -127,12 +127,12 @@ export default function HeroOperationsVisual() {
 
         {/* Deployment Box - Main */}
         <g className="breathe" style={{ transformOrigin: '200px 270px' }}>
-          <rect x="60" y="220" width="280" height="100" rx="12" fill="#1e293b" stroke="#22c55e" strokeWidth="2" />
+          <rect x="60" y="220" width="280" height="100" rx="12" fill="#F5F3F0" stroke="#22c55e" strokeWidth="2" />
           <text x="200" y="245" textAnchor="middle" fill="#22c55e" fontSize="12" fontFamily="monospace" fontWeight="600">DEPLOYMENT</text>
 
           {/* Server icons */}
           <g transform="translate(85, 255)">
-            <rect width="50" height="50" rx="6" fill="#0f172a" stroke="#64748b" strokeWidth="1" />
+            <rect width="50" height="50" rx="6" fill="#ffffff" stroke="#22c55e" strokeWidth="1" />
             <rect x="8" y="10" width="34" height="6" rx="2" fill="#22c55e" fillOpacity="0.5" />
             <rect x="8" y="20" width="34" height="6" rx="2" fill="#22c55e" fillOpacity="0.3" />
             <rect x="8" y="30" width="34" height="6" rx="2" fill="#22c55e" fillOpacity="0.2" />
@@ -140,7 +140,7 @@ export default function HeroOperationsVisual() {
           </g>
 
           <g transform="translate(175, 255)">
-            <rect width="50" height="50" rx="6" fill="#0f172a" stroke="#64748b" strokeWidth="1" />
+            <rect width="50" height="50" rx="6" fill="#ffffff" stroke="#3b82f6" strokeWidth="1" />
             <rect x="8" y="10" width="34" height="6" rx="2" fill="#3b82f6" fillOpacity="0.5" />
             <rect x="8" y="20" width="34" height="6" rx="2" fill="#3b82f6" fillOpacity="0.3" />
             <rect x="8" y="30" width="34" height="6" rx="2" fill="#3b82f6" fillOpacity="0.2" />
@@ -148,7 +148,7 @@ export default function HeroOperationsVisual() {
           </g>
 
           <g transform="translate(265, 255)">
-            <rect width="50" height="50" rx="6" fill="#0f172a" stroke="#64748b" strokeWidth="1" />
+            <rect width="50" height="50" rx="6" fill="#ffffff" stroke="#8b5cf6" strokeWidth="1" />
             <rect x="8" y="10" width="34" height="6" rx="2" fill="#8b5cf6" fillOpacity="0.5" />
             <rect x="8" y="20" width="34" height="6" rx="2" fill="#8b5cf6" fillOpacity="0.3" />
             <rect x="8" y="30" width="34" height="6" rx="2" fill="#8b5cf6" fillOpacity="0.2" />
@@ -161,7 +161,7 @@ export default function HeroOperationsVisual() {
 
         {/* Monitoring Box */}
         <g className="float-slow float-delay-2">
-          <rect x="70" y="350" width="260" height="70" rx="10" fill="#1e293b" stroke="#f59e0b" strokeWidth="1.5" />
+          <rect x="70" y="350" width="260" height="70" rx="10" fill="#F5F3F0" stroke="#f59e0b" strokeWidth="1.5" />
           <text x="200" y="373" textAnchor="middle" fill="#f59e0b" fontSize="10" fontFamily="monospace" fontWeight="600">MONITORING</text>
 
           {/* Mini chart */}
@@ -178,7 +178,7 @@ export default function HeroOperationsVisual() {
         {/* Side Labels */}
         {/* Left side - Human in Loop */}
         <g className="float-slow float-delay-1">
-          <rect x="10" y="170" width="40" height="80" rx="6" fill="#1e293b" stroke="#ec4899" strokeWidth="1" />
+          <rect x="10" y="170" width="40" height="80" rx="6" fill="#F5F3F0" stroke="#ec4899" strokeWidth="1" />
           <text x="30" y="195" textAnchor="middle" fill="#ec4899" fontSize="8" fontFamily="monospace">H</text>
           <text x="30" y="207" textAnchor="middle" fill="#ec4899" fontSize="8" fontFamily="monospace">U</text>
           <text x="30" y="219" textAnchor="middle" fill="#ec4899" fontSize="8" fontFamily="monospace">M</text>
@@ -189,7 +189,7 @@ export default function HeroOperationsVisual() {
 
         {/* Right side - APIs */}
         <g className="float-slow float-delay-3">
-          <rect x="350" y="170" width="40" height="80" rx="6" fill="#1e293b" stroke="#06b6d4" strokeWidth="1" />
+          <rect x="350" y="170" width="40" height="80" rx="6" fill="#F5F3F0" stroke="#06b6d4" strokeWidth="1" />
           <text x="370" y="200" textAnchor="middle" fill="#06b6d4" fontSize="8" fontFamily="monospace">A</text>
           <text x="370" y="212" textAnchor="middle" fill="#06b6d4" fontSize="8" fontFamily="monospace">P</text>
           <text x="370" y="224" textAnchor="middle" fill="#06b6d4" fontSize="8" fontFamily="monospace">I</text>
@@ -205,14 +205,14 @@ export default function HeroOperationsVisual() {
       </svg>
 
       {/* Floating metric labels */}
-      <div className="absolute left-0 top-[12%] px-3 py-1.5 bg-dark-800/80 border border-primary-500/40 rounded-md backdrop-blur-sm transition-all hover:border-primary-500 hover:scale-105 float-slow">
-        <span className="text-xs text-primary-400 font-mono">99.9% Uptime</span>
+      <div className="absolute left-0 top-[12%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow shadow-sm">
+        <span className="text-xs text-gray-700 font-mono">99.9% Uptime</span>
       </div>
-      <div className="absolute right-0 top-[32%] px-3 py-1.5 bg-dark-800/80 border border-primary-500/40 rounded-md backdrop-blur-sm transition-all hover:border-primary-500 hover:scale-105 float-slow float-delay-1">
-        <span className="text-xs text-primary-400 font-mono">Auto-scale</span>
+      <div className="absolute right-0 top-[32%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow float-delay-1 shadow-sm">
+        <span className="text-xs text-gray-700 font-mono">Auto-scale</span>
       </div>
-      <div className="absolute left-[5%] bottom-[22%] px-3 py-1.5 bg-dark-800/80 border border-gold-500/40 rounded-md backdrop-blur-sm transition-all hover:border-gold-500 hover:scale-105 float-slow float-delay-2">
-        <span className="text-xs text-gold-400 font-mono">Real-time</span>
+      <div className="absolute left-[5%] bottom-[22%] px-3 py-1.5 bg-[#F5F3F0] border border-orange-500/50 rounded-md backdrop-blur-sm transition-all hover:border-orange-500 hover:scale-105 float-slow float-delay-2 shadow-sm">
+        <span className="text-xs text-gray-700 font-mono">Real-time</span>
       </div>
 
       {/* Platform logos */}

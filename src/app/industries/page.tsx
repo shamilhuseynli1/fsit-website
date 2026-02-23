@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 import NetworkBackground from '@/components/NetworkBackground';
+import BranchingList from '@/components/BranchingList';
+import BranchingFromTitle from '@/components/BranchingFromTitle';
 
 const industries = [
   {
@@ -68,11 +70,19 @@ const industries = [
     useCases: ['Citizen service automation', 'Document processing', 'Fraud detection', 'Policy impact analysis', 'Emergency response'],
     stats: { projects: '20+', accuracy: '99.0%' },
   },
+  {
+    id: 'sports-entertainment',
+    name: 'Sports & Entertainment',
+    icon: '🏟️',
+    description: 'AI solutions for fan engagement, player performance, stadium operations, and dynamic pricing in Saudi Arabia\'s $38B+ sports economy.',
+    useCases: ['Fan analytics & engagement', 'Dynamic ticket pricing', 'Player performance AI', 'Stadium operations', 'Broadcast personalization'],
+    stats: { projects: '15+', accuracy: '97.5%' },
+  },
 ];
 
 const stats = [
   { number: '98%', label: 'Project success rate' },
-  { number: '8+', label: 'Industries served' },
+  { number: '9+', label: 'Industries served' },
   { number: '300+', label: 'Projects delivered' },
   { number: '3 weeks', label: 'Average deployment' },
 ];
@@ -81,7 +91,7 @@ export default function IndustriesPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center bg-dark-900 overflow-hidden">
+      <section className="relative min-h-[60vh] flex items-center overflow-hidden">
         {/* Saudi Modern Architecture Background */}
         <div
           className="absolute inset-0 opacity-30"
@@ -91,19 +101,18 @@ export default function IndustriesPage() {
             backgroundPosition: 'center',
           }}
         />
+        {/* Light overlay */}
+        <div className="absolute inset-0 bg-cream-50/90" />
         <NetworkBackground />
         <div className="relative z-10 max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-32">
           <div className="max-w-4xl">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
-              <span className="text-primary-400 text-sm font-medium">Industry Expertise</span>
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark-900 mb-6">
               AI Solutions for{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-gold-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-gold-500">
                 Every Industry
               </span>
             </h1>
-            <p className="text-xl text-neutral-300 leading-relaxed max-w-3xl">
+            <p className="text-xl text-dark-500 leading-relaxed max-w-3xl">
               Deep domain expertise combined with AI-native development. We understand the unique challenges, regulations, and opportunities in your industry — delivering solutions that work in production.
             </p>
           </div>
@@ -111,13 +120,13 @@ export default function IndustriesPage() {
       </section>
 
       {/* Stats Bar */}
-      <section className="bg-dark-800 border-y border-dark-700">
+      <section className="border-y border-neutral-200" style={{ background: 'var(--cream)' }}>
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-primary-400 mb-2">{stat.number}</div>
-                <div className="text-neutral-400 text-sm">{stat.label}</div>
+                <div className="text-3xl md:text-4xl font-bold text-primary-600 mb-2">{stat.number}</div>
+                <div className="text-dark-500 text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -136,24 +145,28 @@ export default function IndustriesPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {industries.map((industry) => (
               <Link
                 key={industry.id}
                 href={`/industries/${industry.id}`}
-                className="group bg-neutral-50 rounded-2xl p-6 hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-primary-200"
+                className="group bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl p-5 hover:border-[#00A651] hover:shadow-lg transition-all duration-300"
               >
-                <div className="text-4xl mb-4">{industry.icon}</div>
-                <h3 className="text-xl font-bold text-dark-900 mb-2 group-hover:text-primary-600 transition-colors">
+                <div className="w-12 h-12 rounded-xl bg-[#00A651]/10 flex items-center justify-center text-[#00A651] mb-4">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
+                  </svg>
+                </div>
+                <h3 className="text-base font-bold text-dark-900 mb-2 group-hover:text-[#00A651] transition-colors">
                   {industry.name}
                 </h3>
-                <p className="text-dark-500 text-sm mb-4 line-clamp-2">
+                <p className="text-dark-500 text-xs mb-4 line-clamp-2">
                   {industry.description}
                 </p>
-                <div className="flex items-center gap-4 text-sm">
-                  <span className="text-primary-600 font-semibold">{industry.stats.projects} projects</span>
+                <div className="flex items-center gap-2 text-xs">
+                  <span className="text-[#00A651] font-semibold">{industry.stats.projects}</span>
                   <span className="text-dark-400">|</span>
-                  <span className="text-dark-500">{industry.stats.accuracy} accuracy</span>
+                  <span className="text-dark-500">{industry.stats.accuracy}</span>
                 </div>
               </Link>
             ))}
@@ -162,9 +175,9 @@ export default function IndustriesPage() {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-24 bg-neutral-50">
+      <section className="py-16" style={{ background: 'var(--cream)' }}>
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4">
             <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-4">
               Common Use Cases Across Industries
             </h2>
@@ -173,19 +186,30 @@ export default function IndustriesPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <BranchingFromTitle items={[
+            { title: 'Document Processing', desc: 'Intelligent extraction & classification' },
+            { title: 'Predictive Analytics', desc: 'Forecast with AI accuracy' },
+            { title: 'Conversational AI', desc: 'Natural language interactions' },
+            { title: 'Computer Vision', desc: 'Visual intelligence at scale' },
+          ]} />
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
             {[
-              { title: 'Intelligent Document Processing', desc: 'Extract, classify, and process documents with 98%+ accuracy. From invoices to medical records.', icon: '📄' },
-              { title: 'Predictive Analytics', desc: 'Forecast demand, predict churn, and anticipate maintenance needs before they happen.', icon: '📊' },
-              { title: 'Conversational AI', desc: 'Customer service bots, internal assistants, and voice agents that actually understand context.', icon: '💬' },
-              { title: 'Computer Vision', desc: 'Quality inspection, medical imaging, retail analytics, and security monitoring.', icon: '👁️' },
-              { title: 'Recommendation Systems', desc: 'Product recommendations, content personalization, and next-best-action engines.', icon: '🎯' },
-              { title: 'Process Automation', desc: 'End-to-end workflow automation with AI decision-making at every step.', icon: '⚙️' },
+              { title: 'Intelligent Document Processing', desc: 'Extract, classify, and process documents with 98%+ accuracy. From invoices to medical records.' },
+              { title: 'Predictive Analytics', desc: 'Forecast demand, predict churn, and anticipate maintenance needs before they happen.' },
+              { title: 'Conversational AI', desc: 'Customer service bots, internal assistants, and voice agents that actually understand context.' },
+              { title: 'Computer Vision', desc: 'Quality inspection, medical imaging, retail analytics, and security monitoring.' },
+              { title: 'Recommendation Systems', desc: 'Product recommendations, content personalization, and next-best-action engines.' },
+              { title: 'Process Automation', desc: 'End-to-end workflow automation with AI decision-making at every step.' },
             ].map((useCase, index) => (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
-                <div className="text-3xl mb-4">{useCase.icon}</div>
-                <h3 className="text-xl font-bold text-dark-900 mb-3">{useCase.title}</h3>
-                <p className="text-dark-500">{useCase.desc}</p>
+              <div key={index} className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl p-6 hover:border-[#00A651] hover:shadow-lg transition-all duration-300">
+                <div className="w-10 h-10 rounded-lg bg-[#00A651]/10 flex items-center justify-center text-[#00A651] mb-4">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
+                  </svg>
+                </div>
+                <h3 className="text-base font-bold text-dark-900 mb-2">{useCase.title}</h3>
+                <p className="text-dark-500 text-sm">{useCase.desc}</p>
               </div>
             ))}
           </div>
@@ -193,67 +217,103 @@ export default function IndustriesPage() {
       </section>
 
       {/* Why Industry Expertise Matters */}
-      <section className="py-24 bg-white">
-        <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-6">
-                Why Industry Expertise Matters
-              </h2>
-              <p className="text-lg text-dark-600 mb-8">
-                Generic AI solutions fail in production. We have learned this across 300+ projects. That is why every engagement starts with deep domain understanding — your regulations, your data patterns, your competitive landscape.
-              </p>
-              <div className="space-y-4">
-                {[
-                  { title: 'Regulatory Compliance', desc: 'SOC2, HIPAA, GDPR, PCI-DSS — we build compliant from day one, not as an afterthought.' },
-                  { title: 'Domain-Specific Models', desc: 'Pre-trained on industry data, fine-tuned for your use case, validated by domain experts.' },
-                  { title: 'Proven Playbooks', desc: "We don't experiment with your production systems. We apply what's worked before." },
-                ].map((item, index) => (
-                  <div key={index} className="flex gap-4 bg-neutral-50 p-4 rounded-xl border border-neutral-200 hover:border-primary-500/30 transition-all">
-                    
-                    <div>
-                      <h4 className="font-bold text-dark-900 mb-1">{item.title}</h4>
-                      <p className="text-dark-500">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
+      <section className="section" style={{ background: 'var(--white)' }}>
+        <div className="container-lg">
+          <div className="text-center mb-6">
+            <h2 className="h2 mb-6">Why Industry Expertise Matters</h2>
+            <p className="text-body max-w-3xl mx-auto">
+              Generic AI solutions fail in production. We have learned this across 300+ projects. That is why every engagement starts with deep domain understanding.
+            </p>
+          </div>
+
+          {/* Simple horizontal line animation */}
+          <div className="relative mb-8">
+            <svg className="w-full h-8 pointer-events-none" viewBox="0 0 1000 32" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="industryLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="var(--green)" stopOpacity="0" />
+                  <stop offset="20%" stopColor="var(--green)" stopOpacity="0.3" />
+                  <stop offset="50%" stopColor="var(--green)" stopOpacity="0.5" />
+                  <stop offset="80%" stopColor="var(--green)" stopOpacity="0.3" />
+                  <stop offset="100%" stopColor="var(--green)" stopOpacity="0" />
+                </linearGradient>
+                <linearGradient id="industryPulseGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="var(--green)" stopOpacity="0" />
+                  <stop offset="45%" stopColor="var(--green)" stopOpacity="1" />
+                  <stop offset="55%" stopColor="var(--green)" stopOpacity="1" />
+                  <stop offset="100%" stopColor="var(--green)" stopOpacity="0" />
+                </linearGradient>
+              </defs>
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="var(--gray-200)" strokeWidth="2" />
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="url(#industryLineGradient)" strokeWidth="2" />
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="url(#industryPulseGradient)" strokeWidth="3" strokeLinecap="round"
+                style={{ strokeDasharray: '150 850', animation: 'flowHorizontal 3s linear infinite' }} />
+            </svg>
+          </div>
+
+          {/* Items grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            {[
+              { title: 'Regulatory Compliance', desc: 'SOC2, HIPAA, GDPR, PCI-DSS — we build compliant from day one, not as an afterthought.' },
+              { title: 'Domain-Specific Models', desc: 'Pre-trained on industry data, fine-tuned for your use case, validated by domain experts.' },
+              { title: 'Proven Playbooks', desc: "We don't experiment with your production systems. We apply what's worked before." },
+            ].map((item, index) => (
+              <div key={index} className="group text-center p-5 bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl hover:border-[#00A651] hover:shadow-lg transition-all duration-300">
+                <h3 className="text-base font-bold mb-2 group-hover:text-[#00A651] transition-colors" style={{ color: 'var(--black)' }}>
+                  {item.title}
+                </h3>
+                <p className="text-sm" style={{ color: 'var(--gray-500)' }}>
+                  {item.desc}
+                </p>
               </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link href="/build-scale-ai" className="btn-primary">
+              Start your project
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* The FSIT Difference */}
+      <section className="section-sm" style={{ background: 'var(--cream)' }}>
+        <div className="container-md">
+          <div className="text-center mb-12">
+            <h3 className="h3 mb-4">The FSIT Difference</h3>
+          </div>
+          <div className="grid-3">
+            <div className="text-center">
+              <div className="stat-number mb-2">98%</div>
+              <p className="text-body">Project success rate (vs 59% industry average)</p>
             </div>
-            <div className="bg-gradient-to-br from-primary-50 to-neutral-50 rounded-3xl p-8 lg:p-12">
-              <h3 className="text-2xl font-bold text-dark-900 mb-6">The FSIT Difference</h3>
-              <div className="space-y-4">
-                <div className="bg-white rounded-xl p-4 shadow-sm">
-                  <div className="text-3xl font-bold text-primary-600 mb-1">98%</div>
-                  <div className="text-dark-600">Project success rate (vs 59% industry average)</div>
-                </div>
-                <div className="bg-white rounded-xl p-4 shadow-sm">
-                  <div className="text-3xl font-bold text-primary-600 mb-1">3 weeks</div>
-                  <div className="text-dark-600">Average time to production deployment</div>
-                </div>
-                <div className="bg-white rounded-xl p-4 shadow-sm">
-                  <div className="text-3xl font-bold text-primary-600 mb-1">80,000+</div>
-                  <div className="text-dark-600">Vetted AI specialists in our network</div>
-                </div>
-              </div>
+            <div className="text-center">
+              <div className="stat-number mb-2">3 weeks</div>
+              <p className="text-body">Average time to production deployment</p>
+            </div>
+            <div className="text-center">
+              <div className="stat-number mb-2">80K+</div>
+              <p className="text-body">Vetted AI specialists in our network</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-dark-900">
+      <section className="py-24" style={{ background: 'var(--cream)' }}>
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-6">
             Ready to Transform Your Industry?
           </h2>
-          <p className="text-xl text-neutral-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-dark-500 mb-8 max-w-2xl mx-auto">
             Let's discuss how AI can solve your industry's specific challenges. Our experts are ready to share relevant case studies and proven approaches.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/build-scale-ai" className="btn-primary">
               Schedule a Consultation
             </Link>
-            <Link href="/case-studies" className="btn-secondary border-white/20 text-white hover:bg-white/10">
+            <Link href="/case-studies" className="btn-secondary">
               View Case Studies
             </Link>
           </div>

@@ -103,36 +103,36 @@ export default function HeroSolutionsVisual() {
         {/* Service categories - around the hub */}
         {/* LLM Development */}
         <g className="float-slow">
-          <rect x="20" y="60" width="100" height="50" rx="8" fill="#1e293b" stroke="#22c55e" strokeWidth="1.5" />
+          <rect x="20" y="60" width="100" height="50" rx="8" fill="#F5F3F0" stroke="#22c55e" strokeWidth="1.5" />
           <text x="70" y="82" textAnchor="middle" fill="#22c55e" fontSize="9" fontFamily="monospace" fontWeight="600">LLM</text>
-          <text x="70" y="95" textAnchor="middle" fill="#64748b" fontSize="8" fontFamily="monospace">Development</text>
+          <text x="70" y="95" textAnchor="middle" fill="#6b7280" fontSize="8" fontFamily="monospace">Development</text>
           <path d="M120 85 Q140 100 157 175" stroke="#22c55e" strokeWidth="1" strokeDasharray="4 2" opacity="0.4" />
           <circle cx="157" cy="175" r="3" fill="#22c55e" className="pulse-animation" />
         </g>
 
         {/* AI Agents */}
         <g className="float-slow float-delay-1">
-          <rect x="280" y="60" width="100" height="50" rx="8" fill="#1e293b" stroke="#3b82f6" strokeWidth="1.5" />
+          <rect x="280" y="60" width="100" height="50" rx="8" fill="#F5F3F0" stroke="#3b82f6" strokeWidth="1.5" />
           <text x="330" y="82" textAnchor="middle" fill="#3b82f6" fontSize="9" fontFamily="monospace" fontWeight="600">AI Agents</text>
-          <text x="330" y="95" textAnchor="middle" fill="#64748b" fontSize="8" fontFamily="monospace">Automation</text>
+          <text x="330" y="95" textAnchor="middle" fill="#6b7280" fontSize="8" fontFamily="monospace">Automation</text>
           <path d="M280 85 Q260 100 243 175" stroke="#3b82f6" strokeWidth="1" strokeDasharray="4 2" opacity="0.4" />
           <circle cx="243" cy="175" r="3" fill="#3b82f6" className="pulse-animation" style={{ animationDelay: '0.5s' }} />
         </g>
 
         {/* Data Platform */}
         <g className="float-slow float-delay-2">
-          <rect x="20" y="300" width="100" height="50" rx="8" fill="#1e293b" stroke="#8b5cf6" strokeWidth="1.5" />
+          <rect x="20" y="300" width="100" height="50" rx="8" fill="#F5F3F0" stroke="#8b5cf6" strokeWidth="1.5" />
           <text x="70" y="322" textAnchor="middle" fill="#8b5cf6" fontSize="9" fontFamily="monospace" fontWeight="600">Data</text>
-          <text x="70" y="335" textAnchor="middle" fill="#64748b" fontSize="8" fontFamily="monospace">Platform</text>
+          <text x="70" y="335" textAnchor="middle" fill="#6b7280" fontSize="8" fontFamily="monospace">Platform</text>
           <path d="M120 325 Q140 300 157 225" stroke="#8b5cf6" strokeWidth="1" strokeDasharray="4 2" opacity="0.4" />
           <circle cx="157" cy="225" r="3" fill="#8b5cf6" className="pulse-animation" style={{ animationDelay: '1s' }} />
         </g>
 
         {/* MLOps */}
         <g className="float-slow float-delay-3">
-          <rect x="280" y="300" width="100" height="50" rx="8" fill="#1e293b" stroke="#f59e0b" strokeWidth="1.5" />
+          <rect x="280" y="300" width="100" height="50" rx="8" fill="#F5F3F0" stroke="#f59e0b" strokeWidth="1.5" />
           <text x="330" y="322" textAnchor="middle" fill="#f59e0b" fontSize="9" fontFamily="monospace" fontWeight="600">MLOps</text>
-          <text x="330" y="335" textAnchor="middle" fill="#64748b" fontSize="8" fontFamily="monospace">Operations</text>
+          <text x="330" y="335" textAnchor="middle" fill="#6b7280" fontSize="8" fontFamily="monospace">Operations</text>
           <path d="M280 325 Q260 300 243 225" stroke="#f59e0b" strokeWidth="1" strokeDasharray="4 2" opacity="0.4" />
           <circle cx="243" cy="225" r="3" fill="#f59e0b" className="pulse-animation" style={{ animationDelay: '1.5s' }} />
         </g>
@@ -147,7 +147,7 @@ export default function HeroSolutionsVisual() {
 
         {/* Bottom capabilities */}
         <g className="float-slow float-delay-2">
-          <rect x="80" y="400" width="240" height="30" rx="4" fill="#1e293b" stroke="#22c55e" strokeWidth="1" opacity="0.8" />
+          <rect x="80" y="400" width="240" height="30" rx="4" fill="#F5F3F0" stroke="#22c55e" strokeWidth="1" opacity="0.8" />
           <text x="200" y="420" textAnchor="middle" fill="#22c55e" fontSize="9" fontFamily="monospace">
             BUILD • DEPLOY • MONITOR • SCALE
           </text>
@@ -160,14 +160,14 @@ export default function HeroSolutionsVisual() {
       </svg>
 
       {/* Floating metric labels */}
-      <div className="absolute left-0 top-[20%] px-3 py-1.5 bg-dark-800/80 border border-primary-500/40 rounded-md backdrop-blur-sm transition-all hover:border-primary-500 hover:scale-105 float-slow">
-        <span className="text-xs text-primary-400 font-mono">98% Success</span>
+      <div className="absolute left-0 top-[20%] px-3 py-1.5 bg-[#F5F3F0]/90 border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow">
+        <span className="text-xs text-gray-700 font-mono">98% Success</span>
       </div>
-      <div className="absolute right-0 top-[40%] px-3 py-1.5 bg-dark-800/80 border border-primary-500/40 rounded-md backdrop-blur-sm transition-all hover:border-primary-500 hover:scale-105 float-slow float-delay-1">
-        <span className="text-xs text-primary-400 font-mono">Production Ready</span>
+      <div className="absolute right-0 top-[40%] px-3 py-1.5 bg-[#F5F3F0]/90 border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow float-delay-1">
+        <span className="text-xs text-gray-700 font-mono">Production Ready</span>
       </div>
-      <div className="absolute left-[5%] bottom-[20%] px-3 py-1.5 bg-dark-800/80 border border-primary-600/40 rounded-md backdrop-blur-sm transition-all hover:border-primary-600 hover:scale-105 float-slow float-delay-2">
-        <span className="text-xs text-primary-500 font-mono">Enterprise</span>
+      <div className="absolute left-[5%] bottom-[20%] px-3 py-1.5 bg-[#F5F3F0]/90 border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow float-delay-2">
+        <span className="text-xs text-gray-700 font-mono">Enterprise</span>
       </div>
 
       {/* Platform logos */}

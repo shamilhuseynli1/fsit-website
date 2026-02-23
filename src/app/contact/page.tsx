@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import NetworkBackground from '@/components/NetworkBackground';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -74,24 +73,32 @@ export default function Contact() {
       ),
     },
     {
-      title: 'Phone',
-      content: '+966 54 083 0093',
-      content2: '+966 11 410 0727',
-      href: 'tel:+966540830093',
-      href2: 'tel:+966114100727',
+      title: 'AI Inquiries',
+      content: 'ai@fsitksa.com',
+      href: 'mailto:ai@fsitksa.com',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
         </svg>
       ),
     },
     {
-      title: 'Email',
-      content: 'support@fsitksa.com',
-      href: 'mailto:support@fsitksa.com',
+      title: 'Business Development',
+      content: 'bd@fsitksa.com',
+      href: 'mailto:bd@fsitksa.com',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      ),
+    },
+    {
+      title: 'BD Direct Line',
+      content: '+966 50 123 4567',
+      href: 'tel:+966501234567',
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
         </svg>
       ),
     },
@@ -100,49 +107,42 @@ export default function Contact() {
   return (
     <>
       {/* Hero */}
-      <section className="hero-dark bg-grid-pattern overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-900 to-dark-800" />
-        {/* Saudi Arabia Mosque Background */}
-        <div
-          className="absolute inset-0 opacity-30"
-          style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1672257694085-3a5c603cda1a?auto=format&fit=crop&w=1920&q=80)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
+      <section className="relative min-h-[80vh] flex items-center bg-cream-50 overflow-hidden">
+        <img
+          src="/hero-faisaliyah.jpg"
+          alt="Riyadh Skyline"
+          className="absolute inset-0 w-full h-full object-cover"
         />
-        <NetworkBackground nodeCount={60} maxDistance={120} />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/60" />
         <div className="relative max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
           <div className="max-w-3xl">
-            <p className="section-label !text-primary-500 !mb-6">Contact Us</p>
-            <h1 className="hero-title text-white">
+            <p className="text-primary-500 font-bold text-lg tracking-wide uppercase mb-4">Contact Us</p>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-dark-900 leading-tight mb-6">
               Let&apos;s build AI that{' '}
               <span className="text-primary-500">actually runs</span>
             </h1>
-            <p className="hero-subtitle">
+            <p className="text-xl md:text-2xl text-dark-700">
               Whether you are exploring your first AI initiative or scaling existing systems, FSIT works with organisations ready to move from intent to execution
             </p>
           </div>
         </div>
-        <div className="hidden md:block absolute top-1/2 right-0 w-[600px] h-[600px] bg-primary-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
       </section>
 
       {/* Contact Options */}
-      <section className="section-padding bg-white">
+      <section className="section bg-white">
         <div className="container-max">
           <div className="text-center mb-12">
-            <p className="section-label">Get Started</p>
-            <h2 className="section-title">How can we help?</h2>
+            <h2 className="h2">How can we help?</h2>
           </div>
-          <div className="grid-3">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {contactOptions.map((option, index) => (
-              <div key={index} className="feature-box group flex flex-col h-full">
-                <div className="w-12 h-12 bg-primary-500/10 rounded-xl flex items-center justify-center text-primary-500 mb-6 group-hover:bg-primary-500 group-hover:text-white transition-all duration-400">
+              <div key={index} className="group flex flex-col h-full bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl p-6 hover:border-[#00A651] hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 bg-[#00A651]/10 rounded-xl flex items-center justify-center text-[#00A651] mb-6 group-hover:bg-[#00A651] group-hover:text-white transition-all duration-300">
                   {option.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-dark-900 mb-3">{option.title}</h3>
-                <p className="text-dark-500 mb-6 flex-grow">{option.description}</p>
-                <Link href={option.href} className="btn-ghost mt-auto">
+                <h3 className="text-lg font-semibold text-dark-900 mb-3">{option.title}</h3>
+                <p className="text-dark-500 text-sm mb-6 flex-grow">{option.description}</p>
+                <Link href={option.href} className="inline-flex items-center gap-2 text-[#00A651] font-medium text-sm hover:gap-3 transition-all mt-auto">
                   {option.cta}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -155,26 +155,21 @@ export default function Contact() {
       </section>
 
       {/* Contact Info Cards */}
-      <section className="section-padding bg-neutral-150">
+      <section className="section" style={{ background: 'var(--cream)' }}>
         <div className="container-max">
-          <div className="grid-3">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {contactInfo.map((info, index) => (
-              <div key={index} className="card card-hover text-center">
-                <div className="w-12 h-12 bg-primary-500/10 rounded-full flex items-center justify-center text-primary-500 mx-auto mb-4">
+              <div key={index} className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl p-5 text-center hover:border-[#00A651] hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 bg-[#00A651]/10 rounded-xl flex items-center justify-center text-[#00A651] mx-auto mb-4">
                   {info.icon}
                 </div>
-                <h3 className="font-semibold text-dark-900 mb-2">{info.title}</h3>
+                <h3 className="font-semibold text-dark-900 mb-2 text-sm">{info.title}</h3>
                 {info.href ? (
-                  <a href={info.href} className="text-dark-500 text-sm hover:text-primary-500 transition-colors block">
+                  <a href={info.href} className="text-dark-500 text-xs hover:text-[#00A651] transition-colors block">
                     {info.content}
                   </a>
                 ) : (
-                  <p className="text-dark-500 text-sm">{info.content}</p>
-                )}
-                {info.href2 && (
-                  <a href={info.href2} className="text-dark-500 text-sm hover:text-primary-500 transition-colors block mt-1">
-                    {info.content2}
-                  </a>
+                  <p className="text-dark-500 text-xs">{info.content}</p>
                 )}
               </div>
             ))}
@@ -183,19 +178,18 @@ export default function Contact() {
       </section>
 
       {/* Form and Map */}
-      <section className="section-padding bg-white" id="contact-form">
+      <section className="section bg-white" id="contact-form">
         <div className="container-max">
           <div className="text-center mb-12">
-            <p className="section-label">Send a Message</p>
-            <h2 className="section-title">Get in Touch</h2>
-            <p className="section-subtitle mx-auto">
+            <h2 className="h2">Get in Touch</h2>
+            <p className="text-body mx-auto">
               Fill out the form below and we&apos;ll personalize the right experience for you
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
             {/* Form */}
-            <div className="card">
+            <div className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl p-6">
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
@@ -278,8 +272,8 @@ export default function Contact() {
             </div>
 
             {/* Map */}
-            <div className="card overflow-hidden">
-              <h3 className="text-lg font-semibold text-dark-900 mb-4">Find Us On The Map</h3>
+            <div className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl p-6 overflow-hidden">
+              <h3 className="text-base font-semibold text-dark-900 mb-4">Find Us On The Map</h3>
               <div className="h-80 lg:h-[calc(100%-3rem)] bg-neutral-100 rounded-xl overflow-hidden">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.674368867583!2d46.6821!3d24.7136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDQyJzQ5LjAiTiA0NsKwNDAnNTUuNiJF!5e0!3m2!1sen!2ssa!4v1234567890"
@@ -298,12 +292,12 @@ export default function Contact() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-dark-900">
+      <section className="section" style={{ background: 'var(--cream)' }}>
         <div className="container-max text-center">
-          <h2 className="section-title !text-white mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-dark-900 mb-4">
             Ready to start your AI transformation?
           </h2>
-          <p className="section-subtitle mx-auto !text-dark-300 mb-8">
+          <p className="text-lg md:text-xl text-dark-600 max-w-3xl mx-auto mb-8">
             Talk to our AI delivery team today
           </p>
           <Link href="/build-scale-ai" className="btn-primary">

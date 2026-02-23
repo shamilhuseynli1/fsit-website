@@ -149,7 +149,7 @@ export default function CaseStudiesPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center bg-dark-900 overflow-hidden">
+      <section className="relative min-h-[60vh] flex items-center overflow-hidden">
         {/* Saudi Riyadh Background */}
         <div
           className="absolute inset-0 opacity-30"
@@ -159,19 +159,18 @@ export default function CaseStudiesPage() {
             backgroundPosition: 'center',
           }}
         />
+        {/* Light overlay */}
+        <div className="absolute inset-0 bg-cream-50/90" />
         <NetworkBackground />
         <div className="relative z-10 max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-32">
           <div className="max-w-4xl">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
-              <span className="text-primary-400 text-sm font-medium">Case Studies</span>
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark-900 mb-6">
               Real Results from{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-gold-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-gold-500">
                 Real Projects
               </span>
             </h1>
-            <p className="text-xl text-neutral-300 leading-relaxed max-w-3xl">
+            <p className="text-xl text-dark-500 leading-relaxed max-w-3xl">
               See how we've helped organizations across industries deploy AI that works in production. No experiments — measurable business impact.
             </p>
           </div>
@@ -179,7 +178,7 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* Stats Bar */}
-      <section className="bg-dark-800 border-y border-dark-700">
+      <section className="border-y border-neutral-200" style={{ background: 'var(--cream)' }}>
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
@@ -189,8 +188,8 @@ export default function CaseStudiesPage() {
               { number: '3 weeks', label: 'Average time to production' },
             ].map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-primary-400 mb-2">{stat.number}</div>
-                <div className="text-neutral-400 text-sm">{stat.label}</div>
+                <div className="text-3xl md:text-4xl font-bold text-primary-600 mb-2">{stat.number}</div>
+                <div className="text-dark-500 text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -324,19 +323,19 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-dark-900">
+      <section className="py-24" style={{ background: 'var(--cream)' }}>
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-6">
             Ready to Be Our Next Success Story?
           </h2>
-          <p className="text-xl text-neutral-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-dark-500 mb-8 max-w-2xl mx-auto">
             Let's discuss how we can deliver similar results for your organization. Our team is ready to share relevant case studies and proven approaches for your industry.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/build-scale-ai" className="btn-primary">
               Start Your Project
             </Link>
-            <Link href="/contact" className="btn-secondary border-white/20 text-white hover:bg-white/10">
+            <Link href="/contact" className="btn-secondary">
               Contact Our Team
             </Link>
           </div>

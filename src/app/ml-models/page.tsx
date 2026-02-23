@@ -368,6 +368,63 @@ const categories: Category[] = [
       },
     ],
   },
+  {
+    id: 'sports-entertainment',
+    name: 'Sports & Entertainment',
+    tagline: 'Engage. Perform. Thrive.',
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+    solutions: [
+      {
+        title: 'Fan Analytics',
+        description: 'AI-powered fan engagement analytics that track behavior, preferences, and sentiment to personalize experiences and maximize lifetime value.',
+        inputLabel: 'Fan Data',
+        inputIcon: ModelIcons.user,
+        outputLabel: 'Insights',
+        outputIcon: ModelIcons.insight,
+        models: ['openai', 'xgboost'],
+        metric: 'Engagement',
+        metricValue: '+45%',
+      },
+      {
+        title: 'Dynamic Pricing',
+        description: 'ML models that optimize ticket and merchandise pricing in real-time based on demand, events, and market conditions.',
+        inputLabel: 'Market Data',
+        inputIcon: ModelIcons.chart,
+        outputLabel: 'Optimal Price',
+        outputIcon: ModelIcons.trending,
+        models: ['xgboost', 'pytorch'],
+        metric: 'Revenue Lift',
+        metricValue: '+28%',
+      },
+      {
+        title: 'Player Performance',
+        description: 'Advanced analytics for athlete performance tracking, injury prediction, and training optimization using computer vision and sensor data.',
+        inputLabel: 'Performance',
+        inputIcon: ModelIcons.chart,
+        outputLabel: 'Predictions',
+        outputIcon: ModelIcons.prediction,
+        models: ['pytorch', 'tensorflow'],
+        metric: 'Injury Prevention',
+        metricValue: '35%↓',
+      },
+      {
+        title: 'Content Personalization',
+        description: 'AI-driven content recommendations for streaming, highlights, and broadcasts tailored to individual viewer preferences.',
+        inputLabel: 'Content',
+        inputIcon: ModelIcons.document,
+        outputLabel: 'Personalized',
+        outputIcon: ModelIcons.user,
+        models: ['openai', 'anthropic'],
+        metric: 'Watch Time',
+        metricValue: '+52%',
+      },
+    ],
+  },
 ];
 
 export default function MLModelsPage() {
@@ -426,67 +483,48 @@ export default function MLModelsPage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-dark-900">
+    <main className="min-h-screen bg-white">
       {/* Custom animations */}
       <style dangerouslySetInnerHTML={{ __html: customStyles }} />
 
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url(/hero-solutions.jpg)' }}
+        <img
+          src="/hero-neom.jpg"
+          alt="NEOM - Vision 2030 Saudi Arabia"
+          className="absolute inset-0 w-full h-full object-cover"
         />
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-dark-900/80" />
-
-        {/* Network pattern overlay */}
-        <div className="absolute inset-0 opacity-30">
-          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern id="networkPatternML" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
-                <circle cx="50" cy="50" r="1" fill="#22c55e" opacity="0.5" />
-                <line x1="50" y1="50" x2="100" y2="0" stroke="#22c55e" strokeWidth="0.5" opacity="0.2" />
-                <line x1="50" y1="50" x2="0" y2="100" stroke="#22c55e" strokeWidth="0.5" opacity="0.2" />
-                <line x1="50" y1="50" x2="100" y2="100" stroke="#22c55e" strokeWidth="0.5" opacity="0.2" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#networkPatternML)" />
-          </svg>
-        </div>
-
-        <NetworkBackground nodeCount={60} />
+        {/* Light overlay - reduced for NEOM visibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/50 to-white/30" />
 
         <div className="relative z-10 max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             {/* Left - Text Content */}
             <div>
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 mb-6">
-                <span className="text-primary-400 text-sm font-medium uppercase tracking-wider">ML Model Library</span>
-              </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark-900 mb-6">
                 AI Models That{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-600">
+                <span className="text-primary-500">
                   Deliver Results
                 </span>
               </h1>
-              <p className="text-xl text-neutral-400 leading-relaxed mb-12">
+              <p className="text-xl text-dark-500 leading-relaxed mb-12">
                 Production-ready ML solutions powered by leading AI platforms.
               </p>
 
               {/* Stats */}
               <div className="grid grid-cols-3 gap-8">
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold text-primary-400">6</div>
-                  <div className="text-neutral-400 text-sm">Industry Verticals</div>
+                  <div className="text-3xl md:text-4xl font-bold text-primary-500">6</div>
+                  <div className="text-dark-500 text-sm">Industry Verticals</div>
                 </div>
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold text-primary-400">24+</div>
-                  <div className="text-neutral-400 text-sm">ML Solutions</div>
+                  <div className="text-3xl md:text-4xl font-bold text-primary-500">24+</div>
+                  <div className="text-dark-500 text-sm">ML Solutions</div>
                 </div>
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold text-primary-400">99%</div>
-                  <div className="text-neutral-400 text-sm">Accuracy</div>
+                  <div className="text-3xl md:text-4xl font-bold text-primary-500">99%</div>
+                  <div className="text-dark-500 text-sm">Accuracy</div>
                 </div>
               </div>
             </div>
@@ -500,7 +538,7 @@ export default function MLModelsPage() {
       </section>
 
       {/* Category Selector */}
-      <section id="models-section" className="bg-dark-800/90 backdrop-blur-md border-y border-dark-700 sticky top-16 z-20">
+      <section id="models-section" className="bg-cream-50 border-y border-neutral-200 sticky top-16 z-20">
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex overflow-x-auto py-4 gap-3 scrollbar-hide">
             {categories.map((category) => (
@@ -509,15 +547,11 @@ export default function MLModelsPage() {
                 onClick={() => setActiveCategory(category.id)}
                 className={`group relative flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-300 ${
                   activeCategory === category.id
-                    ? 'bg-gradient-to-r from-primary-500 to-green-500 text-white shadow-lg shadow-primary-500/30'
-                    : 'bg-dark-700/50 text-neutral-400 hover:bg-dark-700 hover:text-white border border-dark-600 hover:border-primary-500/30'
+                    ? 'bg-primary-500 text-white shadow-lg'
+                    : 'bg-white text-dark-700 hover:bg-neutral-100 border border-neutral-200 hover:border-primary-500/30'
                 }`}
               >
-                {/* Glow effect for active */}
-                {activeCategory === category.id && (
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary-500 to-green-500 rounded-full blur-md opacity-40" />
-                )}
-                <span className={`relative ${activeCategory === category.id ? 'text-white' : 'text-neutral-500 group-hover:text-primary-400'} transition-colors`}>
+                <span className={`relative ${activeCategory === category.id ? 'text-white' : 'text-dark-500 group-hover:text-primary-500'} transition-colors`}>
                   {category.icon}
                 </span>
                 <span className="relative">{category.name}</span>
@@ -529,66 +563,24 @@ export default function MLModelsPage() {
 
       {/* Active Category Models */}
       {activeData && (
-        <section className="py-20 relative overflow-hidden">
-          {/* Animated particle background */}
-          <AnimatedBackground />
-
-          {/* Gradient overlays */}
-          <div className="absolute inset-0 bg-gradient-to-b from-dark-900 via-transparent to-dark-900 pointer-events-none" />
-          <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-primary-500/5 to-transparent pointer-events-none" />
-          <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-green-500/5 to-transparent pointer-events-none" />
-
-          {/* Grid pattern overlay */}
-          <div className="absolute inset-0 opacity-[0.02]"
-               style={{
-                 backgroundImage: `linear-gradient(to right, #22c55e 1px, transparent 1px),
-                                   linear-gradient(to bottom, #22c55e 1px, transparent 1px)`,
-                 backgroundSize: '60px 60px'
-               }} />
-
-          {/* Floating decorative elements with animations */}
-          <div className="absolute left-[5%] top-20 w-5 h-5 border-2 border-primary-500/40 rotate-45 animate-bounce" style={{ animationDuration: '3s' }} />
-          <div className="absolute right-[8%] top-32 w-4 h-4 bg-primary-500/30 rotate-45 animate-pulse" />
-          <div className="absolute left-[3%] top-1/3 w-6 h-6 border border-primary-500/20 rotate-45 animate-spin" style={{ animationDuration: '20s' }} />
-          <div className="absolute right-[5%] top-1/2 w-3 h-3 bg-primary-500/30 rotate-45 animate-ping" style={{ animationDuration: '2s' }} />
-          <div className="absolute left-[6%] bottom-1/3 w-4 h-4 bg-primary-500/20 rotate-45 animate-pulse" />
-          <div className="absolute right-[4%] bottom-40 w-5 h-5 border-2 border-primary-500/30 rotate-45 animate-bounce" style={{ animationDuration: '4s' }} />
-          <div className="absolute left-[4%] bottom-20 w-3 h-3 bg-primary-500/20 rotate-45 animate-pulse" />
-          <div className="absolute right-[7%] bottom-24 w-4 h-4 border border-primary-500/25 rotate-45 animate-spin" style={{ animationDuration: '15s' }} />
-
-          {/* Large floating orbs */}
-          <div className="absolute -left-20 top-1/4 w-40 h-40 bg-primary-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '4s' }} />
-          <div className="absolute -right-20 top-2/3 w-60 h-60 bg-green-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '5s' }} />
-          <div className="absolute left-1/3 -bottom-10 w-48 h-48 bg-primary-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s' }} />
-
+        <section className="py-20 bg-white relative overflow-hidden">
           <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             {/* Category Header */}
             <div className="text-center mb-16 relative">
-              {/* Glowing icon container */}
               <div className="relative inline-block mb-6">
-                <div className="absolute -inset-2 bg-gradient-to-r from-primary-500 to-green-500 rounded-3xl opacity-20 blur-xl animate-pulse" />
-                <div className="relative w-20 h-20 rounded-2xl bg-gradient-to-br from-primary-500/20 to-primary-600/10 text-primary-400 border border-primary-500/30 flex items-center justify-center">
+                <div className="relative w-20 h-20 rounded-2xl bg-primary-500/10 text-primary-500 flex items-center justify-center">
                   <div className="w-10 h-10 flex items-center justify-center">
                     {activeData.icon}
                   </div>
                 </div>
               </div>
 
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-dark-900 mb-4">
                 {activeData.name}
               </h2>
-              <p className="text-xl md:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-green-400 font-semibold">
+              <p className="text-xl md:text-2xl text-primary-500 font-semibold">
                 {activeData.tagline}
               </p>
-
-              {/* Decorative line */}
-              <div className="mt-8 flex items-center justify-center gap-2">
-                <div className="w-12 h-[2px] bg-gradient-to-r from-transparent to-primary-500/50" />
-                <div className="w-2 h-2 bg-primary-500 rotate-45" />
-                <div className="w-24 h-[2px] bg-primary-500/50" />
-                <div className="w-2 h-2 bg-primary-500 rotate-45" />
-                <div className="w-12 h-[2px] bg-gradient-to-l from-transparent to-primary-500/50" />
-              </div>
             </div>
 
             {/* Model Cards Grid */}
@@ -619,157 +611,73 @@ export default function MLModelsPage() {
         </section>
       )}
 
-      {/* All Categories Overview */}
-      <section className="py-20 bg-dark-800/50 relative overflow-hidden">
-        {/* Background effects */}
-        <div className="absolute inset-0 bg-gradient-to-b from-dark-900/50 to-transparent pointer-events-none" />
-        <div className="absolute -left-40 top-1/4 w-80 h-80 bg-primary-500/5 rounded-full blur-3xl" />
-        <div className="absolute -right-40 bottom-1/4 w-80 h-80 bg-green-500/5 rounded-full blur-3xl" />
-
-        <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Explore All Categories
-            </h2>
-            <p className="text-lg text-neutral-400">
-              ML solutions across every business domain
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => {
-                  setActiveCategory(category.id);
-                  document.getElementById('models-section')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className={`group relative text-left p-6 rounded-2xl border transition-all duration-500 ${
-                  activeCategory === category.id
-                    ? 'border-primary-500 bg-primary-500/10'
-                    : 'border-dark-700 bg-dark-800/50 hover:border-primary-500/50 hover:bg-dark-800'
-                } hover:shadow-xl hover:shadow-primary-500/10 hover:-translate-y-1`}
-              >
-                {/* Hover glow */}
-                <div className="absolute -inset-px bg-gradient-to-r from-primary-500 to-green-500 rounded-2xl opacity-0 group-hover:opacity-10 blur transition-opacity duration-500" />
-
-                <div className="relative">
-                  <div
-                    className={`inline-flex items-center justify-center w-14 h-14 rounded-xl mb-4 transition-all duration-300 ${
-                      activeCategory === category.id
-                        ? 'bg-gradient-to-br from-primary-500 to-green-500 text-white shadow-lg shadow-primary-500/30'
-                        : 'bg-dark-700 text-neutral-400 group-hover:text-primary-400 group-hover:bg-dark-600'
-                    }`}
-                  >
-                    {category.icon}
-                  </div>
-                  <h3 className="text-lg font-bold text-white mb-1 group-hover:text-primary-400 transition-colors">
-                    {category.name}
-                  </h3>
-                  <p className="text-neutral-500 text-sm">{category.tagline}</p>
-                </div>
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Powered By Section */}
-      <section className="py-16 border-t border-dark-700 relative overflow-hidden">
-        {/* Subtle animated gradient line */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary-500/50 to-transparent animate-shimmer" />
-
+      <section className="py-16 bg-white border-t border-neutral-200">
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-neutral-500 text-sm mb-10 uppercase tracking-wider">Powered by leading AI platforms</p>
+          <p className="text-center text-dark-500 text-sm mb-10 uppercase tracking-wider">Powered by leading AI platforms</p>
           <div className="flex flex-wrap justify-center items-center gap-10">
-            <div className="group flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-white/5 transition-all duration-300 cursor-pointer">
+            <div className="group flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-cream-50 transition-all duration-300 cursor-pointer">
               <div className="w-10 h-10 rounded-lg bg-black flex items-center justify-center group-hover:scale-110 transition-transform">
                 <OpenAILogo className="w-6 h-6 text-white" />
               </div>
-              <span className="text-sm font-medium text-white/60 group-hover:text-white transition-colors">OpenAI</span>
+              <span className="text-sm font-medium text-dark-500 group-hover:text-dark-900 transition-colors">OpenAI</span>
             </div>
-            <div className="group flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-white/5 transition-all duration-300 cursor-pointer">
+            <div className="group flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-cream-50 transition-all duration-300 cursor-pointer">
               <div className="w-10 h-10 rounded-lg bg-[#D4A27F] flex items-center justify-center group-hover:scale-110 transition-transform">
                 <AnthropicLogo className="w-6 h-6 text-white" />
               </div>
-              <span className="text-sm font-medium text-white/60 group-hover:text-white transition-colors">Anthropic</span>
+              <span className="text-sm font-medium text-dark-500 group-hover:text-dark-900 transition-colors">Anthropic</span>
             </div>
-            <div className="group flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-white/5 transition-all duration-300 cursor-pointer">
-              <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center group-hover:scale-110 transition-transform overflow-hidden">
+            <div className="group flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-cream-50 transition-all duration-300 cursor-pointer">
+              <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center group-hover:scale-110 transition-transform overflow-hidden border border-neutral-200">
                 <img src="/logos/google-gemini-icon.webp" alt="Gemini" className="w-7 h-7 object-contain" />
               </div>
-              <span className="text-sm font-medium text-white/60 group-hover:text-white transition-colors">Google AI</span>
+              <span className="text-sm font-medium text-dark-500 group-hover:text-dark-900 transition-colors">Google AI</span>
             </div>
-            <div className="group flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-white/5 transition-all duration-300 cursor-pointer">
+            <div className="group flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-cream-50 transition-all duration-300 cursor-pointer">
               <div className="w-10 h-10 rounded-lg overflow-hidden group-hover:scale-110 transition-transform">
                 <img src="/logos/Meta-ai-logo.webp" alt="Meta AI" className="w-full h-full object-cover" />
               </div>
-              <span className="text-sm font-medium text-white/60 group-hover:text-white transition-colors">Meta AI</span>
+              <span className="text-sm font-medium text-dark-500 group-hover:text-dark-900 transition-colors">Meta AI</span>
             </div>
-            <div className="group flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-white/5 transition-all duration-300 cursor-pointer">
+            <div className="group flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-cream-50 transition-all duration-300 cursor-pointer">
               <div className="w-10 h-10 rounded-lg bg-black p-1 overflow-hidden group-hover:scale-110 transition-transform">
                 <img src="/logos/Mistral_AI_logo_(2025–).svg.png" alt="Mistral" className="w-full h-full object-contain" />
               </div>
-              <span className="text-sm font-medium text-white/60 group-hover:text-white transition-colors">Mistral</span>
+              <span className="text-sm font-medium text-dark-500 group-hover:text-dark-900 transition-colors">Mistral</span>
             </div>
-            <div className="group flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-white/5 transition-all duration-300 cursor-pointer">
+            <div className="group flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-cream-50 transition-all duration-300 cursor-pointer">
               <div className="w-10 h-10 rounded-lg overflow-hidden group-hover:scale-110 transition-transform">
                 <img src="/logos/hf-logo.png" alt="Hugging Face" className="w-full h-full object-cover" />
               </div>
-              <span className="text-sm font-medium text-white/60 group-hover:text-white transition-colors">Hugging Face</span>
+              <span className="text-sm font-medium text-dark-500 group-hover:text-dark-900 transition-colors">Hugging Face</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 relative overflow-hidden">
-        {/* Animated gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 via-green-500/10 to-primary-600/20 animate-gradient-x" />
-
-        {/* Floating orbs */}
-        <div className="absolute -left-20 top-1/2 w-60 h-60 bg-primary-500/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute -right-20 top-1/2 w-60 h-60 bg-green-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-
-        {/* Grid pattern */}
-        <div className="absolute inset-0 opacity-[0.03]"
-             style={{
-               backgroundImage: `linear-gradient(to right, #fff 1px, transparent 1px),
-                                 linear-gradient(to bottom, #fff 1px, transparent 1px)`,
-               backgroundSize: '40px 40px'
-             }} />
-
-        {/* Floating diamonds */}
-        <div className="absolute left-[10%] top-[20%] w-4 h-4 border border-white/20 rotate-45 animate-float-up-down" />
-        <div className="absolute right-[15%] top-[30%] w-3 h-3 bg-white/10 rotate-45 animate-float-up-down" style={{ animationDelay: '1s' }} />
-        <div className="absolute left-[20%] bottom-[25%] w-5 h-5 border border-white/10 rotate-45 animate-float-up-down" style={{ animationDelay: '2s' }} />
-        <div className="absolute right-[10%] bottom-[20%] w-4 h-4 bg-white/5 rotate-45 animate-float-up-down" style={{ animationDelay: '0.5s' }} />
-
+      <section className="py-24 relative overflow-hidden" style={{ background: 'var(--cream)' }}>
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-dark-900 mb-6">
             Ready to Deploy{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-green-400">
+            <span className="text-primary-500">
               ML Solutions
             </span>
             ?
           </h2>
-          <p className="text-xl text-neutral-300 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-dark-500 mb-10 max-w-2xl mx-auto">
             Our team delivers production-ready models tailored to your business challenges.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="group relative inline-flex items-center justify-center px-8 py-4 rounded-xl font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary-500 to-green-500" />
-              <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-green-400 opacity-0 group-hover:opacity-100 transition-opacity" />
-              <span className="relative">Schedule Consultation</span>
+            <Link href="/contact" className="btn-primary">
+              Schedule Consultation
             </Link>
             <Link
               href="/case-studies"
-              className="group inline-flex items-center justify-center px-8 py-4 rounded-xl border border-white/20 text-white font-semibold hover:bg-white/10 hover:border-white/30 transition-all duration-300"
+              className="btn-secondary"
             >
               View Case Studies
-              <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
             </Link>
           </div>
         </div>

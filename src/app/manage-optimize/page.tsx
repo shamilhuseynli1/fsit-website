@@ -3,8 +3,17 @@
 import Link from 'next/link';
 import NetworkBackground from '@/components/NetworkBackground';
 import HeroOptimizeVisual from '@/components/HeroOptimizeVisual';
+import ProcessFlow from '@/components/ProcessFlow';
+import BranchingFromTitle from '@/components/BranchingFromTitle';
 
 export default function ManageOptimize() {
+  const whyManage = [
+    { title: 'Continuous optimization', desc: 'Always improving performance' },
+    { title: '24/7 system monitoring', desc: 'Round-the-clock oversight' },
+    { title: 'Expert AI operations', desc: 'Specialized MLOps teams' },
+    { title: 'Performance guarantees', desc: 'SLAs you can trust' },
+    { title: 'Proactive issue resolution', desc: 'Fix problems before they grow' },
+  ];
   const services = [
     {
       title: 'AI System Management',
@@ -114,8 +123,8 @@ export default function ManageOptimize() {
   return (
     <>
       {/* Hero Section */}
-      <section className="hero-dark bg-grid-pattern overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-900 to-dark-800" />
+      <section className="relative min-h-[80vh] flex items-center bg-cream-50 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-cream-50 to-neutral-50" />
         {/* Saudi Modern Office Background */}
         <div
           className="absolute inset-0 opacity-30"
@@ -131,8 +140,7 @@ export default function ManageOptimize() {
         <div className="relative max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="section-label !text-primary-500 !mb-4 md:!mb-6 animate-fade-in">Manage & Optimize</p>
-              <h1 className="hero-title text-white animate-fade-in-up text-3xl md:text-5xl lg:text-6xl">
+              <h1 className="hero-title text-dark-900 animate-fade-in-up text-3xl md:text-5xl lg:text-6xl">
                 Keep AI Running<br />
                 <span className="text-primary-500 text-glow">At Peak Performance</span>
               </h1>
@@ -143,7 +151,7 @@ export default function ManageOptimize() {
                 <Link href="/contact" className="btn-primary text-center">
                   Optimize your AI
                 </Link>
-                <Link href="/ai-operations" className="btn-secondary !border-white/30 !text-white hover:!bg-white hover:!text-dark-900 text-center">
+                <Link href="/ai-operations" className="btn-secondary text-center">
                   View AI operations
                 </Link>
               </div>
@@ -156,13 +164,13 @@ export default function ManageOptimize() {
       </section>
 
       {/* Stats */}
-      <section className="py-12 bg-primary-500">
+      <section className="section-sm" style={{ background: 'var(--cream)' }}>
         <div className="container-max">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <p className="text-3xl md:text-4xl font-bold text-white">{stat.value}</p>
-                <p className="text-white/80 text-sm mt-1">{stat.label}</p>
+                <p className="text-3xl md:text-4xl font-bold text-dark-900">{stat.value}</p>
+                <p className="text-dark-500 text-sm mt-1">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -170,91 +178,37 @@ export default function ManageOptimize() {
       </section>
 
       {/* Services */}
-      <section className="section-padding bg-white">
+      <section className="section" style={{ background: 'var(--white)' }}>
         <div className="container-max">
-          <div className="text-center mb-16">
-            <p className="section-label">Our Services</p>
-            <h2 className="section-title">AI Management Services</h2>
-            <p className="section-subtitle mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="h2">AI Management Services</h2>
+            <p className="text-body mx-auto" style={{ maxWidth: '42rem' }}>
               Comprehensive management to keep your AI systems running smoothly
             </p>
           </div>
 
-          <div className="grid-2">
+          <div className="mb-12">
+            <ProcessFlow steps={[
+              { num: '01', title: 'Manage', desc: 'System Administration' },
+              { num: '02', title: 'Monitor', desc: 'Performance Tracking' },
+              { num: '03', title: 'Optimize', desc: 'Model Improvement' },
+              { num: '04', title: 'Maintain', desc: 'Data Quality' },
+            ]} />
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mt-12">
             {services.map((service, index) => (
-              <div key={index} className="card card-hover">
-                <div className="flex items-start gap-4">
-                  <div className="w-14 h-14 bg-primary-500/10 rounded-xl flex items-center justify-center text-primary-500 flex-shrink-0">
-                    {service.icon}
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-dark-900 mb-2">{service.title}</h3>
-                    <p className="text-dark-500 text-sm mb-4">{service.description}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {service.features.map((feature, i) => (
-                        <span key={i} className="text-xs bg-neutral-150 text-dark-600 px-2 py-1 rounded">
-                          {feature}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+              <div key={index} className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-lg p-4 hover:border-[#00A651] hover:shadow-md transition-all duration-300">
+                <div className="w-10 h-10 bg-primary-500/10 rounded-lg flex items-center justify-center text-primary-500 mb-3">
+                  {service.icon}
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Optimization Results */}
-      <section className="section-padding bg-dark-900">
-        <div className="container-max">
-          <div className="text-center mb-16">
-            <p className="section-label !text-primary-500">Optimization Impact</p>
-            <h2 className="section-title !text-white">Real Optimization Results</h2>
-            <p className="section-subtitle mx-auto !text-dark-300">
-              Typical improvements we achieve for our clients' AI systems
-            </p>
-          </div>
-
-          <div className="grid-2 lg:grid-cols-4">
-            {optimizationAreas.map((area, index) => (
-              <div key={index} className="bg-dark-800 rounded-2xl p-6 border border-dark-700 text-center">
-                <h3 className="font-semibold text-white mb-4">{area.title}</h3>
-                <div className="flex items-center justify-center gap-4 mb-2">
-                  <span className="text-dark-400 line-through">{area.current}</span>
-                  <svg className="w-5 h-5 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                  <span className="text-2xl font-bold text-primary-500">{area.optimized}</span>
-                </div>
-                <p className="text-dark-400 text-sm">{area.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Monitoring Capabilities */}
-      <section className="section-padding bg-neutral-150">
-        <div className="container-max">
-          <div className="text-center mb-16">
-            <p className="section-label">Monitoring</p>
-            <h2 className="section-title">What We Monitor</h2>
-            <p className="section-subtitle mx-auto">
-              Comprehensive visibility across all aspects of your AI systems
-            </p>
-          </div>
-
-          <div className="grid-2 lg:grid-cols-4">
-            {monitoringCapabilities.map((cap, index) => (
-              <div key={index} className="card">
-                <h3 className="font-semibold text-dark-900 mb-4">{cap.title}</h3>
-                <div className="space-y-2">
-                  {cap.items.map((item, i) => (
-                    <div key={i} className="flex items-center gap-2 bg-neutral-50 p-2 rounded-lg border border-neutral-100">
-                      
-                      <span className="text-sm text-dark-600">{item}</span>
-                    </div>
+                <h3 className="text-sm font-semibold text-dark-900 mb-1">{service.title}</h3>
+                <p className="text-dark-500 text-xs mb-3 line-clamp-2">{service.description}</p>
+                <div className="flex flex-wrap gap-1">
+                  {service.features.slice(0, 3).map((feature, i) => (
+                    <span key={i} className="text-[10px] bg-white text-dark-600 px-1.5 py-0.5 rounded">
+                      {feature}
+                    </span>
                   ))}
                 </div>
               </div>
@@ -263,37 +217,121 @@ export default function ManageOptimize() {
         </div>
       </section>
 
-      {/* Support Tiers */}
-      <section className="section-padding bg-white">
+      {/* Optimization Results */}
+      <section className="section-sm" style={{ background: 'var(--cream)' }}>
         <div className="container-max">
-          <div className="text-center mb-16">
-            <p className="section-label">Support Options</p>
-            <h2 className="section-title">Choose Your Support Level</h2>
-            <p className="section-subtitle mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="h3">Real Optimization Results</h2>
+            <p className="text-small mx-auto" style={{ maxWidth: '42rem' }}>
+              Typical improvements we achieve for our clients' AI systems
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+            {optimizationAreas.map((area, index) => (
+              <div key={index} className="bg-white rounded-lg p-4 border border-neutral-200 text-center">
+                <h3 className="text-sm font-semibold text-dark-900 mb-2">{area.title}</h3>
+                <div className="flex items-center justify-center gap-2 mb-1">
+                  <span className="text-dark-400 line-through text-xs">{area.current}</span>
+                  <svg className="w-4 h-4 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                  <span className="text-lg font-bold text-primary-600">{area.optimized}</span>
+                </div>
+                <p className="text-dark-500 text-xs">{area.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Monitoring Capabilities */}
+      <section className="section" style={{ background: 'var(--white)' }}>
+        <div className="container-max">
+          <div className="text-center mb-6">
+            <h2 className="h2">What We Monitor</h2>
+            <p className="text-body mx-auto" style={{ maxWidth: '42rem' }}>
+              Comprehensive visibility across all aspects of your AI systems
+            </p>
+          </div>
+
+          {/* Animated horizontal line */}
+          <div className="relative mb-8">
+            <svg className="w-full h-8 pointer-events-none" viewBox="0 0 1000 32" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="monitorLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="var(--green)" stopOpacity="0" />
+                  <stop offset="20%" stopColor="var(--green)" stopOpacity="0.3" />
+                  <stop offset="50%" stopColor="var(--green)" stopOpacity="0.5" />
+                  <stop offset="80%" stopColor="var(--green)" stopOpacity="0.3" />
+                  <stop offset="100%" stopColor="var(--green)" stopOpacity="0" />
+                </linearGradient>
+                <linearGradient id="monitorPulseGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="var(--green)" stopOpacity="0" />
+                  <stop offset="45%" stopColor="var(--green)" stopOpacity="1" />
+                  <stop offset="55%" stopColor="var(--green)" stopOpacity="1" />
+                  <stop offset="100%" stopColor="var(--green)" stopOpacity="0" />
+                </linearGradient>
+              </defs>
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="var(--gray-200)" strokeWidth="2" />
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="url(#monitorLineGradient)" strokeWidth="2" />
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="url(#monitorPulseGradient)" strokeWidth="3" strokeLinecap="round"
+                style={{ strokeDasharray: '150 850', animation: 'flowHorizontal 3s linear infinite' }} />
+            </svg>
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            {monitoringCapabilities.map((cap, index) => (
+              <div key={index} className="relative">
+                {/* Dashed connector line between blocks */}
+                {index < monitoringCapabilities.length - 1 && (
+                  <div className="hidden lg:block absolute top-1/2 -right-2 w-4 h-0 -translate-y-1/2 z-10" style={{ borderTop: '2px dashed #00A651', opacity: 0.5 }} />
+                )}
+                <div className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl p-5 h-full hover:border-[#00A651] hover:shadow-lg transition-all duration-300">
+                  <h3 className="font-semibold text-dark-900 mb-3 text-sm">{cap.title}</h3>
+                  <div className="space-y-1.5">
+                    {cap.items.map((item, i) => (
+                      <div key={i} className="flex items-center gap-2 bg-white p-2 rounded-lg border border-[#00A651]/10">
+                        <span className="text-xs text-dark-600">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Support Tiers */}
+      <section className="section-sm" style={{ background: 'var(--cream)' }}>
+        <div className="container-max">
+          <div className="text-center mb-8">
+            <h2 className="h3">Choose Your Support Level</h2>
+            <p className="text-small mx-auto" style={{ maxWidth: '42rem' }}>
               Flexible support options to match your operational requirements
             </p>
           </div>
 
-          <div className="grid-3">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             {supportTiers.map((tier, index) => (
               <div
                 key={index}
-                className={`card card-hover relative ${tier.recommended ? 'border-2 border-primary-500' : ''}`}
+                className={`bg-[#F5F3F0] rounded-lg p-4 hover:shadow-md transition-all duration-300 relative ${tier.recommended ? 'border-2 border-primary-500' : 'border border-[#00A651]/20 hover:border-[#00A651]'}`}
               >
                 {tier.recommended && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="bg-primary-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                  <div className="absolute -top-2 left-1/2 -translate-x-1/2">
+                    <span className="bg-primary-500 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full">
                       Recommended
                     </span>
                   </div>
                 )}
-                <h3 className="text-xl font-semibold text-dark-900 mb-2 mt-2">{tier.tier}</h3>
-                <p className="text-dark-500 text-sm mb-4">{tier.description}</p>
-                <div className="space-y-2">
+                <h3 className="text-base font-semibold text-dark-900 mb-1 mt-1">{tier.tier}</h3>
+                <p className="text-dark-500 text-xs mb-3">{tier.description}</p>
+                <div className="space-y-1">
                   {tier.features.map((feature, i) => (
-                    <div key={i} className="flex items-center gap-2 bg-neutral-50 p-2 rounded-lg border border-neutral-100">
-                      
-                      <span className="text-sm text-dark-600">{feature}</span>
+                    <div key={i} className="flex items-center gap-1.5 bg-neutral-50 p-1.5 rounded border border-neutral-100">
+                      <span className="text-xs text-dark-600">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -304,67 +342,121 @@ export default function ManageOptimize() {
       </section>
 
       {/* Why Manage With Us */}
-      <section className="section-padding bg-neutral-150">
-        <div className="container-max">
-          <div className="grid-2 items-center">
-            <div>
-              <p className="section-label">Why FSIT</p>
-              <h2 className="section-title">Proactive, Not Reactive</h2>
-              <p className="text-dark-500 mb-6">
-                We don't wait for things to break. Our proactive approach identifies and resolves issues before they impact your business.
-              </p>
-              <div className="space-y-3">
-                {[
-                  'Proactive monitoring catches issues early',
-                  'Continuous optimization, not just maintenance',
-                  'Deep AI expertise, not generic IT support',
-                  'Business-aligned SLAs and metrics',
-                  'Regular reporting and recommendations',
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-4 bg-white p-3 rounded-xl border border-neutral-200 hover:border-primary-500/30 transition-all">
-                    
-                    <span className="text-dark-700 font-medium">{item}</span>
+      <section className="section" style={{ background: 'var(--white)' }}>
+        <div className="container-lg">
+          <div className="text-center mb-6">
+            <h2 className="h2">Proactive, Not Reactive</h2>
+            <p className="text-body mx-auto">
+              We don't wait for things to break. Our proactive approach identifies and resolves issues before they impact your business.
+            </p>
+          </div>
+
+          {/* Simple horizontal line animation */}
+          <div className="relative mb-8">
+            <svg className="w-full h-8 pointer-events-none" viewBox="0 0 1000 32" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="manageWhyLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="var(--green)" stopOpacity="0" />
+                  <stop offset="20%" stopColor="var(--green)" stopOpacity="0.3" />
+                  <stop offset="50%" stopColor="var(--green)" stopOpacity="0.5" />
+                  <stop offset="80%" stopColor="var(--green)" stopOpacity="0.3" />
+                  <stop offset="100%" stopColor="var(--green)" stopOpacity="0" />
+                </linearGradient>
+                <linearGradient id="manageWhyPulseGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="var(--green)" stopOpacity="0" />
+                  <stop offset="45%" stopColor="var(--green)" stopOpacity="1" />
+                  <stop offset="55%" stopColor="var(--green)" stopOpacity="1" />
+                  <stop offset="100%" stopColor="var(--green)" stopOpacity="0" />
+                </linearGradient>
+              </defs>
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="var(--gray-200)" strokeWidth="2" />
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="url(#manageWhyLineGradient)" strokeWidth="2" />
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="url(#manageWhyPulseGradient)" strokeWidth="3" strokeLinecap="round"
+                style={{ strokeDasharray: '150 850', animation: 'flowHorizontal 3s linear infinite' }} />
+            </svg>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-8">
+            {[
+              'Proactive monitoring catches issues early',
+              'Continuous optimization, not just maintenance',
+              'Deep AI expertise, not generic IT support',
+              'Business-aligned SLAs and metrics',
+              'Regular reporting and recommendations',
+            ].map((item, i) => (
+              <div key={i} className="relative">
+                {/* Arrow connector between blocks */}
+                {i < 4 && (
+                  <div className="hidden lg:flex absolute top-1/2 -right-2 -translate-y-1/2 z-10 items-center">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M4 8h8M10 4l4 4-4 4" stroke="#00A651" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
                   </div>
-                ))}
+                )}
+                <div className="group text-center p-4 bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl hover:border-[#00A651] hover:shadow-lg transition-all duration-300 h-full">
+                  <h3 className="text-sm font-bold group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+                    {item}
+                  </h3>
+                </div>
               </div>
-            </div>
-            <div className="bg-white rounded-2xl p-8 border border-neutral-200">
-              <h3 className="font-semibold text-dark-900 mb-6">Included With Management</h3>
-              <div className="space-y-4">
-                {[
-                  { title: 'Custom Dashboards', desc: 'Real-time visibility into your AI systems' },
-                  { title: 'Monthly Reports', desc: 'Performance trends and recommendations' },
-                  { title: 'Optimization Reviews', desc: 'Regular analysis for improvement opportunities' },
-                  { title: 'Incident Response', desc: 'Rapid resolution when issues arise' },
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-4 bg-neutral-150 rounded-xl p-4 border border-neutral-200 hover:border-primary-500/30 transition-all">
-                    
-                    <div>
-                      <h4 className="font-medium text-dark-900">{item.title}</h4>
-                      <p className="text-dark-500 text-sm">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+            ))}
+          </div>
+
+          {/* Arrow down to Included With Management */}
+          <div className="flex justify-center mb-6">
+            <svg width="24" height="40" viewBox="0 0 24 40" fill="none">
+              <path d="M12 0v32M6 26l6 6 6-6" stroke="#00A651" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </div>
+
+          {/* Included With Management */}
+          <div className="max-w-4xl mx-auto">
+            <h3 className="font-semibold text-dark-900 mb-6 text-center">Included With Management</h3>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                { title: 'Custom Dashboards', desc: 'Real-time visibility into your AI systems' },
+                { title: 'Monthly Reports', desc: 'Performance trends and recommendations' },
+                { title: 'Optimization Reviews', desc: 'Regular analysis for improvement opportunities' },
+                { title: 'Incident Response', desc: 'Rapid resolution when issues arise' },
+              ].map((item, i) => (
+                <div key={i} className="group text-center p-4 rounded-xl bg-neutral-100 hover:bg-primary-50 transition-all duration-300">
+                  <h4 className="font-bold text-sm mb-2 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+                    {item.title}
+                  </h4>
+                  <p className="text-dark-500 text-xs">{item.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
+      {/* Why Manage - Animated Branching */}
+      <section className="py-16" style={{ background: 'var(--cream)' }}>
+        <div className="container-lg">
+          <div className="text-center mb-2">
+            <h2 className="h2">Why organizations choose FSIT for AI operations</h2>
+          </div>
+          <BranchingFromTitle items={whyManage} />
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="section-padding bg-dark-900">
-        <div className="container-max text-center">
-          <h2 className="section-title !text-white mb-4">
-            Ready to optimize your AI systems?
+      <section className="section" style={{ background: 'var(--white)' }}>
+        <div className="container-md text-center">
+          <h2 className="h1 mb-6">
+            Ready to optimize
+            <br />
+            <span style={{ color: 'var(--green)' }}>your AI?</span>
           </h2>
-          <p className="section-subtitle mx-auto !text-dark-300 mb-8">
+          <p className="text-large mb-10 max-w-xl mx-auto">
             Let's discuss how we can improve the performance and reliability of your AI
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="btn-primary">
               Get started
             </Link>
-            <Link href="/protect-scale" className="btn-secondary !border-white/30 !text-white hover:!bg-white hover:!text-dark-900">
+            <Link href="/protect-scale" className="btn-secondary">
               Learn about governance
             </Link>
           </div>

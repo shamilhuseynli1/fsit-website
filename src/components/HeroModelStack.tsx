@@ -71,7 +71,7 @@ export default function HeroModelStack() {
           y1="30"
           x2="200"
           y2="420"
-          stroke="#22c55e"
+          stroke="#94a3b8"
           strokeWidth="1"
           strokeDasharray="4 4"
           opacity="0.4"
@@ -79,102 +79,102 @@ export default function HeroModelStack() {
 
         {/* MODEL API Label at top */}
         <g className="breathe" style={{ transformOrigin: '200px 38px' }}>
-          <rect x="130" y="20" width="140" height="36" rx="4" fill="none" stroke="#22c55e" strokeWidth="1.5" />
-          <text x="200" y="44" textAnchor="middle" fill="#22c55e" fontSize="12" fontFamily="monospace" fontWeight="500">
+          <rect x="130" y="20" width="140" height="36" rx="4" fill="none" stroke="#19AB5D" strokeWidth="1.5" />
+          <text x="200" y="44" textAnchor="middle" fill="#19AB5D" fontSize="12" fontFamily="monospace" fontWeight="500">
             MODEL API
           </text>
         </g>
 
         {/* Top cylinder (Output) */}
         <g className="float-slow float-delay-1" style={{ transformOrigin: '200px 105px' }}>
-          <ellipse cx="200" cy="95" rx="75" ry="20" fill="#dcfce7" stroke="#86efac" strokeWidth="1.5" />
+          <ellipse cx="200" cy="95" rx="75" ry="20" fill="#f1f5f9" stroke="#cbd5e1" strokeWidth="1.5" />
           <path
             d="M125 95 L125 115 Q125 135 200 135 Q275 135 275 115 L275 95"
-            fill="#dcfce7"
-            stroke="#86efac"
+            fill="#f1f5f9"
+            stroke="#cbd5e1"
             strokeWidth="1.5"
           />
-          <ellipse cx="200" cy="115" rx="75" ry="20" fill="#bbf7d0" stroke="#86efac" strokeWidth="1.5" />
+          <ellipse cx="200" cy="115" rx="75" ry="20" fill="#e2e8f0" stroke="#cbd5e1" strokeWidth="1.5" />
         </g>
 
         {/* Second cylinder */}
         <g className="float-slow float-delay-2" style={{ transformOrigin: '200px 178px' }}>
-          <ellipse cx="200" cy="165" rx="85" ry="22" fill="#dcfce7" stroke="#86efac" strokeWidth="1.5" />
+          <ellipse cx="200" cy="165" rx="85" ry="22" fill="#f1f5f9" stroke="#cbd5e1" strokeWidth="1.5" />
           <path
             d="M115 165 L115 190 Q115 212 200 212 Q285 212 285 190 L285 165"
+            fill="#f1f5f9"
+            stroke="#cbd5e1"
+            strokeWidth="1.5"
+          />
+          <ellipse cx="200" cy="190" rx="85" ry="22" fill="#e2e8f0" stroke="#cbd5e1" strokeWidth="1.5" />
+        </g>
+
+        {/* Third cylinder (accent ring) */}
+        <g className="float-slow float-delay-3" style={{ transformOrigin: '200px 250px' }}>
+          <ellipse cx="200" cy="240" rx="80" ry="20" fill="#dcfce7" stroke="#86efac" strokeWidth="1.5" />
+          <path
+            d="M120 240 L120 260 Q120 280 200 280 Q280 280 280 260 L280 240"
             fill="#dcfce7"
             stroke="#86efac"
             strokeWidth="1.5"
           />
-          <ellipse cx="200" cy="190" rx="85" ry="22" fill="#bbf7d0" stroke="#86efac" strokeWidth="1.5" />
-        </g>
-
-        {/* Third cylinder (darker ring) */}
-        <g className="float-slow float-delay-3" style={{ transformOrigin: '200px 250px' }}>
-          <ellipse cx="200" cy="240" rx="80" ry="20" fill="#86efac" stroke="#4ade80" strokeWidth="1.5" />
-          <path
-            d="M120 240 L120 260 Q120 280 200 280 Q280 280 280 260 L280 240"
-            fill="#86efac"
-            stroke="#4ade80"
-            strokeWidth="1.5"
-          />
-          <ellipse cx="200" cy="260" rx="80" ry="20" fill="#4ade80" stroke="#22c55e" strokeWidth="1.5" />
+          <ellipse cx="200" cy="260" rx="80" ry="20" fill="#bbf7d0" stroke="#19AB5D" strokeWidth="1.5" />
         </g>
 
         {/* Fourth cylinder */}
         <g className="float-slow float-delay-1" style={{ transformOrigin: '200px 315px' }}>
-          <ellipse cx="200" cy="305" rx="75" ry="18" fill="#dcfce7" stroke="#86efac" strokeWidth="1.5" />
+          <ellipse cx="200" cy="305" rx="75" ry="18" fill="#f1f5f9" stroke="#cbd5e1" strokeWidth="1.5" />
           <path
             d="M125 305 L125 325 Q125 343 200 343 Q275 343 275 325 L275 305"
-            fill="#dcfce7"
-            stroke="#86efac"
+            fill="#f1f5f9"
+            stroke="#cbd5e1"
             strokeWidth="1.5"
           />
-          <ellipse cx="200" cy="325" rx="75" ry="18" fill="#bbf7d0" stroke="#86efac" strokeWidth="1.5" />
+          <ellipse cx="200" cy="325" rx="75" ry="18" fill="#e2e8f0" stroke="#cbd5e1" strokeWidth="1.5" />
         </g>
 
         {/* Bottom cylinder (base) */}
         <g className="float-slow float-delay-2" style={{ transformOrigin: '200px 375px' }}>
-          <ellipse cx="200" cy="365" rx="70" ry="16" fill="#86efac" stroke="#4ade80" strokeWidth="1.5" />
+          <ellipse cx="200" cy="365" rx="70" ry="16" fill="#f1f5f9" stroke="#cbd5e1" strokeWidth="1.5" />
           <path
             d="M130 365 L130 385 Q130 401 200 401 Q270 401 270 385 L270 365"
-            fill="#86efac"
-            stroke="#4ade80"
+            fill="#f1f5f9"
+            stroke="#cbd5e1"
             strokeWidth="1.5"
           />
-          <ellipse cx="200" cy="385" rx="70" ry="16" fill="#4ade80" stroke="#22c55e" strokeWidth="1.5" />
+          <ellipse cx="200" cy="385" rx="70" ry="16" fill="#e2e8f0" stroke="#94a3b8" strokeWidth="1.5" />
         </g>
 
         {/* Ascending staircase on the left */}
         <g transform="translate(20, 280)">
-          <rect x="0" y="60" width="16" height="16" fill="#22c55e" transform="rotate(45 8 68)" className="fade-animation" style={{ animationDelay: '0s' }} />
-          <rect x="18" y="45" width="16" height="16" fill="#22c55e" transform="rotate(45 26 53)" className="fade-animation" style={{ animationDelay: '0.2s' }} />
+          <rect x="0" y="60" width="16" height="16" fill="#19AB5D" transform="rotate(45 8 68)" className="fade-animation" style={{ animationDelay: '0s' }} />
+          <rect x="18" y="45" width="16" height="16" fill="#19AB5D" transform="rotate(45 26 53)" className="fade-animation" style={{ animationDelay: '0.2s' }} />
           <rect x="36" y="30" width="16" height="16" fill="#4ade80" transform="rotate(45 44 38)" className="fade-animation" style={{ animationDelay: '0.4s' }} />
           <rect x="54" y="15" width="16" height="16" fill="#86efac" transform="rotate(45 62 23)" className="fade-animation" style={{ animationDelay: '0.6s' }} />
           <rect x="72" y="0" width="16" height="16" fill="#bbf7d0" transform="rotate(45 80 8)" className="fade-animation" style={{ animationDelay: '0.8s' }} />
-          <line x1="8" y1="80" x2="88" y2="0" stroke="#22c55e" strokeWidth="1" strokeDasharray="3 3" opacity="0.5" />
-          <circle cx="8" cy="80" r="3" fill="#22c55e" className="pulse-animation" />
+          <line x1="8" y1="80" x2="88" y2="0" stroke="#19AB5D" strokeWidth="1" strokeDasharray="3 3" opacity="0.5" />
+          <circle cx="8" cy="80" r="3" fill="#19AB5D" className="pulse-animation" />
         </g>
 
         {/* Floating diamonds with animations */}
-        <rect x="70" y="60" width="12" height="12" fill="none" stroke="#22c55e" strokeWidth="1.5" transform="rotate(45 76 66)" className="pulse-animation" />
-        <rect x="320" y="40" width="10" height="10" fill="none" stroke="#22c55e" strokeWidth="1.5" transform="rotate(45 325 45)" className="pulse-animation" style={{ animationDelay: '1s' }} />
-        <rect x="340" y="150" width="14" height="14" fill="#22c55e" transform="rotate(45 347 157)" className="fade-animation" />
+        <rect x="70" y="60" width="12" height="12" fill="none" stroke="#94a3b8" strokeWidth="1.5" transform="rotate(45 76 66)" className="pulse-animation" />
+        <rect x="320" y="40" width="10" height="10" fill="none" stroke="#94a3b8" strokeWidth="1.5" transform="rotate(45 325 45)" className="pulse-animation" style={{ animationDelay: '1s' }} />
+        <rect x="340" y="150" width="14" height="14" fill="#19AB5D" transform="rotate(45 347 157)" className="fade-animation" />
         <rect x="50" y="180" width="10" height="10" fill="#ec4899" transform="rotate(45 55 185)" className="fade-animation" style={{ animationDelay: '0.5s' }} />
-        <rect x="350" y="280" width="12" height="12" fill="none" stroke="#22c55e" strokeWidth="1.5" transform="rotate(45 356 286)" className="pulse-animation" style={{ animationDelay: '1.5s' }} />
-        <rect x="330" y="380" width="14" height="14" fill="#22c55e" transform="rotate(45 337 387)" opacity="0.25" className="fade-animation" style={{ animationDelay: '2s' }} />
+        <rect x="350" y="280" width="12" height="12" fill="none" stroke="#94a3b8" strokeWidth="1.5" transform="rotate(45 356 286)" className="pulse-animation" style={{ animationDelay: '1.5s' }} />
+        <rect x="330" y="380" width="14" height="14" fill="#94a3b8" transform="rotate(45 337 387)" opacity="0.25" className="fade-animation" style={{ animationDelay: '2s' }} />
         <rect x="60" y="400" width="10" height="10" fill="#ec4899" transform="rotate(45 65 405)" className="fade-animation" style={{ animationDelay: '1s' }} />
       </svg>
 
       {/* Floating metric labels with hover effects */}
-      <div className="absolute left-0 top-[18%] px-3 py-1.5 bg-dark-800/80 border border-primary-500/40 rounded-md backdrop-blur-sm transition-all hover:border-primary-500 hover:scale-105 float-slow">
-        <span className="text-xs text-primary-400 font-mono">200 TPS</span>
+      <div className="absolute left-0 top-[18%] px-3 py-1.5 bg-dark-900 rounded-md transition-all hover:scale-105 float-slow">
+        <span className="text-xs text-white font-mono">200 TPS</span>
       </div>
-      <div className="absolute right-0 top-[38%] px-3 py-1.5 bg-dark-800/80 border border-primary-500/40 rounded-md backdrop-blur-sm transition-all hover:border-primary-500 hover:scale-105 float-slow float-delay-1">
-        <span className="text-xs text-primary-400 font-mono">12MS TTFT</span>
+      <div className="absolute right-0 top-[38%] px-3 py-1.5 bg-dark-900 rounded-md transition-all hover:scale-105 float-slow float-delay-1">
+        <span className="text-xs text-white font-mono">12MS TTFT</span>
       </div>
-      <div className="absolute left-[5%] top-[55%] px-3 py-1.5 bg-dark-800/80 border border-primary-500/40 rounded-md backdrop-blur-sm transition-all hover:border-primary-500 hover:scale-105 float-slow float-delay-2">
-        <span className="text-xs text-primary-400 font-mono">110 REQ/M</span>
+      <div className="absolute left-[5%] top-[55%] px-3 py-1.5 bg-dark-900 rounded-md transition-all hover:scale-105 float-slow float-delay-2">
+        <span className="text-xs text-white font-mono">110 REQ/M</span>
       </div>
 
       {/* Floating AI brand logos - OpenAI */}

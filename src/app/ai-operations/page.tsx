@@ -19,50 +19,50 @@ interface OperationsSolution {
   metricValue: string;
 }
 
-// Icons for operations flows
+// Icons for operations flows - using explicit width/height for reliability
 const OpsIcons = {
   model: (
-    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" style={{ maxWidth: '24px', maxHeight: '24px' }}>
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
     </svg>
   ),
   cloud: (
-    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" style={{ maxWidth: '24px', maxHeight: '24px' }}>
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
     </svg>
   ),
   deployed: (
-    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" style={{ maxWidth: '24px', maxHeight: '24px' }}>
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
     </svg>
   ),
   metrics: (
-    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" style={{ maxWidth: '24px', maxHeight: '24px' }}>
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
     </svg>
   ),
   alerts: (
-    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" style={{ maxWidth: '24px', maxHeight: '24px' }}>
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
     </svg>
   ),
   data: (
-    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" style={{ maxWidth: '24px', maxHeight: '24px' }}>
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
     </svg>
   ),
   pipeline: (
-    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" style={{ maxWidth: '24px', maxHeight: '24px' }}>
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
     </svg>
   ),
   optimize: (
-    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" style={{ maxWidth: '24px', maxHeight: '24px' }}>
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
     </svg>
   ),
   performance: (
-    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" style={{ maxWidth: '24px', maxHeight: '24px' }}>
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
     </svg>
   ),
@@ -120,12 +120,60 @@ const operationsSolutions: OperationsSolution[] = [
 ];
 
 const trustSafety = [
-  { title: 'Content Moderation', desc: 'Ensure AI outputs meet safety and compliance standards', icon: '🛡️' },
-  { title: 'Bias Detection', desc: 'Monitor for and mitigate bias in AI decisions', icon: '⚖️' },
-  { title: 'PII Protection', desc: 'Safeguard sensitive data throughout the AI pipeline', icon: '🔒' },
-  { title: 'Audit Trails', desc: 'Complete logging of all AI decisions and actions', icon: '📋' },
-  { title: 'Compliance Monitoring', desc: 'Ensure adherence to industry regulations', icon: '📜' },
-  { title: 'Incident Response', desc: 'Rapid response to AI failures or safety issues', icon: '🚨' },
+  {
+    title: 'Content Moderation',
+    desc: 'Ensure AI outputs meet safety and compliance standards',
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00A651" strokeWidth="1.5" style={{ flexShrink: 0, maxWidth: '28px', maxHeight: '28px' }}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+      </svg>
+    )
+  },
+  {
+    title: 'Bias Detection',
+    desc: 'Monitor for and mitigate bias in AI decisions',
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00A651" strokeWidth="1.5" style={{ flexShrink: 0, maxWidth: '28px', maxHeight: '28px' }}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971z" />
+      </svg>
+    )
+  },
+  {
+    title: 'PII Protection',
+    desc: 'Safeguard sensitive data throughout the AI pipeline',
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00A651" strokeWidth="1.5" style={{ flexShrink: 0, maxWidth: '28px', maxHeight: '28px' }}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+      </svg>
+    )
+  },
+  {
+    title: 'Audit Trails',
+    desc: 'Complete logging of all AI decisions and actions',
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00A651" strokeWidth="1.5" style={{ flexShrink: 0, maxWidth: '28px', maxHeight: '28px' }}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
+      </svg>
+    )
+  },
+  {
+    title: 'Compliance Monitoring',
+    desc: 'Ensure adherence to industry regulations',
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00A651" strokeWidth="1.5" style={{ flexShrink: 0, maxWidth: '28px', maxHeight: '28px' }}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
+      </svg>
+    )
+  },
+  {
+    title: 'Incident Response',
+    desc: 'Rapid response to AI failures or safety issues',
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00A651" strokeWidth="1.5" style={{ flexShrink: 0, maxWidth: '28px', maxHeight: '28px' }}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0M3.124 7.5A8.969 8.969 0 015.292 3m13.416 0a8.969 8.969 0 012.168 4.5" />
+      </svg>
+    )
+  },
 ];
 
 const platforms = [
@@ -143,14 +191,14 @@ export default function AIOperations() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] bg-dark-900 overflow-hidden">
+      <section className="relative min-h-[90vh] overflow-hidden">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url(/hero-solutions.jpg)' }}
+          style={{ backgroundImage: 'url(/hero-neom.jpg)' }}
         />
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-dark-900/80" />
+        {/* Light overlay - reduced for NEOM visibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/60 to-white/40" />
 
         {/* Network pattern overlay */}
         <div className="absolute inset-0 opacity-30">
@@ -176,19 +224,14 @@ export default function AIOperations() {
           <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[70vh]">
             {/* Left content */}
             <div className="relative z-10">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold-500/10 border border-gold-500/30 rounded-full mb-6">
-                <div className="w-2 h-2 bg-gold-500 rounded-full animate-pulse" />
-                <span className="text-gold-400 text-sm font-medium">AI Operations</span>
-              </div>
-
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark-900 mb-6 leading-tight">
                 AI That Runs<br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-primary-400">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-500 to-primary-600">
                   In Production
                 </span>
               </h1>
 
-              <p className="text-lg text-neutral-300 mb-8 leading-relaxed max-w-xl">
+              <p className="text-lg text-black mb-8 leading-relaxed max-w-xl">
                 End-to-end AI operations — from deployment to monitoring to optimization. We ensure your AI systems remain accurate, compliant, and reliable in real-world production environments.
               </p>
 
@@ -196,7 +239,7 @@ export default function AIOperations() {
                 <Link href="/contact" className="btn-primary text-center">
                   Discuss your AI operations
                 </Link>
-                <Link href="/solutions" className="btn-secondary !border-white/30 !text-white hover:!bg-white hover:!text-dark-900 text-center">
+                <Link href="/solutions" className="btn-secondary text-center">
                   View all solutions
                 </Link>
               </div>
@@ -210,10 +253,10 @@ export default function AIOperations() {
                   { value: '5x', label: 'Faster' },
                 ].map((stat, i) => (
                   <div key={i} className="text-center">
-                    <p className="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-primary-400">
+                    <p className="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gold-500 to-primary-600">
                       {stat.value}
                     </p>
-                    <p className="text-xs text-neutral-500">{stat.label}</p>
+                    <p className="text-xs text-dark-500">{stat.label}</p>
                   </div>
                 ))}
               </div>
@@ -228,22 +271,14 @@ export default function AIOperations() {
       </section>
 
       {/* Core Services Section */}
-      <section className="relative py-24 bg-dark-900 overflow-hidden">
-        {/* Gradient overlays */}
-        <div className="absolute inset-0 bg-gradient-to-b from-dark-900 via-dark-800/50 to-dark-900" />
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl" />
-
+      <section className="section" style={{ background: 'var(--cream)' }}>
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-dark-800 border border-dark-700 rounded-full mb-6">
-              <span className="text-neutral-400 text-sm">Core Services</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-4">
               AI Operations Services
             </h2>
-            <p className="text-neutral-400 max-w-2xl mx-auto">
+            <p className="text-dark-500 max-w-2xl mx-auto">
               Comprehensive MLOps and AI operations to keep your AI systems running reliably
             </p>
           </div>
@@ -270,43 +305,71 @@ export default function AIOperations() {
       </section>
 
       {/* Human in the Loop Section */}
-      <section className="relative py-24 bg-dark-800 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900/10 via-transparent to-transparent" />
-
+      <section className="relative py-24 bg-white overflow-hidden">
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-dark-700 border border-dark-600 rounded-full mb-6">
-                <span className="text-neutral-400 text-sm">Human-in-the-Loop</span>
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-6">
                 AI + Human Intelligence
               </h2>
-              <p className="text-neutral-300 mb-8">
+              <p className="text-dark-500 mb-8">
                 The most reliable AI systems combine automation with human oversight. Our human-in-the-loop services ensure your AI remains accurate, safe, and aligned with business objectives.
               </p>
 
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { title: 'Quality Assurance', desc: 'Human reviewers validate AI outputs', icon: '⭐' },
-                  { title: 'Escalation Handling', desc: 'Complex decisions routed to experts', icon: '↑' },
-                  { title: 'Training Data Curation', desc: 'Humans label and annotate data', icon: '◉' },
-                  { title: 'Feedback Loops', desc: 'Continuous feedback to refine AI', icon: '⟲' },
+                  {
+                    title: 'Quality Assurance',
+                    desc: 'Human reviewers validate AI outputs',
+                    icon: (
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00A651" strokeWidth="1.5" style={{ flexShrink: 0, maxWidth: '20px', maxHeight: '20px' }}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                      </svg>
+                    )
+                  },
+                  {
+                    title: 'Escalation Handling',
+                    desc: 'Complex decisions routed to experts',
+                    icon: (
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00A651" strokeWidth="1.5" style={{ flexShrink: 0, maxWidth: '20px', maxHeight: '20px' }}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
+                      </svg>
+                    )
+                  },
+                  {
+                    title: 'Training Data Curation',
+                    desc: 'Humans label and annotate data',
+                    icon: (
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00A651" strokeWidth="1.5" style={{ flexShrink: 0, maxWidth: '20px', maxHeight: '20px' }}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M6 6h.008v.008H6V6z" />
+                      </svg>
+                    )
+                  },
+                  {
+                    title: 'Feedback Loops',
+                    desc: 'Continuous feedback to refine AI',
+                    icon: (
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00A651" strokeWidth="1.5" style={{ flexShrink: 0, maxWidth: '20px', maxHeight: '20px' }}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+                      </svg>
+                    )
+                  },
                 ].map((item, index) => (
-                  <div key={index} className="bg-dark-900/50 rounded-xl p-4 border border-dark-700 hover:border-primary-500/30 transition-all">
-                    <div className="w-10 h-10 bg-primary-500/20 rounded-lg flex items-center justify-center text-primary-400 text-xl mb-3">
+                  <div key={index} className="bg-white rounded-xl p-4 border border-neutral-200 hover:border-green-500/30 hover:shadow-lg transition-all">
+                    <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-3" style={{ background: 'rgba(0, 166, 81, 0.1)' }}>
                       {item.icon}
                     </div>
-                    <h3 className="font-semibold text-white mb-1 text-sm">{item.title}</h3>
-                    <p className="text-neutral-500 text-xs">{item.desc}</p>
+                    <h3 className="font-semibold text-dark-900 mb-1 text-sm">{item.title}</h3>
+                    <p className="text-dark-500 text-xs">{item.desc}</p>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Stats panel */}
-            <div className="bg-dark-900 rounded-2xl p-8 border border-dark-700">
-              <h3 className="text-xl font-semibold text-white mb-6">Why Human-in-the-Loop?</h3>
+            <div className="bg-neutral-150 rounded-2xl p-8 border border-neutral-200">
+              <h3 className="text-xl font-semibold text-dark-900 mb-6">Why Human-in-the-Loop?</h3>
               <ul className="space-y-6">
                 {[
                   { stat: '99.5%', text: 'accuracy with human QA vs 94% without' },
@@ -315,10 +378,10 @@ export default function AIOperations() {
                   { stat: '0', text: 'high-stakes decisions made without review' },
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-4">
-                    <span className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-500 w-24">
+                    <span className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-primary-500 w-24">
                       {item.stat}
                     </span>
-                    <span className="text-neutral-400 text-sm">{item.text}</span>
+                    <span className="text-dark-500 text-sm">{item.text}</span>
                   </li>
                 ))}
               </ul>
@@ -328,116 +391,232 @@ export default function AIOperations() {
       </section>
 
       {/* Trust & Safety Section */}
-      <section className="relative py-24 bg-dark-900 overflow-hidden">
-        <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-dark-800 border border-dark-700 rounded-full mb-6">
-              <span className="text-neutral-400 text-sm">Trust & Safety</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Safe, Compliant, Reliable
-            </h2>
-            <p className="text-neutral-400 max-w-2xl mx-auto">
+      <section className="section" style={{ background: 'var(--cream)' }}>
+        <div className="container-lg">
+          <div className="text-center mb-6">
+            <h2 className="h2 mb-6">Safe, Compliant, Reliable</h2>
+            <p className="text-body max-w-2xl mx-auto">
               Comprehensive governance to ensure your AI systems meet the highest standards
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {trustSafety.map((item, index) => (
-              <div
-                key={index}
-                className="group bg-dark-800/50 backdrop-blur-sm border border-dark-700 rounded-xl p-6
-                           hover:border-primary-500/50 transition-all duration-300
-                           hover:shadow-lg hover:shadow-primary-500/10"
-              >
-                <div className="text-3xl mb-4">{item.icon}</div>
-                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-primary-400 transition-colors">
-                  {item.title}
-                </h3>
-                <p className="text-neutral-400 text-sm">{item.desc}</p>
-              </div>
-            ))}
+          {/* Horizontal line with flowing animation */}
+          <div className="relative">
+            <style jsx>{`
+              @keyframes flowTrust {
+                0% { stroke-dashoffset: 1000; }
+                100% { stroke-dashoffset: 0; }
+              }
+            `}</style>
+            <svg className="w-full h-8 pointer-events-none" viewBox="0 0 1000 32" preserveAspectRatio="none">
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="#E5E7EB" strokeWidth="2" />
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="#00A651" strokeWidth="2" strokeDasharray="8 4"
+                style={{ animation: 'flowTrust 8s linear infinite' }} />
+            </svg>
+          </div>
+
+          {/* Cards grid with gap separators */}
+          <div className="relative pt-8">
+            {/* First row */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-0">
+              {trustSafety.slice(0, 3).map((item, index) => (
+                <div
+                  key={index}
+                  className="group relative p-6 rounded-2xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-white z-10"
+                  style={{ border: '1px solid var(--gray-100)' }}
+                >
+                  {/* Icon */}
+                  <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 overflow-hidden flex-shrink-0" style={{ background: 'rgba(0, 166, 81, 0.1)', minWidth: '56px', maxWidth: '56px', minHeight: '56px', maxHeight: '56px' }}>
+                    {item.icon}
+                  </div>
+                  <h3 className="text-lg font-bold mb-2 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+                    {item.title}
+                  </h3>
+                  <p className="text-sm" style={{ color: 'var(--gray-500)' }}>{item.desc}</p>
+                  {/* Hover border effect */}
+                  <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-green-500/30 transition-all duration-300 pointer-events-none" />
+                </div>
+              ))}
+            </div>
+
+            {/* Dashed separator between rows */}
+            <div className="relative h-6 my-0 hidden lg:flex items-center">
+              <div className="absolute left-0 right-0 top-1/2" style={{ borderTop: '2px dashed #00A651', opacity: 0.3 }} />
+              <div className="absolute top-0 bottom-0" style={{ left: 'calc(33.333% - 12px)', borderLeft: '2px dashed #00A651', opacity: 0.3 }} />
+              <div className="absolute top-0 bottom-0" style={{ left: 'calc(66.666% + 12px)', borderLeft: '2px dashed #00A651', opacity: 0.3 }} />
+            </div>
+
+            {/* Second row */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {trustSafety.slice(3, 6).map((item, index) => (
+                <div
+                  key={index}
+                  className="group relative p-6 rounded-2xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-white z-10"
+                  style={{ border: '1px solid var(--gray-100)' }}
+                >
+                  {/* Icon */}
+                  <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 overflow-hidden flex-shrink-0" style={{ background: 'rgba(0, 166, 81, 0.1)', minWidth: '56px', maxWidth: '56px', minHeight: '56px', maxHeight: '56px' }}>
+                    {item.icon}
+                  </div>
+                  <h3 className="text-lg font-bold mb-2 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+                    {item.title}
+                  </h3>
+                  <p className="text-sm" style={{ color: 'var(--gray-500)' }}>{item.desc}</p>
+                  {/* Hover border effect */}
+                  <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-green-500/30 transition-all duration-300 pointer-events-none" />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Platforms Section */}
-      <section className="relative py-24 bg-dark-800 overflow-hidden">
-        <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-dark-700 border border-dark-600 rounded-full mb-6">
-              <span className="text-neutral-400 text-sm">Technology Stack</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Platforms We Work With
-            </h2>
-            <p className="text-neutral-400 max-w-2xl mx-auto">
+      <section className="section" style={{ background: 'var(--cream)' }}>
+        <div className="container-lg">
+          <div className="text-center mb-6">
+            <h2 className="h2 mb-6">Platforms We Work With</h2>
+            <p className="text-body max-w-2xl mx-auto">
               Deep expertise across leading MLOps and AI infrastructure platforms
             </p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-4">
-            {platforms.map((platform, index) => (
-              <div
-                key={index}
-                className="group bg-dark-900 rounded-xl px-6 py-4 border border-dark-700
-                           hover:border-dark-600 transition-all hover:scale-105"
-              >
-                <div className={`w-full h-1 bg-gradient-to-r ${platform.color} rounded-full mb-3 opacity-60 group-hover:opacity-100 transition-opacity`} />
-                <p className="font-medium text-white">{platform.name}</p>
-                <p className="text-xs text-neutral-500">{platform.category}</p>
-              </div>
-            ))}
+          {/* Horizontal line with flowing animation */}
+          <div className="relative">
+            <style jsx>{`
+              @keyframes flowPlatforms {
+                0% { stroke-dashoffset: 1000; }
+                100% { stroke-dashoffset: 0; }
+              }
+            `}</style>
+            <svg className="w-full h-8 pointer-events-none" viewBox="0 0 1000 32" preserveAspectRatio="none">
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="#E5E7EB" strokeWidth="2" />
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="#00A651" strokeWidth="2" strokeDasharray="8 4"
+                style={{ animation: 'flowPlatforms 8s linear infinite' }} />
+            </svg>
+          </div>
+
+          {/* Platform cards grid with gap separators */}
+          <div className="relative pt-8">
+            {/* First row - 4 items */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {platforms.slice(0, 4).map((platform, index) => (
+                <div
+                  key={index}
+                  className="group relative p-6 rounded-2xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-white z-10"
+                  style={{ border: '1px solid var(--gray-100)' }}
+                >
+                  {/* Colored accent bar */}
+                  <div className={`w-12 h-1 bg-gradient-to-r ${platform.color} rounded-full mb-4 group-hover:w-full transition-all duration-300`} />
+                  <h3 className="font-bold text-lg mb-1 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+                    {platform.name}
+                  </h3>
+                  <p className="text-sm" style={{ color: 'var(--gray-500)' }}>{platform.category}</p>
+                  {/* Hover border effect */}
+                  <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-green-500/30 transition-all duration-300 pointer-events-none" />
+                </div>
+              ))}
+            </div>
+
+            {/* Dashed separator between rows */}
+            <div className="relative h-6 hidden lg:flex items-center">
+              <div className="absolute left-0 right-0 top-1/2" style={{ borderTop: '2px dashed #00A651', opacity: 0.3 }} />
+              <div className="absolute top-0 bottom-0" style={{ left: 'calc(25% - 12px)', borderLeft: '2px dashed #00A651', opacity: 0.3 }} />
+              <div className="absolute top-0 bottom-0" style={{ left: '50%', borderLeft: '2px dashed #00A651', opacity: 0.3 }} />
+              <div className="absolute top-0 bottom-0" style={{ left: 'calc(75% + 12px)', borderLeft: '2px dashed #00A651', opacity: 0.3 }} />
+            </div>
+
+            {/* Second row - remaining 4 items */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {platforms.slice(4, 8).map((platform, index) => (
+                <div
+                  key={index}
+                  className="group relative p-6 rounded-2xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-white z-10"
+                  style={{ border: '1px solid var(--gray-100)' }}
+                >
+                  {/* Colored accent bar */}
+                  <div className={`w-12 h-1 bg-gradient-to-r ${platform.color} rounded-full mb-4 group-hover:w-full transition-all duration-300`} />
+                  <h3 className="font-bold text-lg mb-1 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+                    {platform.name}
+                  </h3>
+                  <p className="text-sm" style={{ color: 'var(--gray-500)' }}>{platform.category}</p>
+                  {/* Hover border effect */}
+                  <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-green-500/30 transition-all duration-300 pointer-events-none" />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="relative py-24 bg-dark-900 overflow-hidden">
-        <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-dark-800 border border-dark-700 rounded-full mb-6">
-              <span className="text-neutral-400 text-sm">Our Process</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              From Assessment to Operations
-            </h2>
+      <section className="section" style={{ background: 'var(--cream)' }}>
+        <div className="container-lg">
+          <div className="text-center mb-6">
+            <h2 className="h2 mb-6">From Assessment to Operations</h2>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-6">
-            {[
-              { phase: 'Assess', title: 'Infrastructure Assessment', desc: 'Evaluate current AI infrastructure and identify gaps' },
-              { phase: 'Design', title: 'Architecture Design', desc: 'Design scalable, reliable MLOps architecture' },
-              { phase: 'Implement', title: 'Implementation', desc: 'Build and deploy monitoring and pipelines' },
-              { phase: 'Operate', title: 'Managed Operations', desc: 'Ongoing management and optimization' },
-            ].map((step, index) => (
-              <div key={index} className="group bg-dark-800 rounded-xl p-6 border border-dark-700 hover:border-gold-500/30 transition-all text-center">
-                
-                <p className="text-xs font-semibold text-gold-400 uppercase tracking-wide mb-2">{step.phase}</p>
-                <h3 className="font-semibold text-white mb-2">{step.title}</h3>
-                <p className="text-neutral-500 text-sm">{step.desc}</p>
-              </div>
-            ))}
+          {/* Horizontal line with flowing animation */}
+          <div className="relative">
+            <style jsx>{`
+              @keyframes flowProcess {
+                0% { stroke-dashoffset: 1000; }
+                100% { stroke-dashoffset: 0; }
+              }
+            `}</style>
+            <svg className="w-full h-8 pointer-events-none" viewBox="0 0 1000 32" preserveAspectRatio="none">
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="#E5E7EB" strokeWidth="2" />
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="#00A651" strokeWidth="2" strokeDasharray="8 4"
+                style={{ animation: 'flowProcess 8s linear infinite' }} />
+            </svg>
+          </div>
+
+          {/* Cards with vertical connector lines */}
+          <div className="relative">
+            {/* Vertical lines from horizontal line to center of each card */}
+            <div className="hidden lg:block absolute top-0 left-[12.5%] w-px h-8" style={{ background: '#00A651' }} />
+            <div className="hidden lg:block absolute top-0 left-[37.5%] w-px h-8" style={{ background: '#00A651' }} />
+            <div className="hidden lg:block absolute top-0 left-[62.5%] w-px h-8" style={{ background: '#00A651' }} />
+            <div className="hidden lg:block absolute top-0 left-[87.5%] w-px h-8" style={{ background: '#00A651' }} />
+
+            <div className="grid md:grid-cols-4 gap-6 pt-8">
+              {[
+                { phase: 'Assess', title: 'Infrastructure Assessment', desc: 'Evaluate current AI infrastructure and identify gaps' },
+                { phase: 'Design', title: 'Architecture Design', desc: 'Design scalable, reliable MLOps architecture' },
+                { phase: 'Implement', title: 'Implementation', desc: 'Build and deploy monitoring and pipelines' },
+                { phase: 'Operate', title: 'Managed Operations', desc: 'Ongoing management and optimization' },
+              ].map((step, index) => (
+                <div
+                  key={index}
+                  className="group relative p-6 rounded-2xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-white"
+                  style={{ border: '1px solid var(--gray-100)' }}
+                >
+                  <p className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: 'var(--green)' }}>{step.phase}</p>
+                  <h3 className="text-lg font-bold mb-2 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>{step.title}</h3>
+                  <p className="text-sm" style={{ color: 'var(--gray-500)' }}>{step.desc}</p>
+                  {/* Hover border effect */}
+                  <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-green-500/30 transition-all duration-300 pointer-events-none" />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-24 bg-dark-800 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-gold-900/20 via-transparent to-primary-900/20" />
-
+      <section className="relative py-24 bg-neutral-150 overflow-hidden">
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-4">
             Ready to operationalize your AI?
           </h2>
-          <p className="text-neutral-400 max-w-2xl mx-auto mb-8">
+          <p className="text-dark-500 max-w-2xl mx-auto mb-8">
             Let's discuss how we can help you deploy, monitor, and scale your AI systems
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="btn-primary">
               Talk to our operations team
             </Link>
-            <Link href="/staff-augmentation" className="btn-secondary !border-white/30 !text-white hover:!bg-white hover:!text-dark-900">
+            <Link href="/staff-augmentation" className="btn-secondary">
               Build your AI team
             </Link>
           </div>

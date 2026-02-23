@@ -3,8 +3,24 @@
 import Link from 'next/link';
 import NetworkBackground from '@/components/NetworkBackground';
 import HeroTransformVisual from '@/components/HeroTransformVisual';
+import ProcessFlow from '@/components/ProcessFlow';
+import BranchingFromTitle from '@/components/BranchingFromTitle';
 
 export default function AITransformation() {
+  const processSteps = [
+    { num: '01', title: 'Assess', desc: 'Evaluate readiness' },
+    { num: '02', title: 'Pilot', desc: 'Validate quickly' },
+    { num: '03', title: 'Scale', desc: 'Expand to production' },
+    { num: '04', title: 'Transform', desc: 'Embed in DNA' },
+  ];
+
+  const whyTransform = [
+    { title: 'AI-first competitive advantage', desc: 'Stay ahead of the competition' },
+    { title: 'Reduced operational costs', desc: 'Automate and optimize workflows' },
+    { title: 'Enhanced customer experiences', desc: 'Personalized AI-powered interactions' },
+    { title: 'Data-driven decision making', desc: 'Insights from your data at scale' },
+    { title: 'Future-proof operations', desc: 'Ready for tomorrow\'s challenges' },
+  ];
   const marketStats = [
     { stat: '90%', description: 'of companies will use AI by 2026', source: 'Gartner' },
     { stat: '83%', description: 'of leaders view AI as top investment priority', source: 'McKinsey' },
@@ -99,8 +115,8 @@ export default function AITransformation() {
   return (
     <>
       {/* Hero Section */}
-      <section className="hero-dark bg-grid-pattern overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-900 to-dark-800" />
+      <section className="relative min-h-[80vh] flex items-center bg-cream-50 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-cream-50 to-neutral-50" />
         {/* Saudi Modern City Background */}
         <div
           className="absolute inset-0 opacity-30"
@@ -116,8 +132,7 @@ export default function AITransformation() {
         <div className="relative max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="section-label !text-primary-500 !mb-4 md:!mb-6 animate-fade-in">Business Transformation with AI</p>
-              <h1 className="hero-title text-white animate-fade-in-up text-3xl md:text-5xl lg:text-6xl">
+              <h1 className="hero-title text-dark-900 animate-fade-in-up text-3xl md:text-5xl lg:text-6xl">
                 The AI Era<br />
                 <span className="text-primary-500 text-glow">Is Here. Are You Ready?</span>
               </h1>
@@ -128,7 +143,7 @@ export default function AITransformation() {
                 <Link href="/contact" className="btn-primary text-center">
                   Start your transformation
                 </Link>
-                <Link href="/leverage-ai" className="btn-secondary !border-white/30 !text-white hover:!bg-white hover:!text-dark-900 text-center">
+                <Link href="/leverage-ai" className="btn-secondary text-center">
                   Explore AI services
                 </Link>
               </div>
@@ -141,14 +156,14 @@ export default function AITransformation() {
       </section>
 
       {/* Market Stats */}
-      <section className="py-16 bg-primary-500">
+      <section className="section-sm" style={{ background: 'var(--cream)' }}>
         <div className="container-max">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {marketStats.map((item, index) => (
               <div key={index} className="text-center">
-                <p className="text-4xl md:text-5xl font-bold text-white">{item.stat}</p>
-                <p className="text-white/90 text-sm mt-2">{item.description}</p>
-                <p className="text-white/60 text-xs mt-1">— {item.source}</p>
+                <p className="text-4xl md:text-5xl font-bold text-dark-900">{item.stat}</p>
+                <p className="text-dark-500 text-sm mt-2">{item.description}</p>
+                <p className="text-dark-400 text-xs mt-1">— {item.source}</p>
               </div>
             ))}
           </div>
@@ -156,11 +171,10 @@ export default function AITransformation() {
       </section>
 
       {/* The Imperative */}
-      <section className="section-padding bg-white">
+      <section className="section" style={{ background: 'var(--white)' }}>
         <div className="container-max">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <p className="section-label">The AI Imperative</p>
-            <h2 className="section-title">Transform or Be Disrupted</h2>
+            <h2 className="h2">Transform or Be Disrupted</h2>
             <p className="text-dark-500 text-lg">
               AI is no longer a competitive advantage — it's becoming table stakes. Organizations that fail to adopt AI risk falling behind competitors who are already using it to reduce costs, improve experiences, and make better decisions.
             </p>
@@ -168,7 +182,7 @@ export default function AITransformation() {
 
           <div className="grid-2">
             {transformationAreas.map((area, index) => (
-              <div key={index} className="card card-hover">
+              <div key={index} className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl p-6 hover:border-[#00A651] hover:shadow-lg transition-all duration-300">
                 <div className="flex items-start gap-4">
                   <div className="w-14 h-14 bg-primary-500/10 rounded-xl flex items-center justify-center text-primary-500 flex-shrink-0">
                     {area.icon}
@@ -191,28 +205,30 @@ export default function AITransformation() {
         </div>
       </section>
 
-      {/* Transformation Journey */}
-      <section className="section-padding bg-dark-900">
-        <div className="container-max">
-          <div className="text-center mb-16">
-            <p className="section-label !text-primary-500">The Journey</p>
-            <h2 className="section-title !text-white">Your AI Transformation Roadmap</h2>
-            <p className="section-subtitle mx-auto !text-dark-300">
+      {/* Transformation Journey - Animated Process Flow */}
+      <section className="section" style={{ background: 'var(--cream)' }}>
+        <div className="container-lg">
+          <div className="text-center mb-12">
+            <h2 className="h2">Your AI Transformation Roadmap</h2>
+            <p className="text-body mx-auto" style={{ maxWidth: '42rem' }}>
               A proven approach to AI transformation that balances quick wins with long-term capability building
             </p>
           </div>
 
-          <div className="grid-2 lg:grid-cols-4">
+          <div className="mb-16">
+            <ProcessFlow steps={processSteps} />
+          </div>
+
+          {/* Journey Details */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {journeyPhases.map((phase, index) => (
-              <div key={index} className="bg-dark-800 rounded-2xl p-6 border border-dark-700 hover:border-primary-500 transition-all">
-                
-                <h3 className="text-xl font-semibold text-white mb-2">{phase.title}</h3>
-                <p className="text-dark-300 text-sm mb-4">{phase.description}</p>
-                <div className="space-y-2">
+              <div key={index} className="group bg-white rounded-2xl p-6 border border-neutral-200 hover:border-primary-500 hover:shadow-lg transition-all duration-300">
+                <h3 className="text-lg font-bold text-dark-900 mb-2 group-hover:text-primary-600 transition-colors">{phase.title}</h3>
+                <p className="text-dark-500 text-sm mb-4">{phase.description}</p>
+                <div className="grid grid-cols-2 gap-2">
                   {phase.activities.map((activity, i) => (
-                    <div key={i} className="flex items-center gap-2 bg-dark-700/50 p-2 rounded-lg border border-dark-600/50">
-                      
-                      <span className="text-xs text-dark-300">{activity}</span>
+                    <div key={i} className="text-center p-2 rounded-lg bg-neutral-50 hover:bg-primary-50 transition-all">
+                      <span className="text-xs text-dark-600 font-medium">{activity}</span>
                     </div>
                   ))}
                 </div>
@@ -223,30 +239,48 @@ export default function AITransformation() {
       </section>
 
       {/* Industry Adoption */}
-      <section className="section-padding bg-neutral-150">
-        <div className="container-max">
-          <div className="text-center mb-16">
-            <p className="section-label">Industry Trends</p>
-            <h2 className="section-title">AI Adoption by Industry</h2>
-            <p className="section-subtitle mx-auto">
+      <section className="section" style={{ background: 'var(--white)' }}>
+        <div className="container-lg">
+          <div className="text-center mb-6">
+            <h2 className="h2">AI Adoption by Industry</h2>
+            <p className="text-body mx-auto" style={{ maxWidth: '42rem' }}>
               Where is your industry in the AI adoption curve?
             </p>
           </div>
 
-          <div className="max-w-3xl mx-auto space-y-4">
+          {/* Simple horizontal line animation */}
+          <div className="relative mb-8">
+            <svg className="w-full h-8 pointer-events-none" viewBox="0 0 1000 32" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="aiTransformIndustryLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="var(--green)" stopOpacity="0" />
+                  <stop offset="20%" stopColor="var(--green)" stopOpacity="0.3" />
+                  <stop offset="50%" stopColor="var(--green)" stopOpacity="0.5" />
+                  <stop offset="80%" stopColor="var(--green)" stopOpacity="0.3" />
+                  <stop offset="100%" stopColor="var(--green)" stopOpacity="0" />
+                </linearGradient>
+                <linearGradient id="aiTransformIndustryPulseGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="var(--green)" stopOpacity="0" />
+                  <stop offset="45%" stopColor="var(--green)" stopOpacity="1" />
+                  <stop offset="55%" stopColor="var(--green)" stopOpacity="1" />
+                  <stop offset="100%" stopColor="var(--green)" stopOpacity="0" />
+                </linearGradient>
+              </defs>
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="var(--gray-200)" strokeWidth="2" />
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="url(#aiTransformIndustryLineGradient)" strokeWidth="2" />
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="url(#aiTransformIndustryPulseGradient)" strokeWidth="3" strokeLinecap="round"
+                style={{ strokeDasharray: '150 850', animation: 'flowHorizontal 3s linear infinite' }} />
+            </svg>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {industries.map((industry, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 border border-neutral-200">
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="font-semibold text-dark-900">{industry.name}</h3>
-                  <span className="text-primary-500 font-bold">{industry.adoption} adoption</span>
-                </div>
-                <div className="w-full bg-neutral-150 rounded-full h-2 mb-3">
-                  <div
-                    className="bg-primary-500 h-2 rounded-full"
-                    style={{ width: industry.adoption }}
-                  />
-                </div>
-                <p className="text-dark-500 text-sm">Focus: {industry.focus}</p>
+              <div key={index} className="group text-center p-4 bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl hover:border-[#00A651] hover:shadow-lg transition-all duration-300">
+                <h3 className="text-sm font-bold mb-2 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+                  {industry.name}
+                </h3>
+                <p className="text-lg font-bold text-primary-500">{industry.adoption}</p>
+                <p className="text-xs text-dark-500 mt-1">{industry.focus}</p>
               </div>
             ))}
           </div>
@@ -254,19 +288,18 @@ export default function AITransformation() {
       </section>
 
       {/* Barriers & Solutions */}
-      <section className="section-padding bg-white">
+      <section className="section" style={{ background: 'var(--cream)' }}>
         <div className="container-max">
           <div className="text-center mb-16">
-            <p className="section-label">Overcoming Barriers</p>
-            <h2 className="section-title">Common Challenges, Solved</h2>
-            <p className="section-subtitle mx-auto">
+            <h2 className="h2">Common Challenges, Solved</h2>
+            <p className="text-body mx-auto" style={{ maxWidth: '42rem' }}>
               We help you overcome the most common barriers to AI transformation
             </p>
           </div>
 
           <div className="grid-3">
             {barriers.map((item, index) => (
-              <div key={index} className="card card-hover">
+              <div key={index} className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl p-6 hover:border-[#00A651] hover:shadow-lg transition-all duration-300">
                 <div className="flex items-center gap-3 mb-3">
                   <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-orange-500 rounded-lg flex items-center justify-center shadow-sm">
                     <span className="text-white font-bold text-sm"></span>
@@ -283,55 +316,82 @@ export default function AITransformation() {
       </section>
 
       {/* Why FSIT */}
-      <section className="section-padding bg-neutral-150">
-        <div className="container-max">
-          <div className="grid-2 items-center">
-            <div>
-              <p className="section-label">Your Transformation Partner</p>
-              <h2 className="section-title">Why Transform with FSIT</h2>
-              <p className="text-dark-500 mb-6">
-                We're not consultants who deliver reports and leave. We're an AI-native delivery platform that embeds vetted AI specialists directly into your organization to build, deploy, and scale real AI systems.
-              </p>
-              <div className="space-y-3">
-                {[
-                  '98% project success rate vs industry 59%',
-                  'Teams deployed in weeks, not months',
-                  'Focus on execution and production impact',
-                  'Enterprise-grade security and governance',
-                  'Vision 2030 aligned for Saudi organizations',
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-4 bg-neutral-100 p-3 rounded-xl border border-neutral-200 hover:border-primary-500/30 transition-all">
-                    
-                    <span className="text-dark-700 font-medium">{item}</span>
-                  </div>
-                ))}
+      <section className="section" style={{ background: 'var(--white)' }}>
+        <div className="container-lg">
+          <div className="text-center mb-6">
+            <h2 className="h2">Why Transform with FSIT</h2>
+            <p className="text-body mx-auto">
+              We're not consultants who deliver reports and leave. We're an AI-native delivery platform that embeds vetted AI specialists directly into your organization to build, deploy, and scale real AI systems.
+            </p>
+          </div>
+
+          {/* Simple horizontal line animation */}
+          <div className="relative mb-8">
+            <svg className="w-full h-8 pointer-events-none" viewBox="0 0 1000 32" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="aiTransformWhyLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="var(--green)" stopOpacity="0" />
+                  <stop offset="20%" stopColor="var(--green)" stopOpacity="0.3" />
+                  <stop offset="50%" stopColor="var(--green)" stopOpacity="0.5" />
+                  <stop offset="80%" stopColor="var(--green)" stopOpacity="0.3" />
+                  <stop offset="100%" stopColor="var(--green)" stopOpacity="0" />
+                </linearGradient>
+                <linearGradient id="aiTransformWhyPulseGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="var(--green)" stopOpacity="0" />
+                  <stop offset="45%" stopColor="var(--green)" stopOpacity="1" />
+                  <stop offset="55%" stopColor="var(--green)" stopOpacity="1" />
+                  <stop offset="100%" stopColor="var(--green)" stopOpacity="0" />
+                </linearGradient>
+              </defs>
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="var(--gray-200)" strokeWidth="2" />
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="url(#aiTransformWhyLineGradient)" strokeWidth="2" />
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="url(#aiTransformWhyPulseGradient)" strokeWidth="3" strokeLinecap="round"
+                style={{ strokeDasharray: '150 850', animation: 'flowHorizontal 3s linear infinite' }} />
+            </svg>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-16">
+            {[
+              '98% project success rate vs industry 59%',
+              'Teams deployed in weeks, not months',
+              'Focus on execution and production impact',
+              'Enterprise-grade security and governance',
+              'Vision 2030 aligned for Saudi organizations',
+            ].map((item, i) => (
+              <div key={i} className="group text-center p-4 bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl hover:border-[#00A651] hover:shadow-lg transition-all duration-300">
+                <h3 className="text-sm font-bold group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+                  {item}
+                </h3>
               </div>
-            </div>
-            <div className="bg-dark-900 rounded-2xl p-8 text-white">
-              <h3 className="text-xl font-semibold mb-4">The Cost of Waiting</h3>
-              <p className="text-dark-300 mb-6">
-                Every month you delay AI transformation, your competitors are:
-              </p>
-              <div className="space-y-3">
-                {[
-                  'Automating processes you do manually',
-                  'Delivering experiences you can\'t match',
-                  'Making decisions faster than you',
-                  'Building capabilities you\'ll need to catch up on',
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-4 bg-dark-800/60 p-3 rounded-xl border border-dark-700 hover:border-primary-500/40 transition-all">
-                    
-                    <span className="text-dark-200 font-medium">{item}</span>
-                  </div>
-                ))}
-              </div>
+            ))}
+          </div>
+
+          {/* The Cost of Waiting */}
+          <div className="bg-neutral-150 rounded-2xl p-8 max-w-4xl mx-auto">
+            <h3 className="text-xl font-semibold text-dark-900 mb-4 text-center">The Cost of Waiting</h3>
+            <p className="text-dark-500 mb-6 text-center">
+              Every month you delay AI transformation, your competitors are:
+            </p>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                'Automating processes you do manually',
+                'Delivering experiences you can\'t match',
+                'Making decisions faster than you',
+                'Building capabilities you\'ll need to catch up on',
+              ].map((item, i) => (
+                <div key={i} className="group text-center p-4 rounded-xl bg-white hover:bg-primary-50 transition-all duration-300">
+                  <h3 className="text-sm font-bold group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+                    {item}
+                  </h3>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
       {/* Vision 2030 Transformation */}
-      <section className="section-padding bg-white relative overflow-hidden">
+      <section className="section" style={{ background: 'var(--cream)' }}>
         <div className="container-max">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative order-2 lg:order-1">
@@ -345,8 +405,7 @@ export default function AITransformation() {
               </div>
             </div>
             <div className="order-1 lg:order-2">
-              <p className="section-label">Saudi Arabia Focus</p>
-              <h2 className="section-title">Transforming the Kingdom with AI</h2>
+              <h2 className="h2">Transforming the Kingdom with AI</h2>
               <p className="text-dark-500 mb-6">
                 We're proud partners in Saudi Arabia's Vision 2030, helping government entities and enterprises embrace AI transformation that drives real economic impact.
               </p>
@@ -367,28 +426,32 @@ export default function AITransformation() {
         </div>
       </section>
 
+      {/* Why Transform - Animated Branching */}
+      <section className="py-16" style={{ background: 'var(--white)' }}>
+        <div className="container-lg">
+          <div className="text-center mb-2">
+            <h2 className="h2">Why organizations are transforming now</h2>
+          </div>
+          <BranchingFromTitle items={whyTransform} />
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="section-padding bg-dark-900 relative overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-25"
-          style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1733757361453-5f493624a734?auto=format&fit=crop&w=1920&q=80)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        />
-        <div className="container-max text-center relative z-10">
-          <h2 className="section-title !text-white mb-4">
-            Ready to start your AI transformation?
+      <section className="section" style={{ background: 'var(--cream)' }}>
+        <div className="container-md text-center relative z-10">
+          <h2 className="h1 mb-6">
+            Ready to transform
+            <br />
+            <span style={{ color: 'var(--green)' }}>with AI?</span>
           </h2>
-          <p className="section-subtitle mx-auto !text-dark-300 mb-8">
+          <p className="text-large mb-10 max-w-xl mx-auto">
             Don't get left behind. Start your transformation journey today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="btn-primary">
               Start your transformation
             </Link>
-            <Link href="/staff-augmentation" className="btn-secondary !border-white/30 !text-white hover:!bg-white hover:!text-dark-900">
+            <Link href="/staff-augmentation" className="btn-secondary">
               Build your AI team
             </Link>
           </div>

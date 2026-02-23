@@ -75,9 +75,9 @@ export default function HeroStaffVisual() {
 
         {/* Your Organization - Left */}
         <g className="float-slow">
-          <rect x="20" y="150" width="100" height="100" rx="12" fill="#1e293b" stroke="#3b82f6" strokeWidth="2" />
-          <text x="70" y="185" textAnchor="middle" fill="#3b82f6" fontSize="10" fontFamily="monospace" fontWeight="600">YOUR</text>
-          <text x="70" y="200" textAnchor="middle" fill="#3b82f6" fontSize="10" fontFamily="monospace" fontWeight="600">TEAM</text>
+          <rect x="20" y="150" width="100" height="100" rx="12" fill="#F5F3F0" stroke="#3b82f6" strokeWidth="2" />
+          <text x="70" y="185" textAnchor="middle" fill="#1e293b" fontSize="10" fontFamily="monospace" fontWeight="600">YOUR</text>
+          <text x="70" y="200" textAnchor="middle" fill="#1e293b" fontSize="10" fontFamily="monospace" fontWeight="600">TEAM</text>
 
           {/* Team icons */}
           <circle cx="45" cy="225" r="10" fill="#3b82f6" fillOpacity="0.3" stroke="#3b82f6" strokeWidth="1" />
@@ -91,7 +91,7 @@ export default function HeroStaffVisual() {
           <circle cx="200" cy="200" r="70" fill="#22c55e" fillOpacity="0.05" stroke="#22c55e" strokeWidth="1" strokeDasharray="6 3" />
 
           {/* Main box */}
-          <rect x="145" y="145" width="110" height="110" rx="16" fill="#22c55e" fillOpacity="0.1" stroke="#22c55e" strokeWidth="2" />
+          <rect x="145" y="145" width="110" height="110" rx="16" fill="#F5F3F0" stroke="#22c55e" strokeWidth="2" />
 
           <text x="200" y="175" textAnchor="middle" fill="#22c55e" fontSize="10" fontFamily="monospace" fontWeight="600">FSIT</text>
           <text x="200" y="190" textAnchor="middle" fill="#22c55e" fontSize="10" fontFamily="monospace" fontWeight="600">AI TEAM</text>
@@ -99,15 +99,15 @@ export default function HeroStaffVisual() {
           {/* Specialist icons */}
           <g transform="translate(160, 205)">
             <circle r="12" fill="#22c55e" fillOpacity="0.2" stroke="#22c55e" strokeWidth="1.5" />
-            <text x="0" y="4" textAnchor="middle" fill="#22c55e" fontSize="8">AI</text>
+            <text x="0" y="4" textAnchor="middle" fill="#22c55e" fontSize="8" fontWeight="600">AI</text>
           </g>
           <g transform="translate(200, 205)">
             <circle r="12" fill="#22c55e" fillOpacity="0.2" stroke="#22c55e" strokeWidth="1.5" />
-            <text x="0" y="4" textAnchor="middle" fill="#22c55e" fontSize="8">ML</text>
+            <text x="0" y="4" textAnchor="middle" fill="#22c55e" fontSize="8" fontWeight="600">ML</text>
           </g>
           <g transform="translate(240, 205)">
             <circle r="12" fill="#22c55e" fillOpacity="0.2" stroke="#22c55e" strokeWidth="1.5" />
-            <text x="0" y="4" textAnchor="middle" fill="#22c55e" fontSize="8">DS</text>
+            <text x="0" y="4" textAnchor="middle" fill="#22c55e" fontSize="8" fontWeight="600">DS</text>
           </g>
 
           {/* Bottom row */}
@@ -121,9 +121,9 @@ export default function HeroStaffVisual() {
 
         {/* Production Systems - Right */}
         <g className="float-slow float-delay-1">
-          <rect x="280" y="150" width="100" height="100" rx="12" fill="#1e293b" stroke="#8b5cf6" strokeWidth="2" />
-          <text x="330" y="185" textAnchor="middle" fill="#8b5cf6" fontSize="10" fontFamily="monospace" fontWeight="600">PRODUCTION</text>
-          <text x="330" y="200" textAnchor="middle" fill="#8b5cf6" fontSize="10" fontFamily="monospace" fontWeight="600">AI</text>
+          <rect x="280" y="150" width="100" height="100" rx="12" fill="#F5F3F0" stroke="#8b5cf6" strokeWidth="2" />
+          <text x="330" y="185" textAnchor="middle" fill="#1e293b" fontSize="10" fontFamily="monospace" fontWeight="600">PRODUCTION</text>
+          <text x="330" y="200" textAnchor="middle" fill="#1e293b" fontSize="10" fontFamily="monospace" fontWeight="600">AI</text>
 
           {/* System icons */}
           <rect x="300" y="215" width="15" height="20" rx="2" fill="#8b5cf6" fillOpacity="0.3" stroke="#8b5cf6" strokeWidth="1" />
@@ -148,41 +148,41 @@ export default function HeroStaffVisual() {
 
         {/* Top label */}
         <g className="breathe" style={{ transformOrigin: '200px 50px' }}>
-          <rect x="100" y="30" width="200" height="36" rx="4" fill="none" stroke="#22c55e" strokeWidth="1.5" />
-          <text x="200" y="54" textAnchor="middle" fill="#22c55e" fontSize="11" fontFamily="monospace" fontWeight="500">
+          <rect x="100" y="30" width="200" height="36" rx="4" fill="#F5F3F0" stroke="#22c55e" strokeWidth="1.5" />
+          <text x="200" y="54" textAnchor="middle" fill="#22c55e" fontSize="11" fontFamily="monospace" fontWeight="600">
             STAFF AUGMENTATION
           </text>
         </g>
 
         {/* Role cards - top */}
         <g className="float-slow float-delay-2">
-          <rect x="50" y="80" width="80" height="30" rx="4" fill="#1e293b" stroke="#22c55e" strokeWidth="1" opacity="0.8" />
-          <text x="90" y="100" textAnchor="middle" fill="#22c55e" fontSize="9" fontFamily="monospace">AI Engineers</text>
+          <rect x="50" y="80" width="80" height="30" rx="4" fill="#F5F3F0" stroke="#22c55e" strokeWidth="1" />
+          <text x="90" y="100" textAnchor="middle" fill="#1e293b" fontSize="9" fontFamily="monospace" fontWeight="500">AI Engineers</text>
         </g>
         <g className="float-slow float-delay-3">
-          <rect x="270" y="80" width="80" height="30" rx="4" fill="#1e293b" stroke="#3b82f6" strokeWidth="1" opacity="0.8" />
-          <text x="310" y="100" textAnchor="middle" fill="#3b82f6" fontSize="9" fontFamily="monospace">ML Engineers</text>
+          <rect x="270" y="80" width="80" height="30" rx="4" fill="#F5F3F0" stroke="#3b82f6" strokeWidth="1" />
+          <text x="310" y="100" textAnchor="middle" fill="#1e293b" fontSize="9" fontFamily="monospace" fontWeight="500">ML Engineers</text>
         </g>
 
         {/* Role cards - bottom */}
         <g className="float-slow float-delay-1">
-          <rect x="50" y="290" width="80" height="30" rx="4" fill="#1e293b" stroke="#8b5cf6" strokeWidth="1" opacity="0.8" />
-          <text x="90" y="310" textAnchor="middle" fill="#8b5cf6" fontSize="9" fontFamily="monospace">Data Scientists</text>
+          <rect x="50" y="290" width="80" height="30" rx="4" fill="#F5F3F0" stroke="#8b5cf6" strokeWidth="1" />
+          <text x="90" y="310" textAnchor="middle" fill="#1e293b" fontSize="9" fontFamily="monospace" fontWeight="500">Data Scientists</text>
         </g>
         <g className="float-slow">
-          <rect x="270" y="290" width="80" height="30" rx="4" fill="#1e293b" stroke="#f59e0b" strokeWidth="1" opacity="0.8" />
-          <text x="310" y="310" textAnchor="middle" fill="#f59e0b" fontSize="9" fontFamily="monospace">MLOps</text>
+          <rect x="270" y="290" width="80" height="30" rx="4" fill="#F5F3F0" stroke="#f59e0b" strokeWidth="1" />
+          <text x="310" y="310" textAnchor="middle" fill="#1e293b" fontSize="9" fontFamily="monospace" fontWeight="500">MLOps</text>
         </g>
 
         {/* Bottom stats bar */}
         <g className="float-slow float-delay-2">
-          <rect x="60" y="380" width="280" height="50" rx="8" fill="#1e293b" stroke="#22c55e" strokeWidth="1" opacity="0.9" />
+          <rect x="60" y="380" width="280" height="50" rx="8" fill="#1e293b" stroke="#22c55e" strokeWidth="1" opacity="0.95" />
           <text x="120" y="400" textAnchor="middle" fill="#22c55e" fontSize="18" fontFamily="monospace" fontWeight="700">80K+</text>
-          <text x="120" y="418" textAnchor="middle" fill="#64748b" fontSize="8" fontFamily="monospace">Specialists</text>
+          <text x="120" y="418" textAnchor="middle" fill="#94a3b8" fontSize="8" fontFamily="monospace">Specialists</text>
           <text x="200" y="400" textAnchor="middle" fill="#3b82f6" fontSize="18" fontFamily="monospace" fontWeight="700">98%</text>
-          <text x="200" y="418" textAnchor="middle" fill="#64748b" fontSize="8" fontFamily="monospace">Success</text>
+          <text x="200" y="418" textAnchor="middle" fill="#94a3b8" fontSize="8" fontFamily="monospace">Success</text>
           <text x="280" y="400" textAnchor="middle" fill="#8b5cf6" fontSize="18" fontFamily="monospace" fontWeight="700">3wk</text>
-          <text x="280" y="418" textAnchor="middle" fill="#64748b" fontSize="8" fontFamily="monospace">Deploy</text>
+          <text x="280" y="418" textAnchor="middle" fill="#94a3b8" fontSize="8" fontFamily="monospace">Deploy</text>
         </g>
 
         {/* Floating decorations */}
@@ -193,14 +193,14 @@ export default function HeroStaffVisual() {
       </svg>
 
       {/* Floating metric labels */}
-      <div className="absolute left-0 top-[15%] px-3 py-1.5 bg-dark-800/80 border border-primary-500/40 rounded-md backdrop-blur-sm transition-all hover:border-primary-500 hover:scale-105 float-slow">
-        <span className="text-xs text-primary-400 font-mono">Vetted Talent</span>
+      <div className="absolute left-0 top-[15%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow shadow-sm">
+        <span className="text-xs text-gray-700 font-mono">Vetted Talent</span>
       </div>
-      <div className="absolute right-0 top-[30%] px-3 py-1.5 bg-dark-800/80 border border-primary-500/40 rounded-md backdrop-blur-sm transition-all hover:border-primary-500 hover:scale-105 float-slow float-delay-1">
-        <span className="text-xs text-primary-400 font-mono">Full Integration</span>
+      <div className="absolute right-0 top-[30%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow float-delay-1 shadow-sm">
+        <span className="text-xs text-gray-700 font-mono">Full Integration</span>
       </div>
-      <div className="absolute left-[5%] bottom-[28%] px-3 py-1.5 bg-dark-800/80 border border-primary-600/40 rounded-md backdrop-blur-sm transition-all hover:border-primary-600 hover:scale-105 float-slow float-delay-2">
-        <span className="text-xs text-primary-500 font-mono">Dedicated</span>
+      <div className="absolute left-[5%] bottom-[28%] px-3 py-1.5 bg-[#F5F3F0] border border-purple-500/50 rounded-md backdrop-blur-sm transition-all hover:border-purple-500 hover:scale-105 float-slow float-delay-2 shadow-sm">
+        <span className="text-xs text-gray-700 font-mono">Dedicated</span>
       </div>
     </div>
   );

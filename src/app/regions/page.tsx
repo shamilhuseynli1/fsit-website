@@ -2,7 +2,7 @@ import Link from 'next/link';
 import NetworkBackground from '@/components/NetworkBackground';
 
 export const metadata = {
-  title: 'Regions & Delivery | FSIT AI',
+  title: 'Regions & Delivery | FSIT',
   description: 'Regional execution. Global delivery. FSIT operates across Saudi Arabia and the Middle East, supported by globally distributed teams.',
 };
 
@@ -75,19 +75,18 @@ export default function Regions() {
   return (
     <>
       {/* Hero */}
-      <section className="hero-dark bg-grid-pattern overflow-hidden">
+      <section className="relative min-h-[80vh] flex items-center bg-cream-50 overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1674386491555-5b92161e4d04?auto=format&fit=crop&w=1920&q=80"
             alt="Aerial view of city"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-dark-900/80" />
+          <div className="absolute inset-0 bg-primary-500/80" />
         </div>
         <NetworkBackground nodeCount={60} />
         <div className="relative max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
           <div className="max-w-3xl">
-            <p className="section-label !text-primary-500 !mb-6">Global Presence</p>
             <h1 className="hero-title text-white">
               Regional execution.<br />
               <span className="text-primary-500">Global delivery.</span>
@@ -103,44 +102,57 @@ export default function Regions() {
         <div className="hidden md:block absolute top-1/2 right-0 w-[600px] h-[600px] bg-primary-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
       </section>
 
+      {/* Cities Carousel */}
+      <section className="py-6 overflow-hidden border-y border-neutral-200" style={{ background: 'var(--cream)' }}>
+        <div className="relative">
+          <div className="flex animate-scroll-cities whitespace-nowrap">
+            {['Riyadh', 'Doha', 'Dubai', 'Bangalore', 'Ho Chi Minh City', 'Singapore', 'Manila', 'Amman', 'Lebanon', 'Barcelona', 'Milan', 'London', 'Berlin', 'Zagreb', 'Riyadh', 'Doha', 'Dubai', 'Bangalore', 'Ho Chi Minh City', 'Singapore', 'Manila', 'Amman', 'Lebanon', 'Barcelona', 'Milan', 'London', 'Berlin', 'Zagreb'].map((city, index) => (
+              <span key={index} className="text-dark-700 text-lg font-medium mx-8 inline-block">
+                {city}
+                <span className="text-primary-500 mx-4">·</span>
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Value Statement */}
-      <section className="py-16 bg-primary-500">
+      <section className="py-12" style={{ background: 'var(--cream)' }}>
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <p className="text-xl md:text-2xl text-white font-medium">
+          <p className="text-xl md:text-2xl text-dark-900 font-medium">
             This model allows us to combine regional understanding with global scale, speed, and specialised AI expertise
           </p>
         </div>
       </section>
 
       {/* Regions Grid */}
-      <section className="section-padding bg-white">
+      <section className="section bg-white">
         <div className="container-max">
           <div className="text-center mb-16">
-            <p className="section-label">Our Regions</p>
-            <h2 className="section-title">Where We Operate</h2>
+            <h2 className="h2">Where We Operate</h2>
           </div>
-          <div className="space-y-8">
+          <div className="space-y-12">
             {regions.map((region, index) => (
-              <div key={index} className="card card-hover">
+              <div key={index} className="border-b border-neutral-100 pb-12 last:border-b-0">
                 <div className="flex flex-col md:flex-row gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-primary-500/10 rounded-2xl flex items-center justify-center text-primary-500">
+                    <div className="w-14 h-14 bg-primary-500/10 rounded-xl flex items-center justify-center text-primary-500">
                       {region.icon}
                     </div>
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl md:text-2xl font-bold text-dark-900 mb-3">{region.name}</h3>
-                    <p className="text-dark-500 mb-4">{region.description}</p>
-                    <div className="space-y-2 mb-4">
+                    <p className="text-dark-500 mb-6">{region.description}</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
                       {region.focus.map((item, i) => (
-                        <div key={i} className="flex items-center gap-3 bg-neutral-50 p-3 rounded-lg border border-neutral-200 hover:border-primary-500/30 transition-all">
-                          
+                        <div key={i} className="flex items-center gap-3">
+                          <span className="w-1.5 h-1.5 bg-primary-500 rounded-full flex-shrink-0"></span>
                           <span className="text-dark-700">{item}</span>
                         </div>
                       ))}
                     </div>
                     {region.note && (
-                      <p className="text-dark-500 text-sm italic border-l-2 border-primary-500 pl-4">{region.note}</p>
+                      <p className="text-dark-500 text-sm italic border-l-2 border-primary-500 pl-4 mt-4">{region.note}</p>
                     )}
                   </div>
                 </div>
@@ -151,11 +163,10 @@ export default function Regions() {
       </section>
 
       {/* Global Statement */}
-      <section className="section-padding bg-dark-900">
+      <section className="section" style={{ background: 'var(--cream)' }}>
         <div className="container-max text-center">
-          <p className="section-label">One Standard</p>
-          <h2 className="section-title !text-white mb-6">Global team, one delivery standard</h2>
-          <p className="text-xl text-dark-300 mb-6 max-w-3xl mx-auto">
+          <h2 className="h2 mb-6">Global team, one delivery standard</h2>
+          <p className="text-xl text-dark-600 mb-6 max-w-3xl mx-auto">
             AI transformation requires both local understanding and global capability
           </p>
           <p className="text-3xl font-bold text-primary-500">
@@ -165,10 +176,10 @@ export default function Regions() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-white">
+      <section className="section bg-white">
         <div className="container-max text-center">
-          <h2 className="section-title mb-4">Ready to partner with a global AI team?</h2>
-          <p className="section-subtitle mx-auto mb-8">
+          <h2 className="h2 mb-4">Ready to partner with a global AI team?</h2>
+          <p className="text-body mx-auto mb-8">
             Connect with our delivery team across any region
           </p>
           <Link href="/contact" className="btn-primary">

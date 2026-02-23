@@ -17,6 +17,7 @@ const industriesData: Record<string, {
   useCases: { title: string; desc: string; results: string }[];
   stats: { value: string; label: string }[];
   compliance: string[];
+  featuredClients?: { name: string; description: string }[];
 }> = {
   'financial-services': {
     name: 'Financial Services',
@@ -290,6 +291,46 @@ const industriesData: Record<string, {
     ],
     compliance: ['FedRAMP', 'StateRAMP', 'FISMA', 'SOC2', 'Section 508'],
   },
+  'sports-entertainment': {
+    name: 'Sports & Entertainment',
+    icon: '🏟️',
+    headline: 'AI for Sports, Events & Entertainment',
+    description: 'Power the future of sports and entertainment with AI. From fan analytics to player performance, we help organizations in Saudi Arabia\'s rapidly growing $38B+ sports economy leverage AI for competitive advantage.',
+    heroImage: 'https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=1920&q=80',
+    sectionImage: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1920&q=80',
+    imageAlt: 'Modern Sports Stadium Saudi Arabia',
+    featuredClients: [
+      { name: 'Qiddiya', description: 'Saudi Arabia\'s entertainment mega-destination' },
+      { name: 'SEVEN', description: 'Entertainment destinations across KSA' },
+    ],
+    challenges: [
+      'Real-time fan engagement at scale',
+      'Dynamic pricing optimization',
+      'Player performance analytics',
+      'Stadium operations efficiency',
+      'Broadcast and content personalization',
+    ],
+    solutions: [
+      { title: 'Fan Analytics', desc: 'Deep insights into fan behavior, preferences, and engagement patterns' },
+      { title: 'Dynamic Pricing', desc: 'AI-powered ticket pricing that maximizes revenue and attendance' },
+      { title: 'Performance AI', desc: 'Player analytics, injury prediction, and training optimization' },
+      { title: 'Stadium Operations', desc: 'Crowd management, security, and operations automation' },
+      { title: 'Broadcast AI', desc: 'Automated highlights, personalized content delivery, and real-time production' },
+    ],
+    useCases: [
+      { title: 'Fan Engagement Platform', desc: 'AI-powered personalization for major sports league', results: '45% increase in fan engagement, 30% higher merchandise sales' },
+      { title: 'Dynamic Ticket Pricing', desc: 'Real-time pricing optimization for entertainment venue', results: '22% revenue increase, 95% seat utilization' },
+      { title: 'Player Performance System', desc: 'ML-based performance and injury prediction for football club', results: '35% reduction in injuries, 18% performance improvement' },
+      { title: 'Broadcast Automation', desc: 'AI-driven content production for live sports events', results: '60% faster highlight generation, 40% cost reduction' },
+    ],
+    stats: [
+      { value: '$38B+', label: 'Saudi sports investment' },
+      { value: '45%', label: 'Fan engagement increase' },
+      { value: '22%', label: 'Revenue optimization' },
+      { value: '35%', label: 'Injury reduction' },
+    ],
+    compliance: ['GDPR', 'Data Privacy', 'SOC2', 'ISO 27001'],
+  },
 };
 
 export default function IndustryPage() {
@@ -314,7 +355,7 @@ export default function IndustryPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center bg-dark-900 overflow-hidden">
+      <section className="relative min-h-[60vh] flex items-center bg-neutral-50 overflow-hidden">
         {/* Saudi Industry Background */}
         <div
           className="absolute inset-0 opacity-30"
@@ -327,13 +368,10 @@ export default function IndustryPage() {
         <NetworkBackground />
         <div className="relative z-10 max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-32">
           <div className="max-w-4xl">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
-              <span className="text-primary-400 text-sm font-medium">{industry.name}</span>
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark-900 mb-6">
               {industry.headline}
             </h1>
-            <p className="text-xl text-neutral-300 leading-relaxed max-w-3xl">
+            <p className="text-xl text-dark-500 leading-relaxed max-w-3xl">
               {industry.description}
             </p>
           </div>
@@ -341,74 +379,146 @@ export default function IndustryPage() {
       </section>
 
       {/* Stats Bar */}
-      <section className="bg-dark-800 border-y border-dark-700">
+      <section className="bg-white border-y border-neutral-200">
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {industry.stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-primary-400 mb-2">{stat.value}</div>
-                <div className="text-neutral-400 text-sm">{stat.label}</div>
+                <div className="text-3xl md:text-4xl font-bold text-primary-600 mb-2">{stat.value}</div>
+                <div className="text-dark-500 text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Challenges Section */}
-      <section className="py-24 bg-white">
-        <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-6">
-                Industry Challenges We Solve
-              </h2>
-              <p className="text-lg text-dark-600 mb-8">
-                We understand the unique challenges facing {industry.name.toLowerCase()}. Our solutions are built specifically for your regulatory environment, data requirements, and operational constraints.
-              </p>
-              <div className="space-y-3">
-                {industry.challenges.map((challenge, index) => (
-                  <div key={index} className="flex items-center gap-4 bg-neutral-50 p-3 rounded-xl border border-neutral-200 hover:border-primary-500/30 transition-all">
-                    
-                    <span className="text-dark-700 font-medium">{challenge}</span>
-                  </div>
-                ))}
-              </div>
+      {/* Featured Clients - Only for industries with clients */}
+      {industry.featuredClients && industry.featuredClients.length > 0 && (
+        <section className="py-12" style={{ background: 'var(--cream)' }}>
+          <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-8">
+              <p className="text-sm font-semibold uppercase tracking-wider mb-2" style={{ color: 'var(--green)' }}>Trusted By</p>
+              <h3 className="text-2xl font-bold" style={{ color: 'var(--black)' }}>Our Clients in This Sector</h3>
             </div>
-            <div className="bg-gradient-to-br from-primary-50 to-neutral-50 rounded-3xl p-8">
-              <h3 className="text-xl font-bold text-dark-900 mb-6">Compliance & Security</h3>
-              <p className="text-dark-600 mb-6">
-                All our {industry.name.toLowerCase()} solutions are built with compliance in mind from day one.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                {industry.compliance.map((cert, index) => (
-                  <span key={index} className="px-4 py-2 bg-white rounded-lg text-dark-700 font-medium shadow-sm">
-                    {cert}
-                  </span>
-                ))}
+            <div className="flex flex-wrap justify-center gap-8">
+              {industry.featuredClients.map((client: { name: string; description: string }, index: number) => (
+                <div key={index} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 min-w-[250px] text-center">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style={{ background: 'var(--green)' }}>
+                    <span className="text-2xl text-white font-bold">{client.name.charAt(0)}</span>
+                  </div>
+                  <h4 className="text-lg font-bold mb-2" style={{ color: 'var(--black)' }}>{client.name}</h4>
+                  <p className="text-sm" style={{ color: 'var(--gray-500)' }}>{client.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Challenges Section */}
+      <section className="section bg-white">
+        <div className="container-lg">
+          <div className="text-center mb-6">
+            <h2 className="h2 mb-6">Industry Challenges We Solve</h2>
+            <p className="text-body max-w-3xl mx-auto">
+              We understand the unique challenges facing {industry.name.toLowerCase()}. Our solutions are built specifically for your regulatory environment, data requirements, and operational constraints.
+            </p>
+          </div>
+
+          {/* Simple horizontal line animation */}
+          <div className="relative mb-8">
+            <svg className="w-full h-8 pointer-events-none" viewBox="0 0 1000 32" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="industryChalLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="var(--green)" stopOpacity="0" />
+                  <stop offset="20%" stopColor="var(--green)" stopOpacity="0.3" />
+                  <stop offset="50%" stopColor="var(--green)" stopOpacity="0.5" />
+                  <stop offset="80%" stopColor="var(--green)" stopOpacity="0.3" />
+                  <stop offset="100%" stopColor="var(--green)" stopOpacity="0" />
+                </linearGradient>
+                <linearGradient id="industryChalPulseGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="var(--green)" stopOpacity="0" />
+                  <stop offset="45%" stopColor="var(--green)" stopOpacity="1" />
+                  <stop offset="55%" stopColor="var(--green)" stopOpacity="1" />
+                  <stop offset="100%" stopColor="var(--green)" stopOpacity="0" />
+                </linearGradient>
+              </defs>
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="var(--gray-200)" strokeWidth="2" />
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="url(#industryChalLineGradient)" strokeWidth="2" />
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="url(#industryChalPulseGradient)" strokeWidth="3" strokeLinecap="round"
+                style={{ strokeDasharray: '150 850', animation: 'flowHorizontal 3s linear infinite' }} />
+            </svg>
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 mb-16">
+            {industry.challenges.map((challenge, index) => (
+              <div key={index} className="group text-center p-4 rounded-xl hover:bg-neutral-50 transition-all duration-300">
+                <h3 className="text-sm font-bold group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+                  {challenge}
+                </h3>
               </div>
+            ))}
+          </div>
+
+          {/* Compliance Section */}
+          <div className="bg-gradient-to-br from-primary-50 to-neutral-50 rounded-3xl p-8 max-w-3xl mx-auto text-center">
+            <h3 className="text-xl font-bold text-dark-900 mb-4">Compliance & Security</h3>
+            <p className="text-dark-600 mb-6">
+              All our {industry.name.toLowerCase()} solutions are built with compliance in mind from day one.
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              {industry.compliance.map((cert, index) => (
+                <span key={index} className="px-4 py-2 bg-white rounded-lg text-dark-700 font-medium shadow-sm">
+                  {cert}
+                </span>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
       {/* Solutions Section */}
-      <section className="py-24 bg-neutral-50">
-        <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-4">
-              Our {industry.name} Solutions
-            </h2>
-            <p className="text-xl text-dark-500 max-w-3xl mx-auto">
+      <section className="section" style={{ background: 'var(--cream)' }}>
+        <div className="container-lg">
+          <div className="text-center mb-6">
+            <h2 className="h2 mb-6">Our {industry.name} Solutions</h2>
+            <p className="text-body max-w-3xl mx-auto">
               Purpose-built AI solutions for the specific needs of {industry.name.toLowerCase()}.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          {/* Simple horizontal line animation */}
+          <div className="relative mb-8">
+            <svg className="w-full h-8 pointer-events-none" viewBox="0 0 1000 32" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="industrySolLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="var(--green)" stopOpacity="0" />
+                  <stop offset="20%" stopColor="var(--green)" stopOpacity="0.3" />
+                  <stop offset="50%" stopColor="var(--green)" stopOpacity="0.5" />
+                  <stop offset="80%" stopColor="var(--green)" stopOpacity="0.3" />
+                  <stop offset="100%" stopColor="var(--green)" stopOpacity="0" />
+                </linearGradient>
+                <linearGradient id="industrySolPulseGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="var(--green)" stopOpacity="0" />
+                  <stop offset="45%" stopColor="var(--green)" stopOpacity="1" />
+                  <stop offset="55%" stopColor="var(--green)" stopOpacity="1" />
+                  <stop offset="100%" stopColor="var(--green)" stopOpacity="0" />
+                </linearGradient>
+              </defs>
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="var(--gray-200)" strokeWidth="2" />
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="url(#industrySolLineGradient)" strokeWidth="2" />
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="url(#industrySolPulseGradient)" strokeWidth="3" strokeLinecap="round"
+                style={{ strokeDasharray: '150 850', animation: 'flowHorizontal 3s linear infinite' }} />
+            </svg>
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {industry.solutions.map((solution, index) => (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
-                
-                <h3 className="text-xl font-bold text-dark-900 mb-3">{solution.title}</h3>
-                <p className="text-dark-500">{solution.desc}</p>
+              <div key={index} className="group text-center p-6 rounded-xl hover:bg-white transition-all duration-300">
+                <h3 className="text-lg font-bold mb-2 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+                  {solution.title}
+                </h3>
+                <p className="text-sm" style={{ color: 'var(--gray-500)' }}>{solution.desc}</p>
               </div>
             ))}
           </div>
@@ -416,7 +526,7 @@ export default function IndustryPage() {
       </section>
 
       {/* Saudi Arabia Focus Section */}
-      <section className="py-24 bg-dark-900 relative overflow-hidden">
+      <section className="py-24 bg-neutral-50 relative overflow-hidden">
         {/* Saudi Background */}
         <div
           className="absolute inset-0 opacity-25"
@@ -429,21 +539,21 @@ export default function IndustryPage() {
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-primary-400 text-sm font-medium mb-4">Regional Excellence</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <p className="text-primary-600 text-sm font-medium mb-4">Regional Excellence</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-6">
                 {industry.name} AI in Saudi Arabia
               </h2>
-              <p className="text-lg text-neutral-300 mb-6">
+              <p className="text-lg text-dark-500 mb-6">
                 FSIT delivers specialized AI solutions for {industry.name.toLowerCase()} organizations across Saudi Arabia and the Middle East. Our solutions are aligned with Vision 2030 and designed for regional requirements.
               </p>
               <div className="grid grid-cols-2 gap-4">
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-                  <div className="text-2xl font-bold text-primary-400 mb-1">Vision 2030</div>
-                  <div className="text-neutral-300 text-sm">Aligned</div>
+                <div className="bg-primary-50 border border-primary-100 rounded-xl p-4">
+                  <div className="text-2xl font-bold text-primary-600 mb-1">Vision 2030</div>
+                  <div className="text-dark-500 text-sm">Aligned</div>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-                  <div className="text-2xl font-bold text-primary-400 mb-1">Local</div>
-                  <div className="text-neutral-300 text-sm">Expertise</div>
+                <div className="bg-primary-50 border border-primary-100 rounded-xl p-4">
+                  <div className="text-2xl font-bold text-primary-600 mb-1">Local</div>
+                  <div className="text-dark-500 text-sm">Expertise</div>
                 </div>
               </div>
             </div>
@@ -499,7 +609,7 @@ export default function IndustryPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-dark-900 relative overflow-hidden">
+      <section className="py-24 bg-neutral-50 relative overflow-hidden">
         {/* Saudi Background */}
         <div
           className="absolute inset-0 opacity-25"
@@ -510,17 +620,17 @@ export default function IndustryPage() {
           }}
         />
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-6">
             Ready to Transform Your {industry.name} Operations?
           </h2>
-          <p className="text-xl text-neutral-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-dark-500 mb-8 max-w-2xl mx-auto">
             Let's discuss how AI can solve your specific challenges. Our team includes specialists with deep {industry.name.toLowerCase()} experience.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/build-scale-ai" className="btn-primary">
               Schedule a Consultation
             </Link>
-            <Link href="/industries" className="btn-secondary border-white/20 text-white hover:bg-white/10">
+            <Link href="/industries" className="btn-secondary ">
               Explore Other Industries
             </Link>
           </div>

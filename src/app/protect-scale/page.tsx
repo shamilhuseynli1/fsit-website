@@ -3,8 +3,25 @@
 import Link from 'next/link';
 import NetworkBackground from '@/components/NetworkBackground';
 import HeroProtectVisual from '@/components/HeroProtectVisual';
+import ProcessFlow from '@/components/ProcessFlow';
+import BranchingFromTitle from '@/components/BranchingFromTitle';
 
 export default function ProtectScale() {
+  const processSteps = [
+    { num: '01', title: 'Assess', desc: 'Security audit' },
+    { num: '02', title: 'Plan', desc: 'Design controls' },
+    { num: '03', title: 'Implement', desc: 'Deploy security' },
+    { num: '04', title: 'Monitor', desc: 'Continuous watch' },
+    { num: '05', title: 'Optimize', desc: 'Improve always' },
+  ];
+
+  const whyProtect = [
+    { title: 'Enterprise-grade security', desc: 'Protect AI systems at scale' },
+    { title: 'Regulatory compliance', desc: 'Meet industry standards' },
+    { title: 'Risk mitigation', desc: 'Proactive threat detection' },
+    { title: 'Scalable infrastructure', desc: 'Grow without limits' },
+    { title: 'Continuous monitoring', desc: '24/7 observability' },
+  ];
   const governanceAreas = [
     {
       title: 'AI Security',
@@ -128,8 +145,8 @@ export default function ProtectScale() {
   return (
     <>
       {/* Hero Section */}
-      <section className="hero-dark bg-grid-pattern overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-900 to-dark-800" />
+      <section className="relative min-h-[80vh] flex items-center bg-cream-50 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-cream-50 to-neutral-50" />
         {/* Saudi Riyadh Skyline Background */}
         <div
           className="absolute inset-0 opacity-30"
@@ -145,8 +162,7 @@ export default function ProtectScale() {
         <div className="relative max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="section-label !text-primary-500 !mb-4 md:!mb-6 animate-fade-in">Protect & Scale</p>
-              <h1 className="hero-title text-white animate-fade-in-up text-3xl md:text-5xl lg:text-6xl">
+              <h1 className="hero-title text-dark-900 animate-fade-in-up text-3xl md:text-5xl lg:text-6xl">
                 AI Governance<br />
                 <span className="text-primary-500 text-glow">Built for Enterprise</span>
               </h1>
@@ -157,7 +173,7 @@ export default function ProtectScale() {
                 <Link href="/contact" className="btn-primary text-center">
                   Discuss your requirements
                 </Link>
-                <Link href="/ai-operations" className="btn-secondary !border-white/30 !text-white hover:!bg-white hover:!text-dark-900 text-center">
+                <Link href="/ai-operations" className="btn-secondary text-center">
                   View AI operations
                 </Link>
               </div>
@@ -170,48 +186,56 @@ export default function ProtectScale() {
       </section>
 
       {/* Stats */}
-      <section className="py-12 bg-primary-500">
+      <section className="section-sm" style={{ background: 'var(--cream)' }}>
         <div className="container-max">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <p className="text-3xl md:text-4xl font-bold text-white">{stat.value}</p>
-                <p className="text-white/80 text-sm mt-1">{stat.label}</p>
+                <p className="text-3xl md:text-4xl font-bold text-dark-900">{stat.value}</p>
+                <p className="text-dark-500 text-sm mt-1">{stat.label}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* Governance Process - Animated Flow */}
+      <section className="section" style={{ background: 'var(--white)' }}>
+        <div className="container-lg">
+          <div className="text-center mb-12">
+            <h2 className="h2">Our Governance Process</h2>
+            <p className="text-body mx-auto" style={{ maxWidth: '42rem' }}>
+              A systematic approach to securing and scaling your AI systems
+            </p>
+          </div>
+          <ProcessFlow steps={processSteps} />
+        </div>
+      </section>
+
       {/* Governance Areas */}
-      <section className="section-padding bg-white">
+      <section className="section" style={{ background: 'var(--white)' }}>
         <div className="container-max">
           <div className="text-center mb-16">
-            <p className="section-label">What We Offer</p>
-            <h2 className="section-title">AI Governance & Scaling</h2>
-            <p className="section-subtitle mx-auto">
+            <h2 className="h2">AI Governance & Scaling</h2>
+            <p className="text-body mx-auto" style={{ maxWidth: '42rem' }}>
               Comprehensive governance to protect your AI investment and scale with confidence
             </p>
           </div>
 
-          <div className="grid-2">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
             {governanceAreas.map((area, index) => (
-              <div key={index} className="card card-hover">
-                <div className="flex items-start gap-4">
-                  <div className="w-14 h-14 bg-primary-500/10 rounded-xl flex items-center justify-center text-primary-500 flex-shrink-0">
-                    {area.icon}
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-dark-900 mb-2">{area.title}</h3>
-                    <p className="text-dark-500 text-sm mb-4">{area.description}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {area.features.map((feature, i) => (
-                        <span key={i} className="text-xs bg-neutral-150 text-dark-600 px-2 py-1 rounded">
-                          {feature}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+              <div key={index} className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-lg p-4 hover:border-[#00A651] hover:shadow-md transition-all duration-300">
+                <div className="w-10 h-10 bg-primary-500/10 rounded-lg flex items-center justify-center text-primary-500 mb-3">
+                  {area.icon}
+                </div>
+                <h3 className="text-sm font-semibold text-dark-900 mb-1">{area.title}</h3>
+                <p className="text-dark-500 text-xs mb-3 line-clamp-2">{area.description}</p>
+                <div className="flex flex-wrap gap-1">
+                  {area.features.slice(0, 3).map((feature, i) => (
+                    <span key={i} className="text-[10px] bg-white text-dark-600 px-1.5 py-0.5 rounded">
+                      {feature}
+                    </span>
+                  ))}
                 </div>
               </div>
             ))}
@@ -220,25 +244,48 @@ export default function ProtectScale() {
       </section>
 
       {/* Security Layers */}
-      <section className="section-padding bg-dark-900">
-        <div className="container-max">
-          <div className="text-center mb-16">
-            <p className="section-label !text-primary-500">Security Architecture</p>
-            <h2 className="section-title !text-white">Defense in Depth</h2>
-            <p className="section-subtitle mx-auto !text-dark-300">
+      <section className="section" style={{ background: 'var(--cream)' }}>
+        <div className="container-lg">
+          <div className="text-center mb-6">
+            <h2 className="h2">Defense in Depth</h2>
+            <p className="text-body mx-auto" style={{ maxWidth: '42rem' }}>
               Multiple layers of security controls to protect your AI systems
             </p>
           </div>
 
-          <div className="grid-2 lg:grid-cols-4">
+          {/* Simple horizontal line animation */}
+          <div className="relative mb-8">
+            <svg className="w-full h-8 pointer-events-none" viewBox="0 0 1000 32" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="protectSecurityLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="var(--green)" stopOpacity="0" />
+                  <stop offset="20%" stopColor="var(--green)" stopOpacity="0.3" />
+                  <stop offset="50%" stopColor="var(--green)" stopOpacity="0.5" />
+                  <stop offset="80%" stopColor="var(--green)" stopOpacity="0.3" />
+                  <stop offset="100%" stopColor="var(--green)" stopOpacity="0" />
+                </linearGradient>
+                <linearGradient id="protectSecurityPulseGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="var(--green)" stopOpacity="0" />
+                  <stop offset="45%" stopColor="var(--green)" stopOpacity="1" />
+                  <stop offset="55%" stopColor="var(--green)" stopOpacity="1" />
+                  <stop offset="100%" stopColor="var(--green)" stopOpacity="0" />
+                </linearGradient>
+              </defs>
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="var(--gray-200)" strokeWidth="2" />
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="url(#protectSecurityLineGradient)" strokeWidth="2" />
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="url(#protectSecurityPulseGradient)" strokeWidth="3" strokeLinecap="round"
+                style={{ strokeDasharray: '150 850', animation: 'flowHorizontal 3s linear infinite' }} />
+            </svg>
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {securityLayers.map((layer, index) => (
-              <div key={index} className="bg-dark-800 rounded-2xl p-6 border border-dark-700">
-                <h3 className="font-semibold text-white mb-4">{layer.layer}</h3>
-                <div className="space-y-2">
+              <div key={index} className="bg-white rounded-2xl p-6 border border-neutral-200 text-center">
+                <h3 className="font-semibold text-dark-900 mb-4">{layer.layer}</h3>
+                <div className="grid grid-cols-2 gap-2">
                   {layer.controls.map((control, i) => (
-                    <div key={i} className="flex items-center gap-2 bg-dark-700/50 p-2 rounded-lg border border-dark-600/50">
-                      
-                      <span className="text-sm text-dark-300">{control}</span>
+                    <div key={i} className="group p-2 rounded-lg hover:bg-primary-50 transition-all">
+                      <span className="text-xs text-dark-600 group-hover:text-green-600 font-medium transition-colors">{control}</span>
                     </div>
                   ))}
                 </div>
@@ -249,26 +296,25 @@ export default function ProtectScale() {
       </section>
 
       {/* Compliance Frameworks */}
-      <section className="section-padding bg-neutral-150">
+      <section className="section-sm" style={{ background: 'var(--white)' }}>
         <div className="container-max">
-          <div className="text-center mb-16">
-            <p className="section-label">Compliance</p>
-            <h2 className="section-title">Regulatory Compliance</h2>
-            <p className="section-subtitle mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="h3">Regulatory Compliance</h2>
+            <p className="text-small mx-auto" style={{ maxWidth: '42rem' }}>
               We help you meet the compliance requirements for your industry
             </p>
           </div>
 
-          <div className="grid-3">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
             {complianceFrameworks.map((framework, index) => (
-              <div key={index} className="card card-hover text-center">
-                <div className="w-12 h-12 bg-primary-500/10 rounded-xl flex items-center justify-center text-primary-500 mx-auto mb-4">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div key={index} className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-lg p-3 hover:border-[#00A651] hover:shadow-md transition-all duration-300 text-center">
+                <div className="w-8 h-8 bg-primary-500/10 rounded-lg flex items-center justify-center text-primary-500 mx-auto mb-2">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 </div>
-                <h3 className="font-semibold text-dark-900 mb-2">{framework.name}</h3>
-                <p className="text-dark-500 text-sm">{framework.description}</p>
+                <h3 className="text-xs font-semibold text-dark-900 mb-1">{framework.name}</h3>
+                <p className="text-dark-500 text-[10px]">{framework.description}</p>
               </div>
             ))}
           </div>
@@ -276,22 +322,52 @@ export default function ProtectScale() {
       </section>
 
       {/* Scaling Capabilities */}
-      <section className="section-padding bg-white">
+      <section className="section" style={{ background: 'var(--cream)' }}>
         <div className="container-max">
-          <div className="text-center mb-16">
-            <p className="section-label">Scale</p>
-            <h2 className="section-title">Scale With Confidence</h2>
-            <p className="section-subtitle mx-auto">
+          <div className="text-center mb-6">
+            <h2 className="h2">Scale With Confidence</h2>
+            <p className="text-body mx-auto" style={{ maxWidth: '42rem' }}>
               Infrastructure and architecture designed for enterprise-scale AI
             </p>
           </div>
 
-          <div className="grid-2 lg:grid-cols-4">
+          {/* Animated horizontal line */}
+          <div className="relative mb-8">
+            <svg className="w-full h-8 pointer-events-none" viewBox="0 0 1000 32" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="scaleLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="var(--green)" stopOpacity="0" />
+                  <stop offset="20%" stopColor="var(--green)" stopOpacity="0.3" />
+                  <stop offset="50%" stopColor="var(--green)" stopOpacity="0.5" />
+                  <stop offset="80%" stopColor="var(--green)" stopOpacity="0.3" />
+                  <stop offset="100%" stopColor="var(--green)" stopOpacity="0" />
+                </linearGradient>
+                <linearGradient id="scalePulseGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="var(--green)" stopOpacity="0" />
+                  <stop offset="45%" stopColor="var(--green)" stopOpacity="1" />
+                  <stop offset="55%" stopColor="var(--green)" stopOpacity="1" />
+                  <stop offset="100%" stopColor="var(--green)" stopOpacity="0" />
+                </linearGradient>
+              </defs>
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="var(--gray-200)" strokeWidth="2" />
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="url(#scaleLineGradient)" strokeWidth="2" />
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="url(#scalePulseGradient)" strokeWidth="3" strokeLinecap="round"
+                style={{ strokeDasharray: '150 850', animation: 'flowHorizontal 3s linear infinite' }} />
+            </svg>
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {scalingCapabilities.map((cap, index) => (
-              <div key={index} className="card card-hover text-center">
-                <h3 className="font-semibold text-dark-900 mb-2">{cap.title}</h3>
-                <p className="text-dark-500 text-sm mb-4">{cap.description}</p>
-                <p className="text-primary-500 font-semibold">{cap.metric}</p>
+              <div key={index} className="relative">
+                {/* Dashed connector line between blocks */}
+                {index < scalingCapabilities.length - 1 && (
+                  <div className="hidden lg:block absolute top-1/2 -right-2 w-4 h-0 -translate-y-1/2 z-10" style={{ borderTop: '2px dashed #00A651', opacity: 0.5 }} />
+                )}
+                <div className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl p-5 h-full hover:border-[#00A651] hover:shadow-lg transition-all duration-300 text-center">
+                  <h3 className="font-semibold text-dark-900 mb-2 text-sm">{cap.title}</h3>
+                  <p className="text-dark-500 text-xs mb-3">{cap.description}</p>
+                  <p className="text-primary-500 font-semibold text-sm">{cap.metric}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -299,25 +375,48 @@ export default function ProtectScale() {
       </section>
 
       {/* Industry Requirements */}
-      <section className="section-padding bg-neutral-150">
-        <div className="container-max">
-          <div className="text-center mb-16">
-            <p className="section-label">Industries</p>
-            <h2 className="section-title">Industry-Specific Expertise</h2>
-            <p className="section-subtitle mx-auto">
+      <section className="section" style={{ background: 'var(--white)' }}>
+        <div className="container-lg">
+          <div className="text-center mb-6">
+            <h2 className="h2">Industry-Specific Expertise</h2>
+            <p className="text-body mx-auto" style={{ maxWidth: '42rem' }}>
               Deep understanding of compliance requirements across regulated industries
             </p>
           </div>
 
-          <div className="grid-2 lg:grid-cols-4">
+          {/* Simple horizontal line animation */}
+          <div className="relative mb-8">
+            <svg className="w-full h-8 pointer-events-none" viewBox="0 0 1000 32" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="protectIndustryLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="var(--green)" stopOpacity="0" />
+                  <stop offset="20%" stopColor="var(--green)" stopOpacity="0.3" />
+                  <stop offset="50%" stopColor="var(--green)" stopOpacity="0.5" />
+                  <stop offset="80%" stopColor="var(--green)" stopOpacity="0.3" />
+                  <stop offset="100%" stopColor="var(--green)" stopOpacity="0" />
+                </linearGradient>
+                <linearGradient id="protectIndustryPulseGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="var(--green)" stopOpacity="0" />
+                  <stop offset="45%" stopColor="var(--green)" stopOpacity="1" />
+                  <stop offset="55%" stopColor="var(--green)" stopOpacity="1" />
+                  <stop offset="100%" stopColor="var(--green)" stopOpacity="0" />
+                </linearGradient>
+              </defs>
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="var(--gray-200)" strokeWidth="2" />
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="url(#protectIndustryLineGradient)" strokeWidth="2" />
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="url(#protectIndustryPulseGradient)" strokeWidth="3" strokeLinecap="round"
+                style={{ strokeDasharray: '150 850', animation: 'flowHorizontal 3s linear infinite' }} />
+            </svg>
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {industries.map((industry, index) => (
-              <div key={index} className="card">
+              <div key={index} className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl p-6 hover:border-[#00A651] hover:shadow-lg transition-all duration-300 text-center">
                 <h3 className="font-semibold text-dark-900 mb-4">{industry.name}</h3>
-                <div className="space-y-2">
+                <div className="grid grid-cols-2 gap-2">
                   {industry.requirements.map((req, i) => (
-                    <div key={i} className="flex items-center gap-2 bg-neutral-50 p-2 rounded-lg border border-neutral-100">
-                      
-                      <span className="text-sm text-dark-600">{req}</span>
+                    <div key={i} className="group p-2 rounded-lg hover:bg-primary-50 transition-all">
+                      <span className="text-xs text-dark-600 group-hover:text-green-600 font-medium transition-colors">{req}</span>
                     </div>
                   ))}
                 </div>
@@ -328,64 +427,121 @@ export default function ProtectScale() {
       </section>
 
       {/* Why FSIT */}
-      <section className="section-padding bg-white">
-        <div className="container-max">
-          <div className="grid-2 items-center">
-            <div>
-              <p className="section-label">Why FSIT</p>
-              <h2 className="section-title">Governance Expertise</h2>
-              <p className="text-dark-500 mb-6">
-                We understand that enterprise AI requires more than just good technology. Security, compliance, and governance are built into everything we do.
-              </p>
-              <div className="space-y-3">
-                {[
-                  'Deep experience in regulated industries',
-                  'Security-first architecture and development',
-                  'Compliance expertise across frameworks',
-                  'Scalable infrastructure design',
-                  'Continuous security monitoring',
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-4 bg-neutral-100 p-3 rounded-xl border border-neutral-200 hover:border-primary-500/30 transition-all">
-                    
-                    <span className="text-dark-700 font-medium">{item}</span>
+      <section className="section" style={{ background: 'var(--cream)' }}>
+        <div className="container-lg">
+          <div className="text-center mb-6">
+            <h2 className="h2">Governance Expertise</h2>
+            <p className="text-body mx-auto">
+              We understand that enterprise AI requires more than just good technology. Security, compliance, and governance are built into everything we do.
+            </p>
+          </div>
+
+          {/* Simple horizontal line animation */}
+          <div className="relative mb-8">
+            <svg className="w-full h-8 pointer-events-none" viewBox="0 0 1000 32" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="protectGovLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="var(--green)" stopOpacity="0" />
+                  <stop offset="20%" stopColor="var(--green)" stopOpacity="0.3" />
+                  <stop offset="50%" stopColor="var(--green)" stopOpacity="0.5" />
+                  <stop offset="80%" stopColor="var(--green)" stopOpacity="0.3" />
+                  <stop offset="100%" stopColor="var(--green)" stopOpacity="0" />
+                </linearGradient>
+                <linearGradient id="protectGovPulseGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="var(--green)" stopOpacity="0" />
+                  <stop offset="45%" stopColor="var(--green)" stopOpacity="1" />
+                  <stop offset="55%" stopColor="var(--green)" stopOpacity="1" />
+                  <stop offset="100%" stopColor="var(--green)" stopOpacity="0" />
+                </linearGradient>
+              </defs>
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="var(--gray-200)" strokeWidth="2" />
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="url(#protectGovLineGradient)" strokeWidth="2" />
+              <line x1="0" y1="16" x2="1000" y2="16" stroke="url(#protectGovPulseGradient)" strokeWidth="3" strokeLinecap="round"
+                style={{ strokeDasharray: '150 850', animation: 'flowHorizontal 3s linear infinite' }} />
+            </svg>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-8">
+            {[
+              'Deep experience in regulated industries',
+              'Security-first architecture and development',
+              'Compliance expertise across frameworks',
+              'Scalable infrastructure design',
+              'Continuous security monitoring',
+            ].map((item, i) => (
+              <div key={i} className="relative">
+                {/* Arrow connector between blocks */}
+                {i < 4 && (
+                  <div className="hidden lg:flex absolute top-1/2 -right-2 -translate-y-1/2 z-10 items-center">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M4 8h8M10 4l4 4-4 4" stroke="#00A651" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
                   </div>
-                ))}
+                )}
+                <div className="group text-center p-4 bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl hover:border-[#00A651] hover:shadow-lg transition-all duration-300 h-full">
+                  <h3 className="text-sm font-bold group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+                    {item}
+                  </h3>
+                </div>
               </div>
-            </div>
-            <div className="bg-dark-900 rounded-2xl p-8 text-white">
-              <h3 className="text-xl font-semibold mb-6">Governance Deliverables</h3>
-              <div className="space-y-4">
-                {[
-                  { title: 'Security Assessment', desc: 'Comprehensive security review of AI systems' },
-                  { title: 'Compliance Roadmap', desc: 'Path to meeting regulatory requirements' },
-                  { title: 'Risk Register', desc: 'Documented risks and mitigation strategies' },
-                  { title: 'Scaling Architecture', desc: 'Design for growth and high availability' },
-                ].map((item, i) => (
-                  <div key={i} className="bg-dark-800 rounded-lg p-4 border border-dark-700">
-                    <h4 className="font-medium text-white mb-1">{item.title}</h4>
-                    <p className="text-dark-400 text-sm">{item.desc}</p>
-                  </div>
-                ))}
-              </div>
+            ))}
+          </div>
+
+          {/* Arrow down to Governance Deliverables */}
+          <div className="flex justify-center mb-6">
+            <svg width="24" height="40" viewBox="0 0 24 40" fill="none">
+              <path d="M12 0v32M6 26l6 6 6-6" stroke="#00A651" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </div>
+
+          {/* Governance Deliverables */}
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-xl font-semibold text-dark-900 mb-6 text-center">Governance Deliverables</h3>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                { title: 'Security Assessment', desc: 'Comprehensive security review of AI systems' },
+                { title: 'Compliance Roadmap', desc: 'Path to meeting regulatory requirements' },
+                { title: 'Risk Register', desc: 'Documented risks and mitigation strategies' },
+                { title: 'Scaling Architecture', desc: 'Design for growth and high availability' },
+              ].map((item, i) => (
+                <div key={i} className="group text-center p-4 rounded-xl bg-white hover:bg-primary-50 transition-all duration-300">
+                  <h4 className="font-bold text-sm mb-2 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+                    {item.title}
+                  </h4>
+                  <p className="text-dark-500 text-xs">{item.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
+      {/* Why Protect - Animated Branching */}
+      <section className="py-16" style={{ background: 'var(--white)' }}>
+        <div className="container-lg">
+          <div className="text-center mb-2">
+            <h2 className="h2">Why organizations choose FSIT for governance</h2>
+          </div>
+          <BranchingFromTitle items={whyProtect} />
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="section-padding bg-dark-900">
-        <div className="container-max text-center">
-          <h2 className="section-title !text-white mb-4">
-            Ready to secure and scale your AI?
+      <section className="section" style={{ background: 'var(--cream)' }}>
+        <div className="container-md text-center">
+          <h2 className="h1 mb-6">
+            Ready to secure
+            <br />
+            <span style={{ color: 'var(--green)' }}>and scale?</span>
           </h2>
-          <p className="section-subtitle mx-auto !text-dark-300 mb-8">
+          <p className="text-large mb-10 max-w-xl mx-auto">
             Let's discuss your governance requirements and build a roadmap
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="btn-primary">
               Talk to our experts
             </Link>
-            <Link href="/build-innovate" className="btn-secondary !border-white/30 !text-white hover:!bg-white hover:!text-dark-900">
+            <Link href="/build-innovate" className="btn-secondary">
               Start building
             </Link>
           </div>

@@ -6,7 +6,6 @@ import Image from 'next/image';
 import BranchingList from '@/components/BranchingList';
 import BranchingFromTitle from '@/components/BranchingFromTitle';
 import ProcessFlow from '@/components/ProcessFlow';
-import VideoPlaceholder from '@/components/VideoPlaceholder';
 
 export default function Home() {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -318,15 +317,15 @@ export default function Home() {
                   </div>
                 ))}
             </div>
-            {/* Right side: Video */}
+            {/* Right side: Image */}
             <div className="lg:-mr-8 xl:-mr-16 h-full min-h-[280px] md:min-h-[320px]">
-              <VideoPlaceholder
-                title="What is FSIT?"
-                description="60-second explainer"
-                duration="1:00"
-                thumbnailUrl="/hero-riyadh-day.jpg"
-                className="shadow-xl h-full"
-              />
+              <div className="relative rounded-2xl overflow-hidden shadow-xl h-full">
+                <img
+                  src="/hero-riyadh-day.jpg"
+                  alt="FSIT AI Transformation"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
 
@@ -366,21 +365,21 @@ export default function Home() {
         <div className="relative overflow-hidden">
           {filteredClients.length <= 5 ? (
             /* Static centered layout for few clients */
-            <div className="flex justify-center flex-wrap gap-8">
+            <div className="flex justify-center flex-wrap gap-14">
               {filteredClients.map((client, index) => (
                 <a
                   key={index}
                   href={client.url || '#'}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-shrink-0 flex items-center justify-center h-16 w-40 logo-item"
+                  className="flex-shrink-0 flex items-center justify-center h-28 w-64 logo-item"
                 >
                   <Image
                     src={client.logo}
                     alt={client.name}
-                    width={160}
-                    height={60}
-                    className="object-contain max-h-12"
+                    width={256}
+                    height={112}
+                    className="object-contain max-h-24"
                   />
                 </a>
               ))}
@@ -394,14 +393,14 @@ export default function Home() {
                   href={client.url || '#'}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-shrink-0 mx-8 flex items-center justify-center h-16 w-40 logo-item"
+                  className="flex-shrink-0 mx-14 flex items-center justify-center h-28 w-64 logo-item"
                 >
                   <Image
                     src={client.logo}
                     alt={client.name}
-                    width={160}
-                    height={60}
-                    className="object-contain max-h-12"
+                    width={256}
+                    height={112}
+                    className="object-contain max-h-24"
                   />
                 </a>
               ))}
@@ -670,12 +669,13 @@ export default function Home() {
                 ))}
               </div>
             </div>
-            <VideoPlaceholder
-              title="AI Explained Simply"
-              description="30-second concept explainer"
-              duration="0:30"
-              thumbnailUrl="/hero-neom.jpg"
-            />
+            <div className="relative rounded-2xl overflow-hidden shadow-xl">
+              <img
+                src="/hero-neom.jpg"
+                alt="AI Explained Simply"
+                className="w-full aspect-video object-cover"
+              />
+            </div>
           </div>
 
           <div className="text-center mt-12">

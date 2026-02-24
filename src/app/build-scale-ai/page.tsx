@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import NetworkBackground from '@/components/NetworkBackground';
 
 type FormStep = 1 | 2 | 3 | 4;
@@ -74,18 +75,21 @@ export default function BuildScaleAI() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[85vh] flex items-center overflow-hidden" style={{ background: 'var(--cream)' }}>
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1738410775719-9f237adb266d?auto=format&fit=crop&w=1920&q=80"
           alt="Build Scale AI"
-          className="absolute inset-0 w-full h-full object-cover opacity-60"
+          className="absolute inset-0 w-full h-full object-cover"
         />
+        <div className="absolute inset-0 bg-black/60" />
+        <NetworkBackground nodeCount={60} maxDistance={120} />
         <div className="relative container-max py-20 md:py-28">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="hero-title text-dark-900 !text-3xl md:!text-4xl lg:!text-5xl">
-              Build and Scale <span className="text-primary-500">AI</span>
+          <div className="max-w-3xl">
+            <p className="text-green-400 font-semibold text-sm tracking-wider uppercase mb-4">Start Your AI Journey</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[1.1]" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
+              Build and Scale <span className="text-green-400" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>AI</span>
             </h1>
-            <p className="text-xl text-dark-600 text-center mx-auto">
+            <p className="text-xl md:text-2xl text-white mb-8 max-w-lg" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
               Access elite AI talent to accelerate your AI transformation
             </p>
           </div>
@@ -418,23 +422,48 @@ export default function BuildScaleAI() {
       </section>
 
       {/* Trust Indicators */}
-      <section className="section bg-white">
+      <section className="py-12 border-y" style={{ background: '#F5F5F3', borderColor: 'var(--gray-100)' }}>
         <div className="container-max">
-          <div className="text-center mb-12">
-            <h2 className="h2">Trusted by Leading Organizations</h2>
+          <p className="text-xl font-semibold text-center mb-8" style={{ color: 'var(--gray-600)' }}>Trusted by leading organizations</p>
+
+          {/* Client Logos */}
+          <div className="flex justify-center flex-wrap gap-12 mb-10">
+            {[
+              { name: 'Arab Bank', logo: '/clients/Arab-Bank-Logo.png' },
+              { name: 'Tadawul', logo: '/clients/Saudi-Tadawul-Logo.png' },
+              { name: 'NCB Capital', logo: '/clients/NCB-Capital-Logo.png' },
+              { name: 'Vision 2030', logo: '/clients/Vision-2023-Logo.png' },
+              { name: 'Jadwa Investment', logo: '/clients/Jadwa-Investment-Logo.png' },
+              { name: 'Public Pension Agency', logo: '/clients/Public-Pension-Agency-Logo-Wide.png' },
+              { name: 'Emirates NBD', logo: '/clients/Emirates-NBD-Logo-Wide.png' },
+            ].map((client, index) => (
+              <div key={index} className="flex-shrink-0 flex items-center justify-center h-20 w-48">
+                <Image
+                  src={client.logo}
+                  alt={client.name}
+                  width={192}
+                  height={80}
+                  className="object-contain max-h-16"
+                />
+              </div>
+            ))}
           </div>
-          <div className="grid-3">
-            <div className="card card-hover text-center">
-              <p className="stat-number">80,000+</p>
-              <p className="stat-label">AI Experts in Network</p>
+
+          {/* Stats */}
+          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-12 text-center pt-8 border-t" style={{ borderColor: 'var(--gray-200)' }}>
+            <div className="flex items-center gap-2">
+              <span className="text-3xl md:text-4xl font-bold" style={{ color: 'var(--green)' }}>80K+</span>
+              <span className="text-base" style={{ color: 'var(--gray-500)' }}>AI Experts in Network</span>
             </div>
-            <div className="card card-hover text-center">
-              <p className="stat-number">99%</p>
-              <p className="stat-label">Applicants vetted out</p>
+            <div className="w-px h-8 bg-gray-300 hidden md:block" />
+            <div className="flex items-center gap-2">
+              <span className="text-3xl md:text-4xl font-bold" style={{ color: 'var(--green)' }}>99%</span>
+              <span className="text-base" style={{ color: 'var(--gray-500)' }}>Applicants vetted out</span>
             </div>
-            <div className="card card-hover text-center">
-              <p className="stat-number">98%</p>
-              <p className="stat-label">Client Retention Rate</p>
+            <div className="w-px h-8 bg-gray-300 hidden md:block" />
+            <div className="flex items-center gap-2">
+              <span className="text-3xl md:text-4xl font-bold" style={{ color: 'var(--green)' }}>98%</span>
+              <span className="text-base" style={{ color: 'var(--gray-500)' }}>Client Retention Rate</span>
             </div>
           </div>
         </div>

@@ -91,7 +91,7 @@ export default function IndustriesPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[85vh] flex items-center justify-start overflow-hidden">
         {/* Saudi Modern Architecture Background */}
         <div
           className="absolute inset-0"
@@ -103,15 +103,15 @@ export default function IndustriesPage() {
         />
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 container-max py-20 md:py-28">
+        <div className="relative z-10 container-max py-20 md:py-28 w-full">
           <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 text-left" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
               AI Solutions for{' '}
               <span style={{ color: 'var(--green)', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
                 Every Industry
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl font-medium" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
+            <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl font-medium text-left" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
               Deep domain expertise combined with AI-native development. We understand the unique challenges, regulations, and opportunities in your industry — delivering solutions that work in production.
             </p>
           </div>

@@ -105,11 +105,12 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
-            <img
-              src="/fsit-logo.svg"
-              alt="FSIT - Kingdom's preferred choice for AI"
-              className="h-14 md:h-16 w-auto"
-            />
+            <span
+              className="text-2xl md:text-3xl font-bold"
+              style={{ color: 'var(--black)' }}
+            >
+              FSIT
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

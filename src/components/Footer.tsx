@@ -32,11 +32,12 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="col-span-2 text-center md:text-left lg:col-span-2 mb-4 md:mb-0">
             <Link href="/" className="inline-block mb-4 md:mb-6">
-              <img
-                src="/fsit-logo.svg"
-                alt="FSIT - Kingdom's preferred choice for AI"
-                className="h-32 md:h-36 w-auto object-contain mx-auto md:mx-0"
-              />
+              <span
+                className="text-4xl md:text-5xl font-bold"
+                style={{ color: 'var(--black)' }}
+              >
+                FSIT
+              </span>
             </Link>
             <p className="mb-6 md:mb-8 max-w-sm mx-auto md:mx-0 leading-relaxed text-sm" style={{ color: 'var(--gray-500)' }}>
               On-Site AI. Real Results. Built Capability. Pioneering AI transformation across Saudi Arabia and the Middle East.

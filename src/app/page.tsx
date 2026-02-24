@@ -167,14 +167,14 @@ export default function Home() {
   const experts = [
     // Saudi Experts
     { name: 'Mohammed Al-Anazi', nameAr: 'محمد العنزي', role: 'AI Strategy Lead', location: 'Riyadh', specialty: 'NLP & Machine Learning', image: '/experts/amir.jpg', isSaudi: true },
-    { name: 'Sarah Al-Ghamdi', nameAr: 'سارة الغامدي', role: 'Data Science Manager', location: 'Jeddah', specialty: 'Predictive Analytics', image: '/experts/sarah.jpg', isSaudi: true },
-    { name: 'Khalid Al-Zahrani', nameAr: 'خالد الزهراني', role: 'ML Solutions Architect', location: 'Riyadh', specialty: 'Python, PyTorch', image: '/experts/james.jpg', isSaudi: true },
+    { name: 'Sarah Haddad', nameAr: 'سارة حداد', role: 'Data Science Manager', location: 'Jeddah', specialty: 'Predictive Analytics', image: '/experts/sarah.jpg', isSaudi: true },
+    { name: 'Khalid Rahman', nameAr: 'خالد رحمان', role: 'ML Solutions Architect', location: 'Riyadh', specialty: 'Python, PyTorch', image: '/experts/james.jpg', isSaudi: true },
     { name: 'Nora Al-Shehri', nameAr: 'نورة الشهري', role: 'AI Product Lead', location: 'KAUST', specialty: 'Computer Vision', image: '/experts/leila.jpg', isSaudi: true },
     // International Experts
-    { name: 'Daniel Kim', nameAr: '', role: 'Principal AI Research Scientist', location: 'Singapore', specialty: 'Deep Learning, NLP', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80', isSaudi: false },
-    { name: 'Sofia Petrović', nameAr: '', role: 'Senior AI UX Designer', location: 'Berlin', specialty: 'AI/ML Design, UX', image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=400&q=80', isSaudi: false },
-    { name: 'Hannah Nguyen', nameAr: '', role: 'AI Infrastructure & MLOps Director', location: 'London', specialty: 'MLOps, Cloud', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80', isSaudi: false },
-    { name: 'Mateo Rossi', nameAr: '', role: 'Computer Vision Lead', location: 'Milan', specialty: 'Computer Vision, PyTorch', image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80', isSaudi: false },
+    { name: 'Daniel Kim', nameAr: '', role: 'Principal AI Research Scientist', location: 'Singapore', specialty: 'Deep Learning, NLP', image: '/experts/daniel.jpg', isSaudi: false },
+    { name: 'Sofia Petrović', nameAr: '', role: 'Senior AI UX Designer', location: 'Berlin', specialty: 'AI/ML Design, UX', image: '/experts/sofia.jpg', isSaudi: false },
+    { name: 'Hannah Nguyen', nameAr: '', role: 'AI Infrastructure & MLOps Director', location: 'London', specialty: 'MLOps, Cloud', image: '/experts/hannah.jpg', isSaudi: false },
+    { name: 'Mateo Rossi', nameAr: '', role: 'Computer Vision Lead', location: 'Milan', specialty: 'Computer Vision, PyTorch', image: '/experts/mateo.jpg', isSaudi: false },
   ];
 
   const whyFsit = [
@@ -748,7 +748,7 @@ export default function Home() {
           <div className="grid-4 mb-16">
             {experts.filter(e => expertFilter === 'all' || e.isSaudi).map((expert, index) => (
               <div key={index} className="text-center group">
-                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden img-zoom" style={{ border: '4px solid var(--green)' }}>
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden img-zoom" style={{ border: expert.isSaudi ? '4px solid var(--green)' : '4px solid var(--gray-200)' }}>
                   <img
                     src={expert.image}
                     alt={expert.name}

@@ -22,6 +22,7 @@ const translations = {
     thankyou: 'Thank you! Our team will contact you within 24 hours.',
     close: 'Close',
     startover: 'Start Over',
+    back: 'Back',
     switchlang: 'عربي',
   },
   ar: {
@@ -39,6 +40,7 @@ const translations = {
     thankyou: 'شكراً لك! سيتواصل معك فريقنا خلال 24 ساعة.',
     close: 'إغلاق',
     startover: 'البدء من جديد',
+    back: 'رجوع',
     switchlang: 'English',
   },
 };
@@ -211,13 +213,23 @@ export default function Chatbot() {
                     onChange={(e) => setFormData({ ...formData, requirement: e.target.value })}
                     className="w-full px-3 py-2 text-sm rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-500 resize-none"
                   />
-                  <button
-                    type="submit"
-                    className="w-full py-2 rounded-lg text-sm font-semibold text-white transition-all duration-200 hover:opacity-90"
-                    style={{ background: 'var(--green)' }}
-                  >
-                    {t.submit}
-                  </button>
+                  <div className="flex gap-2">
+                    <button
+                      type="button"
+                      onClick={() => setStep('welcome')}
+                      className="flex-1 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:opacity-80"
+                      style={{ background: 'var(--cream)', color: 'var(--green)', border: '1px solid var(--green)' }}
+                    >
+                      {t.back}
+                    </button>
+                    <button
+                      type="submit"
+                      className="flex-1 py-2 rounded-lg text-sm font-semibold text-white transition-all duration-200 hover:opacity-90"
+                      style={{ background: 'var(--green)' }}
+                    >
+                      {t.submit}
+                    </button>
+                  </div>
                 </form>
               </div>
             )}

@@ -495,36 +495,36 @@ export default function MLModelsPage() {
           alt="NEOM - Vision 2030 Saudi Arabia"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        {/* Light overlay - reduced for NEOM visibility */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/50 to-white/30" />
+        {/* Dark overlay for contrast */}
+        <div className="absolute inset-0 bg-black/60" />
 
         <div className="relative z-10 max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             {/* Left - Text Content */}
             <div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark-900 mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                 AI Models That{' '}
-                <span className="text-primary-500">
+                <span className="text-green-400" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                   Deliver Results
                 </span>
               </h1>
-              <p className="text-xl text-dark-500 leading-relaxed mb-12">
+              <p className="text-xl md:text-2xl text-white leading-relaxed mb-12" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
                 Production-ready ML solutions powered by leading AI platforms.
               </p>
 
               {/* Stats */}
               <div className="grid grid-cols-3 gap-8">
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold text-primary-500">6</div>
-                  <div className="text-dark-500 text-sm">Industry Verticals</div>
+                  <div className="text-3xl md:text-5xl font-bold text-green-400" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>6</div>
+                  <div className="text-white/80 text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>Industry Verticals</div>
                 </div>
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold text-primary-500">24+</div>
-                  <div className="text-dark-500 text-sm">ML Solutions</div>
+                  <div className="text-3xl md:text-5xl font-bold text-green-400" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>24+</div>
+                  <div className="text-white/80 text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>ML Solutions</div>
                 </div>
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold text-primary-500">99%</div>
-                  <div className="text-dark-500 text-sm">Accuracy</div>
+                  <div className="text-3xl md:text-5xl font-bold text-green-400" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>99%</div>
+                  <div className="text-white/80 text-base" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>Accuracy</div>
                 </div>
               </div>
             </div>
@@ -539,19 +539,19 @@ export default function MLModelsPage() {
 
       {/* Category Selector */}
       <section id="models-section" className="bg-cream-50 border-y border-neutral-200 sticky top-16 z-20">
-        <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex overflow-x-auto py-4 gap-3 scrollbar-hide">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-center flex-wrap gap-3 py-5">
             {categories.map((category) => (
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
-                className={`group relative flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-300 ${
+                className={`group relative flex items-center gap-2 px-5 py-3 rounded-full text-base font-semibold whitespace-nowrap transition-all duration-300 ${
                   activeCategory === category.id
                     ? 'bg-primary-500 text-white shadow-lg'
                     : 'bg-white text-dark-700 hover:bg-neutral-100 border border-neutral-200 hover:border-primary-500/30'
                 }`}
               >
-                <span className={`relative ${activeCategory === category.id ? 'text-white' : 'text-dark-500 group-hover:text-primary-500'} transition-colors`}>
+                <span className={`relative [&>svg]:w-5 [&>svg]:h-5 ${activeCategory === category.id ? 'text-white' : 'text-dark-500 group-hover:text-primary-500'} transition-colors`}>
                   {category.icon}
                 </span>
                 <span className="relative">{category.name}</span>
@@ -568,17 +568,17 @@ export default function MLModelsPage() {
             {/* Category Header */}
             <div className="text-center mb-16 relative">
               <div className="relative inline-block mb-6">
-                <div className="relative w-20 h-20 rounded-2xl bg-primary-500/10 text-primary-500 flex items-center justify-center">
-                  <div className="w-10 h-10 flex items-center justify-center">
+                <div className="relative w-24 h-24 rounded-2xl bg-primary-500/10 text-primary-500 flex items-center justify-center">
+                  <div className="w-12 h-12 flex items-center justify-center [&>svg]:w-8 [&>svg]:h-8">
                     {activeData.icon}
                   </div>
                 </div>
               </div>
 
-              <h2 className="text-4xl md:text-5xl font-bold text-dark-900 mb-4">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4" style={{ color: 'var(--black)' }}>
                 {activeData.name}
               </h2>
-              <p className="text-xl md:text-2xl text-primary-500 font-semibold">
+              <p className="text-2xl md:text-3xl text-primary-500 font-semibold">
                 {activeData.tagline}
               </p>
             </div>
@@ -612,45 +612,45 @@ export default function MLModelsPage() {
       )}
 
       {/* Powered By Section */}
-      <section className="py-16 bg-white border-t border-neutral-200">
+      <section className="py-20 bg-white border-t border-neutral-200">
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-dark-500 text-sm mb-10 uppercase tracking-wider">Powered by leading AI platforms</p>
-          <div className="flex flex-wrap justify-center items-center gap-10">
-            <div className="group flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-cream-50 transition-all duration-300 cursor-pointer">
-              <div className="w-10 h-10 rounded-lg bg-black flex items-center justify-center group-hover:scale-110 transition-transform">
-                <OpenAILogo className="w-6 h-6 text-white" />
+          <p className="text-center text-base mb-12 uppercase tracking-wider font-semibold" style={{ color: 'var(--gray-600)' }}>Powered by leading AI platforms</p>
+          <div className="flex flex-wrap justify-center items-center gap-12">
+            <div className="group flex items-center gap-4 px-5 py-3 rounded-xl hover:bg-cream-50 transition-all duration-300 cursor-pointer">
+              <div className="w-14 h-14 rounded-xl bg-black flex items-center justify-center group-hover:scale-110 transition-transform">
+                <OpenAILogo className="w-8 h-8 text-white" />
               </div>
-              <span className="text-sm font-medium text-dark-500 group-hover:text-dark-900 transition-colors">OpenAI</span>
+              <span className="text-lg font-semibold group-hover:text-dark-900 transition-colors" style={{ color: 'var(--gray-700)' }}>OpenAI</span>
             </div>
-            <div className="group flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-cream-50 transition-all duration-300 cursor-pointer">
-              <div className="w-10 h-10 rounded-lg bg-[#D4A27F] flex items-center justify-center group-hover:scale-110 transition-transform">
-                <AnthropicLogo className="w-6 h-6 text-white" />
+            <div className="group flex items-center gap-4 px-5 py-3 rounded-xl hover:bg-cream-50 transition-all duration-300 cursor-pointer">
+              <div className="w-14 h-14 rounded-xl bg-[#D4A27F] flex items-center justify-center group-hover:scale-110 transition-transform">
+                <AnthropicLogo className="w-8 h-8 text-white" />
               </div>
-              <span className="text-sm font-medium text-dark-500 group-hover:text-dark-900 transition-colors">Anthropic</span>
+              <span className="text-lg font-semibold group-hover:text-dark-900 transition-colors" style={{ color: 'var(--gray-700)' }}>Anthropic</span>
             </div>
-            <div className="group flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-cream-50 transition-all duration-300 cursor-pointer">
-              <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center group-hover:scale-110 transition-transform overflow-hidden border border-neutral-200">
-                <img src="/logos/google-gemini-icon.webp" alt="Gemini" className="w-7 h-7 object-contain" />
+            <div className="group flex items-center gap-4 px-5 py-3 rounded-xl hover:bg-cream-50 transition-all duration-300 cursor-pointer">
+              <div className="w-14 h-14 rounded-xl bg-white flex items-center justify-center group-hover:scale-110 transition-transform overflow-hidden border border-neutral-200">
+                <img src="/logos/google-gemini-icon.webp" alt="Gemini" className="w-9 h-9 object-contain" />
               </div>
-              <span className="text-sm font-medium text-dark-500 group-hover:text-dark-900 transition-colors">Google AI</span>
+              <span className="text-lg font-semibold group-hover:text-dark-900 transition-colors" style={{ color: 'var(--gray-700)' }}>Google AI</span>
             </div>
-            <div className="group flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-cream-50 transition-all duration-300 cursor-pointer">
-              <div className="w-10 h-10 rounded-lg overflow-hidden group-hover:scale-110 transition-transform">
+            <div className="group flex items-center gap-4 px-5 py-3 rounded-xl hover:bg-cream-50 transition-all duration-300 cursor-pointer">
+              <div className="w-14 h-14 rounded-xl overflow-hidden group-hover:scale-110 transition-transform">
                 <img src="/logos/Meta-ai-logo.webp" alt="Meta AI" className="w-full h-full object-cover" />
               </div>
-              <span className="text-sm font-medium text-dark-500 group-hover:text-dark-900 transition-colors">Meta AI</span>
+              <span className="text-lg font-semibold group-hover:text-dark-900 transition-colors" style={{ color: 'var(--gray-700)' }}>Meta AI</span>
             </div>
-            <div className="group flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-cream-50 transition-all duration-300 cursor-pointer">
-              <div className="w-10 h-10 rounded-lg bg-black p-1 overflow-hidden group-hover:scale-110 transition-transform">
+            <div className="group flex items-center gap-4 px-5 py-3 rounded-xl hover:bg-cream-50 transition-all duration-300 cursor-pointer">
+              <div className="w-14 h-14 rounded-xl bg-black p-2 overflow-hidden group-hover:scale-110 transition-transform">
                 <img src="/logos/Mistral_AI_logo_(2025–).svg.png" alt="Mistral" className="w-full h-full object-contain" />
               </div>
-              <span className="text-sm font-medium text-dark-500 group-hover:text-dark-900 transition-colors">Mistral</span>
+              <span className="text-lg font-semibold group-hover:text-dark-900 transition-colors" style={{ color: 'var(--gray-700)' }}>Mistral</span>
             </div>
-            <div className="group flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-cream-50 transition-all duration-300 cursor-pointer">
-              <div className="w-10 h-10 rounded-lg overflow-hidden group-hover:scale-110 transition-transform">
+            <div className="group flex items-center gap-4 px-5 py-3 rounded-xl hover:bg-cream-50 transition-all duration-300 cursor-pointer">
+              <div className="w-14 h-14 rounded-xl overflow-hidden group-hover:scale-110 transition-transform">
                 <img src="/logos/hf-logo.png" alt="Hugging Face" className="w-full h-full object-cover" />
               </div>
-              <span className="text-sm font-medium text-dark-500 group-hover:text-dark-900 transition-colors">Hugging Face</span>
+              <span className="text-lg font-semibold group-hover:text-dark-900 transition-colors" style={{ color: 'var(--gray-700)' }}>Hugging Face</span>
             </div>
           </div>
         </div>
@@ -659,23 +659,23 @@ export default function MLModelsPage() {
       {/* CTA Section */}
       <section className="py-24 relative overflow-hidden" style={{ background: 'var(--cream)' }}>
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-dark-900 mb-6">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style={{ color: 'var(--black)' }}>
             Ready to Deploy{' '}
-            <span className="text-primary-500">
+            <span className="text-gradient">
               ML Solutions
             </span>
             ?
           </h2>
-          <p className="text-xl text-dark-500 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl mb-10 max-w-2xl mx-auto" style={{ color: 'var(--gray-600)' }}>
             Our team delivers production-ready models tailored to your business challenges.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-primary">
+            <Link href="/contact" className="btn-primary text-lg px-8 py-4">
               Schedule Consultation
             </Link>
             <Link
               href="/case-studies"
-              className="btn-secondary"
+              className="btn-secondary text-lg px-8 py-4"
             >
               View Case Studies
             </Link>

@@ -140,8 +140,8 @@ export default function StaffAugmentation() {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1590959914819-b767b9fe4cfb?auto=format&fit=crop&w=1920&q=80)' }}
         />
-        {/* Light overlay */}
-        <div className="absolute inset-0 bg-cream-50/50" />
+        {/* Dark overlay for contrast */}
+        <div className="absolute inset-0 bg-black/60" />
 
         {/* Network pattern overlay */}
         <div className="absolute inset-0 opacity-30">
@@ -164,30 +164,27 @@ export default function StaffAugmentation() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark-900 mb-6 leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                 AI Staff{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-primary-500">
+                <span className="text-green-400" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                   Augmentation
                 </span>
               </h1>
 
-              <p className="text-xl md:text-2xl text-gray-800 mb-8 leading-relaxed">
+              <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
                 Scale your AI capabilities with pre-vetted specialists who integrate seamlessly into your existing teams
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-12">
                 <Link
                   href="/build-scale-ai"
-                  className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-400 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-primary-500/30 transition-all duration-300"
+                  className="btn-primary text-lg px-8 py-4"
                 >
                   Get Started
-                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
                 </Link>
                 <Link
                   href="/how-we-vet"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-gray-800 text-gray-800 font-semibold rounded-lg hover:bg-gray-800 hover:text-white transition-all duration-300"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-dark-900 transition-all duration-300"
                 >
                   Our Vetting Process
                 </Link>
@@ -196,16 +193,16 @@ export default function StaffAugmentation() {
               {/* Stats */}
               <div className="grid grid-cols-3 gap-8">
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold text-primary-600">80K+</div>
-                  <div className="text-dark-500 text-sm">AI Specialists</div>
+                  <div className="text-3xl md:text-4xl font-bold text-green-400">80K+</div>
+                  <div className="text-white/80 text-sm">AI Specialists</div>
                 </div>
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold text-primary-600">Top 1%</div>
-                  <div className="text-dark-500 text-sm">Vetted Talent</div>
+                  <div className="text-3xl md:text-4xl font-bold text-green-400">Top 1%</div>
+                  <div className="text-white/80 text-sm">Vetted Talent</div>
                 </div>
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold text-primary-600">3 weeks</div>
-                  <div className="text-dark-500 text-sm">Deployment</div>
+                  <div className="text-3xl md:text-4xl font-bold text-green-400">3 weeks</div>
+                  <div className="text-white/80 text-sm">Deployment</div>
                 </div>
               </div>
             </div>
@@ -246,10 +243,10 @@ export default function StaffAugmentation() {
       <section className="relative py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>
               AI Specialists Ready to Join Your Team
             </h2>
-            <p className="text-dark-500 max-w-2xl mx-auto">
+            <p className="text-xl max-w-3xl mx-auto" style={{ color: 'var(--gray-600)' }}>
               From machine learning engineers to MLOps specialists, find the exact expertise your project needs
             </p>
           </div>
@@ -267,7 +264,7 @@ export default function StaffAugmentation() {
                 >
                   {spec.icon}
                 </div>
-                <p className="font-medium text-sm group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>{spec.role}</p>
+                <p className="font-semibold text-base group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>{spec.role}</p>
               </div>
             ))}
           </div>
@@ -278,7 +275,7 @@ export default function StaffAugmentation() {
       <section className="section" style={{ background: 'var(--cream)' }}>
         <div className="container-lg">
           <div className="text-center mb-6">
-            <h2 className="h2 mb-6">Benefits of FSIT Staff Augmentation</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>Benefits of FSIT Staff Augmentation</h2>
           </div>
 
           {/* Flowing line animation with branches */}
@@ -333,10 +330,10 @@ export default function StaffAugmentation() {
                 >
                   {benefit.icon}
                 </div>
-                <h3 className="text-lg font-bold mb-3 text-center group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+                <h3 className="text-xl font-bold mb-3 text-center group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
                   {benefit.title}
                 </h3>
-                <p className="text-sm text-center" style={{ color: 'var(--gray-500)' }}>{benefit.description}</p>
+                <p className="text-base text-center" style={{ color: 'var(--gray-600)' }}>{benefit.description}</p>
 
                 {/* Hover glow */}
                 <div
@@ -353,10 +350,10 @@ export default function StaffAugmentation() {
       <section className="relative py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>
               Engagement Models
             </h2>
-            <p className="text-dark-500 max-w-2xl mx-auto">
+            <p className="text-xl max-w-3xl mx-auto" style={{ color: 'var(--gray-600)' }}>
               Choose the engagement model that best fits your project requirements and organizational needs
             </p>
           </div>
@@ -376,16 +373,16 @@ export default function StaffAugmentation() {
                   {model.icon}
                 </div>
 
-                <h3 className="text-xl font-bold mb-3 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+                <h3 className="text-2xl font-bold mb-3 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
                   {model.title}
                 </h3>
-                <p className="text-sm mb-6" style={{ color: 'var(--gray-500)' }}>{model.description}</p>
+                <p className="text-base mb-6" style={{ color: 'var(--gray-600)' }}>{model.description}</p>
 
                 <div className="space-y-2">
                   {model.features.map((feature, i) => (
                     <div key={i} className="flex items-center gap-3 py-2">
                       <div className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: 'var(--green)' }} />
-                      <span className="text-sm" style={{ color: 'var(--gray-700)' }}>{feature}</span>
+                      <span className="text-base" style={{ color: 'var(--gray-700)' }}>{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -405,7 +402,7 @@ export default function StaffAugmentation() {
       <section className="section" style={{ background: 'var(--cream)' }}>
         <div className="container-lg">
           <div className="text-center mb-6">
-            <h2 className="h2 mb-6">How Staff Augmentation Works</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>How Staff Augmentation Works</h2>
           </div>
 
           {/* Flowing line animation with branches */}
@@ -494,10 +491,10 @@ export default function StaffAugmentation() {
                 >
                   {item.icon}
                 </div>
-                <h3 className="text-lg font-bold mb-3 text-center group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+                <h3 className="text-xl font-bold mb-3 text-center group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
                   {item.title}
                 </h3>
-                <p className="text-sm text-center" style={{ color: 'var(--gray-500)' }}>{item.description}</p>
+                <p className="text-base text-center" style={{ color: 'var(--gray-600)' }}>{item.description}</p>
 
                 <div
                   className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
@@ -516,10 +513,10 @@ export default function StaffAugmentation() {
         </div>
 
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>
             Ready to scale your AI team?
           </h2>
-          <p className="text-xl text-dark-500 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto" style={{ color: 'var(--gray-600)' }}>
             Get access to pre-vetted AI specialists who can start contributing from day one
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

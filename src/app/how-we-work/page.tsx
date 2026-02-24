@@ -135,8 +135,8 @@ export default function HowWeWork() {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1682695796795-cc287af78a2b?auto=format&fit=crop&w=1920&q=80)' }}
         />
-        {/* Light overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/50 to-white/30" />
+        {/* Dark overlay for contrast */}
+        <div className="absolute inset-0 bg-black/60" />
 
         {/* Network pattern overlay */}
         <div className="absolute inset-0 opacity-30">
@@ -159,30 +159,30 @@ export default function HowWeWork() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark-900 mb-6 leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                 How We{' '}
-                <span className="text-primary-500">
+                <span className="text-green-400" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                   Work
                 </span>
               </h1>
 
-              <p className="text-xl md:text-2xl text-dark-600 mb-8 leading-relaxed">
+              <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
                 AI execution, built for production, not experimentation
               </p>
 
               {/* Stats */}
               <div className="grid grid-cols-3 gap-8">
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold text-primary-500">98%</div>
-                  <div className="text-dark-500 text-sm">Success Rate</div>
+                  <div className="text-3xl md:text-4xl font-bold text-green-400">98%</div>
+                  <div className="text-white/80 text-sm">Success Rate</div>
                 </div>
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold text-primary-500">3 weeks</div>
-                  <div className="text-dark-500 text-sm">To Deploy</div>
+                  <div className="text-3xl md:text-4xl font-bold text-green-400">3 weeks</div>
+                  <div className="text-white/80 text-sm">To Deploy</div>
                 </div>
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold text-primary-500">5 Steps</div>
-                  <div className="text-dark-500 text-sm">Process</div>
+                  <div className="text-3xl md:text-4xl font-bold text-green-400">5 Steps</div>
+                  <div className="text-white/80 text-sm">Process</div>
                 </div>
               </div>
             </div>
@@ -220,7 +220,7 @@ export default function HowWeWork() {
       <section className="section" style={{ background: 'var(--white)' }}>
         <div className="container-lg">
           <div className="text-center mb-12">
-            <h2 className="h2">Our 5-Step Process</h2>
+            <h2 className="text-4xl md:text-5xl font-bold" style={{ color: 'var(--black)' }}>Our 5-Step Process</h2>
           </div>
 
           <div className="mb-4">
@@ -316,8 +316,8 @@ export default function HowWeWork() {
         <div className="container-lg">
           {/* Centered text */}
           <div className="text-center mb-12">
-            <h2 className="h2 mb-4">Watch Our Process in Action</h2>
-            <p className="text-body max-w-2xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>Watch Our Process in Action</h2>
+            <p className="text-xl max-w-3xl mx-auto" style={{ color: 'var(--gray-600)' }}>
               See how FSIT takes organizations from AI strategy to production-ready systems. This step-by-step walkthrough shows our proven methodology in action.
             </p>
           </div>
@@ -370,8 +370,8 @@ export default function HowWeWork() {
       <section className="section" style={{ background: 'var(--cream)' }}>
         <div className="container-lg">
           <div className="text-center mb-6">
-            <h2 className="h2 mb-6">FSIT Delivers</h2>
-            <p className="text-body max-w-2xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>FSIT Delivers</h2>
+            <p className="text-xl max-w-3xl mx-auto" style={{ color: 'var(--gray-600)' }}>
               AI-native teams that work as an extension of your organization
             </p>
           </div>
@@ -429,7 +429,7 @@ export default function HowWeWork() {
       <section className="py-16" style={{ background: 'var(--white)' }}>
         <div className="container-lg">
           <div className="text-center mb-4">
-            <h2 className="h2">Enterprise-ready by design</h2>
+            <h2 className="text-4xl md:text-5xl font-bold" style={{ color: 'var(--black)' }}>Enterprise-ready by design</h2>
           </div>
 
           <BranchingFromTitle items={enterpriseFeatures.map(f => ({ title: f.title, desc: f.desc }))} />
@@ -440,10 +440,10 @@ export default function HowWeWork() {
       <section className="section" style={{ background: 'var(--cream)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="h2 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>
               From Strategy to Execution
             </h2>
-            <p className="text-body mx-auto" style={{ maxWidth: '42rem' }}>
+            <p className="text-xl mx-auto" style={{ maxWidth: '42rem', color: 'var(--gray-600)' }}>
               A seamless flow from defining outcomes to scaling AI systems
             </p>
           </div>
@@ -529,10 +529,10 @@ export default function HowWeWork() {
       {/* CTA */}
       <section className="relative py-24 bg-white">
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="h2 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>
             Build AI systems that actually run your business
           </h2>
-          <p className="text-body mx-auto mb-8" style={{ maxWidth: '42rem' }}>
+          <p className="text-xl md:text-2xl mx-auto mb-8" style={{ maxWidth: '42rem', color: 'var(--gray-600)' }}>
             Talk to FSIT&apos;s delivery team
           </p>
           <Link href="/build-scale-ai" className="btn-primary">

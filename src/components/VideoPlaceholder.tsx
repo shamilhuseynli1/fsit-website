@@ -40,7 +40,7 @@ export default function VideoPlaceholder({
         </div>
       ) : (
         <div
-          className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 flex flex-col items-center justify-center cursor-pointer relative"
+          className={`${className.includes('h-full') ? 'h-full min-h-[300px]' : 'aspect-video'} bg-gradient-to-br from-gray-800 to-gray-900 flex flex-col items-center justify-center cursor-pointer relative`}
           onClick={handlePlay}
           style={{
             backgroundImage: thumbnailUrl ? `url(${thumbnailUrl})` : undefined,

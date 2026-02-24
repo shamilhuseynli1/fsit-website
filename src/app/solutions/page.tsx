@@ -166,8 +166,8 @@ export default function Solutions() {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1590959914819-b767b9fe4cfb?auto=format&fit=crop&w=1920&q=80)' }}
         />
-        {/* Cream overlay for better text visibility */}
-        <div className="absolute inset-0" style={{ background: 'rgba(245, 243, 240, 0.75)' }} />
+        {/* Dark overlay for better text visibility */}
+        <div className="absolute inset-0 bg-black/50" />
 
         <AnimatedBackground />
 
@@ -175,22 +175,22 @@ export default function Solutions() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
 
-              <h1 className="h1 mb-8">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 text-white">
                 AI Systems &{' '}
                 <span style={{ color: 'var(--green)' }}>
                   Solutions
                 </span>
               </h1>
 
-              <p className="text-large mb-10">
+              <p className="text-2xl md:text-3xl mb-10 text-white font-medium">
                 From general-purpose LLMs to industry-specific AI models — we build, deploy, and operate production-grade AI systems tailored to your vertical
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-16">
-                <Link href="/build-scale-ai" className="btn-primary">
+                <Link href="/build-scale-ai" className="btn-primary text-lg px-8 py-4">
                   Discuss your AI needs
                 </Link>
-                <Link href="/ml-models" className="btn-secondary">
+                <Link href="/ml-models" className="px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 bg-white/20 backdrop-blur-sm border-2 border-white text-white hover:bg-white hover:text-black">
                   Explore ML Models
                 </Link>
               </div>
@@ -198,16 +198,16 @@ export default function Solutions() {
               {/* Stats */}
               <div className="grid grid-cols-3 gap-8">
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold tracking-tight" style={{ color: 'var(--green)' }}>50+</div>
-                  <div className="text-sm mt-1" style={{ color: 'var(--gray-500)' }}>AI Systems Built</div>
+                  <div className="text-4xl md:text-5xl font-bold tracking-tight" style={{ color: 'var(--green)' }}>50+</div>
+                  <div className="text-base mt-1 text-white/80">AI Systems Built</div>
                 </div>
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold tracking-tight" style={{ color: 'var(--green)' }}>98%</div>
-                  <div className="text-sm mt-1" style={{ color: 'var(--gray-500)' }}>Success Rate</div>
+                  <div className="text-4xl md:text-5xl font-bold tracking-tight" style={{ color: 'var(--green)' }}>98%</div>
+                  <div className="text-base mt-1 text-white/80">Success Rate</div>
                 </div>
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold tracking-tight" style={{ color: 'var(--green)' }}>24/7</div>
-                  <div className="text-sm mt-1" style={{ color: 'var(--gray-500)' }}>Production Ready</div>
+                  <div className="text-4xl md:text-5xl font-bold tracking-tight" style={{ color: 'var(--green)' }}>24/7</div>
+                  <div className="text-base mt-1 text-white/80">Production Ready</div>
                 </div>
               </div>
             </div>
@@ -223,8 +223,8 @@ export default function Solutions() {
       <section className="section" style={{ background: 'var(--white)' }}>
         <div className="container-lg">
           <div className="text-center mb-6">
-            <h2 className="h2 mb-6">Core AI Services</h2>
-            <p className="text-body max-w-2xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>Core AI Services</h2>
+            <p className="text-xl max-w-2xl mx-auto" style={{ color: 'var(--gray-600)' }}>
               End-to-end AI delivery from strategy to production operations
             </p>
           </div>
@@ -294,11 +294,11 @@ export default function Solutions() {
           {/* Items grid with dividing lines - 5 columns for 5 services */}
           <div className="grid grid-cols-2 lg:grid-cols-5 gap-px bg-[#00A651]/20 rounded-2xl overflow-hidden -mt-4">
             {coreServices.map((item, index) => (
-              <div key={index} className="group text-center p-6 bg-white hover:bg-[#F5F3F0] transition-all duration-300">
-                <h3 className="text-lg font-bold mb-3 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+              <div key={index} className="group text-center p-8 bg-white hover:bg-[#F5F3F0] transition-all duration-300">
+                <h3 className="text-xl font-bold mb-4 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
                   {item.title}
                 </h3>
-                <p className="text-base" style={{ color: 'var(--gray-600)' }}>
+                <p className="text-lg" style={{ color: 'var(--gray-600)' }}>
                   {item.description.split('.')[0]}
                 </p>
               </div>
@@ -317,8 +317,8 @@ export default function Solutions() {
       <section className="section" style={{ background: 'var(--cream)' }}>
         <div className="container-lg">
           <div className="text-center mb-16">
-            <h2 className="h2 mb-6">General-Purpose AI Models</h2>
-            <p className="text-body max-w-2xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>General-Purpose AI Models</h2>
+            <p className="text-xl max-w-3xl mx-auto" style={{ color: 'var(--gray-600)' }}>
               Leverage state-of-the-art foundation models for broad enterprise applications
             </p>
           </div>
@@ -328,60 +328,60 @@ export default function Solutions() {
             {generalModels.map((model, index) => (
               <div
                 key={index}
-                className="group relative p-8 bg-white hover:bg-[#F5F3F0] transition-all duration-300"
+                className="group relative p-10 bg-white hover:bg-[#F5F3F0] transition-all duration-300"
               >
                 {/* Icon */}
                 <div
-                  className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110"
+                  className="w-16 h-16 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110"
                   style={{ background: 'rgba(0, 166, 81, 0.1)' }}
                 >
                   {index === 0 && (
-                    <svg className="w-7 h-7" fill="none" stroke="#00A651" strokeWidth="1.5" viewBox="0 0 24 24">
+                    <svg className="w-8 h-8" fill="none" stroke="#00A651" strokeWidth="1.5" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
                     </svg>
                   )}
                   {index === 1 && (
-                    <svg className="w-7 h-7" fill="none" stroke="#00A651" strokeWidth="1.5" viewBox="0 0 24 24">
+                    <svg className="w-8 h-8" fill="none" stroke="#00A651" strokeWidth="1.5" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                     </svg>
                   )}
                   {index === 2 && (
-                    <svg className="w-7 h-7" fill="none" stroke="#00A651" strokeWidth="1.5" viewBox="0 0 24 24">
+                    <svg className="w-8 h-8" fill="none" stroke="#00A651" strokeWidth="1.5" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
                     </svg>
                   )}
                 </div>
 
                 {/* Title & Description */}
-                <h3 className="text-xl font-bold mb-3 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+                <h3 className="text-2xl font-bold mb-4 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
                   {model.name}
                 </h3>
-                <p className="text-sm mb-6" style={{ color: 'var(--gray-500)' }}>
+                <p className="text-lg mb-6" style={{ color: 'var(--gray-500)' }}>
                   {model.description}
                 </p>
 
                 {/* Use Cases */}
                 <div className="mb-6">
-                  <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: 'var(--green)' }}>
+                  <p className="text-sm font-semibold uppercase tracking-wider mb-4" style={{ color: 'var(--green)' }}>
                     Use Cases
                   </p>
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     {model.useCases.map((uc, i) => (
-                      <div key={i} className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full" style={{ background: 'var(--green)' }} />
-                        <span className="text-sm" style={{ color: 'var(--gray-700)' }}>{uc}</span>
+                      <div key={i} className="flex items-center gap-3">
+                        <div className="w-2 h-2 rounded-full" style={{ background: 'var(--green)' }} />
+                        <span className="text-base" style={{ color: 'var(--gray-700)' }}>{uc}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
                 {/* Platforms */}
-                <div className="pt-4" style={{ borderTop: '1px solid var(--gray-100)' }}>
+                <div className="pt-5" style={{ borderTop: '1px solid var(--gray-100)' }}>
                   <div className="flex flex-wrap gap-2">
                     {model.platforms.map((platform, i) => (
                       <span
                         key={i}
-                        className="px-3 py-1 text-xs font-medium rounded-full"
+                        className="px-4 py-2 text-sm font-medium rounded-full"
                         style={{
                           background: 'var(--gray-100)',
                           color: 'var(--gray-600)'
@@ -403,8 +403,8 @@ export default function Solutions() {
       <section className="section" style={{ background: 'var(--white)' }}>
         <div className="container-lg">
           <div className="text-center mb-16">
-            <h2 className="h2 mb-6">Targeted Models for Verticals</h2>
-            <p className="text-body max-w-2xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>Targeted Models for Verticals</h2>
+            <p className="text-xl max-w-3xl mx-auto" style={{ color: 'var(--gray-600)' }}>
               Fine-tuned and purpose-built AI models designed for specific industry requirements
             </p>
           </div>
@@ -413,19 +413,19 @@ export default function Solutions() {
             {targetedModels.map((vertical, index) => {
               const icons = [
                 // Government
-                <svg key="gov" className="w-5 h-5" fill="none" stroke="#00A651" strokeWidth="1.5" viewBox="0 0 24 24">
+                <svg key="gov" className="w-6 h-6" fill="none" stroke="#00A651" strokeWidth="1.5" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
                 </svg>,
                 // Banking
-                <svg key="bank" className="w-5 h-5" fill="none" stroke="#00A651" strokeWidth="1.5" viewBox="0 0 24 24">
+                <svg key="bank" className="w-6 h-6" fill="none" stroke="#00A651" strokeWidth="1.5" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
                 </svg>,
                 // Healthcare
-                <svg key="health" className="w-5 h-5" fill="none" stroke="#00A651" strokeWidth="1.5" viewBox="0 0 24 24">
+                <svg key="health" className="w-6 h-6" fill="none" stroke="#00A651" strokeWidth="1.5" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                 </svg>,
                 // Manufacturing
-                <svg key="mfg" className="w-5 h-5" fill="none" stroke="#00A651" strokeWidth="1.5" viewBox="0 0 24 24">
+                <svg key="mfg" className="w-6 h-6" fill="none" stroke="#00A651" strokeWidth="1.5" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" />
                 </svg>,
               ];
@@ -440,14 +440,14 @@ export default function Solutions() {
                   }}
                 >
                   {/* Header with icon */}
-                  <div className="flex items-center gap-2 mb-3">
+                  <div className="flex items-start gap-2 mb-3 min-h-[56px]">
                     <div
-                      className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
+                      className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
                       style={{ background: 'rgba(0, 166, 81, 0.1)' }}
                     >
                       {icons[index]}
                     </div>
-                    <h3 className="text-sm font-bold group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+                    <h3 className="text-base font-bold group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
                       {vertical.vertical}
                     </h3>
                   </div>
@@ -460,8 +460,8 @@ export default function Solutions() {
                         className="p-2 rounded-lg"
                         style={{ background: 'rgba(255,255,255,0.5)' }}
                       >
-                        <p className="text-xs font-semibold mb-0.5" style={{ color: 'var(--green)' }}>{model.name}</p>
-                        <p className="text-[10px] line-clamp-1" style={{ color: 'var(--gray-600)' }}>{model.desc}</p>
+                        <p className="text-base font-semibold mb-1" style={{ color: 'var(--green)' }}>{model.name}</p>
+                        <p className="text-sm line-clamp-2" style={{ color: 'var(--gray-600)' }}>{model.desc}</p>
                       </div>
                     ))}
                   </div>
@@ -472,7 +472,7 @@ export default function Solutions() {
                       {vertical.outcomes.slice(0, 2).map((outcome, i) => (
                         <span
                           key={i}
-                          className="px-2 py-0.5 text-[10px] font-medium rounded-full"
+                          className="px-3 py-1 text-xs font-medium rounded-full"
                           style={{
                             background: 'rgba(0, 166, 81, 0.1)',
                             color: 'var(--green)'
@@ -489,7 +489,7 @@ export default function Solutions() {
           </div>
 
           <div className="text-center mt-16">
-            <p className="text-small mb-6">Need AI solutions for a different vertical?</p>
+            <p className="text-lg mb-6" style={{ color: 'var(--gray-600)' }}>Need AI solutions for a different vertical?</p>
             <Link href="/build-scale-ai" className="btn-primary">
               Discuss your requirements
             </Link>
@@ -649,11 +649,15 @@ export default function Solutions() {
               </div>
             </div>
             <div className="relative">
-              <p className="font-semibold mb-6 text-center" style={{ color: 'var(--black)' }}>AI Components Deployed</p>
+              <div className="flex items-start">
+                {/* Spacer for SVG width */}
+                <div className="w-44 flex-shrink-0"></div>
+                <p className="flex-1 font-semibold mb-6 text-center text-lg" style={{ color: 'var(--black)' }}>AI Components Deployed</p>
+              </div>
 
               <div className="flex items-start">
                 {/* SVG with curved branches - height matches items */}
-                <svg className="w-44 flex-shrink-0 h-[280px]" viewBox="0 0 180 280" preserveAspectRatio="none" style={{ marginRight: '-16px' }}>
+                <svg className="w-44 flex-shrink-0 h-[280px]" viewBox="0 0 180 280" preserveAspectRatio="none" style={{ marginRight: '-8px' }}>
                   {/* Center node - positioned at middle (item 3) */}
                   <circle cx="12" cy="140" r="6" fill="#00A651" />
                   <circle cx="12" cy="140" r="10" fill="none" stroke="#00A651" strokeWidth="1.5" opacity="0.3" />
@@ -685,10 +689,14 @@ export default function Solutions() {
                   ].map((item, i) => (
                     <div
                       key={i}
-                      className="py-3 px-4 rounded-lg transition-all duration-200 hover:bg-white hover:shadow-md"
-                      style={{ background: 'rgba(255,255,255,0.5)' }}
+                      className="py-4 px-5 rounded-xl transition-all duration-200 hover:shadow-lg"
+                      style={{
+                        background: 'white',
+                        border: '2px solid var(--green)',
+                        boxShadow: '0 2px 8px rgba(0,166,81,0.1)'
+                      }}
                     >
-                      <span className="text-body font-medium">{item}</span>
+                      <span className="text-lg font-semibold" style={{ color: 'var(--black)' }}>{item}</span>
                     </div>
                   ))}
                 </div>

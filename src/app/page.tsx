@@ -166,10 +166,16 @@ export default function Home() {
     : clients.filter(c => c.category === activeFilter);
 
   const experts = [
+    // Saudi Experts
     { name: 'Mohammed Al-Anazi', nameAr: 'محمد العنزي', role: 'AI Strategy Lead', location: 'Riyadh', specialty: 'NLP & Machine Learning', image: '/experts/amir.jpg', isSaudi: true },
     { name: 'Sarah Al-Ghamdi', nameAr: 'سارة الغامدي', role: 'Data Science Manager', location: 'Jeddah', specialty: 'Predictive Analytics', image: '/experts/sarah.jpg', isSaudi: true },
     { name: 'Khalid Al-Zahrani', nameAr: 'خالد الزهراني', role: 'ML Solutions Architect', location: 'Riyadh', specialty: 'Python, PyTorch', image: '/experts/james.jpg', isSaudi: true },
     { name: 'Nora Al-Shehri', nameAr: 'نورة الشهري', role: 'AI Product Lead', location: 'KAUST', specialty: 'Computer Vision', image: '/experts/leila.jpg', isSaudi: true },
+    // International Experts
+    { name: 'Daniel Kim', nameAr: '', role: 'Principal AI Research Scientist', location: 'Singapore', specialty: 'Deep Learning, NLP', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80', isSaudi: false },
+    { name: 'Sofia Petrović', nameAr: '', role: 'Senior AI UX Designer', location: 'Berlin', specialty: 'AI/ML Design, UX', image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=400&q=80', isSaudi: false },
+    { name: 'Hannah Nguyen', nameAr: '', role: 'AI Infrastructure & MLOps Director', location: 'London', specialty: 'MLOps, Cloud', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80', isSaudi: false },
+    { name: 'Mateo Rossi', nameAr: '', role: 'Computer Vision Lead', location: 'Milan', specialty: 'Computer Vision, PyTorch', image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80', isSaudi: false },
   ];
 
   const whyFsit = [
@@ -214,20 +220,9 @@ export default function Home() {
               <Link href="/contact" className="btn-primary text-lg px-8 py-4">
                 Talk to our team
               </Link>
-              <Link href="/build-scale-ai" className="px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 border-2 border-white text-white hover:bg-white hover:text-black">
+              <Link href="/build-scale-ai" className="px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 bg-white/20 backdrop-blur-sm border-2 border-white text-white hover:bg-white hover:text-black">
                 Start with a pilot
               </Link>
-              <a
-                href="#video-section"
-                className="flex items-center gap-3 px-4 py-3 rounded-lg text-lg font-medium transition-all duration-300 text-white hover:bg-white/10"
-              >
-                <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ background: 'var(--green)' }}>
-                  <svg className="w-5 h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-                Watch Video
-              </a>
             </div>
           </div>
         </div>
@@ -236,14 +231,18 @@ export default function Home() {
       {/* Video Section */}
       <section id="video-section" className="py-16" style={{ background: 'var(--white)' }}>
         <div className="container-lg">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="h2 mb-6">What is FSIT?</h2>
-              <p className="text-body mb-6">
-                Discover how FSIT transforms organizations with AI-native teams, production-ready systems, and a unique approach that bridges the gap between AI potential and real-world results.
-              </p>
-              {/* Ultra-modern animated feature blocks */}
-              <div className="grid grid-cols-2 gap-4 mb-8">
+          {/* Title and description at top */}
+          <div className="max-w-2xl mb-10">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>What is FSIT?</h2>
+            <p className="text-xl md:text-2xl" style={{ color: 'var(--gray-600)' }}>
+              Discover how FSIT transforms organizations with AI-native teams, production-ready systems, and a unique approach that bridges the gap between AI potential and real-world results.
+            </p>
+          </div>
+
+          {/* Blocks and Video side by side */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+            {/* Left side: blocks */}
+            <div className="grid grid-cols-2 gap-5">
                 {[
                   { text: 'AI-native delivery', icon: 'ai' },
                   { text: '80K+ experts', icon: 'users' },
@@ -252,7 +251,7 @@ export default function Home() {
                 ].map((item, i) => (
                   <div
                     key={i}
-                    className="group relative p-5 rounded-3xl cursor-pointer overflow-hidden transition-all duration-700 hover:-translate-y-2"
+                    className="group relative p-8 rounded-3xl cursor-pointer overflow-hidden transition-all duration-700 hover:-translate-y-2 flex flex-col justify-center"
                     style={{
                       background: 'linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%)',
                       boxShadow: '0 10px 40px -10px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.6)'
@@ -277,7 +276,7 @@ export default function Home() {
                     {/* Animated icon */}
                     <div className="relative z-10 mb-3">
                       <div
-                        className="w-12 h-12 rounded-2xl flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-3"
+                        className="w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-3"
                         style={{
                           background: 'linear-gradient(135deg, var(--green) 0%, #10b981 100%)',
                           boxShadow: '0 8px 20px -8px rgba(0,166,81,0.5)'
@@ -308,7 +307,7 @@ export default function Home() {
 
                     {/* Text with animated underline */}
                     <div className="relative z-10">
-                      <p className="text-base font-bold transition-colors duration-300" style={{ color: 'var(--gray-900)' }}>
+                      <p className="text-lg font-bold transition-colors duration-300" style={{ color: 'var(--gray-900)' }}>
                         {item.text}
                       </p>
                       <div
@@ -318,19 +317,24 @@ export default function Home() {
                     </div>
                   </div>
                 ))}
-              </div>
-              <Link href="/about" className="btn-secondary">
-                Learn more about us
-              </Link>
             </div>
-            <div>
+            {/* Right side: Video */}
+            <div className="lg:-mr-16 xl:-mr-24 h-full">
               <VideoPlaceholder
                 title="What is FSIT?"
                 description="60-second explainer"
                 duration="1:00"
                 thumbnailUrl="/hero-riyadh-day.jpg"
+                className="shadow-xl h-full"
               />
             </div>
+          </div>
+
+          {/* Button below */}
+          <div className="mt-10">
+            <Link href="/about" className="btn-secondary text-lg">
+              Learn more about us
+            </Link>
           </div>
         </div>
       </section>
@@ -338,7 +342,7 @@ export default function Home() {
       {/* Client Logos */}
       <section className="py-12 border-y" style={{ background: '#F5F5F3', borderColor: 'var(--gray-100)' }}>
         <div className="container-lg mb-6">
-          <p className="label-muted text-center mb-6">Trusted by leading organizations</p>
+          <p className="text-xl font-semibold text-center mb-6" style={{ color: 'var(--gray-600)' }}>Trusted by leading organizations</p>
           {/* Filter Tabs */}
           <div className="flex flex-wrap justify-center gap-2 mb-8">
             {filterTabs.map((tab) => (
@@ -408,18 +412,18 @@ export default function Home() {
         <div className="container-lg mt-8">
           <div className="flex flex-wrap justify-center items-center gap-6 md:gap-12 text-center">
             <div className="flex items-center gap-2">
-              <span className="text-2xl md:text-3xl font-bold" style={{ color: 'var(--green)' }}>50+</span>
-              <span className="text-sm" style={{ color: 'var(--gray-500)' }}>Registered Clients</span>
+              <span className="text-3xl md:text-4xl font-bold" style={{ color: 'var(--green)' }}>50+</span>
+              <span className="text-base" style={{ color: 'var(--gray-500)' }}>Registered Clients</span>
             </div>
             <div className="w-px h-8 bg-gray-300 hidden md:block" />
             <div className="flex items-center gap-2">
-              <span className="text-2xl md:text-3xl font-bold" style={{ color: 'var(--green)' }}>10+</span>
-              <span className="text-sm" style={{ color: 'var(--gray-500)' }}>Government Entities</span>
+              <span className="text-3xl md:text-4xl font-bold" style={{ color: 'var(--green)' }}>10+</span>
+              <span className="text-base" style={{ color: 'var(--gray-500)' }}>Government Entities</span>
             </div>
             <div className="w-px h-8 bg-gray-300 hidden md:block" />
             <div className="flex items-center gap-2">
-              <span className="text-2xl md:text-3xl font-bold" style={{ color: 'var(--green)' }}>SAR Billions</span>
-              <span className="text-sm" style={{ color: 'var(--gray-500)' }}>in Projects Supported</span>
+              <span className="text-3xl md:text-4xl font-bold" style={{ color: 'var(--green)' }}>SAR Billions</span>
+              <span className="text-base" style={{ color: 'var(--gray-500)' }}>in Projects Supported</span>
             </div>
           </div>
         </div>
@@ -431,7 +435,7 @@ export default function Home() {
             {/* GOSI Spotlight */}
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-16 h-16 rounded-lg overflow-hidden bg-gray-50 flex items-center justify-center p-2">
+                <div className="w-24 h-24 rounded-lg overflow-hidden bg-gray-50 flex items-center justify-center p-2">
                   <img
                     src="/clients/Public-Pension-Agency-Logo-Wide.png"
                     alt="GOSI"
@@ -457,7 +461,7 @@ export default function Home() {
             {/* PIF Entities Spotlight */}
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-16 h-16 rounded-lg overflow-hidden bg-gray-50 flex items-center justify-center p-2">
+                <div className="w-24 h-24 rounded-lg overflow-hidden bg-gray-50 flex items-center justify-center p-2">
                   <img
                     src="/clients/Vision-2023-Logo.png"
                     alt="PIF Vision 2030"
@@ -574,16 +578,16 @@ export default function Home() {
                 ]
               }
             ].map((category, index) => (
-              <div key={index} className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl p-4 hover:border-[#00A651] hover:shadow-lg transition-all duration-300">
-                <h3 className="text-sm font-semibold text-dark-900 mb-3 text-center">{category.title}</h3>
-                <div className="flex justify-center gap-3">
+              <div key={index} className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl p-5 hover:border-[#00A651] hover:shadow-lg transition-all duration-300 flex flex-col items-center">
+                <h3 className="text-base font-semibold text-dark-900 mb-4 text-center whitespace-nowrap">{category.title}</h3>
+                <div className="flex justify-center gap-4">
                   {category.logos.map((logo, i) => (
-                    <div key={i} className="w-10 h-10 rounded-lg bg-white flex items-center justify-center shadow-sm p-1.5" title={logo.name}>
+                    <div key={i} className="w-12 h-12 rounded-lg bg-white flex items-center justify-center shadow-sm p-2" title={logo.name}>
                       <Image
                         src={logo.src}
                         alt={logo.name}
-                        width={28}
-                        height={28}
+                        width={36}
+                        height={36}
                         className="object-contain w-full h-full"
                       />
                     </div>
@@ -622,8 +626,8 @@ export default function Home() {
           {/* AI Concepts Simplified Video */}
           <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center max-w-5xl mx-auto">
             <div>
-              <h3 className="text-2xl font-bold mb-4" style={{ color: 'var(--black)' }}>What is Machine Learning?</h3>
-              <p className="text-base mb-6" style={{ color: 'var(--gray-600)' }}>
+              <h3 className="text-3xl font-bold mb-4" style={{ color: 'var(--black)' }}>What is Machine Learning?</h3>
+              <p className="text-xl mb-6" style={{ color: 'var(--gray-600)' }}>
                 New to AI? Watch this 30-second explainer to understand the basics of machine learning and how it can transform your business operations.
               </p>
               {/* Modern feature cards */}
@@ -661,7 +665,7 @@ export default function Home() {
                         </svg>
                       )}
                     </div>
-                    <p className="text-sm font-semibold" style={{ color: 'var(--gray-800)' }}>{item.text}</p>
+                    <p className="text-base font-semibold" style={{ color: 'var(--gray-800)' }}>{item.text}</p>
                   </div>
                 ))}
               </div>
@@ -752,7 +756,7 @@ export default function Home() {
                   />
                 </div>
                 <h3 className="font-semibold mb-0.5" style={{ color: 'var(--black)' }}>{expert.name}</h3>
-                <p className="text-sm mb-1 font-medium" style={{ color: 'var(--green)', direction: 'rtl' }}>{expert.nameAr}</p>
+                {expert.nameAr && <p className="text-sm mb-1 font-medium" style={{ color: 'var(--green)', direction: 'rtl' }}>{expert.nameAr}</p>}
                 <p className="text-sm font-medium" style={{ color: 'var(--gray-600)' }}>{expert.role}</p>
                 <p className="text-xs mt-1" style={{ color: 'var(--gray-500)' }}>{expert.location}</p>
                 {/* Specialty Tags */}
@@ -778,38 +782,37 @@ export default function Home() {
       {/* Case Study */}
       <section className="section" style={{ background: 'var(--cream)' }}>
         <div className="container-lg">
-          <div className="grid-2 items-center">
-            <div>
-              <h2 className="h2 mb-6">AI Operations Copilot</h2>
-              <p className="text-body mb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+            <div className="flex flex-col justify-between">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>AI Operations Copilot</h2>
+              <p className="text-xl mb-8" style={{ color: 'var(--gray-600)' }}>
                 Secure, Vision 2030–aligned AI that automates workflows, unlocks institutional knowledge, and accelerates decision-making for a Saudi Government Entity.
               </p>
 
               <div className="flex items-baseline gap-4 mb-8">
-                <span className="stat-number">-45%</span>
-                <span className="text-body">manual processing time</span>
+                <span className="text-5xl md:text-6xl font-bold" style={{ color: 'var(--green)' }}>-45%</span>
+                <span className="text-xl" style={{ color: 'var(--gray-600)' }}>manual processing time</span>
               </div>
 
-              <div className="flex flex-wrap gap-2 mb-8">
+              <div className="flex flex-wrap gap-3 mb-8">
                 {['Custom LLM', 'Arabic NLP', 'RAG System', 'On-premise'].map((tag, i) => (
-                  <span key={i} className="tag">{tag}</span>
+                  <span key={i} className="px-4 py-2 rounded-full text-base font-medium border" style={{ borderColor: 'var(--green)', color: 'var(--green)' }}>{tag}</span>
                 ))}
               </div>
 
-              <Link href="/case-studies" className="btn-text">
+              <Link href="/case-studies" className="btn-text text-lg">
                 View all case studies
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
             </div>
 
-            <div>
-              <VideoPlaceholder
-                title="GOSI Case Study"
-                description="See how we transformed claims processing"
-                duration="2:00"
-                thumbnailUrl="https://images.unsplash.com/photo-1733757361453-5f493624a734?auto=format&fit=crop&w=800&q=80"
+            <div className="relative rounded-2xl overflow-hidden shadow-xl lg:-mr-20 xl:-mr-32">
+              <img
+                src="https://images.unsplash.com/photo-1733757361453-5f493624a734?auto=format&fit=crop&w=1200&q=80"
+                alt="GOSI Case Study"
+                className="w-full aspect-[4/3] object-cover"
               />
             </div>
           </div>

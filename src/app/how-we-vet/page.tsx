@@ -86,8 +86,8 @@ export default function HowWeVet() {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1682695796795-cc287af78a2b?auto=format&fit=crop&w=1920&q=80)' }}
         />
-        {/* Light overlay */}
-        <div className="absolute inset-0 bg-cream-50/50" />
+        {/* Dark overlay for contrast */}
+        <div className="absolute inset-0 bg-black/60" />
 
         {/* Network pattern overlay */}
         <div className="absolute inset-0 opacity-30">
@@ -110,30 +110,30 @@ export default function HowWeVet() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark-900 mb-6 leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                 How We Vet{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-primary-500">
+                <span className="text-green-400" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                   Elite AI Talent
                 </span>
               </h1>
 
-              <p className="text-xl md:text-2xl text-dark-500 mb-8 leading-relaxed">
+              <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
                 At FSIT, our vetting process ensures only top-tier AI professionals become part of our augmented intelligence network
               </p>
 
               {/* Stats */}
               <div className="grid grid-cols-3 gap-8">
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold text-primary-600">99%</div>
-                  <div className="text-dark-500 text-sm">Filtered Out</div>
+                  <div className="text-3xl md:text-4xl font-bold text-green-400">99%</div>
+                  <div className="text-white/80 text-sm">Filtered Out</div>
                 </div>
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold text-primary-600">Top 1%</div>
-                  <div className="text-dark-500 text-sm">Selected</div>
+                  <div className="text-3xl md:text-4xl font-bold text-green-400">Top 1%</div>
+                  <div className="text-white/80 text-sm">Selected</div>
                 </div>
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold text-primary-600">5 Steps</div>
-                  <div className="text-dark-500 text-sm">Vetting</div>
+                  <div className="text-3xl md:text-4xl font-bold text-green-400">5 Steps</div>
+                  <div className="text-white/80 text-sm">Vetting</div>
                 </div>
               </div>
             </div>
@@ -205,7 +205,7 @@ export default function HowWeVet() {
       <section className="relative py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-900">
+            <h2 className="text-4xl md:text-5xl font-bold" style={{ color: 'var(--black)' }}>
               5-Step Vetting Framework
             </h2>
           </div>
@@ -331,7 +331,7 @@ export default function HowWeVet() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-900">
+            <h2 className="text-4xl md:text-5xl font-bold" style={{ color: 'var(--black)' }}>
               Why Our Vetting Matters
             </h2>
           </div>
@@ -365,7 +365,7 @@ export default function HowWeVet() {
       <section className="section bg-white">
         <div className="container-lg">
           <div className="text-center mb-6">
-            <h2 className="h2">FSIT Talent vs Generic Outsourcing</h2>
+            <h2 className="text-4xl md:text-5xl font-bold" style={{ color: 'var(--black)' }}>FSIT Talent vs Generic Outsourcing</h2>
           </div>
 
           {/* Simple horizontal line animation */}
@@ -457,10 +457,10 @@ export default function HowWeVet() {
         </div>
 
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>
             Ready to access elite AI talent?
           </h2>
-          <p className="text-xl text-dark-500 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto" style={{ color: 'var(--gray-600)' }}>
             Start your AI transformation with vetted experts
           </p>
           <Link

@@ -97,33 +97,34 @@ export default function BuildInnovate() {
     <>
       {/* Hero Section */}
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-white via-cream-50 to-neutral-50" />
         <div
-          className="absolute inset-0 opacity-50"
+          className="absolute inset-0"
           style={{
             backgroundImage: 'url(https://images.unsplash.com/photo-1738410775719-9f237adb266d?auto=format&fit=crop&w=1920&q=80)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
         />
+        {/* Dark overlay for contrast */}
+        <div className="absolute inset-0 bg-black/60" />
         <NetworkBackground nodeCount={60} maxDistance={120} />
 
         <div className="relative container-max py-20 md:py-28">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="label mb-4">Build & Innovate</p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark-900 mb-6 leading-[1.1]">
+              <p className="text-green-400 font-semibold text-sm tracking-wider uppercase mb-4">Build & Innovate</p>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[1.1]" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                 Build AI Systems
-                <span className="block text-gradient">That Actually Work</span>
+                <span className="block text-green-400" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>That Actually Work</span>
               </h1>
-              <p className="text-lg text-gray-600 mb-8 max-w-lg">
+              <p className="text-xl text-white mb-8 max-w-lg" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
                 Operationalize AI at scale, not just experiment with it. We embed AI into mission-critical systems with strong governance, security, and industry compliance.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link href="/contact" className="btn-primary">
+                <Link href="/contact" className="btn-primary text-lg px-8 py-4">
                   Start your AI project
                 </Link>
-                <Link href="/solutions" className="btn-secondary">
+                <Link href="/solutions" className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-dark-900 transition-all text-lg">
                   Explore solutions
                 </Link>
               </div>
@@ -152,10 +153,10 @@ export default function BuildInnovate() {
       {/* Capabilities Section */}
       <section className="py-20 md:py-28 bg-white">
         <div className="container-max">
-          <div className="max-w-2xl mx-auto text-center mb-16">
+          <div className="max-w-3xl mx-auto text-center mb-16">
             <p className="label mb-3">What We Do</p>
-            <h2 className="h3 mb-4">AI Development Capabilities</h2>
-            <p className="text-body">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>AI Development Capabilities</h2>
+            <p className="text-xl" style={{ color: 'var(--gray-600)' }}>
               End-to-end AI development from concept to production-ready systems
             </p>
           </div>
@@ -186,10 +187,10 @@ export default function BuildInnovate() {
       {/* Process Section */}
       <section className="py-20 md:py-28 bg-subtle">
         <div className="container-max">
-          <div className="max-w-2xl mx-auto text-center mb-16">
+          <div className="max-w-3xl mx-auto text-center mb-16">
             <p className="label mb-3">Our Process</p>
-            <h2 className="h3 mb-4">How We Build</h2>
-            <p className="text-body">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>How We Build</h2>
+            <p className="text-xl" style={{ color: 'var(--gray-600)' }}>
               A proven methodology that delivers production-ready AI systems
             </p>
           </div>
@@ -208,10 +209,10 @@ export default function BuildInnovate() {
       {/* Use Cases Section */}
       <section className="py-20 md:py-28 bg-white">
         <div className="container-max">
-          <div className="max-w-2xl mx-auto text-center mb-16">
+          <div className="max-w-3xl mx-auto text-center mb-16">
             <p className="label mb-3">Real Results</p>
-            <h2 className="h3 mb-4">What We've Built</h2>
-            <p className="text-body">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>What We've Built</h2>
+            <p className="text-xl" style={{ color: 'var(--gray-600)' }}>
               Real AI solutions delivering measurable business outcomes
             </p>
           </div>
@@ -238,10 +239,10 @@ export default function BuildInnovate() {
       {/* Tech Stack Section */}
       <section className="py-20 md:py-28 bg-subtle">
         <div className="container-max">
-          <div className="max-w-2xl mx-auto text-center mb-16">
+          <div className="max-w-3xl mx-auto text-center mb-16">
             <p className="label mb-3">Technology</p>
-            <h2 className="h3 mb-4">Our Tech Stack</h2>
-            <p className="text-body">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>Our Tech Stack</h2>
+            <p className="text-xl" style={{ color: 'var(--gray-600)' }}>
               Modern AI infrastructure and frameworks for production-grade systems
             </p>
           </div>
@@ -267,10 +268,10 @@ export default function BuildInnovate() {
       {/* Why Us Section */}
       <section className="py-20 md:py-28 bg-white">
         <div className="container-max">
-          <div className="max-w-2xl mx-auto text-center mb-16">
+          <div className="max-w-3xl mx-auto text-center mb-16">
             <p className="label mb-3">Why FSIT</p>
-            <h2 className="h3 mb-4">Build With Experts</h2>
-            <p className="text-body">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>Build With Experts</h2>
+            <p className="text-xl" style={{ color: 'var(--gray-600)' }}>
               We're not a traditional consulting firm that hands over a report and leaves. We build alongside you.
             </p>
           </div>
@@ -293,11 +294,11 @@ export default function BuildInnovate() {
       <section className="py-20 md:py-28 bg-subtle">
         <div className="container-max">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="h2 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>
               Ready to build
               <span className="block text-gradient">AI that works?</span>
             </h2>
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="text-xl md:text-2xl mb-8" style={{ color: 'var(--gray-600)' }}>
               Let's discuss your challenges and design an AI solution that delivers real results
             </p>
             <div className="flex flex-wrap gap-4 justify-center">

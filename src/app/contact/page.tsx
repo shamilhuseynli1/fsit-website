@@ -107,21 +107,21 @@ export default function Contact() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[80vh] flex items-center bg-cream-50 overflow-hidden">
+      <section className="relative min-h-[80vh] flex items-center overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1694018359679-49465b4c0d61?auto=format&fit=crop&w=1920&q=80"
           alt="Riyadh Skyline"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-white/40 to-white/20" />
+        <div className="absolute inset-0 bg-black/60" />
         <div className="relative max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
           <div className="max-w-3xl">
-            <p className="text-primary-500 font-bold text-lg tracking-wide uppercase mb-4">Contact Us</p>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-dark-900 leading-tight mb-6">
+            <p className="text-green-400 font-bold text-lg tracking-wide uppercase mb-4" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>Contact Us</p>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
               Let&apos;s build AI that{' '}
-              <span className="text-primary-500">actually runs</span>
+              <span className="text-green-400">actually runs</span>
             </h1>
-            <p className="text-xl md:text-2xl text-dark-700">
+            <p className="text-xl md:text-2xl text-white/90" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
               Whether you are exploring your first AI initiative or scaling existing systems, FSIT works with organisations ready to move from intent to execution
             </p>
           </div>
@@ -129,22 +129,22 @@ export default function Contact() {
       </section>
 
       {/* Contact Options */}
-      <section className="section bg-white">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container-max">
-          <div className="text-center mb-12">
-            <h2 className="h2">How can we help?</h2>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold" style={{ color: 'var(--black)' }}>How can we help?</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {contactOptions.map((option, index) => (
-              <div key={index} className="group flex flex-col h-full bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl p-6 hover:border-[#00A651] hover:shadow-lg transition-all duration-300">
-                <div className="w-12 h-12 bg-[#00A651]/10 rounded-xl flex items-center justify-center text-[#00A651] mb-6 group-hover:bg-[#00A651] group-hover:text-white transition-all duration-300">
+              <div key={index} className="group flex flex-col h-full bg-neutral-50 border border-green-500/20 rounded-2xl p-8 hover:border-green-500 hover:shadow-lg transition-all duration-300">
+                <div className="w-14 h-14 bg-green-500/10 rounded-xl flex items-center justify-center text-green-600 mb-6 group-hover:bg-green-500 group-hover:text-white transition-all duration-300">
                   {option.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-dark-900 mb-3">{option.title}</h3>
-                <p className="text-dark-500 text-sm mb-6 flex-grow">{option.description}</p>
-                <Link href={option.href} className="inline-flex items-center gap-2 text-[#00A651] font-medium text-sm hover:gap-3 transition-all mt-auto">
+                <h3 className="text-xl md:text-2xl font-semibold text-dark-900 mb-3">{option.title}</h3>
+                <p className="text-dark-500 text-base md:text-lg mb-6 flex-grow">{option.description}</p>
+                <Link href={option.href} className="inline-flex items-center gap-2 text-green-600 font-medium text-base md:text-lg hover:gap-3 transition-all mt-auto">
                   {option.cta}
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </Link>
@@ -155,21 +155,21 @@ export default function Contact() {
       </section>
 
       {/* Contact Info Cards */}
-      <section className="section" style={{ background: 'var(--cream)' }}>
+      <section className="py-16" style={{ background: 'var(--cream)' }}>
         <div className="container-max">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {contactInfo.map((info, index) => (
-              <div key={index} className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl p-5 text-center hover:border-[#00A651] hover:shadow-lg transition-all duration-300">
-                <div className="w-12 h-12 bg-[#00A651]/10 rounded-xl flex items-center justify-center text-[#00A651] mx-auto mb-4">
+              <div key={index} className="bg-white border border-green-500/20 rounded-2xl p-6 text-center hover:border-green-500 hover:shadow-lg transition-all duration-300">
+                <div className="w-14 h-14 bg-green-500/10 rounded-xl flex items-center justify-center text-green-600 mx-auto mb-4">
                   {info.icon}
                 </div>
-                <h3 className="font-semibold text-dark-900 mb-2 text-sm">{info.title}</h3>
+                <h3 className="font-semibold text-dark-900 mb-2 text-base md:text-lg">{info.title}</h3>
                 {info.href ? (
-                  <a href={info.href} className="text-dark-500 text-xs hover:text-[#00A651] transition-colors block">
+                  <a href={info.href} className="text-dark-500 text-sm md:text-base hover:text-green-600 transition-colors block">
                     {info.content}
                   </a>
                 ) : (
-                  <p className="text-dark-500 text-xs">{info.content}</p>
+                  <p className="text-dark-500 text-sm md:text-base">{info.content}</p>
                 )}
               </div>
             ))}
@@ -178,22 +178,22 @@ export default function Contact() {
       </section>
 
       {/* Form and Map */}
-      <section className="section bg-white" id="contact-form">
+      <section className="py-20 md:py-28 bg-white" id="contact-form">
         <div className="container-max">
-          <div className="text-center mb-12">
-            <h2 className="h2">Get in Touch</h2>
-            <p className="text-body mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4" style={{ color: 'var(--black)' }}>Get in Touch</h2>
+            <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
               Fill out the form below and we&apos;ll personalize the right experience for you
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {/* Form */}
-            <div className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl p-6">
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="bg-neutral-50 border border-green-500/20 rounded-2xl p-8">
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium text-dark-700 mb-2">
+                    <label htmlFor="firstName" className="block text-base font-medium text-dark-700 mb-2">
                       First Name*
                     </label>
                     <input
@@ -203,11 +203,11 @@ export default function Contact() {
                       required
                       value={formData.firstName}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-neutral-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+                      className="w-full px-4 py-4 text-base border border-neutral-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
                     />
                   </div>
                   <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium text-dark-700 mb-2">
+                    <label htmlFor="lastName" className="block text-base font-medium text-dark-700 mb-2">
                       Last Name*
                     </label>
                     <input
@@ -217,13 +217,13 @@ export default function Contact() {
                       required
                       value={formData.lastName}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-neutral-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+                      className="w-full px-4 py-4 text-base border border-neutral-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
                     />
                   </div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-dark-700 mb-2">
+                    <label htmlFor="phone" className="block text-base font-medium text-dark-700 mb-2">
                       Phone Number*
                     </label>
                     <input
@@ -233,11 +233,11 @@ export default function Contact() {
                       required
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-neutral-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+                      className="w-full px-4 py-4 text-base border border-neutral-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-dark-700 mb-2">
+                    <label htmlFor="email" className="block text-base font-medium text-dark-700 mb-2">
                       Email*
                     </label>
                     <input
@@ -247,12 +247,12 @@ export default function Contact() {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-neutral-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+                      className="w-full px-4 py-4 text-base border border-neutral-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
                     />
                   </div>
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-dark-700 mb-2">
+                  <label htmlFor="message" className="block text-base font-medium text-dark-700 mb-2">
                     Message*
                   </label>
                   <textarea
@@ -262,19 +262,19 @@ export default function Contact() {
                     required
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-neutral-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all resize-none"
+                    className="w-full px-4 py-4 text-base border border-neutral-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all resize-none"
                   />
                 </div>
-                <button type="submit" className="btn-primary w-full !py-4">
+                <button type="submit" className="btn-primary w-full text-lg px-8 py-4">
                   Submit
                 </button>
               </form>
             </div>
 
             {/* Map */}
-            <div className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl p-6 overflow-hidden">
-              <h3 className="text-base font-semibold text-dark-900 mb-4">Find Us On The Map</h3>
-              <div className="h-80 lg:h-[calc(100%-3rem)] bg-neutral-100 rounded-xl overflow-hidden">
+            <div className="bg-neutral-50 border border-green-500/20 rounded-2xl p-8 overflow-hidden">
+              <h3 className="text-xl md:text-2xl font-semibold text-dark-900 mb-6">Find Us On The Map</h3>
+              <div className="h-80 lg:h-[calc(100%-4rem)] bg-neutral-100 rounded-xl overflow-hidden">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.674368867583!2d46.6821!3d24.7136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDQyJzQ5LjAiTiA0NsKwNDAnNTUuNiJF!5e0!3m2!1sen!2ssa!4v1234567890"
                   width="100%"
@@ -292,15 +292,15 @@ export default function Contact() {
       </section>
 
       {/* CTA */}
-      <section className="section" style={{ background: 'var(--cream)' }}>
+      <section className="py-24" style={{ background: 'var(--cream)' }}>
         <div className="container-max text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-dark-900 mb-4">
-            Ready to start your AI transformation?
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>
+            Ready to start your <span className="text-green-600">AI transformation</span>?
           </h2>
-          <p className="text-lg md:text-xl text-dark-600 max-w-3xl mx-auto mb-8">
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-10">
             Talk to our AI delivery team today
           </p>
-          <Link href="/build-scale-ai" className="btn-primary">
+          <Link href="/build-scale-ai" className="btn-primary text-lg px-8 py-4">
             Book a free consultation
           </Link>
         </div>

@@ -177,8 +177,8 @@ export default function ManageOptimize() {
       <section className="section" style={{ background: 'var(--white)' }}>
         <div className="container-max">
           <div className="text-center mb-12">
-            <h2 className="h2">AI Management Services</h2>
-            <p className="text-body mx-auto" style={{ maxWidth: '42rem' }}>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>AI Management Services</h2>
+            <p className="text-xl mx-auto" style={{ maxWidth: '42rem', color: 'var(--gray-600)' }}>
               Comprehensive management to keep your AI systems running smoothly
             </p>
           </div>
@@ -198,8 +198,8 @@ export default function ManageOptimize() {
                 <div className="w-10 h-10 bg-primary-500/10 rounded-lg flex items-center justify-center text-primary-500 mb-3">
                   {service.icon}
                 </div>
-                <h3 className="text-sm font-semibold text-dark-900 mb-1">{service.title}</h3>
-                <p className="text-dark-500 text-xs mb-3 line-clamp-2">{service.description}</p>
+                <h3 className="text-base font-semibold text-dark-900 mb-1">{service.title}</h3>
+                <p className="text-dark-500 text-sm mb-3 line-clamp-2">{service.description}</p>
                 <div className="flex flex-wrap gap-1">
                   {service.features.slice(0, 3).map((feature, i) => (
                     <span key={i} className="text-[10px] bg-white text-dark-600 px-1.5 py-0.5 rounded">
@@ -217,8 +217,8 @@ export default function ManageOptimize() {
       <section className="section-sm" style={{ background: 'var(--cream)' }}>
         <div className="container-max">
           <div className="text-center mb-8">
-            <h2 className="h3">Real Optimization Results</h2>
-            <p className="text-small mx-auto" style={{ maxWidth: '42rem' }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: 'var(--black)' }}>Real Optimization Results</h2>
+            <p className="text-lg mx-auto" style={{ maxWidth: '42rem', color: 'var(--gray-600)' }}>
               Typical improvements we achieve for our clients' AI systems
             </p>
           </div>
@@ -226,7 +226,7 @@ export default function ManageOptimize() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
             {optimizationAreas.map((area, index) => (
               <div key={index} className="bg-white rounded-lg p-4 border border-neutral-200 text-center">
-                <h3 className="text-sm font-semibold text-dark-900 mb-2">{area.title}</h3>
+                <h3 className="text-base font-semibold text-dark-900 mb-2">{area.title}</h3>
                 <div className="flex items-center justify-center gap-2 mb-1">
                   <span className="text-dark-400 line-through text-xs">{area.current}</span>
                   <svg className="w-4 h-4 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -234,7 +234,7 @@ export default function ManageOptimize() {
                   </svg>
                   <span className="text-lg font-bold text-primary-600">{area.optimized}</span>
                 </div>
-                <p className="text-dark-500 text-xs">{area.description}</p>
+                <p className="text-dark-500 text-sm">{area.description}</p>
               </div>
             ))}
           </div>
@@ -245,8 +245,8 @@ export default function ManageOptimize() {
       <section className="section" style={{ background: 'var(--white)' }}>
         <div className="container-max">
           <div className="text-center mb-6">
-            <h2 className="h2">What We Monitor</h2>
-            <p className="text-body mx-auto" style={{ maxWidth: '42rem' }}>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>What We Monitor</h2>
+            <p className="text-xl mx-auto" style={{ maxWidth: '42rem', color: 'var(--gray-600)' }}>
               Comprehensive visibility across all aspects of your AI systems
             </p>
           </div>
@@ -284,11 +284,11 @@ export default function ManageOptimize() {
                   <div className="hidden lg:block absolute top-1/2 -right-2 w-4 h-0 -translate-y-1/2 z-10" style={{ borderTop: '2px dashed #00A651', opacity: 0.5 }} />
                 )}
                 <div className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl p-5 h-full hover:border-[#00A651] hover:shadow-lg transition-all duration-300">
-                  <h3 className="font-semibold text-dark-900 mb-3 text-sm">{cap.title}</h3>
+                  <h3 className="font-semibold text-dark-900 mb-3 text-base">{cap.title}</h3>
                   <div className="space-y-1.5">
                     {cap.items.map((item, i) => (
                       <div key={i} className="flex items-center gap-2 bg-white p-2 rounded-lg border border-[#00A651]/10">
-                        <span className="text-xs text-dark-600">{item}</span>
+                        <span className="text-sm text-dark-600">{item}</span>
                       </div>
                     ))}
                   </div>
@@ -303,8 +303,8 @@ export default function ManageOptimize() {
       <section className="section-sm" style={{ background: 'var(--cream)' }}>
         <div className="container-max">
           <div className="text-center mb-8">
-            <h2 className="h3">Choose Your Support Level</h2>
-            <p className="text-small mx-auto" style={{ maxWidth: '42rem' }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: 'var(--black)' }}>Choose Your Support Level</h2>
+            <p className="text-lg mx-auto" style={{ maxWidth: '42rem', color: 'var(--gray-600)' }}>
               Flexible support options to match your operational requirements
             </p>
           </div>
@@ -322,12 +322,12 @@ export default function ManageOptimize() {
                     </span>
                   </div>
                 )}
-                <h3 className="text-base font-semibold text-dark-900 mb-1 mt-1">{tier.tier}</h3>
-                <p className="text-dark-500 text-xs mb-3">{tier.description}</p>
+                <h3 className="text-lg font-semibold text-dark-900 mb-1 mt-1">{tier.tier}</h3>
+                <p className="text-dark-500 text-sm mb-3">{tier.description}</p>
                 <div className="space-y-1">
                   {tier.features.map((feature, i) => (
                     <div key={i} className="flex items-center gap-1.5 bg-neutral-50 p-1.5 rounded border border-neutral-100">
-                      <span className="text-xs text-dark-600">{feature}</span>
+                      <span className="text-sm text-dark-600">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -341,8 +341,8 @@ export default function ManageOptimize() {
       <section className="section" style={{ background: 'var(--white)' }}>
         <div className="container-lg">
           <div className="text-center mb-6">
-            <h2 className="h2">Proactive, Not Reactive</h2>
-            <p className="text-body mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>Proactive, Not Reactive</h2>
+            <p className="text-xl mx-auto" style={{ color: 'var(--gray-600)' }}>
               We don't wait for things to break. Our proactive approach identifies and resolves issues before they impact your business.
             </p>
           </div>
@@ -390,7 +390,7 @@ export default function ManageOptimize() {
                   </div>
                 )}
                 <div className="group text-center p-4 bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl hover:border-[#00A651] hover:shadow-lg transition-all duration-300 h-full">
-                  <h3 className="text-sm font-bold group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+                  <h3 className="text-base font-bold group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
                     {item}
                   </h3>
                 </div>
@@ -407,7 +407,7 @@ export default function ManageOptimize() {
 
           {/* Included With Management */}
           <div className="max-w-4xl mx-auto">
-            <h3 className="font-semibold text-dark-900 mb-6 text-center">Included With Management</h3>
+            <h3 className="text-2xl font-semibold text-dark-900 mb-6 text-center">Included With Management</h3>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
               {[
                 { title: 'Custom Dashboards', desc: 'Real-time visibility into your AI systems' },
@@ -416,10 +416,10 @@ export default function ManageOptimize() {
                 { title: 'Incident Response', desc: 'Rapid resolution when issues arise' },
               ].map((item, i) => (
                 <div key={i} className="group text-center p-4 rounded-xl bg-neutral-100 hover:bg-primary-50 transition-all duration-300">
-                  <h4 className="font-bold text-sm mb-2 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+                  <h4 className="font-bold text-base mb-2 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
                     {item.title}
                   </h4>
-                  <p className="text-dark-500 text-xs">{item.desc}</p>
+                  <p className="text-dark-500 text-sm">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -431,7 +431,7 @@ export default function ManageOptimize() {
       <section className="py-16" style={{ background: 'var(--cream)' }}>
         <div className="container-lg">
           <div className="text-center mb-2">
-            <h2 className="h2">Why organizations choose FSIT for AI operations</h2>
+            <h2 className="text-4xl md:text-5xl font-bold" style={{ color: 'var(--black)' }}>Why organizations choose FSIT for AI operations</h2>
           </div>
           <BranchingFromTitle items={whyManage} />
         </div>
@@ -440,12 +440,12 @@ export default function ManageOptimize() {
       {/* CTA Section */}
       <section className="section" style={{ background: 'var(--white)' }}>
         <div className="container-md text-center">
-          <h2 className="h1 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>
             Ready to optimize
             <br />
             <span style={{ color: 'var(--green)' }}>your AI?</span>
           </h2>
-          <p className="text-large mb-10 max-w-xl mx-auto">
+          <p className="text-xl md:text-2xl mb-10 max-w-xl mx-auto" style={{ color: 'var(--gray-600)' }}>
             Let's discuss how we can improve the performance and reliability of your AI
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

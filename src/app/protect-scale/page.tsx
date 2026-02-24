@@ -199,8 +199,8 @@ export default function ProtectScale() {
       <section className="section" style={{ background: 'var(--white)' }}>
         <div className="container-lg">
           <div className="text-center mb-12">
-            <h2 className="h2">Our Governance Process</h2>
-            <p className="text-body mx-auto" style={{ maxWidth: '42rem' }}>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>Our Governance Process</h2>
+            <p className="text-xl mx-auto" style={{ maxWidth: '42rem', color: 'var(--gray-600)' }}>
               A systematic approach to securing and scaling your AI systems
             </p>
           </div>
@@ -212,8 +212,8 @@ export default function ProtectScale() {
       <section className="section" style={{ background: 'var(--white)' }}>
         <div className="container-max">
           <div className="text-center mb-16">
-            <h2 className="h2">AI Governance & Scaling</h2>
-            <p className="text-body mx-auto" style={{ maxWidth: '42rem' }}>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>AI Governance & Scaling</h2>
+            <p className="text-xl mx-auto" style={{ maxWidth: '42rem', color: 'var(--gray-600)' }}>
               Comprehensive governance to protect your AI investment and scale with confidence
             </p>
           </div>
@@ -224,8 +224,8 @@ export default function ProtectScale() {
                 <div className="w-10 h-10 bg-primary-500/10 rounded-lg flex items-center justify-center text-primary-500 mb-3">
                   {area.icon}
                 </div>
-                <h3 className="text-sm font-semibold text-dark-900 mb-1">{area.title}</h3>
-                <p className="text-dark-500 text-xs mb-3 line-clamp-2">{area.description}</p>
+                <h3 className="text-base font-semibold text-dark-900 mb-1">{area.title}</h3>
+                <p className="text-dark-500 text-sm mb-3 line-clamp-2">{area.description}</p>
                 <div className="flex flex-wrap gap-1">
                   {area.features.slice(0, 3).map((feature, i) => (
                     <span key={i} className="text-[10px] bg-white text-dark-600 px-1.5 py-0.5 rounded">
@@ -243,8 +243,8 @@ export default function ProtectScale() {
       <section className="section" style={{ background: 'var(--cream)' }}>
         <div className="container-lg">
           <div className="text-center mb-6">
-            <h2 className="h2">Defense in Depth</h2>
-            <p className="text-body mx-auto" style={{ maxWidth: '42rem' }}>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>Defense in Depth</h2>
+            <p className="text-xl mx-auto" style={{ maxWidth: '42rem', color: 'var(--gray-600)' }}>
               Multiple layers of security controls to protect your AI systems
             </p>
           </div>
@@ -277,11 +277,11 @@ export default function ProtectScale() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {securityLayers.map((layer, index) => (
               <div key={index} className="bg-white rounded-2xl p-6 border border-neutral-200 text-center">
-                <h3 className="font-semibold text-dark-900 mb-4">{layer.layer}</h3>
+                <h3 className="text-lg font-semibold text-dark-900 mb-4">{layer.layer}</h3>
                 <div className="grid grid-cols-2 gap-2">
                   {layer.controls.map((control, i) => (
                     <div key={i} className="group p-2 rounded-lg hover:bg-primary-50 transition-all">
-                      <span className="text-xs text-dark-600 group-hover:text-green-600 font-medium transition-colors">{control}</span>
+                      <span className="text-sm text-dark-600 group-hover:text-green-600 font-medium transition-colors">{control}</span>
                     </div>
                   ))}
                 </div>
@@ -295,8 +295,8 @@ export default function ProtectScale() {
       <section className="section-sm" style={{ background: 'var(--white)' }}>
         <div className="container-max">
           <div className="text-center mb-8">
-            <h2 className="h3">Regulatory Compliance</h2>
-            <p className="text-small mx-auto" style={{ maxWidth: '42rem' }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: 'var(--black)' }}>Regulatory Compliance</h2>
+            <p className="text-lg mx-auto" style={{ maxWidth: '42rem', color: 'var(--gray-600)' }}>
               We help you meet the compliance requirements for your industry
             </p>
           </div>
@@ -309,8 +309,8 @@ export default function ProtectScale() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 </div>
-                <h3 className="text-xs font-semibold text-dark-900 mb-1">{framework.name}</h3>
-                <p className="text-dark-500 text-[10px]">{framework.description}</p>
+                <h3 className="text-sm font-semibold text-dark-900 mb-1">{framework.name}</h3>
+                <p className="text-dark-500 text-xs">{framework.description}</p>
               </div>
             ))}
           </div>
@@ -321,8 +321,8 @@ export default function ProtectScale() {
       <section className="section" style={{ background: 'var(--cream)' }}>
         <div className="container-max">
           <div className="text-center mb-6">
-            <h2 className="h2">Scale With Confidence</h2>
-            <p className="text-body mx-auto" style={{ maxWidth: '42rem' }}>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>Scale With Confidence</h2>
+            <p className="text-xl mx-auto" style={{ maxWidth: '42rem', color: 'var(--gray-600)' }}>
               Infrastructure and architecture designed for enterprise-scale AI
             </p>
           </div>
@@ -360,9 +360,9 @@ export default function ProtectScale() {
                   <div className="hidden lg:block absolute top-1/2 -right-2 w-4 h-0 -translate-y-1/2 z-10" style={{ borderTop: '2px dashed #00A651', opacity: 0.5 }} />
                 )}
                 <div className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl p-5 h-full hover:border-[#00A651] hover:shadow-lg transition-all duration-300 text-center">
-                  <h3 className="font-semibold text-dark-900 mb-2 text-sm">{cap.title}</h3>
-                  <p className="text-dark-500 text-xs mb-3">{cap.description}</p>
-                  <p className="text-primary-500 font-semibold text-sm">{cap.metric}</p>
+                  <h3 className="font-semibold text-dark-900 mb-2 text-base">{cap.title}</h3>
+                  <p className="text-dark-500 text-sm mb-3">{cap.description}</p>
+                  <p className="text-primary-500 font-semibold text-base">{cap.metric}</p>
                 </div>
               </div>
             ))}
@@ -374,8 +374,8 @@ export default function ProtectScale() {
       <section className="section" style={{ background: 'var(--white)' }}>
         <div className="container-lg">
           <div className="text-center mb-6">
-            <h2 className="h2">Industry-Specific Expertise</h2>
-            <p className="text-body mx-auto" style={{ maxWidth: '42rem' }}>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>Industry-Specific Expertise</h2>
+            <p className="text-xl mx-auto" style={{ maxWidth: '42rem', color: 'var(--gray-600)' }}>
               Deep understanding of compliance requirements across regulated industries
             </p>
           </div>
@@ -408,11 +408,11 @@ export default function ProtectScale() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {industries.map((industry, index) => (
               <div key={index} className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl p-6 hover:border-[#00A651] hover:shadow-lg transition-all duration-300 text-center">
-                <h3 className="font-semibold text-dark-900 mb-4">{industry.name}</h3>
+                <h3 className="text-lg font-semibold text-dark-900 mb-4">{industry.name}</h3>
                 <div className="grid grid-cols-2 gap-2">
                   {industry.requirements.map((req, i) => (
                     <div key={i} className="group p-2 rounded-lg hover:bg-primary-50 transition-all">
-                      <span className="text-xs text-dark-600 group-hover:text-green-600 font-medium transition-colors">{req}</span>
+                      <span className="text-sm text-dark-600 group-hover:text-green-600 font-medium transition-colors">{req}</span>
                     </div>
                   ))}
                 </div>
@@ -426,8 +426,8 @@ export default function ProtectScale() {
       <section className="section" style={{ background: 'var(--cream)' }}>
         <div className="container-lg">
           <div className="text-center mb-6">
-            <h2 className="h2">Governance Expertise</h2>
-            <p className="text-body mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>Governance Expertise</h2>
+            <p className="text-xl mx-auto" style={{ color: 'var(--gray-600)' }}>
               We understand that enterprise AI requires more than just good technology. Security, compliance, and governance are built into everything we do.
             </p>
           </div>
@@ -475,7 +475,7 @@ export default function ProtectScale() {
                   </div>
                 )}
                 <div className="group text-center p-4 bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl hover:border-[#00A651] hover:shadow-lg transition-all duration-300 h-full">
-                  <h3 className="text-sm font-bold group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+                  <h3 className="text-base font-bold group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
                     {item}
                   </h3>
                 </div>
@@ -492,7 +492,7 @@ export default function ProtectScale() {
 
           {/* Governance Deliverables */}
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-xl font-semibold text-dark-900 mb-6 text-center">Governance Deliverables</h3>
+            <h3 className="text-2xl font-semibold text-dark-900 mb-6 text-center">Governance Deliverables</h3>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
               {[
                 { title: 'Security Assessment', desc: 'Comprehensive security review of AI systems' },
@@ -501,10 +501,10 @@ export default function ProtectScale() {
                 { title: 'Scaling Architecture', desc: 'Design for growth and high availability' },
               ].map((item, i) => (
                 <div key={i} className="group text-center p-4 rounded-xl bg-white hover:bg-primary-50 transition-all duration-300">
-                  <h4 className="font-bold text-sm mb-2 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+                  <h4 className="font-bold text-base mb-2 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
                     {item.title}
                   </h4>
-                  <p className="text-dark-500 text-xs">{item.desc}</p>
+                  <p className="text-dark-500 text-sm">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -516,7 +516,7 @@ export default function ProtectScale() {
       <section className="py-16" style={{ background: 'var(--white)' }}>
         <div className="container-lg">
           <div className="text-center mb-2">
-            <h2 className="h2">Why organizations choose FSIT for governance</h2>
+            <h2 className="text-4xl md:text-5xl font-bold" style={{ color: 'var(--black)' }}>Why organizations choose FSIT for governance</h2>
           </div>
           <BranchingFromTitle items={whyProtect} />
         </div>
@@ -525,12 +525,12 @@ export default function ProtectScale() {
       {/* CTA Section */}
       <section className="section" style={{ background: 'var(--cream)' }}>
         <div className="container-md text-center">
-          <h2 className="h1 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>
             Ready to secure
             <br />
             <span style={{ color: 'var(--green)' }}>and scale?</span>
           </h2>
-          <p className="text-large mb-10 max-w-xl mx-auto">
+          <p className="text-xl md:text-2xl mb-10 max-w-xl mx-auto" style={{ color: 'var(--gray-600)' }}>
             Let's discuss your governance requirements and build a roadmap
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

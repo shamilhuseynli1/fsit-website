@@ -179,8 +179,8 @@ export default function LeverageAI() {
       <section className="section" style={{ background: 'var(--white)' }}>
         <div className="container-max">
           <div className="text-center mb-12">
-            <h2 className="h2">End-to-End AI Services</h2>
-            <p className="text-body mx-auto" style={{ maxWidth: '42rem' }}>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>End-to-End AI Services</h2>
+            <p className="text-xl mx-auto" style={{ maxWidth: '42rem', color: 'var(--gray-600)' }}>
               From initial assessment to production operations — we deliver AI that works
             </p>
           </div>
@@ -200,8 +200,8 @@ export default function LeverageAI() {
                 <div className="w-10 h-10 bg-primary-500/10 rounded-lg flex items-center justify-center text-primary-500 mb-3">
                   {service.icon}
                 </div>
-                <h3 className="text-sm font-semibold text-dark-900 mb-1">{service.title}</h3>
-                <p className="text-dark-500 text-xs mb-3 line-clamp-2">{service.description}</p>
+                <h3 className="text-base font-semibold text-dark-900 mb-1">{service.title}</h3>
+                <p className="text-dark-500 text-sm mb-3 line-clamp-2">{service.description}</p>
                 <div className="flex flex-wrap gap-1">
                   {service.deliverables.slice(0, 3).map((item, i) => (
                     <span key={i} className="text-[10px] bg-white text-dark-600 px-1.5 py-0.5 rounded">
@@ -219,8 +219,8 @@ export default function LeverageAI() {
       <section className="section-sm" style={{ background: 'var(--cream)' }}>
         <div className="container-max">
           <div className="text-center mb-8">
-            <h2 className="h3">Business-Driven AI Applications</h2>
-            <p className="text-small mx-auto" style={{ maxWidth: '42rem' }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: 'var(--black)' }}>Business-Driven AI Applications</h2>
+            <p className="text-lg mx-auto" style={{ maxWidth: '42rem', color: 'var(--gray-600)' }}>
               Practical AI solutions that deliver measurable business outcomes
             </p>
           </div>
@@ -228,17 +228,17 @@ export default function LeverageAI() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
             {useCases.map((useCase, index) => (
               <div key={index} className="bg-white rounded-lg p-4 border border-neutral-200 hover:border-primary-500 transition-all">
-                <span className="text-[10px] font-semibold text-primary-600 uppercase tracking-wide">{useCase.category}</span>
-                <h3 className="text-sm font-semibold text-dark-900 mt-1 mb-2">{useCase.title}</h3>
+                <span className="text-xs font-semibold text-primary-600 uppercase tracking-wide">{useCase.category}</span>
+                <h3 className="text-base font-semibold text-dark-900 mt-1 mb-2">{useCase.title}</h3>
                 <div className="space-y-1 mb-3">
                   {useCase.examples.slice(0, 3).map((example, i) => (
                     <div key={i} className="flex items-center gap-2 bg-neutral-50 p-1.5 rounded border border-neutral-100">
-                      <span className="text-xs text-dark-600">{example}</span>
+                      <span className="text-sm text-dark-600">{example}</span>
                     </div>
                   ))}
                 </div>
                 <div className="pt-2 border-t border-neutral-200">
-                  <span className="text-primary-600 font-semibold text-xs">{useCase.impact}</span>
+                  <span className="text-primary-600 font-semibold text-sm">{useCase.impact}</span>
                 </div>
               </div>
             ))}
@@ -250,8 +250,8 @@ export default function LeverageAI() {
       <section className="section" style={{ background: 'var(--white)' }}>
         <div className="container-lg">
           <div className="text-center mb-6">
-            <h2 className="h2">Are You Ready for AI?</h2>
-            <p className="text-body mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>Are You Ready for AI?</h2>
+            <p className="text-xl mx-auto" style={{ color: 'var(--gray-600)' }}>
               Successful AI implementation depends on several key factors. We assess your readiness and help you address gaps before investing in development.
             </p>
           </div>
@@ -284,10 +284,10 @@ export default function LeverageAI() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
             {readinessFactors.map((item, i) => (
               <div key={i} className="group text-center p-4 bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl hover:border-[#00A651] hover:shadow-lg transition-all duration-300">
-                <h3 className="text-sm font-bold mb-2 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+                <h3 className="text-base font-bold mb-2 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
                   {item.factor}
                 </h3>
-                <p className="text-dark-500 text-xs">{item.question}</p>
+                <p className="text-dark-500 text-sm">{item.question}</p>
               </div>
             ))}
           </div>
@@ -304,8 +304,8 @@ export default function LeverageAI() {
       <section className="section-sm" style={{ background: 'var(--cream)' }}>
         <div className="container-max">
           <div className="text-center mb-8">
-            <h2 className="h3">Transparent Pricing</h2>
-            <p className="text-small mx-auto" style={{ maxWidth: '42rem' }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: 'var(--black)' }}>Transparent Pricing</h2>
+            <p className="text-lg mx-auto" style={{ maxWidth: '42rem', color: 'var(--gray-600)' }}>
               Clear investment ranges based on project scope and complexity
             </p>
           </div>
@@ -313,13 +313,13 @@ export default function LeverageAI() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             {investmentTiers.map((tier, index) => (
               <div key={index} className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-lg p-4 hover:border-[#00A651] hover:shadow-md transition-all duration-300 text-center">
-                <h3 className="text-base font-semibold text-dark-900 mb-1">{tier.tier}</h3>
-                <p className="text-xl font-bold text-primary-500 mb-2">{tier.range}</p>
-                <p className="text-dark-500 text-xs mb-3">{tier.description}</p>
+                <h3 className="text-lg font-semibold text-dark-900 mb-1">{tier.tier}</h3>
+                <p className="text-2xl font-bold text-primary-500 mb-2">{tier.range}</p>
+                <p className="text-dark-500 text-sm mb-3">{tier.description}</p>
                 <div className="space-y-1 text-left">
                   {tier.includes.map((item, i) => (
                     <div key={i} className="flex items-center gap-2 bg-neutral-50 p-1.5 rounded border border-neutral-200">
-                      <span className="text-xs text-dark-600">{item}</span>
+                      <span className="text-sm text-dark-600">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -337,8 +337,8 @@ export default function LeverageAI() {
       <section className="section" style={{ background: 'var(--white)' }}>
         <div className="container-lg">
           <div className="text-center mb-6">
-            <h2 className="h2">AI-Native Delivery</h2>
-            <p className="text-body mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>AI-Native Delivery</h2>
+            <p className="text-xl mx-auto" style={{ color: 'var(--gray-600)' }}>
               We're not traditional consultants who hand over reports and leave. We embed vetted AI engineers directly into your organization to build, deploy, and scale real AI systems — focusing on execution, speed, and production impact.
             </p>
           </div>
@@ -377,7 +377,7 @@ export default function LeverageAI() {
               'Knowledge transfer built into every engagement',
             ].map((item, i) => (
               <div key={i} className="group text-center p-4 bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl hover:border-[#00A651] hover:shadow-lg transition-all duration-300">
-                <h3 className="text-sm font-bold group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+                <h3 className="text-base font-bold group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
                   {item}
                 </h3>
               </div>
@@ -386,7 +386,7 @@ export default function LeverageAI() {
 
           {/* Comparison Grid */}
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-xl font-semibold text-dark-900 mb-6 text-center">Traditional vs FSIT</h3>
+            <h3 className="text-2xl font-semibold text-dark-900 mb-6 text-center">Traditional vs FSIT</h3>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
               {[
                 { label: 'Approach', old: 'Consulting reports', new: 'Working software' },
@@ -395,9 +395,9 @@ export default function LeverageAI() {
                 { label: 'Success rate', old: '59%', new: '98%' },
               ].map((item, i) => (
                 <div key={i} className="group text-center p-4 rounded-xl bg-neutral-100 hover:bg-primary-50 transition-all duration-300">
-                  <p className="text-dark-600 text-xs mb-2">{item.label}</p>
-                  <p className="text-dark-400 line-through text-sm">{item.old}</p>
-                  <p className="text-primary-600 font-bold">{item.new}</p>
+                  <p className="text-dark-600 text-sm mb-2">{item.label}</p>
+                  <p className="text-dark-400 line-through text-base">{item.old}</p>
+                  <p className="text-primary-600 font-bold text-lg">{item.new}</p>
                 </div>
               ))}
             </div>
@@ -409,7 +409,7 @@ export default function LeverageAI() {
       <section className="py-16" style={{ background: 'var(--cream)' }}>
         <div className="container-lg">
           <div className="text-center mb-2">
-            <h2 className="h2">Why organizations leverage AI with FSIT</h2>
+            <h2 className="text-4xl md:text-5xl font-bold" style={{ color: 'var(--black)' }}>Why organizations leverage AI with FSIT</h2>
           </div>
           <BranchingFromTitle items={whyLeverage} />
         </div>
@@ -418,12 +418,12 @@ export default function LeverageAI() {
       {/* CTA Section */}
       <section className="section" style={{ background: 'var(--white)' }}>
         <div className="container-md text-center">
-          <h2 className="h1 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>
             Ready to leverage
             <br />
             <span style={{ color: 'var(--green)' }}>AI?</span>
           </h2>
-          <p className="text-large mb-10 max-w-xl mx-auto">
+          <p className="text-xl md:text-2xl mb-10 max-w-xl mx-auto" style={{ color: 'var(--gray-600)' }}>
             Start with a free AI readiness assessment and discover your highest-impact opportunities
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

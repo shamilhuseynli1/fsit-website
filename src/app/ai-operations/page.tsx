@@ -197,8 +197,8 @@ export default function AIOperations() {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1629667051607-e412f1c493c0?auto=format&fit=crop&w=1920&q=80)' }}
         />
-        {/* Light overlay - reduced for NEOM visibility */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/50 via-white/30 to-white/10" />
+        {/* Dark overlay for contrast */}
+        <div className="absolute inset-0 bg-black/60" />
 
         {/* Network pattern overlay */}
         <div className="absolute inset-0 opacity-30">
@@ -224,22 +224,22 @@ export default function AIOperations() {
           <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[70vh]">
             {/* Left content */}
             <div className="relative z-10">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark-900 mb-6 leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                 AI That Runs<br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-500 to-primary-600">
+                <span className="text-green-400" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                   In Production
                 </span>
               </h1>
 
-              <p className="text-lg text-black mb-8 leading-relaxed max-w-xl">
+              <p className="text-xl text-white mb-8 leading-relaxed max-w-xl" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
                 End-to-end AI operations — from deployment to monitoring to optimization. We ensure your AI systems remain accurate, compliant, and reliable in real-world production environments.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/contact" className="btn-primary text-center">
+                <Link href="/contact" className="btn-primary text-lg px-8 py-4 text-center">
                   Discuss your AI operations
                 </Link>
-                <Link href="/solutions" className="btn-secondary text-center">
+                <Link href="/solutions" className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-dark-900 transition-all text-lg text-center">
                   View all solutions
                 </Link>
               </div>
@@ -253,10 +253,10 @@ export default function AIOperations() {
                   { value: '5x', label: 'Faster' },
                 ].map((stat, i) => (
                   <div key={i} className="text-center">
-                    <p className="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gold-500 to-primary-600">
+                    <p className="text-xl md:text-2xl font-bold text-green-400">
                       {stat.value}
                     </p>
-                    <p className="text-xs text-dark-500">{stat.label}</p>
+                    <p className="text-sm text-white/80">{stat.label}</p>
                   </div>
                 ))}
               </div>
@@ -275,10 +275,10 @@ export default function AIOperations() {
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>
               AI Operations Services
             </h2>
-            <p className="text-dark-500 max-w-2xl mx-auto">
+            <p className="text-xl max-w-3xl mx-auto" style={{ color: 'var(--gray-600)' }}>
               Comprehensive MLOps and AI operations to keep your AI systems running reliably
             </p>
           </div>
@@ -309,10 +309,10 @@ export default function AIOperations() {
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>
                 AI + Human Intelligence
               </h2>
-              <p className="text-dark-500 mb-8">
+              <p className="text-xl mb-8" style={{ color: 'var(--gray-600)' }}>
                 The most reliable AI systems combine automation with human oversight. Our human-in-the-loop services ensure your AI remains accurate, safe, and aligned with business objectives.
               </p>
 
@@ -394,8 +394,8 @@ export default function AIOperations() {
       <section className="section" style={{ background: 'var(--cream)' }}>
         <div className="container-lg">
           <div className="text-center mb-6">
-            <h2 className="h2 mb-6">Safe, Compliant, Reliable</h2>
-            <p className="text-body max-w-2xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>Safe, Compliant, Reliable</h2>
+            <p className="text-xl max-w-3xl mx-auto" style={{ color: 'var(--gray-600)' }}>
               Comprehensive governance to ensure your AI systems meet the highest standards
             </p>
           </div>
@@ -429,10 +429,10 @@ export default function AIOperations() {
                   <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 overflow-hidden flex-shrink-0" style={{ background: 'rgba(0, 166, 81, 0.1)', minWidth: '56px', maxWidth: '56px', minHeight: '56px', maxHeight: '56px' }}>
                     {item.icon}
                   </div>
-                  <h3 className="text-lg font-bold mb-2 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
                     {item.title}
                   </h3>
-                  <p className="text-sm" style={{ color: 'var(--gray-500)' }}>{item.desc}</p>
+                  <p className="text-base" style={{ color: 'var(--gray-600)' }}>{item.desc}</p>
                   {/* Hover border effect */}
                   <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-green-500/30 transition-all duration-300 pointer-events-none" />
                 </div>
@@ -458,10 +458,10 @@ export default function AIOperations() {
                   <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 overflow-hidden flex-shrink-0" style={{ background: 'rgba(0, 166, 81, 0.1)', minWidth: '56px', maxWidth: '56px', minHeight: '56px', maxHeight: '56px' }}>
                     {item.icon}
                   </div>
-                  <h3 className="text-lg font-bold mb-2 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
                     {item.title}
                   </h3>
-                  <p className="text-sm" style={{ color: 'var(--gray-500)' }}>{item.desc}</p>
+                  <p className="text-base" style={{ color: 'var(--gray-600)' }}>{item.desc}</p>
                   {/* Hover border effect */}
                   <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-green-500/30 transition-all duration-300 pointer-events-none" />
                 </div>
@@ -475,8 +475,8 @@ export default function AIOperations() {
       <section className="section" style={{ background: 'var(--cream)' }}>
         <div className="container-lg">
           <div className="text-center mb-6">
-            <h2 className="h2 mb-6">Platforms We Work With</h2>
-            <p className="text-body max-w-2xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>Platforms We Work With</h2>
+            <p className="text-xl max-w-3xl mx-auto" style={{ color: 'var(--gray-600)' }}>
               Deep expertise across leading MLOps and AI infrastructure platforms
             </p>
           </div>
@@ -553,7 +553,7 @@ export default function AIOperations() {
       <section className="section" style={{ background: 'var(--cream)' }}>
         <div className="container-lg">
           <div className="text-center mb-6">
-            <h2 className="h2 mb-6">From Assessment to Operations</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>From Assessment to Operations</h2>
           </div>
 
           {/* Horizontal line with flowing animation */}
@@ -591,9 +591,9 @@ export default function AIOperations() {
                   className="group relative p-6 rounded-2xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-white"
                   style={{ border: '1px solid var(--gray-100)' }}
                 >
-                  <p className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: 'var(--green)' }}>{step.phase}</p>
-                  <h3 className="text-lg font-bold mb-2 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>{step.title}</h3>
-                  <p className="text-sm" style={{ color: 'var(--gray-500)' }}>{step.desc}</p>
+                  <p className="text-sm font-semibold uppercase tracking-wide mb-2" style={{ color: 'var(--green)' }}>{step.phase}</p>
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>{step.title}</h3>
+                  <p className="text-base" style={{ color: 'var(--gray-600)' }}>{step.desc}</p>
                   {/* Hover border effect */}
                   <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-green-500/30 transition-all duration-300 pointer-events-none" />
                 </div>
@@ -606,10 +606,10 @@ export default function AIOperations() {
       {/* CTA Section */}
       <section className="relative py-24 bg-neutral-150 overflow-hidden">
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>
             Ready to operationalize your AI?
           </h2>
-          <p className="text-dark-500 max-w-2xl mx-auto mb-8">
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-8" style={{ color: 'var(--gray-600)' }}>
             Let's discuss how we can help you deploy, monitor, and scale your AI systems
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -152,25 +152,25 @@ export default function CaseStudiesPage() {
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
         {/* Saudi Riyadh Background */}
         <div
-          className="absolute inset-0 opacity-30"
+          className="absolute inset-0"
           style={{
             backgroundImage: 'url(https://images.unsplash.com/photo-1590959914819-b767b9fe4cfb?auto=format&fit=crop&w=1920&q=80)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
         />
-        {/* Light overlay */}
-        <div className="absolute inset-0 bg-cream-50/50" />
+        {/* Dark overlay for contrast */}
+        <div className="absolute inset-0 bg-black/60" />
         <NetworkBackground />
         <div className="relative z-10 max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-32">
           <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark-900 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
               Real Results from{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-gold-500">
+              <span className="text-green-400" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                 Real Projects
               </span>
             </h1>
-            <p className="text-xl text-dark-500 leading-relaxed max-w-3xl">
+            <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
               See how we've helped organizations across industries deploy AI that works in production. No experiments — measurable business impact.
             </p>
           </div>
@@ -179,7 +179,7 @@ export default function CaseStudiesPage() {
 
       {/* Stats Bar */}
       <section className="border-y border-neutral-200" style={{ background: 'var(--cream)' }}>
-        <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { number: '300+', label: 'Projects delivered' },
@@ -188,8 +188,8 @@ export default function CaseStudiesPage() {
               { number: '3 weeks', label: 'Average time to production' },
             ].map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-primary-600 mb-2">{stat.number}</div>
-                <div className="text-dark-500 text-sm">{stat.label}</div>
+                <div className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3" style={{ color: 'var(--green)' }}>{stat.number}</div>
+                <div className="text-lg md:text-xl font-medium" style={{ color: 'var(--gray-700)' }}>{stat.label}</div>
               </div>
             ))}
           </div>
@@ -200,40 +200,40 @@ export default function CaseStudiesPage() {
       <section className="py-24 bg-white">
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>
               Featured Success Stories
             </h2>
-            <p className="text-xl text-dark-500 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl max-w-3xl mx-auto" style={{ color: 'var(--gray-600)' }}>
               Highlighted projects showcasing our impact across different industries and use cases.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-3 gap-8 items-stretch">
             {featuredStudies.map((study) => (
               <div
                 key={study.id}
-                className="bg-neutral-50 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 group"
+                className="bg-neutral-50 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col h-full"
               >
-                <div className="bg-gradient-to-br from-primary-600 to-primary-800 p-6">
-                  <span className="inline-block px-3 py-1 bg-white/20 rounded-full text-white text-sm mb-4">
+                <div className="p-8 h-[220px] flex flex-col justify-center" style={{ backgroundColor: '#15803d' }}>
+                  <span className="inline-block px-4 py-1.5 bg-white/20 rounded-full text-white text-base mb-4 w-fit">
                     {study.category}
                   </span>
-                  <h3 className="text-xl font-bold text-white mb-2">{study.title}</h3>
-                  <p className="text-primary-100 text-sm">{study.client}</p>
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-3">{study.title}</h3>
+                  <p className="text-primary-100 text-base">{study.client}</p>
                 </div>
-                <div className="p-6">
-                  <p className="text-dark-600 mb-6 text-sm">{study.challenge}</p>
+                <div className="p-8 flex flex-col flex-1">
+                  <p className="text-dark-600 mb-6 text-base md:text-lg flex-1">{study.challenge}</p>
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     {study.results.slice(0, 2).map((result, idx) => (
-                      <div key={idx} className="text-center p-3 bg-white rounded-lg">
-                        <div className="text-xl font-bold text-primary-600">{result.metric}</div>
-                        <div className="text-xs text-dark-500">{result.label}</div>
+                      <div key={idx} className="text-center p-4 bg-white rounded-xl">
+                        <div className="text-2xl md:text-3xl font-bold text-primary-600">{result.metric}</div>
+                        <div className="text-sm md:text-base text-dark-500">{result.label}</div>
                       </div>
                     ))}
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {study.tags.map((tag, idx) => (
-                      <span key={idx} className="px-2 py-1 bg-primary-50 text-primary-700 text-xs rounded-full">
+                      <span key={idx} className="px-3 py-1.5 bg-primary-50 text-primary-700 text-sm rounded-full font-medium">
                         {tag}
                       </span>
                     ))}
@@ -249,10 +249,10 @@ export default function CaseStudiesPage() {
       <section className="py-24 bg-neutral-50">
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>
               All Case Studies
             </h2>
-            <p className="text-xl text-dark-500 max-w-3xl mx-auto mb-8">
+            <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-10" style={{ color: 'var(--gray-600)' }}>
               Filter by industry to find relevant examples for your business.
             </p>
 
@@ -262,7 +262,7 @@ export default function CaseStudiesPage() {
                 <button
                   key={category}
                   onClick={() => setActiveCategory(category)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                  className={`px-6 py-3 rounded-full text-base font-semibold transition-all ${
                     activeCategory === category
                       ? 'bg-primary-600 text-white'
                       : 'bg-white text-dark-600 hover:bg-primary-50 hover:text-primary-600'
@@ -278,40 +278,40 @@ export default function CaseStudiesPage() {
             {filteredStudies.map((study) => (
               <div
                 key={study.id}
-                className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300"
+                className="bg-white rounded-2xl p-10 shadow-sm hover:shadow-lg transition-all duration-300"
               >
-                <div className="flex items-start justify-between mb-4">
+                <div className="flex items-start justify-between mb-5">
                   <div>
-                    <span className="inline-block px-3 py-1 bg-primary-50 text-primary-700 rounded-full text-sm mb-2">
+                    <span className="inline-block px-4 py-1.5 bg-primary-50 text-primary-700 rounded-full text-base font-medium mb-3">
                       {study.category}
                     </span>
-                    <h3 className="text-xl font-bold text-dark-900">{study.title}</h3>
-                    <p className="text-dark-500 text-sm">{study.client}</p>
+                    <h3 className="text-xl md:text-2xl font-bold text-dark-900">{study.title}</h3>
+                    <p className="text-dark-500 text-base mt-1">{study.client}</p>
                   </div>
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="font-semibold text-dark-800 mb-2">Challenge:</h4>
-                  <p className="text-dark-600 text-sm">{study.challenge}</p>
+                  <h4 className="font-bold text-dark-800 mb-2 text-lg">Challenge:</h4>
+                  <p className="text-dark-600 text-base md:text-lg">{study.challenge}</p>
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="font-semibold text-dark-800 mb-2">Solution:</h4>
-                  <p className="text-dark-600 text-sm">{study.solution}</p>
+                  <h4 className="font-bold text-dark-800 mb-2 text-lg">Solution:</h4>
+                  <p className="text-dark-600 text-base md:text-lg">{study.solution}</p>
                 </div>
 
-                <div className="grid grid-cols-4 gap-3 mb-6">
+                <div className="grid grid-cols-4 gap-4 mb-6">
                   {study.results.map((result, idx) => (
-                    <div key={idx} className="text-center p-2 bg-neutral-50 rounded-lg">
-                      <div className="text-lg font-bold text-primary-600">{result.metric}</div>
-                      <div className="text-xs text-dark-500">{result.label}</div>
+                    <div key={idx} className="text-center p-3 bg-neutral-50 rounded-xl">
+                      <div className="text-xl md:text-2xl font-bold text-primary-600">{result.metric}</div>
+                      <div className="text-sm text-dark-500">{result.label}</div>
                     </div>
                   ))}
                 </div>
 
                 <div className="flex flex-wrap gap-2">
                   {study.tags.map((tag, idx) => (
-                    <span key={idx} className="px-2 py-1 bg-neutral-100 text-dark-600 text-xs rounded-full">
+                    <span key={idx} className="px-3 py-1.5 bg-neutral-100 text-dark-600 text-sm rounded-full font-medium">
                       {tag}
                     </span>
                   ))}
@@ -325,17 +325,17 @@ export default function CaseStudiesPage() {
       {/* CTA Section */}
       <section className="py-24" style={{ background: 'var(--cream)' }}>
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>
             Ready to Be Our Next Success Story?
           </h2>
-          <p className="text-xl text-dark-500 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl mb-10 max-w-2xl mx-auto" style={{ color: 'var(--gray-600)' }}>
             Let's discuss how we can deliver similar results for your organization. Our team is ready to share relevant case studies and proven approaches for your industry.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/build-scale-ai" className="btn-primary">
+            <Link href="/build-scale-ai" className="btn-primary text-lg px-8 py-4">
               Start Your Project
             </Link>
-            <Link href="/contact" className="btn-secondary">
+            <Link href="/contact" className="btn-secondary text-lg px-8 py-4">
               Contact Our Team
             </Link>
           </div>

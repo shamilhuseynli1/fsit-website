@@ -48,7 +48,7 @@ export default function ProcessFlow({ steps }: ProcessFlowProps) {
   return (
     <div ref={containerRef} className="relative">
       {/* Scrollable on mobile, flex row on desktop */}
-      <div className="flex items-stretch gap-2 md:gap-3 overflow-x-auto pb-4 md:pb-0 scrollbar-hide md:overflow-visible">
+      <div className="flex items-stretch gap-3 md:gap-4 overflow-x-auto pb-4 md:pb-0 scrollbar-hide md:overflow-visible">
         {steps.map((step, index) => {
           const isActive = index <= activeStep;
           const isCurrent = index === activeStep;
@@ -61,13 +61,13 @@ export default function ProcessFlow({ steps }: ProcessFlowProps) {
               }`}
               style={{
                 transitionDelay: `${index * 0.1}s`,
-                minWidth: '120px',
+                minWidth: '140px',
               }}
             >
               {/* Connector line between boxes - hidden on mobile */}
               {index < steps.length - 1 && (
                 <div
-                  className="hidden md:block absolute top-1/2 -right-1.5 w-3 h-0.5 z-0"
+                  className="hidden md:block absolute top-1/2 -right-2 w-4 h-0.5 z-0"
                   style={{
                     background: index < activeStep ? 'var(--green)' : 'var(--gray-200)',
                     transition: 'background 0.3s ease',
@@ -77,17 +77,17 @@ export default function ProcessFlow({ steps }: ProcessFlowProps) {
 
               {/* Box */}
               <div
-                className="relative z-10 p-3 md:p-4 rounded-lg text-center transition-all duration-300 h-full"
+                className="relative z-10 p-5 md:p-6 rounded-xl text-center transition-all duration-300 h-full"
                 style={{
                   background: isActive ? 'var(--green)' : 'var(--white)',
-                  border: `1px solid ${isActive ? 'var(--green)' : 'var(--gray-200)'}`,
-                  boxShadow: isCurrent ? '0 4px 12px rgba(0, 166, 81, 0.3)' : 'none',
-                  transform: isCurrent ? 'scale(1.02)' : 'scale(1)',
+                  border: `2px solid ${isActive ? 'var(--green)' : 'var(--gray-200)'}`,
+                  boxShadow: isCurrent ? '0 8px 24px rgba(0, 166, 81, 0.3)' : 'none',
+                  transform: isCurrent ? 'scale(1.03)' : 'scale(1)',
                 }}
               >
                 {/* Title */}
                 <p
-                  className="text-sm md:text-base font-semibold mb-0.5 transition-colors duration-300"
+                  className="text-lg md:text-xl font-bold mb-1 transition-colors duration-300"
                   style={{ color: isActive ? 'white' : 'var(--black)' }}
                 >
                   {step.title}
@@ -95,8 +95,8 @@ export default function ProcessFlow({ steps }: ProcessFlowProps) {
 
                 {/* Description */}
                 <p
-                  className="text-xs md:text-sm transition-colors duration-300"
-                  style={{ color: isActive ? 'rgba(255,255,255,0.8)' : 'var(--gray-500)' }}
+                  className="text-sm md:text-base transition-colors duration-300"
+                  style={{ color: isActive ? 'rgba(255,255,255,0.9)' : 'var(--gray-500)' }}
                 >
                   {step.desc}
                 </p>

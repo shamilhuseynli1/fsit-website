@@ -167,30 +167,30 @@ export default function Solutions() {
           style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1590959914819-b767b9fe4cfb?auto=format&fit=crop&w=1920&q=80)' }}
         />
         {/* Dark overlay for better text visibility */}
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/60" />
 
         <AnimatedBackground />
 
-        <div className="container-lg relative py-32">
+        <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 relative py-32">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
 
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 text-white">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                 AI Systems &{' '}
-                <span style={{ color: 'var(--green)' }}>
+                <span className="text-green-400" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                   Solutions
                 </span>
               </h1>
 
-              <p className="text-2xl md:text-3xl mb-10 text-white font-medium">
+              <p className="text-xl md:text-2xl mb-8 text-white leading-relaxed max-w-xl" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
                 From general-purpose LLMs to industry-specific AI models — we build, deploy, and operate production-grade AI systems tailored to your vertical
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 mb-16">
-                <Link href="/build-scale-ai" className="btn-primary text-lg px-8 py-4">
+              <div className="flex flex-col sm:flex-row gap-4 mb-12">
+                <Link href="/build-scale-ai" className="btn-primary text-lg px-8 py-4 text-center">
                   Discuss your AI needs
                 </Link>
-                <Link href="/ml-models" className="px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 bg-white/20 backdrop-blur-sm border-2 border-white text-white hover:bg-white hover:text-black">
+                <Link href="/ml-models" className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-dark-900 transition-all text-lg text-center">
                   Explore ML Models
                 </Link>
               </div>
@@ -198,16 +198,16 @@ export default function Solutions() {
               {/* Stats */}
               <div className="grid grid-cols-3 gap-8">
                 <div>
-                  <div className="text-4xl md:text-5xl font-bold tracking-tight" style={{ color: 'var(--green)' }}>50+</div>
-                  <div className="text-base mt-1 text-white/80">AI Systems Built</div>
+                  <div className="text-3xl md:text-4xl font-bold text-green-400">50+</div>
+                  <div className="text-sm text-white/80">AI Systems Built</div>
                 </div>
                 <div>
-                  <div className="text-4xl md:text-5xl font-bold tracking-tight" style={{ color: 'var(--green)' }}>98%</div>
-                  <div className="text-base mt-1 text-white/80">Success Rate</div>
+                  <div className="text-3xl md:text-4xl font-bold text-green-400">98%</div>
+                  <div className="text-sm text-white/80">Success Rate</div>
                 </div>
                 <div>
-                  <div className="text-4xl md:text-5xl font-bold tracking-tight" style={{ color: 'var(--green)' }}>24/7</div>
-                  <div className="text-base mt-1 text-white/80">Production Ready</div>
+                  <div className="text-3xl md:text-4xl font-bold text-green-400">24/7</div>
+                  <div className="text-sm text-white/80">Production Ready</div>
                 </div>
               </div>
             </div>

@@ -123,7 +123,7 @@ export default function ManageOptimize() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?auto=format&fit=crop&w=1920&q=80"
           alt="Manage & Optimize"
@@ -133,8 +133,8 @@ export default function ManageOptimize() {
         <NetworkBackground nodeCount={60} />
         <div className="hidden md:block absolute top-1/2 right-0 w-[600px] h-[600px] bg-primary-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 animate-glow-pulse" />
 
-        <div className="relative max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="relative container-max py-20 md:py-28">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-8 leading-tight animate-fade-in-up" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                 Keep AI Running<br />

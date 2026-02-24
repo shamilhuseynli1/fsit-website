@@ -191,7 +191,7 @@ export default function AIOperations() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] overflow-hidden">
+      <section className="relative min-h-[85vh] overflow-hidden">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -220,8 +220,8 @@ export default function AIOperations() {
 
         <NetworkBackground nodeCount={50} maxDistance={120} />
 
-        <div className="relative max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[70vh]">
+        <div className="relative container-max py-20 md:py-28">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left content */}
             <div className="relative z-10">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>

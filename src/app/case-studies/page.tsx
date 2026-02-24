@@ -179,17 +179,17 @@ export default function CaseStudiesPage() {
 
       {/* Stats Bar */}
       <section className="border-y border-neutral-200" style={{ background: 'var(--cream)' }}>
-        <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-16">
             {[
               { number: '300+', label: 'Projects delivered' },
               { number: '98%', label: 'Success rate' },
               { number: '$500M+', label: 'Client value generated' },
               { number: '3 weeks', label: 'Average time to production' },
             ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3" style={{ color: 'var(--green)' }}>{stat.number}</div>
-                <div className="text-lg md:text-xl font-medium" style={{ color: 'var(--gray-700)' }}>{stat.label}</div>
+              <div key={index} className="text-center px-4">
+                <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3" style={{ color: 'var(--green)' }}>{stat.number}</div>
+                <div className="text-sm md:text-base lg:text-lg font-medium" style={{ color: 'var(--gray-700)' }}>{stat.label}</div>
               </div>
             ))}
           </div>

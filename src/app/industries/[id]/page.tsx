@@ -126,8 +126,8 @@ const industriesData: Record<string, {
     icon: '🏭',
     headline: 'Smart Factory AI Solutions',
     description: 'Bring intelligence to your manufacturing operations. From predictive maintenance to quality control, we help manufacturers reduce downtime, improve quality, and optimize production.',
-    heroImage: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1920&q=80',
-    sectionImage: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1920&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80',
+    sectionImage: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80',
     imageAlt: 'Industrial Manufacturing Facility Saudi Arabia',
     challenges: [
       'Legacy equipment integration',
@@ -160,8 +160,8 @@ const industriesData: Record<string, {
     icon: '💻',
     headline: 'AI for Software Companies',
     description: 'Embed AI into your products and operations. From intelligent features to automated development workflows, we help technology companies build and operate AI-powered products.',
-    heroImage: 'https://images.unsplash.com/photo-1659241869140-3cb7cdff42fd?auto=format&fit=crop&w=1920&q=80',
-    sectionImage: 'https://images.unsplash.com/photo-1659241869140-3cb7cdff42fd?auto=format&fit=crop&w=1920&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80',
+    sectionImage: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80',
     imageAlt: 'Modern Technology Office Saudi Arabia',
     challenges: [
       'Rapid iteration and deployment',
@@ -296,7 +296,7 @@ const industriesData: Record<string, {
     icon: '🏟️',
     headline: 'AI for Sports, Events & Entertainment',
     description: 'Power the future of sports and entertainment with AI. From fan analytics to player performance, we help organizations in Saudi Arabia\'s rapidly growing $38B+ sports economy leverage AI for competitive advantage.',
-    heroImage: 'https://images.unsplash.com/photo-1709019571029-f52884e924f3?auto=format&fit=crop&w=1920&q=80',
+    heroImage: '/industries/sports-saudi.jpg',
     sectionImage: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1920&q=80',
     imageAlt: 'Modern Sports Stadium Saudi Arabia',
     featuredClients: [

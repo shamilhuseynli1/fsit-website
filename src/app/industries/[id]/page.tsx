@@ -24,8 +24,8 @@ const industriesData: Record<string, {
     icon: '🏦',
     headline: 'AI for Banking, Insurance & Fintech',
     description: 'Deploy AI systems that meet the strictest regulatory requirements while delivering measurable business impact. From fraud detection to algorithmic trading, we build AI that financial institutions can trust.',
-    heroImage: 'https://images.unsplash.com/photo-1511883040705-6011fad9edfc?auto=format&fit=crop&w=800&q=80',
-    sectionImage: 'https://images.unsplash.com/photo-1511883040705-6011fad9edfc?auto=format&fit=crop&w=800&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1511883040705-6011fad9edfc?auto=format&fit=crop&w=1920&q=80',
+    sectionImage: 'https://images.unsplash.com/photo-1511883040705-6011fad9edfc?auto=format&fit=crop&w=1920&q=80',
     imageAlt: 'Saudi Arabia Financial District Riyadh',
     challenges: [
       'Regulatory compliance (SOC2, PCI-DSS, GDPR)',
@@ -58,8 +58,8 @@ const industriesData: Record<string, {
     icon: '🏥',
     headline: 'HIPAA-Compliant AI for Healthcare',
     description: 'Build AI systems that improve patient outcomes while maintaining the highest standards of privacy and compliance. From diagnostic support to operational efficiency, we help healthcare organizations harness AI responsibly.',
-    heroImage: 'https://images.unsplash.com/photo-1485848395967-65dff62dc35b?auto=format&fit=crop&w=800&q=80',
-    sectionImage: 'https://images.unsplash.com/photo-1485848395967-65dff62dc35b?auto=format&fit=crop&w=800&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1485848395967-65dff62dc35b?auto=format&fit=crop&w=1920&q=80',
+    sectionImage: 'https://images.unsplash.com/photo-1485848395967-65dff62dc35b?auto=format&fit=crop&w=1920&q=80',
     imageAlt: 'Modern Healthcare Facility Saudi Arabia',
     challenges: [
       'HIPAA compliance and patient privacy',
@@ -92,8 +92,8 @@ const industriesData: Record<string, {
     icon: '🛒',
     headline: 'AI-Powered Retail Experiences',
     description: 'Transform customer experiences and optimize operations with AI. From hyper-personalization to demand forecasting, we help retailers compete in the age of AI-first commerce.',
-    heroImage: 'https://images.unsplash.com/photo-1669003152226-b37b58281b84?auto=format&fit=crop&w=800&q=80',
-    sectionImage: 'https://images.unsplash.com/photo-1669003152226-b37b58281b84?auto=format&fit=crop&w=800&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1669003152226-b37b58281b84?auto=format&fit=crop&w=1920&q=80',
+    sectionImage: 'https://images.unsplash.com/photo-1669003152226-b37b58281b84?auto=format&fit=crop&w=1920&q=80',
     imageAlt: 'Modern Retail Shopping Mall Saudi Arabia',
     challenges: [
       'Real-time personalization at scale',
@@ -126,8 +126,8 @@ const industriesData: Record<string, {
     icon: '🏭',
     headline: 'Smart Factory AI Solutions',
     description: 'Bring intelligence to your manufacturing operations. From predictive maintenance to quality control, we help manufacturers reduce downtime, improve quality, and optimize production.',
-    heroImage: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80',
-    sectionImage: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1920&q=80',
+    sectionImage: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1920&q=80',
     imageAlt: 'Industrial Manufacturing Facility Saudi Arabia',
     challenges: [
       'Legacy equipment integration',
@@ -160,8 +160,8 @@ const industriesData: Record<string, {
     icon: '💻',
     headline: 'AI for Software Companies',
     description: 'Embed AI into your products and operations. From intelligent features to automated development workflows, we help technology companies build and operate AI-powered products.',
-    heroImage: 'https://images.unsplash.com/photo-1659241869140-3cb7cdff42fd?auto=format&fit=crop&w=800&q=80',
-    sectionImage: 'https://images.unsplash.com/photo-1659241869140-3cb7cdff42fd?auto=format&fit=crop&w=800&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1659241869140-3cb7cdff42fd?auto=format&fit=crop&w=1920&q=80',
+    sectionImage: 'https://images.unsplash.com/photo-1659241869140-3cb7cdff42fd?auto=format&fit=crop&w=1920&q=80',
     imageAlt: 'Modern Technology Office Saudi Arabia',
     challenges: [
       'Rapid iteration and deployment',
@@ -296,7 +296,7 @@ const industriesData: Record<string, {
     icon: '🏟️',
     headline: 'AI for Sports, Events & Entertainment',
     description: 'Power the future of sports and entertainment with AI. From fan analytics to player performance, we help organizations in Saudi Arabia\'s rapidly growing $38B+ sports economy leverage AI for competitive advantage.',
-    heroImage: 'https://images.unsplash.com/photo-1707669778142-3e7715a2b85b?auto=format&fit=crop&w=1920&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1709019571029-f52884e924f3?auto=format&fit=crop&w=1920&q=80',
     sectionImage: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1920&q=80',
     imageAlt: 'Modern Sports Stadium Saudi Arabia',
     featuredClients: [

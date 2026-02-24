@@ -39,7 +39,7 @@ export default function Mission() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[80vh] flex items-center bg-cream-50 overflow-hidden">
+      <section className="relative min-h-[85vh] flex items-center bg-cream-50 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1682695796795-cc287af78a2b?auto=format&fit=crop&w=1920&q=80"
           alt="Mission"
@@ -47,7 +47,7 @@ export default function Mission() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/50 to-white/30" />
         <NetworkBackground nodeCount={60} />
-        <div className="relative max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
+        <div className="relative container-max py-20 md:py-28">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="hero-title text-dark-900 !text-3xl md:!text-4xl lg:!text-5xl">
               We exist to close the gap between AI ambition and{' '}

@@ -355,7 +355,7 @@ export default function IndustryPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center bg-neutral-50 overflow-hidden">
+      <section className="relative min-h-[85vh] flex items-center bg-neutral-50 overflow-hidden">
         {/* Saudi Industry Background */}
         <div
           className="absolute inset-0"
@@ -367,7 +367,7 @@ export default function IndustryPage() {
         />
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-32">
+        <div className="relative z-10 container-max py-20 md:py-28">
           <div className="max-w-4xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5), 0 4px 12px rgba(0,0,0,0.3)' }}>
               {industry.headline}

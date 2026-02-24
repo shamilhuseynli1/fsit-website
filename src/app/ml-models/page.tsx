@@ -488,7 +488,7 @@ export default function MLModelsPage() {
       <style dangerouslySetInnerHTML={{ __html: customStyles }} />
 
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         {/* Background Image */}
         <img
           src="https://images.unsplash.com/photo-1629667051607-e412f1c493c0?auto=format&fit=crop&w=1920&q=80"
@@ -498,7 +498,7 @@ export default function MLModelsPage() {
         {/* Dark overlay for contrast */}
         <div className="absolute inset-0 bg-black/60" />
 
-        <div className="relative z-10 max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="relative z-10 container-max py-20 md:py-28">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             {/* Left - Text Content */}
             <div>

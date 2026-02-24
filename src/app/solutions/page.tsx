@@ -161,7 +161,7 @@ export default function Solutions() {
   return (
     <div style={{ background: 'var(--white)' }} className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden min-h-[90vh] flex items-center">
+      <section className="relative overflow-hidden min-h-[85vh] flex items-center">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1590959914819-b767b9fe4cfb?auto=format&fit=crop&w=1920&q=80)' }}
@@ -171,7 +171,7 @@ export default function Solutions() {
 
         <AnimatedBackground />
 
-        <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 relative py-32">
+        <div className="container-max relative py-20 md:py-28">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
 

@@ -74,13 +74,13 @@ export default function BuildScaleAI() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[60vh] flex items-center overflow-hidden" style={{ background: 'var(--cream)' }}>
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden" style={{ background: 'var(--cream)' }}>
         <img
           src="https://images.unsplash.com/photo-1738410775719-9f237adb266d?auto=format&fit=crop&w=1920&q=80"
           alt="Build Scale AI"
           className="absolute inset-0 w-full h-full object-cover opacity-60"
         />
-        <div className="relative max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+        <div className="relative container-max py-20 md:py-28">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="hero-title text-dark-900 !text-3xl md:!text-4xl lg:!text-5xl">
               Build and Scale <span className="text-primary-500">AI</span>

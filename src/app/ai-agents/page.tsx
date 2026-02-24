@@ -207,7 +207,7 @@ export default function AIAgents() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] overflow-hidden">
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -236,7 +236,7 @@ export default function AIAgents() {
 
         <NetworkBackground nodeCount={50} maxDistance={120} />
 
-        <div className="relative max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="relative container-max py-20 md:py-28">
           <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[70vh]">
             {/* Left content */}
             <div className="relative z-10">

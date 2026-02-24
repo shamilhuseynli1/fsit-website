@@ -78,14 +78,14 @@ export default function About() {
   return (
     <>
       {/* 1. Hero - Vision Statement */}
-      <section className="relative min-h-[80vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1694018359679-49465b4c0d61?auto=format&fit=crop&w=1920&q=80"
           alt="FSIT Team"
           className="absolute inset-0 w-full h-full object-cover object-top"
         />
         <div className="absolute inset-0 bg-black/60" />
-        <div className="container-max relative py-24 lg:py-32">
+        <div className="container-max relative py-20 md:py-28">
           <div className="max-w-3xl">
             <p className="text-green-400 font-semibold text-lg mb-4" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>About FSIT</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[1.1]" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>

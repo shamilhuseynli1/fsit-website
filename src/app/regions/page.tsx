@@ -75,7 +75,7 @@ export default function Regions() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[80vh] flex items-center bg-cream-50 overflow-hidden">
+      <section className="relative min-h-[85vh] flex items-center bg-cream-50 overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1682687219573-3fd75f982217?auto=format&fit=crop&w=1920&q=80"
@@ -85,7 +85,7 @@ export default function Regions() {
           <div className="absolute inset-0 bg-primary-500/40" />
         </div>
         <NetworkBackground nodeCount={60} />
-        <div className="relative max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
+        <div className="relative container-max py-20 md:py-28">
           <div className="max-w-3xl">
             <h1 className="hero-title text-white">
               Regional execution.<br />

@@ -218,7 +218,7 @@ export default function ProtectScale() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {governanceAreas.map((area, index) => (
               <div key={index} className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-lg p-4 hover:border-[#00A651] hover:shadow-md transition-all duration-300">
                 <div className="w-10 h-10 bg-primary-500/10 rounded-lg flex items-center justify-center text-primary-500 mb-3">
@@ -274,7 +274,7 @@ export default function ProtectScale() {
             </svg>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {securityLayers.map((layer, index) => (
               <div key={index} className="bg-white rounded-2xl p-6 border border-neutral-200 text-center">
                 <h3 className="text-lg font-semibold text-dark-900 mb-4">{layer.layer}</h3>
@@ -301,7 +301,7 @@ export default function ProtectScale() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
             {complianceFrameworks.map((framework, index) => (
               <div key={index} className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-lg p-3 hover:border-[#00A651] hover:shadow-md transition-all duration-300 text-center">
                 <div className="w-8 h-8 bg-primary-500/10 rounded-lg flex items-center justify-center text-primary-500 mx-auto mb-2">
@@ -352,7 +352,7 @@ export default function ProtectScale() {
             </svg>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
             {scalingCapabilities.map((cap, index) => (
               <div key={index} className="relative">
                 {/* Dashed connector line between blocks */}
@@ -405,7 +405,7 @@ export default function ProtectScale() {
             </svg>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {industries.map((industry, index) => (
               <div key={index} className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl p-6 hover:border-[#00A651] hover:shadow-lg transition-all duration-300 text-center">
                 <h3 className="text-lg font-semibold text-dark-900 mb-4">{industry.name}</h3>
@@ -457,7 +457,7 @@ export default function ProtectScale() {
             </svg>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-8">
             {[
               'Deep experience in regulated industries',
               'Security-first architecture and development',
@@ -493,7 +493,7 @@ export default function ProtectScale() {
           {/* Governance Deliverables */}
           <div className="max-w-4xl mx-auto">
             <h3 className="text-2xl font-semibold text-dark-900 mb-6 text-center">Governance Deliverables</h3>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
               {[
                 { title: 'Security Assessment', desc: 'Comprehensive security review of AI systems' },
                 { title: 'Compliance Roadmap', desc: 'Path to meeting regulatory requirements' },

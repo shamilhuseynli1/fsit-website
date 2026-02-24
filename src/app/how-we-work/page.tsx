@@ -322,8 +322,8 @@ export default function HowWeWork() {
             </p>
           </div>
 
-          {/* Video and blocks side by side with connecting lines */}
-          <div className="flex items-center justify-center gap-0">
+          {/* Video and blocks side by side with connecting lines - Desktop */}
+          <div className="hidden md:flex items-center justify-center gap-0">
             {/* Video */}
             <div className="w-[45%]">
               <VideoPlaceholder
@@ -356,6 +356,27 @@ export default function HowWeWork() {
                 <div
                   key={i}
                   className="px-4 py-3 rounded-lg border transition-all hover:border-[#00A651] hover:shadow-sm"
+                  style={{ background: '#F5F3F0', borderColor: 'rgba(0,166,81,0.2)' }}
+                >
+                  <span className="text-sm font-medium" style={{ color: 'var(--gray-700)' }}>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Mobile layout - Video and blocks stacked */}
+          <div className="md:hidden space-y-6">
+            <VideoPlaceholder
+              title="Our Process Walkthrough"
+              description="See how we deliver AI systems"
+              duration="2:30"
+              thumbnailUrl="/hero-solutions.jpg"
+            />
+            <div className="space-y-2">
+              {['Define clear business outcomes', 'Embed specialized AI teams', 'Build integrated systems', 'Operate with reliability', 'Scale with governance'].map((item, i) => (
+                <div
+                  key={i}
+                  className="px-4 py-3 rounded-lg border"
                   style={{ background: '#F5F3F0', borderColor: 'rgba(0,166,81,0.2)' }}
                 >
                   <span className="text-sm font-medium" style={{ color: 'var(--gray-700)' }}>{item}</span>
@@ -402,7 +423,7 @@ export default function HowWeWork() {
           </div>
 
           {/* Items grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {delivers.map((item, index) => (
               <div key={index} className="group text-center p-4 rounded-xl hover:bg-white transition-all duration-300">
                 <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-white border border-[#00A651]/30

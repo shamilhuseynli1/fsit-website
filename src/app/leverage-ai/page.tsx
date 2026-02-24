@@ -194,7 +194,7 @@ export default function LeverageAI() {
             ]} />
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mt-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-12">
             {services.map((service, index) => (
               <div key={index} className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-lg p-4 hover:border-[#00A651] hover:shadow-md transition-all duration-300">
                 <div className="w-10 h-10 bg-primary-500/10 rounded-lg flex items-center justify-center text-primary-500 mb-3">
@@ -225,7 +225,7 @@ export default function LeverageAI() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {useCases.map((useCase, index) => (
               <div key={index} className="bg-white rounded-lg p-4 border border-neutral-200 hover:border-primary-500 transition-all">
                 <span className="text-xs font-semibold text-primary-600 uppercase tracking-wide">{useCase.category}</span>
@@ -281,7 +281,7 @@ export default function LeverageAI() {
             </svg>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
             {readinessFactors.map((item, i) => (
               <div key={i} className="group text-center p-4 bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl hover:border-[#00A651] hover:shadow-lg transition-all duration-300">
                 <h3 className="text-base font-bold mb-2 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
@@ -368,7 +368,7 @@ export default function LeverageAI() {
             </svg>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-16">
             {[
               '98% project success rate vs 59% industry standard',
               'Teams deployed in 3 weeks, not 6 months',

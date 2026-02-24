@@ -270,7 +270,7 @@ export default function About() {
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-lg md:text-xl text-gray-500 mb-6">FSIT is not a traditional consultancy. Not a generic outsourcing provider. Not a staffing marketplace.</p>
             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8" style={{ color: 'var(--black)' }}>We are an <span className="text-green-600">AI execution partner</span></h3>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
               {[
                 'AI-native engineering teams',
                 'End-to-end responsibility',
@@ -296,7 +296,7 @@ export default function About() {
               These principles guide every engagement and define how we deliver AI that works.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {values.map((value, index) => (
               <div key={index} className="card-feature p-6 text-center group">
                 <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-green-100 flex items-center justify-center group-hover:bg-green-500 transition-colors">
@@ -415,7 +415,7 @@ export default function About() {
               }
             `}</style>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-0 relative z-20">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0 relative z-20">
               {[
                 {
                   icon: (
@@ -703,7 +703,7 @@ export default function About() {
             <p className="text-green-600 font-semibold text-lg mb-4">Our Commitment</p>
             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6" style={{ color: 'var(--black)' }}>We measure success by impact</h3>
             <p className="text-lg md:text-xl text-gray-600 mb-8">Not headcount, buzzwords, or slide decks.</p>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
               {[
                 'Responsible AI adoption',
                 'Measurable business outcomes',

@@ -245,7 +245,7 @@ export default function AIOperations() {
               </div>
 
               {/* Stats row */}
-              <div className="mt-12 grid grid-cols-4 gap-4">
+              <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4">
                 {[
                   { value: '99.9%', label: 'Uptime' },
                   { value: '98%', label: 'Accuracy' },
@@ -316,7 +316,7 @@ export default function AIOperations() {
                 The most reliable AI systems combine automation with human oversight. Our human-in-the-loop services ensure your AI remains accurate, safe, and aligned with business objectives.
               </p>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
                   {
                     title: 'Quality Assurance',

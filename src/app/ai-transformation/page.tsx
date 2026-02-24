@@ -216,7 +216,7 @@ export default function AITransformation() {
           </div>
 
           {/* Journey Details */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {journeyPhases.map((phase, index) => (
               <div key={index} className="group bg-white rounded-2xl p-6 border border-neutral-200 hover:border-primary-500 hover:shadow-lg transition-all duration-300">
                 <h3 className="text-xl font-bold text-dark-900 mb-2 group-hover:text-primary-600 transition-colors">{phase.title}</h3>
@@ -269,7 +269,7 @@ export default function AITransformation() {
             </svg>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {industries.map((industry, index) => (
               <div key={index} className="group text-center p-4 bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl hover:border-[#00A651] hover:shadow-lg transition-all duration-300">
                 <h3 className="text-base font-bold mb-2 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
@@ -368,7 +368,7 @@ export default function AITransformation() {
             <p className="text-lg text-dark-500 mb-6 text-center">
               Every month you delay AI transformation, your competitors are:
             </p>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
                 'Automating processes you do manually',
                 'Delivering experiences you can\'t match',

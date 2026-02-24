@@ -157,9 +157,9 @@ export default function Contact() {
       {/* Contact Info Cards */}
       <section className="py-16" style={{ background: 'var(--cream)' }}>
         <div className="container-max">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {contactInfo.map((info, index) => (
-              <div key={index} className="bg-white border border-green-500/20 rounded-2xl p-6 text-center hover:border-green-500 hover:shadow-lg transition-all duration-300">
+              <div key={index} className="bg-white border border-green-500/20 rounded-2xl p-5 md:p-6 text-center hover:border-green-500 hover:shadow-lg transition-all duration-300">
                 <div className="w-14 h-14 bg-green-500/10 rounded-xl flex items-center justify-center text-green-600 mx-auto mb-4">
                   {info.icon}
                 </div>

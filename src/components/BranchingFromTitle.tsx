@@ -34,8 +34,8 @@ export default function BranchingFromTitle({ items }: BranchingFromTitleProps) {
 
   return (
     <div ref={containerRef} className="relative">
-      {/* SVG with branching lines */}
-      <div className="relative h-44">
+      {/* SVG with branching lines - hidden on mobile */}
+      <div className="relative h-24 md:h-44 hidden md:block">
         <svg
           className="w-full h-full"
           viewBox="0 0 1000 180"
@@ -156,12 +156,12 @@ export default function BranchingFromTitle({ items }: BranchingFromTitleProps) {
         }
       `}</style>
 
-      {/* Cards grid */}
-      <div className={`grid gap-4 -mt-2 ${items.length === 5 ? 'grid-cols-5' : 'grid-cols-4'}`}>
+      {/* Cards grid - responsive */}
+      <div className={`grid gap-3 md:gap-4 mt-6 md:-mt-2 ${items.length === 5 ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-5' : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'}`}>
         {items.map((item, index) => (
           <div
             key={index}
-            className={`text-center px-4 py-8 rounded-t-[2rem] rounded-b-xl transition-all duration-500 hover:shadow-lg hover:-translate-y-1 ${
+            className={`text-center px-4 py-6 md:py-8 rounded-2xl md:rounded-t-[2rem] md:rounded-b-xl transition-all duration-500 hover:shadow-lg hover:-translate-y-1 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}
             style={{
@@ -170,14 +170,14 @@ export default function BranchingFromTitle({ items }: BranchingFromTitleProps) {
               transitionDelay: `${index * 0.1 + 0.3}s`,
             }}
           >
-            <h3 className="text-lg font-bold mb-3" style={{ color: 'var(--black)' }}>
+            <h3 className="text-base md:text-lg font-bold mb-2 md:mb-3" style={{ color: 'var(--black)' }}>
               {item.title}
             </h3>
-            <p className="text-sm mb-6" style={{ color: 'var(--gray-500)' }}>
+            <p className="text-sm mb-4 md:mb-6" style={{ color: 'var(--gray-500)' }}>
               {item.desc}
             </p>
             {/* Green underline */}
-            <div className="w-20 h-1.5 mx-auto rounded-full" style={{ background: 'var(--green)' }} />
+            <div className="w-16 md:w-20 h-1 md:h-1.5 mx-auto rounded-full" style={{ background: 'var(--green)' }} />
           </div>
         ))}
       </div>

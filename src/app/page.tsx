@@ -240,9 +240,9 @@ export default function Home() {
           </div>
 
           {/* Blocks and Video side by side */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
             {/* Left side: blocks */}
-            <div className="grid grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
                 {[
                   { text: 'AI-native delivery', icon: 'ai' },
                   { text: '80K+ experts', icon: 'users' },
@@ -319,7 +319,7 @@ export default function Home() {
                 ))}
             </div>
             {/* Right side: Video */}
-            <div className="lg:-mr-16 xl:-mr-24 h-full">
+            <div className="lg:-mr-8 xl:-mr-16 h-full min-h-[280px] md:min-h-[320px]">
               <VideoPlaceholder
                 title="What is FSIT?"
                 description="60-second explainer"
@@ -631,7 +631,7 @@ export default function Home() {
                 New to AI? Watch this 30-second explainer to understand the basics of machine learning and how it can transform your business operations.
               </p>
               {/* Modern feature cards */}
-              <div className="grid grid-cols-3 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 {[
                   { text: 'Pattern recognition', icon: 'pattern' },
                   { text: 'Predictive decisions', icon: 'predict' },
@@ -808,7 +808,7 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="relative rounded-2xl overflow-hidden shadow-xl lg:-mr-20 xl:-mr-32">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl lg:-mr-12 xl:-mr-20">
               <img
                 src="https://images.unsplash.com/photo-1733757361453-5f493624a734?auto=format&fit=crop&w=1200&q=80"
                 alt="GOSI Case Study"

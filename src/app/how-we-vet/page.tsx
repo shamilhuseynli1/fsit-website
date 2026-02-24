@@ -122,18 +122,18 @@ export default function HowWeVet() {
               </p>
 
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-8">
+              <div className="flex items-start gap-12 md:gap-16 mt-10">
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold text-green-400">99%</div>
-                  <div className="text-white/80 text-sm">Filtered Out</div>
+                  <div className="text-3xl md:text-4xl font-bold text-green-400 whitespace-nowrap">99%</div>
+                  <div className="text-white/80 text-sm md:text-base mt-1">Filtered Out</div>
                 </div>
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold text-green-400">Top 1%</div>
-                  <div className="text-white/80 text-sm">Selected</div>
+                  <div className="text-3xl md:text-4xl font-bold text-green-400 whitespace-nowrap">Top 1%</div>
+                  <div className="text-white/80 text-sm md:text-base mt-1">Selected</div>
                 </div>
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold text-green-400">5 Steps</div>
-                  <div className="text-white/80 text-sm">Vetting</div>
+                  <div className="text-3xl md:text-4xl font-bold text-green-400 whitespace-nowrap">5 Steps</div>
+                  <div className="text-white/80 text-sm md:text-base mt-1">Vetting</div>
                 </div>
               </div>
             </div>

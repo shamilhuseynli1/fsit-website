@@ -92,8 +92,8 @@ const industriesData: Record<string, {
     icon: '🛒',
     headline: 'AI-Powered Retail Experiences',
     description: 'Transform customer experiences and optimize operations with AI. From hyper-personalization to demand forecasting, we help retailers compete in the age of AI-first commerce.',
-    heroImage: 'https://images.unsplash.com/photo-1669003152226-b37b58281b84?auto=format&fit=crop&w=1920&q=80',
-    sectionImage: 'https://images.unsplash.com/photo-1669003152226-b37b58281b84?auto=format&fit=crop&w=1920&q=80',
+    heroImage: '/industries/retail.jpg',
+    sectionImage: '/industries/retail.jpg',
     imageAlt: 'Modern Retail Shopping Mall Saudi Arabia',
     challenges: [
       'Real-time personalization at scale',
@@ -126,8 +126,8 @@ const industriesData: Record<string, {
     icon: '🏭',
     headline: 'Smart Factory AI Solutions',
     description: 'Bring intelligence to your manufacturing operations. From predictive maintenance to quality control, we help manufacturers reduce downtime, improve quality, and optimize production.',
-    heroImage: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80',
-    sectionImage: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1920&q=80',
+    sectionImage: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1920&q=80',
     imageAlt: 'Industrial Manufacturing Facility Saudi Arabia',
     challenges: [
       'Legacy equipment integration',
@@ -160,8 +160,8 @@ const industriesData: Record<string, {
     icon: '💻',
     headline: 'AI for Software Companies',
     description: 'Embed AI into your products and operations. From intelligent features to automated development workflows, we help technology companies build and operate AI-powered products.',
-    heroImage: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80',
-    sectionImage: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80',
+    heroImage: '/industries/techsas.jpg',
+    sectionImage: '/industries/techsas.jpg',
     imageAlt: 'Modern Technology Office Saudi Arabia',
     challenges: [
       'Rapid iteration and deployment',
@@ -355,7 +355,7 @@ export default function IndustryPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center bg-neutral-50 overflow-hidden">
+      <section className="relative min-h-[85vh] flex items-center justify-start bg-neutral-50 overflow-hidden">
         {/* Saudi Industry Background */}
         <div
           className="absolute inset-0"
@@ -367,12 +367,12 @@ export default function IndustryPage() {
         />
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 container-max py-20 md:py-28">
+        <div className="relative z-10 container-max py-20 md:py-28 w-full">
           <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5), 0 4px 12px rgba(0,0,0,0.3)' }}>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 text-left" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5), 0 4px 12px rgba(0,0,0,0.3)' }}>
               {industry.headline}
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl font-medium" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
+            <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl font-medium text-left" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
               {industry.description}
             </p>
           </div>

@@ -171,18 +171,18 @@ export default function HowWeWork() {
               </p>
 
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-8">
+              <div className="flex items-start gap-12 md:gap-16 mt-10">
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold text-green-400">98%</div>
-                  <div className="text-white/80 text-sm">Success Rate</div>
+                  <div className="text-3xl md:text-4xl font-bold text-green-400 whitespace-nowrap">98%</div>
+                  <div className="text-white/80 text-sm md:text-base mt-1">Success Rate</div>
                 </div>
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold text-green-400">3 weeks</div>
-                  <div className="text-white/80 text-sm">To Deploy</div>
+                  <div className="text-3xl md:text-4xl font-bold text-green-400 whitespace-nowrap">3 weeks</div>
+                  <div className="text-white/80 text-sm md:text-base mt-1">To Deploy</div>
                 </div>
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold text-green-400">5 Steps</div>
-                  <div className="text-white/80 text-sm">Process</div>
+                  <div className="text-3xl md:text-4xl font-bold text-green-400 whitespace-nowrap">5 Steps</div>
+                  <div className="text-white/80 text-sm md:text-base mt-1">Process</div>
                 </div>
               </div>
             </div>

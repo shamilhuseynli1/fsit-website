@@ -194,8 +194,8 @@ export default function Home() {
           alt={isNight ? "Riyadh Skyline at Night - Saudi Arabia" : "Riyadh Skyline - Saudi Arabia"}
           className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
         />
-        {/* Overlay for text contrast - slightly darker at night */}
-        <div className={`absolute inset-0 transition-colors duration-1000 ${isNight ? 'bg-black/60' : 'bg-black/50'}`} />
+        {/* Overlay for text contrast - darker on mobile for readability */}
+        <div className={`absolute inset-0 transition-colors duration-1000 ${isNight ? 'bg-black/60 md:bg-black/60' : 'bg-black/65 md:bg-black/50'}`} />
 
         <div className="container-lg relative py-32 lg:py-40">
           <div className="max-w-5xl">
@@ -212,14 +212,14 @@ export default function Home() {
 
             <div className="mb-14 max-w-4xl">
               <p className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5), 0 4px 12px rgba(0,0,0,0.3)' }}>Pioneering AI transformation across Saudi Arabia and the Middle East</p>
-              <p className="text-xl md:text-2xl lg:text-3xl font-medium text-white/90" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5), 0 3px 8px rgba(0,0,0,0.3)' }}>AI-native teams delivering production-ready systems across government and enterprise since 2020</p>
+              <p className="text-xl md:text-2xl lg:text-3xl font-medium text-white/90" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5), 0 3px 8px rgba(0,0,0,0.3)' }}>AI-native teams delivering production-ready systems across government and enterprise since 2012</p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 items-start">
-              <Link href="/contact" className="btn-primary text-lg px-8 py-4">
+            <div className="flex flex-row gap-3 sm:gap-4 items-center justify-center md:justify-start">
+              <Link href="/contact" className="btn-primary text-base sm:text-lg px-5 sm:px-8 py-3 sm:py-4">
                 Talk to our team
               </Link>
-              <Link href="/build-scale-ai" className="px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 bg-white/20 backdrop-blur-sm border-2 border-white text-white hover:bg-white hover:text-black">
+              <Link href="/build-scale-ai" className="px-5 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold transition-all duration-300 bg-white/20 backdrop-blur-sm border-2 border-white text-white hover:bg-white hover:text-black">
                 Start with a pilot
               </Link>
             </div>
@@ -273,7 +273,7 @@ export default function Home() {
                     />
 
                     {/* Animated icon */}
-                    <div className="relative z-10 mb-3">
+                    <div className="relative z-10 mb-3 flex justify-center md:justify-start">
                       <div
                         className="w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-3"
                         style={{
@@ -305,12 +305,12 @@ export default function Home() {
                     </div>
 
                     {/* Text with animated underline */}
-                    <div className="relative z-10">
+                    <div className="relative z-10 text-center md:text-left">
                       <p className="text-lg font-bold transition-colors duration-300" style={{ color: 'var(--gray-900)' }}>
                         {item.text}
                       </p>
                       <div
-                        className="h-0.5 mt-2 rounded-full transition-all duration-500 w-0 group-hover:w-full"
+                        className="h-0.5 mt-2 rounded-full transition-all duration-500 w-0 group-hover:w-full mx-auto md:mx-0"
                         style={{ background: 'linear-gradient(90deg, var(--green), #10b981)' }}
                       />
                     </div>
@@ -330,7 +330,7 @@ export default function Home() {
           </div>
 
           {/* Button below */}
-          <div className="mt-10">
+          <div className="mt-10 text-center md:text-left">
             <Link href="/about" className="btn-secondary text-lg">
               Learn more about us
             </Link>
@@ -365,42 +365,48 @@ export default function Home() {
         <div className="relative overflow-hidden">
           {filteredClients.length <= 5 ? (
             /* Static centered layout for few clients */
-            <div className="flex justify-center flex-wrap gap-14">
+            <div className="flex justify-center flex-wrap gap-6 md:gap-14 px-4">
               {filteredClients.map((client, index) => (
                 <a
                   key={index}
                   href={client.url || '#'}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-shrink-0 flex items-center justify-center h-28 w-64 logo-item"
+                  className="flex-shrink-0 flex items-center justify-center h-20 md:h-28 w-28 md:w-64 logo-item"
                 >
                   <Image
                     src={client.logo}
                     alt={client.name}
                     width={256}
                     height={112}
-                    className="object-contain max-h-24"
+                    className="object-contain max-h-16 md:max-h-24"
                   />
                 </a>
               ))}
             </div>
           ) : (
-            /* Scrolling animation for many clients */
-            <div className="flex animate-scroll">
+            /* Scrolling animation for many clients - faster on mobile */
+            <div
+              className="flex"
+              style={{
+                animation: 'scroll 26s linear infinite',
+                width: 'max-content'
+              }}
+            >
               {[...filteredClients, ...filteredClients].map((client, index) => (
                 <a
                   key={index}
                   href={client.url || '#'}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-shrink-0 mx-14 flex items-center justify-center h-28 w-64 logo-item"
+                  className="flex-shrink-0 mx-4 md:mx-14 flex items-center justify-center h-20 md:h-28 w-32 md:w-64 logo-item"
                 >
                   <Image
                     src={client.logo}
                     alt={client.name}
                     width={256}
                     height={112}
-                    className="object-contain max-h-24"
+                    className="object-contain max-h-16 md:max-h-24"
                   />
                 </a>
               ))}
@@ -409,20 +415,20 @@ export default function Home() {
         </div>
         {/* Client Stats Counter */}
         <div className="container-lg mt-8">
-          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-12 text-center">
-            <div className="flex items-center gap-2">
-              <span className="text-3xl md:text-4xl font-bold" style={{ color: 'var(--green)' }}>50+</span>
-              <span className="text-base" style={{ color: 'var(--gray-500)' }}>Registered Clients</span>
+          <div className="flex flex-row justify-center items-center gap-6 md:gap-12 text-center">
+            <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-2">
+              <span className="text-2xl md:text-4xl font-bold" style={{ color: 'var(--green)' }}>50+</span>
+              <span className="text-xs md:text-base" style={{ color: 'var(--gray-500)' }}>Clients</span>
             </div>
             <div className="w-px h-8 bg-gray-300 hidden md:block" />
-            <div className="flex items-center gap-2">
-              <span className="text-3xl md:text-4xl font-bold" style={{ color: 'var(--green)' }}>10+</span>
-              <span className="text-base" style={{ color: 'var(--gray-500)' }}>Government Entities</span>
+            <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-2">
+              <span className="text-2xl md:text-4xl font-bold" style={{ color: 'var(--green)' }}>10+</span>
+              <span className="text-xs md:text-base" style={{ color: 'var(--gray-500)' }}>Gov Entities</span>
             </div>
             <div className="w-px h-8 bg-gray-300 hidden md:block" />
-            <div className="flex items-center gap-2">
-              <span className="text-3xl md:text-4xl font-bold" style={{ color: 'var(--green)' }}>SAR Billions</span>
-              <span className="text-base" style={{ color: 'var(--gray-500)' }}>in Projects Supported</span>
+            <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-2 text-center">
+              <span className="text-2xl md:text-4xl font-bold whitespace-nowrap" style={{ color: 'var(--green)' }}>SAR Billions</span>
+              <span className="text-xs md:text-base" style={{ color: 'var(--gray-500)' }}>Projects</span>
             </div>
           </div>
         </div>
@@ -488,13 +494,13 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="section-sm" style={{ background: 'rgba(0, 166, 81, 0.85)' }}>
+      <section className="py-10 md:py-16" style={{ background: 'rgba(0, 166, 81, 0.85)' }}>
         <div className="container-lg">
-          <div className="grid-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-10">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <p className="text-5xl md:text-6xl font-bold text-white tracking-tight">{stat.number}</p>
-                <p className="text-white/70 text-sm mt-2">{stat.label}</p>
+                <p className="text-3xl md:text-6xl font-bold text-white tracking-tight">{stat.number}</p>
+                <p className="text-white/70 text-xs md:text-sm mt-1 md:mt-2">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -534,7 +540,7 @@ export default function Home() {
           </div>
 
           {/* Technology Categories */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div className="flex flex-wrap justify-center gap-3 md:grid md:grid-cols-3 lg:grid-cols-5 md:gap-4">
             {[
               {
                 title: 'Cloud & AI Platforms',
@@ -545,7 +551,8 @@ export default function Home() {
                 ]
               },
               {
-                title: 'Large Language Models',
+                title: 'LLMs',
+                titleFull: 'Large Language Models',
                 logos: [
                   { name: 'OpenAI', src: '/tools/openai.svg' },
                   { name: 'Anthropic', src: '/tools/anthropic-icon-tdvkiqisswbrmtkiygb0ia.webp' },
@@ -577,11 +584,14 @@ export default function Home() {
                 ]
               }
             ].map((category, index) => (
-              <div key={index} className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl p-5 hover:border-[#00A651] hover:shadow-lg transition-all duration-300 flex flex-col items-center">
-                <h3 className="text-base font-semibold text-dark-900 mb-4 text-center whitespace-nowrap">{category.title}</h3>
-                <div className="flex justify-center gap-4">
+              <div key={index} className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl p-3 md:p-5 hover:border-[#00A651] hover:shadow-lg transition-all duration-300 flex flex-col items-center w-[calc(50%-6px)] md:w-auto min-h-[100px] md:min-h-0">
+                <h3 className="text-xs md:text-base font-semibold text-dark-900 mb-2 md:mb-4 text-center">
+                  <span className="md:hidden">{category.title}</span>
+                  <span className="hidden md:inline whitespace-nowrap">{category.titleFull || category.title}</span>
+                </h3>
+                <div className="flex justify-center gap-2 md:gap-4">
                   {category.logos.map((logo, i) => (
-                    <div key={i} className="w-12 h-12 rounded-lg bg-white flex items-center justify-center shadow-sm p-2" title={logo.name}>
+                    <div key={i} className="w-8 h-8 md:w-12 md:h-12 rounded-lg bg-white flex items-center justify-center shadow-sm p-1 md:p-2" title={logo.name}>
                       <Image
                         src={logo.src}
                         alt={logo.name}
@@ -638,7 +648,7 @@ export default function Home() {
                 ].map((item, i) => (
                   <div
                     key={i}
-                    className="group p-4 rounded-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer"
+                    className="group p-4 rounded-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer flex flex-col items-center sm:items-start"
                     style={{
                       background: 'linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%)',
                       boxShadow: '0 4px 15px rgba(0,0,0,0.05)'
@@ -664,7 +674,7 @@ export default function Home() {
                         </svg>
                       )}
                     </div>
-                    <p className="text-base font-semibold" style={{ color: 'var(--gray-800)' }}>{item.text}</p>
+                    <p className="text-base font-semibold text-center sm:text-left" style={{ color: 'var(--gray-800)' }}>{item.text}</p>
                   </div>
                 ))}
               </div>
@@ -789,12 +799,12 @@ export default function Home() {
                 Secure, Vision 2030–aligned AI that automates workflows, unlocks institutional knowledge, and accelerates decision-making for a Saudi Government Entity.
               </p>
 
-              <div className="flex items-baseline gap-4 mb-8">
-                <span className="text-5xl md:text-6xl font-bold" style={{ color: 'var(--green)' }}>-45%</span>
-                <span className="text-xl" style={{ color: 'var(--gray-600)' }}>manual processing time</span>
+              <div className="flex items-center justify-center md:justify-start gap-3 mb-8">
+                <span className="text-4xl md:text-6xl font-bold" style={{ color: 'var(--green)' }}>-45%</span>
+                <span className="text-base md:text-xl" style={{ color: 'var(--gray-600)' }}>manual processing time</span>
               </div>
 
-              <div className="flex flex-wrap gap-3 mb-8">
+              <div className="flex flex-wrap justify-center md:justify-start gap-3 mb-8">
                 {['Custom LLM', 'Arabic NLP', 'RAG System', 'On-premise'].map((tag, i) => (
                   <span key={i} className="px-4 py-2 rounded-full text-base font-medium border" style={{ borderColor: 'var(--green)', color: 'var(--green)' }}>{tag}</span>
                 ))}

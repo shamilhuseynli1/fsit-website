@@ -178,7 +178,7 @@ const industriesData: Record<string, {
     ],
     useCases: [
       { title: 'Code Review Automation', desc: 'AI-powered code review for enterprise software company', results: '60% faster reviews, 85% security issues caught pre-merge' },
-      { title: 'Customer Support AI', desc: 'Conversational AI handling 70% of support tickets', results: '2-min response time, 94% CSAT' },
+      { title: 'Customer Support AI', desc: 'Conversational AI handling 70% of support tickets', results: '2-minute response time, 94% CSAT' },
       { title: 'Product Recommendations', desc: 'ML-powered feature recommendations in SaaS product', results: '40% increase in feature adoption' },
     ],
     stats: [
@@ -355,7 +355,7 @@ export default function IndustryPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center justify-start bg-neutral-50 overflow-hidden">
+      <section className="relative min-h-[auto] md:min-h-[85vh] flex items-center justify-start bg-neutral-50 overflow-hidden">
         {/* Saudi Industry Background */}
         <div
           className="absolute inset-0"
@@ -366,13 +366,13 @@ export default function IndustryPage() {
           }}
         />
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 container-max py-20 md:py-28 w-full">
-          <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 text-left" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5), 0 4px 12px rgba(0,0,0,0.3)' }}>
+        <div className="absolute inset-0 bg-black/70 md:bg-black/60" />
+        <div className="relative z-10 container-max pt-36 pb-4 md:py-36 w-full">
+          <div className="max-w-4xl text-center md:text-left mx-auto md:mx-0">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-4 md:mb-6" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5), 0 4px 12px rgba(0,0,0,0.3)' }}>
               {industry.headline}
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl font-medium text-left" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
+            <p className="text-lg md:text-2xl text-white/90 leading-relaxed max-w-3xl font-medium mx-auto md:mx-0" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
               {industry.description}
             </p>
           </div>
@@ -381,12 +381,12 @@ export default function IndustryPage() {
 
       {/* Stats Bar */}
       <section className="bg-white border-y border-neutral-200">
-        <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             {industry.stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3" style={{ color: 'var(--green)' }}>{stat.value}</div>
-                <div className="text-lg md:text-xl font-medium" style={{ color: 'var(--gray-700)' }}>{stat.label}</div>
+              <div key={index} className="text-center px-2">
+                <div className="text-2xl md:text-5xl lg:text-6xl font-bold mb-1 md:mb-3" style={{ color: 'var(--green)' }}>{stat.value}</div>
+                <div className="text-xs md:text-xl font-medium" style={{ color: 'var(--gray-700)' }}>{stat.label}</div>
               </div>
             ))}
           </div>
@@ -403,7 +403,7 @@ export default function IndustryPage() {
             </div>
             <div className="flex flex-wrap justify-center gap-8">
               {industry.featuredClients.map((client: { name: string; description: string }, index: number) => (
-                <div key={index} className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 min-w-[280px] text-center">
+                <div key={index} className="bg-white rounded-xl p-6 md:p-8 shadow-sm border border-gray-100 w-full sm:w-auto sm:min-w-[280px] text-center">
                   <div className="w-20 h-20 mx-auto mb-5 rounded-full flex items-center justify-center" style={{ background: 'var(--green)' }}>
                     <span className="text-3xl text-white font-bold">{client.name.charAt(0)}</span>
                   </div>
@@ -452,10 +452,10 @@ export default function IndustryPage() {
           </div>
 
           {/* Grid with dividing lines - 5 columns for 5 challenges */}
-          <div className="grid grid-cols-2 lg:grid-cols-5 gap-px bg-[#00A651]/20 rounded-2xl overflow-hidden mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-px bg-[#00A651]/20 rounded-2xl overflow-hidden mb-16">
             {industry.challenges.map((challenge, index) => (
-              <div key={index} className="group text-center p-8 bg-white hover:bg-[#F5F3F0] transition-all duration-300">
-                <h3 className="text-lg md:text-xl font-bold group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+              <div key={index} className="group text-center p-4 md:p-8 bg-white hover:bg-[#F5F3F0] transition-all duration-300">
+                <h3 className="text-base md:text-xl font-bold group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
                   {challenge}
                 </h3>
               </div>
@@ -463,14 +463,14 @@ export default function IndustryPage() {
           </div>
 
           {/* Compliance Section */}
-          <div className="bg-gradient-to-br from-primary-50 to-neutral-50 rounded-3xl p-10 max-w-4xl mx-auto text-center">
-            <h3 className="text-2xl md:text-3xl font-bold text-dark-900 mb-4">Compliance & Security</h3>
-            <p className="text-lg md:text-xl text-dark-600 mb-8">
+          <div className="bg-gradient-to-br from-primary-50 to-neutral-50 rounded-3xl p-6 md:p-10 max-w-4xl mx-auto text-center">
+            <h3 className="text-xl md:text-3xl font-bold text-dark-900 mb-4">Compliance & Security</h3>
+            <p className="text-base md:text-xl text-dark-600 mb-6 md:mb-8">
               All our {industry.name.toLowerCase()} solutions are built with compliance in mind from day one.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-2 md:gap-4">
               {industry.compliance.map((cert, index) => (
-                <span key={index} className="px-6 py-3 bg-white rounded-xl text-dark-700 font-semibold text-lg shadow-sm">
+                <span key={index} className="px-4 md:px-6 py-2 md:py-3 bg-white rounded-xl text-dark-700 font-semibold text-sm md:text-lg shadow-sm">
                   {cert}
                 </span>
               ))}
@@ -515,13 +515,13 @@ export default function IndustryPage() {
           </div>
 
           {/* Grid with dividing lines - 4 columns */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-[#00A651]/20 rounded-2xl overflow-hidden">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#00A651]/20 rounded-2xl overflow-hidden">
             {industry.solutions.map((solution, index) => (
-              <div key={index} className="group text-center p-8 md:p-10 bg-white hover:bg-[#F5F3F0] transition-all duration-300">
-                <h3 className="text-xl md:text-2xl font-bold mb-4 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+              <div key={index} className="group text-center p-6 md:p-10 bg-white hover:bg-[#F5F3F0] transition-all duration-300">
+                <h3 className="text-lg md:text-2xl font-bold mb-2 md:mb-4 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
                   {solution.title}
                 </h3>
-                <p className="text-base md:text-lg" style={{ color: 'var(--gray-600)' }}>{solution.desc}</p>
+                <p className="text-sm md:text-lg" style={{ color: 'var(--gray-600)' }}>{solution.desc}</p>
               </div>
             ))}
           </div>
@@ -529,7 +529,7 @@ export default function IndustryPage() {
       </section>
 
       {/* Saudi Arabia Focus Section */}
-      <section className="py-24 relative overflow-hidden">
+      <section className="py-12 md:py-24 relative overflow-hidden">
         {/* Saudi Background */}
         <div
           className="absolute inset-0"
@@ -540,36 +540,36 @@ export default function IndustryPage() {
           }}
         />
         {/* Dark overlay for contrast */}
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/70 md:bg-black/60" />
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-green-400 text-base font-semibold mb-4 uppercase tracking-wider">Regional Excellence</p>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <p className="text-green-400 text-sm md:text-base font-semibold mb-2 md:mb-4 uppercase tracking-wider">Regional Excellence</p>
+              <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                 {industry.name} AI in Saudi Arabia
               </h2>
-              <p className="text-lg md:text-xl text-white/90 mb-8" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
+              <p className="text-base md:text-xl text-white/90 mb-6 md:mb-8" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
                 FSIT delivers specialized AI solutions for {industry.name.toLowerCase()} organizations across Saudi Arabia and the Middle East. Our solutions are aligned with Vision 2030 and designed for regional requirements.
               </p>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-5">
-                  <div className="text-2xl md:text-3xl font-bold text-green-400 mb-1">Vision 2030</div>
-                  <div className="text-white/80 text-base">Aligned</div>
+              <div className="grid grid-cols-2 gap-3 md:gap-4">
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-3 md:p-5">
+                  <div className="text-xl md:text-3xl font-bold text-green-400 mb-1">Vision 2030</div>
+                  <div className="text-white/80 text-sm md:text-base">Aligned</div>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-5">
-                  <div className="text-2xl md:text-3xl font-bold text-green-400 mb-1">Local</div>
-                  <div className="text-white/80 text-base">Expertise</div>
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-3 md:p-5">
+                  <div className="text-xl md:text-3xl font-bold text-green-400 mb-1">Local</div>
+                  <div className="text-white/80 text-sm md:text-base">Expertise</div>
                 </div>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative mt-8 lg:mt-0">
               <img
                 src={industry.sectionImage}
                 alt={industry.imageAlt}
-                className="rounded-2xl shadow-2xl w-full h-80 object-cover border-2 border-white/20"
+                className="rounded-2xl shadow-2xl w-full h-64 md:h-80 object-cover border-2 border-white/20"
               />
-              <div className="absolute -bottom-4 -right-4 bg-green-500 text-white px-6 py-3 rounded-xl shadow-lg">
-                <p className="font-bold text-lg">{industry.name}</p>
+              <div className="absolute -bottom-3 -right-3 md:-bottom-4 md:-right-4 bg-green-500 text-white px-4 md:px-6 py-2 md:py-3 rounded-xl shadow-lg">
+                <p className="font-bold text-sm md:text-lg">{industry.name}</p>
               </div>
             </div>
           </div>
@@ -577,36 +577,36 @@ export default function IndustryPage() {
       </section>
 
       {/* Case Studies Section */}
-      <section className="py-24 bg-white">
+      <section className="py-12 md:py-24 bg-white">
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>
+          <div className="text-center mb-8 md:mb-16">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6" style={{ color: 'var(--black)' }}>
               {industry.name} Success Stories
             </h2>
-            <p className="text-xl md:text-2xl max-w-3xl mx-auto" style={{ color: 'var(--gray-600)' }}>
+            <p className="text-lg md:text-2xl max-w-3xl mx-auto" style={{ color: 'var(--gray-600)' }}>
               Real results from real projects in {industry.name.toLowerCase()}.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8 items-stretch">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
             {industry.useCases.map((useCase, index) => (
               <div key={index} className="bg-neutral-50 rounded-2xl overflow-hidden flex flex-col">
-                <div className="bg-gradient-to-br from-primary-600 to-primary-800 p-8">
-                  <h3 className="text-xl md:text-2xl font-bold text-white">{useCase.title}</h3>
+                <div className="bg-gradient-to-br from-primary-600 to-primary-800 p-5 md:p-8">
+                  <h3 className="text-lg md:text-2xl font-bold text-white">{useCase.title}</h3>
                 </div>
-                <div className="p-8 flex flex-col flex-1">
-                  <p className="text-lg text-dark-600 mb-6 min-h-[60px]">{useCase.desc}</p>
-                  <div className="bg-primary-50 rounded-xl p-6 mt-auto">
-                    <div className="text-base text-primary-600 font-semibold mb-2">Results</div>
-                    <div className="text-lg md:text-xl text-dark-900 font-bold min-h-[48px]">{useCase.results}</div>
+                <div className="p-5 md:p-8 flex flex-col flex-1">
+                  <p className="text-base md:text-lg text-dark-600 mb-4 md:mb-6 min-h-[48px] md:min-h-[60px]">{useCase.desc}</p>
+                  <div className="bg-primary-50 rounded-xl p-4 md:p-6 mt-auto">
+                    <div className="text-sm md:text-base text-primary-600 font-semibold mb-2">Results</div>
+                    <div className="text-base md:text-xl text-dark-900 font-bold">{useCase.results}</div>
                   </div>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <Link href="/case-studies" className="btn-secondary text-lg px-8 py-4">
+          <div className="text-center mt-8 md:mt-12">
+            <Link href="/case-studies" className="btn-secondary text-base md:text-lg px-6 md:px-8 py-3 md:py-4">
               View All Case Studies
             </Link>
           </div>
@@ -614,7 +614,7 @@ export default function IndustryPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 relative overflow-hidden">
+      <section className="py-12 md:py-24 relative overflow-hidden">
         {/* Saudi Background */}
         <div
           className="absolute inset-0"
@@ -627,17 +627,17 @@ export default function IndustryPage() {
         {/* Dark overlay for contrast */}
         <div className="absolute inset-0 bg-black/70" />
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
             Ready to Transform Your {industry.name} Operations?
           </h2>
-          <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-2xl mx-auto" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
+          <p className="text-lg md:text-2xl text-white/90 mb-8 md:mb-10 max-w-2xl mx-auto" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
             Let's discuss how AI can solve your specific challenges. Our team includes specialists with deep {industry.name.toLowerCase()} experience.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/build-scale-ai" className="btn-primary text-lg px-8 py-4">
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
+            <Link href="/build-scale-ai" className="btn-primary text-base md:text-lg px-6 md:px-8 py-3 md:py-4">
               Schedule a Consultation
             </Link>
-            <Link href="/industries" className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-dark-900 transition-all text-lg">
+            <Link href="/industries" className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-dark-900 transition-all text-base md:text-lg">
               Explore Other Industries
             </Link>
           </div>

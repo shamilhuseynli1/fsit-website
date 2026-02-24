@@ -207,7 +207,7 @@ export default function AIAgents() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[auto] md:min-h-[85vh] flex items-center overflow-hidden">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -233,11 +233,10 @@ export default function AIAgents() {
 
         {/* Animated particles */}
         <AnimatedBackground />
-
         <NetworkBackground nodeCount={50} maxDistance={120} />
 
-        <div className="relative container-max py-20 md:py-28">
-          <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[70vh]">
+        <div className="relative container-max pt-36 pb-4 md:py-36">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center md:min-h-[70vh]">
             {/* Left content */}
             <div className="relative z-10">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
@@ -261,24 +260,24 @@ export default function AIAgents() {
               </div>
 
               {/* Stats row */}
-              <div className="mt-12 grid grid-cols-3 gap-6">
+              <div className="mt-12 grid grid-cols-3 gap-4 md:gap-6">
                 {[
                   { value: '50+', label: 'Agents Deployed' },
                   { value: '98%', label: 'Accuracy Rate' },
                   { value: '24/7', label: 'Autonomous' },
                 ].map((stat, i) => (
                   <div key={i} className="text-center">
-                    <p className="text-2xl md:text-3xl font-bold text-green-400">
+                    <p className="text-xl md:text-3xl font-bold text-green-400">
                       {stat.value}
                     </p>
-                    <p className="text-sm text-white/80">{stat.label}</p>
+                    <p className="text-xs md:text-sm text-white/80">{stat.label}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Right visual */}
-            <div className="relative mt-8 lg:mt-0">
+            {/* Right visual - scaled down on mobile */}
+            <div className="relative mt-2 lg:mt-0 transform scale-[0.75] md:scale-100 origin-top -mb-16 md:mb-0">
               <HeroAgentVisual />
             </div>
           </div>
@@ -329,8 +328,8 @@ export default function AIAgents() {
             </p>
           </div>
 
-          {/* Horizontal line with flowing animation */}
-          <div className="relative mb-8">
+          {/* Horizontal line with flowing animation - hidden on mobile */}
+          <div className="relative mb-8 hidden md:block">
             <style jsx>{`
               @keyframes flowCapabilities {
                 0% { stroke-dashoffset: 1000; }
@@ -345,14 +344,14 @@ export default function AIAgents() {
           </div>
 
           {/* Cards grid with dividing lines - 3 columns for 6 items (2x3) */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#00A651]/20 rounded-2xl overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#00A651]/20 rounded-2xl overflow-hidden">
             {capabilities.map((cap, index) => (
               <div
                 key={index}
-                className="group relative p-8 bg-white hover:bg-[#F5F3F0] transition-all duration-300"
+                className="group relative p-6 md:p-8 bg-white hover:bg-[#F5F3F0] transition-all duration-300 text-center md:text-left"
               >
                 {/* Icon */}
-                <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(0, 166, 81, 0.1)' }}>
+                <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-5 mx-auto md:mx-0" style={{ background: 'rgba(0, 166, 81, 0.1)' }}>
                   {cap.icon}
                 </div>
 
@@ -377,8 +376,8 @@ export default function AIAgents() {
             </p>
           </div>
 
-          {/* Horizontal line with flowing animation */}
-          <div className="relative mb-8">
+          {/* Horizontal line with flowing animation - hidden on mobile */}
+          <div className="relative mb-8 hidden md:block">
             <style jsx>{`
               @keyframes flowDiff {
                 0% { stroke-dashoffset: 1000; }
@@ -512,8 +511,8 @@ export default function AIAgents() {
             </p>
           </div>
 
-          {/* Horizontal line with flowing animation */}
-          <div className="relative">
+          {/* Horizontal line with flowing animation - hidden on mobile */}
+          <div className="relative hidden md:block">
             <style jsx>{`
               @keyframes flowIndustry {
                 0% { stroke-dashoffset: 1000; }
@@ -528,7 +527,7 @@ export default function AIAgents() {
           </div>
 
           {/* Cards grid with dividing lines - 4 columns */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-[#00A651]/20 rounded-2xl overflow-hidden mt-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-[#00A651]/20 rounded-2xl overflow-hidden mt-8">
             {[
               {
                 name: 'Financial Services',
@@ -569,10 +568,10 @@ export default function AIAgents() {
             ].map((industry, index) => (
               <div
                 key={index}
-                className="group bg-white p-8 hover:bg-[#F5F3F0] transition-all duration-300"
+                className="group bg-white p-6 md:p-8 hover:bg-[#F5F3F0] transition-all duration-300 text-center md:text-left"
               >
                 {/* Icon */}
-                <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(0, 166, 81, 0.1)' }}>
+                <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-5 mx-auto md:mx-0" style={{ background: 'rgba(0, 166, 81, 0.1)' }}>
                   {industry.icon}
                 </div>
                 <h3 className="font-bold text-xl mb-4" style={{ color: 'var(--black)' }}>{industry.name}</h3>

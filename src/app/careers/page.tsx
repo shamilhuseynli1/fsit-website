@@ -107,7 +107,7 @@ export default function CareersPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[auto] md:min-h-[85vh] flex items-center overflow-hidden">
         {/* Saudi Riyadh Skyline Background */}
         <div
           className="absolute inset-0 opacity-30"
@@ -120,15 +120,15 @@ export default function CareersPage() {
         {/* Light overlay */}
         <div className="absolute inset-0 bg-cream-50/50" />
         <NetworkBackground />
-        <div className="relative z-10 container-max py-20 md:py-28">
-          <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark-900 mb-6">
+        <div className="relative z-10 container-max pt-36 pb-4 md:py-36">
+          <div className="max-w-4xl text-center md:text-left mx-auto md:mx-0">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-dark-900 mb-4 md:mb-6">
               Build AI That{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-gold-500">
                 Actually Works
               </span>
             </h1>
-            <p className="text-xl text-dark-500 leading-relaxed max-w-3xl">
+            <p className="text-lg md:text-xl text-dark-500 leading-relaxed max-w-3xl">
               Join a team of elite AI engineers and specialists deploying production AI systems for the world's most ambitious companies. We're remote-first, impact-driven, and always learning.
             </p>
           </div>

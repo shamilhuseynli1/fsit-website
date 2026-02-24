@@ -115,36 +115,36 @@ export default function AITransformation() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[auto] md:min-h-[85vh] flex items-center overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1629667051607-e412f1c493c0?auto=format&fit=crop&w=1920&q=80"
           alt="AI Transformation"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/70 md:bg-black/60" />
         <NetworkBackground nodeCount={70} maxDistance={130} />
         <div className="hidden md:block absolute top-1/2 right-0 w-[600px] h-[600px] bg-primary-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 animate-glow-pulse" />
 
-        <div className="relative container-max py-20 md:py-28">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-8 leading-tight animate-fade-in-up" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
+        <div className="relative container-max pt-36 pb-4 md:py-36">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 md:mb-8 leading-tight animate-fade-in-up" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                 The AI Era<br />
                 <span className="text-green-400" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>Is Here. Are You Ready?</span>
               </h1>
-              <p className="text-xl md:text-2xl text-white mb-10 leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s', textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
+              <p className="text-lg md:text-2xl text-white mb-6 md:mb-10 leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s', textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
                 By 2026, 90% of companies will use AI. 83% of business leaders already view AI as their top investment priority. The question isn't whether to adopt AI — it's how fast you can transform.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-                <Link href="/contact" className="btn-primary text-lg px-8 py-4">
+              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: '0.3s' }}>
+                <Link href="/contact" className="btn-primary text-base md:text-lg px-6 md:px-8 py-3 md:py-4">
                   Start your transformation
                 </Link>
-                <Link href="/leverage-ai" className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-dark-900 transition-all text-lg">
+                <Link href="/leverage-ai" className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-dark-900 transition-all text-base md:text-lg">
                   Explore AI services
                 </Link>
               </div>
             </div>
-            <div className="mt-8 lg:mt-0">
+            <div className="mt-2 lg:mt-0 transform scale-[0.75] md:scale-100 origin-top -mb-16 md:mb-0">
               <HeroTransformVisual />
             </div>
           </div>
@@ -154,11 +154,11 @@ export default function AITransformation() {
       {/* Market Stats */}
       <section className="section-sm" style={{ background: 'var(--cream)' }}>
         <div className="container-max">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             {marketStats.map((item, index) => (
               <div key={index} className="text-center">
-                <p className="text-4xl md:text-5xl font-bold text-dark-900">{item.stat}</p>
-                <p className="text-dark-500 text-sm mt-2">{item.description}</p>
+                <p className="text-2xl md:text-5xl font-bold text-dark-900">{item.stat}</p>
+                <p className="text-dark-500 text-xs md:text-sm mt-1 md:mt-2">{item.description}</p>
                 <p className="text-dark-400 text-xs mt-1">— {item.source}</p>
               </div>
             ))}

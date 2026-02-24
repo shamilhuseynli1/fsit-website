@@ -91,7 +91,7 @@ export default function IndustriesPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center justify-start overflow-hidden">
+      <section className="relative min-h-[auto] md:min-h-[85vh] flex items-center justify-start overflow-hidden">
         {/* Saudi Modern Architecture Background */}
         <div
           className="absolute inset-0"
@@ -102,16 +102,16 @@ export default function IndustriesPage() {
           }}
         />
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 container-max py-20 md:py-28 w-full">
-          <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 text-left" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
+        <div className="absolute inset-0 bg-black/70 md:bg-black/50" />
+        <div className="relative z-10 container-max pt-36 pb-4 md:py-36 w-full">
+          <div className="max-w-4xl text-center md:text-left mx-auto md:mx-0">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-4 md:mb-6" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
               AI Solutions for{' '}
               <span style={{ color: 'var(--green)', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
                 Every Industry
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl font-medium text-left" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
+            <p className="text-lg md:text-2xl text-white/90 leading-relaxed max-w-3xl font-medium" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
               Deep domain expertise combined with AI-native development. We understand the unique challenges, regulations, and opportunities in your industry — delivering solutions that work in production.
             </p>
           </div>
@@ -121,11 +121,11 @@ export default function IndustriesPage() {
       {/* Stats Bar */}
       <section className="border-y border-neutral-200" style={{ background: 'var(--cream)' }}>
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3" style={{ color: 'var(--green)' }}>{stat.number}</div>
-                <div className="text-lg md:text-xl font-medium" style={{ color: 'var(--gray-700)' }}>{stat.label}</div>
+                <div className="text-2xl md:text-5xl lg:text-6xl font-bold mb-1 md:mb-3" style={{ color: 'var(--green)' }}>{stat.number}</div>
+                <div className="text-xs md:text-xl font-medium" style={{ color: 'var(--gray-700)' }}>{stat.label}</div>
               </div>
             ))}
           </div>

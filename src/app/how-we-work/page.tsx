@@ -129,14 +129,14 @@ export default function HowWeWork() {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero */}
-      <section className="relative overflow-hidden min-h-[85vh] flex items-center">
+      <section className="relative overflow-hidden min-h-[auto] md:min-h-[85vh] flex items-center">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1682695796795-cc287af78a2b?auto=format&fit=crop&w=1920&q=80)' }}
         />
         {/* Dark overlay for contrast */}
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/70 md:bg-black/60" />
 
         {/* Network pattern overlay */}
         <div className="absolute inset-0 opacity-30">
@@ -156,39 +156,39 @@ export default function HowWeWork() {
         <AnimatedBackground />
         <NetworkBackground nodeCount={50} maxDistance={120} />
 
-        <div className="relative container-max py-20 md:py-28">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
+        <div className="relative container-max pt-36 pb-4 md:py-36">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                 How We{' '}
                 <span className="text-green-400" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                   Work
                 </span>
               </h1>
 
-              <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
+              <p className="text-lg md:text-2xl text-white mb-6 md:mb-8 leading-relaxed" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
                 AI execution, built for production, not experimentation
               </p>
 
               {/* Stats */}
-              <div className="flex items-start gap-12 md:gap-16 mt-10">
-                <div>
-                  <div className="text-3xl md:text-4xl font-bold text-green-400 whitespace-nowrap">98%</div>
-                  <div className="text-white/80 text-sm md:text-base mt-1">Success Rate</div>
+              <div className="grid grid-cols-3 gap-4 md:flex md:items-start md:gap-16 mt-6 md:mt-10">
+                <div className="text-center lg:text-left">
+                  <div className="text-2xl md:text-4xl font-bold text-green-400 whitespace-nowrap">98%</div>
+                  <div className="text-white/80 text-xs md:text-base mt-1">Success Rate</div>
                 </div>
-                <div>
-                  <div className="text-3xl md:text-4xl font-bold text-green-400 whitespace-nowrap">3 weeks</div>
-                  <div className="text-white/80 text-sm md:text-base mt-1">To Deploy</div>
+                <div className="text-center lg:text-left">
+                  <div className="text-2xl md:text-4xl font-bold text-green-400 whitespace-nowrap">3 weeks</div>
+                  <div className="text-white/80 text-xs md:text-base mt-1">To Deploy</div>
                 </div>
-                <div>
-                  <div className="text-3xl md:text-4xl font-bold text-green-400 whitespace-nowrap">5 Steps</div>
-                  <div className="text-white/80 text-sm md:text-base mt-1">Process</div>
+                <div className="text-center lg:text-left">
+                  <div className="text-2xl md:text-4xl font-bold text-green-400 whitespace-nowrap">5 Steps</div>
+                  <div className="text-white/80 text-xs md:text-base mt-1">Process</div>
                 </div>
               </div>
             </div>
 
             {/* Hero Visual */}
-            <div className="mt-8 lg:mt-0">
+            <div className="mt-2 lg:mt-0 transform scale-[0.75] md:scale-100 origin-top -mb-16 md:mb-0">
               <HeroProcessVisual />
             </div>
           </div>
@@ -470,7 +470,7 @@ export default function HowWeWork() {
           </div>
 
           {/* Visual Flow */}
-          <div className="relative bg-white rounded-2xl p-8 md:p-12">
+          <div className="relative bg-white rounded-2xl p-6 md:p-12">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               {/* Your Team */}
               <div className="text-center flex-1">
@@ -527,19 +527,19 @@ export default function HowWeWork() {
             </div>
 
             {/* Bottom Stats */}
-            <div className="mt-12 pt-8 border-t border-neutral-100">
-              <div className="grid grid-cols-3 gap-8 text-center">
+            <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-neutral-100">
+              <div className="grid grid-cols-3 gap-4 md:gap-8 text-center">
                 <div>
-                  <p className="text-3xl font-bold text-primary-500">98%</p>
-                  <p className="text-dark-500 text-sm mt-1">Success Rate</p>
+                  <p className="text-xl md:text-3xl font-bold text-primary-500">98%</p>
+                  <p className="text-dark-500 text-xs md:text-sm mt-1">Success Rate</p>
                 </div>
                 <div>
-                  <p className="text-3xl font-bold text-primary-500">3 weeks</p>
-                  <p className="text-dark-500 text-sm mt-1">To Deploy</p>
+                  <p className="text-xl md:text-3xl font-bold text-primary-500 whitespace-nowrap">3 weeks</p>
+                  <p className="text-dark-500 text-xs md:text-sm mt-1">To Deploy</p>
                 </div>
                 <div>
-                  <p className="text-3xl font-bold text-primary-500">Production</p>
-                  <p className="text-dark-500 text-sm mt-1">Focus</p>
+                  <p className="text-xl md:text-3xl font-bold text-primary-500">Prod</p>
+                  <p className="text-dark-500 text-xs md:text-sm mt-1">Focus</p>
                 </div>
               </div>
             </div>

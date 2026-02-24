@@ -75,21 +75,21 @@ export default function BuildScaleAI() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[auto] md:min-h-[85vh] flex items-center overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1738410775719-9f237adb266d?auto=format&fit=crop&w=1920&q=80"
           alt="Build Scale AI"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/70 md:bg-black/60" />
         <NetworkBackground nodeCount={60} maxDistance={120} />
-        <div className="relative container-max py-20 md:py-28">
-          <div className="max-w-3xl">
-            <p className="text-green-400 font-semibold text-sm tracking-wider uppercase mb-4">Start Your AI Journey</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[1.1]" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
+        <div className="relative container-max pt-36 pb-4 md:py-36">
+          <div className="max-w-3xl text-center md:text-left mx-auto md:mx-0">
+            <p className="text-green-400 font-semibold text-sm tracking-wider uppercase mb-3 md:mb-4">Start Your AI Journey</p>
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-[1.1]" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
               Build and Scale <span className="text-green-400" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>AI</span>
             </h1>
-            <p className="text-xl md:text-2xl text-white mb-8 max-w-lg" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
+            <p className="text-lg md:text-2xl text-white mb-6 md:mb-8 max-w-lg mx-auto md:mx-0" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
               Access elite AI talent to accelerate your AI transformation
             </p>
           </div>

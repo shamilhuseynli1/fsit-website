@@ -80,14 +80,14 @@ export default function HowWeVet() {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero */}
-      <section className="relative overflow-hidden min-h-[85vh] flex items-center">
+      <section className="relative overflow-hidden min-h-[auto] md:min-h-[85vh] flex items-center">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1682695796795-cc287af78a2b?auto=format&fit=crop&w=1920&q=80)' }}
         />
         {/* Dark overlay for contrast */}
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/70 md:bg-black/60" />
 
         {/* Network pattern overlay */}
         <div className="absolute inset-0 opacity-30">
@@ -107,39 +107,39 @@ export default function HowWeVet() {
         <AnimatedBackground />
         <NetworkBackground nodeCount={50} maxDistance={120} />
 
-        <div className="relative container-max py-20 md:py-28">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
+        <div className="relative container-max pt-36 pb-4 md:py-36">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                 How We Vet{' '}
                 <span className="text-green-400" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                   Elite AI Talent
                 </span>
               </h1>
 
-              <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
+              <p className="text-lg md:text-2xl text-white mb-6 md:mb-8 leading-relaxed" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
                 At FSIT, our vetting process ensures only top-tier AI professionals become part of our augmented intelligence network
               </p>
 
               {/* Stats */}
-              <div className="flex items-start gap-12 md:gap-16 mt-10">
-                <div>
-                  <div className="text-3xl md:text-4xl font-bold text-green-400 whitespace-nowrap">99%</div>
-                  <div className="text-white/80 text-sm md:text-base mt-1">Filtered Out</div>
+              <div className="grid grid-cols-3 gap-4 md:flex md:items-start md:gap-16 mt-6 md:mt-10">
+                <div className="text-center lg:text-left">
+                  <div className="text-2xl md:text-4xl font-bold text-green-400 whitespace-nowrap">99%</div>
+                  <div className="text-white/80 text-xs md:text-base mt-1">Filtered Out</div>
                 </div>
-                <div>
-                  <div className="text-3xl md:text-4xl font-bold text-green-400 whitespace-nowrap">Top 1%</div>
-                  <div className="text-white/80 text-sm md:text-base mt-1">Selected</div>
+                <div className="text-center lg:text-left">
+                  <div className="text-2xl md:text-4xl font-bold text-green-400 whitespace-nowrap">Top 1%</div>
+                  <div className="text-white/80 text-xs md:text-base mt-1">Selected</div>
                 </div>
-                <div>
-                  <div className="text-3xl md:text-4xl font-bold text-green-400 whitespace-nowrap">5 Steps</div>
-                  <div className="text-white/80 text-sm md:text-base mt-1">Vetting</div>
+                <div className="text-center lg:text-left">
+                  <div className="text-2xl md:text-4xl font-bold text-green-400 whitespace-nowrap">5 Steps</div>
+                  <div className="text-white/80 text-xs md:text-base mt-1">Vetting</div>
                 </div>
               </div>
             </div>
 
             {/* Hero Visual */}
-            <div className="mt-8 lg:mt-0">
+            <div className="mt-2 lg:mt-0 transform scale-[0.75] md:scale-100 origin-top -mb-16 md:mb-0">
               <HeroVettingVisual />
             </div>
           </div>
@@ -340,19 +340,19 @@ export default function HowWeVet() {
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-primary-500 to-primary-400 rounded-2xl opacity-30 blur-xl group-hover:opacity-50 transition-all duration-500" />
 
-              <div className="relative bg-white backdrop-blur-sm border border-neutral-200 rounded-2xl p-10 md:p-12 text-center">
-                <div className="w-20 h-20 mx-auto mb-6 rounded-xl bg-[#00A651]/10 flex items-center justify-center text-[#00A651]">
-                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <div className="relative bg-white backdrop-blur-sm border border-neutral-200 rounded-2xl p-6 md:p-12 text-center">
+                <div className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4 md:mb-6 rounded-xl bg-[#00A651]/10 flex items-center justify-center text-[#00A651]">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="md:w-12 md:h-12">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                   </svg>
                 </div>
-                <p className="text-7xl md:text-8xl font-bold text-[#00A651] mb-6">
+                <p className="text-5xl md:text-8xl font-bold text-[#00A651] mb-4 md:mb-6">
                   99%
                 </p>
-                <p className="text-2xl text-dark-900 mb-4">
+                <p className="text-xl md:text-2xl text-dark-900 mb-3 md:mb-4">
                   We filter out up to 99% of applicants
                 </p>
-                <p className="text-dark-500 text-lg leading-relaxed">
+                <p className="text-dark-500 text-base md:text-lg leading-relaxed">
                   ensuring organizations gain access to trusted AI capacity capable of delivering real, scalable impact.
                 </p>
               </div>
@@ -395,11 +395,11 @@ export default function HowWeVet() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Generic */}
-            <div className="bg-neutral-50 backdrop-blur-sm border border-neutral-200 rounded-2xl p-6">
+            <div className="bg-neutral-50 backdrop-blur-sm border border-neutral-200 rounded-2xl p-4 md:p-6">
               <div className="text-center mb-4">
-                <h3 className="text-lg font-semibold text-dark-500">Generic Outsourcing</h3>
+                <h3 className="text-base md:text-lg font-semibold text-dark-500">Generic Outsourcing</h3>
               </div>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-3">
                 {[
                   'Resume-based screening only',
                   'No production AI experience required',
@@ -407,7 +407,7 @@ export default function HowWeVet() {
                   'High turnover, inconsistent quality',
                   'No ongoing performance monitoring',
                 ].map((item, i) => (
-                  <div key={i} className="text-center p-3 rounded-lg bg-white border border-red-200">
+                  <div key={i} className="text-center p-2 md:p-3 rounded-lg bg-white border border-red-200">
                     <span className="text-dark-500 text-xs">{item}</span>
                   </div>
                 ))}
@@ -415,11 +415,11 @@ export default function HowWeVet() {
             </div>
 
             {/* FSIT */}
-            <div className="bg-gradient-to-br from-primary-50 to-primary-100 backdrop-blur-sm border border-primary-200 rounded-2xl p-6">
+            <div className="bg-gradient-to-br from-primary-50 to-primary-100 backdrop-blur-sm border border-primary-200 rounded-2xl p-4 md:p-6">
               <div className="text-center mb-4">
-                <h3 className="text-lg font-semibold text-dark-900">FSIT Vetted Talent</h3>
+                <h3 className="text-base md:text-lg font-semibold text-dark-900">FSIT Vetted Talent</h3>
               </div>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-3">
                 {[
                   '5-step comprehensive evaluation',
                   'Proven production AI delivery required',
@@ -427,7 +427,7 @@ export default function HowWeVet() {
                   'Long-term partnerships, consistent excellence',
                   'Continuous performance monitoring & upskilling',
                 ].map((item, i) => (
-                  <div key={i} className="group text-center p-3 rounded-lg bg-white border border-primary-200 hover:border-primary-400 transition-all">
+                  <div key={i} className="group text-center p-2 md:p-3 rounded-lg bg-white border border-primary-200 hover:border-primary-400 transition-all">
                     <span className="text-dark-600 text-xs group-hover:text-green-600 font-medium transition-colors">{item}</span>
                   </div>
                 ))}

@@ -125,36 +125,36 @@ export default function LeverageAI() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[auto] md:min-h-[85vh] flex items-center overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1738410775719-9f237adb266d?auto=format&fit=crop&w=1920&q=80"
           alt="Leverage AI"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/70 md:bg-black/60" />
         <NetworkBackground nodeCount={70} maxDistance={130} />
         <div className="hidden md:block absolute top-1/2 right-0 w-[600px] h-[600px] bg-primary-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 animate-glow-pulse" />
 
-        <div className="relative container-max py-20 md:py-28">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-8 leading-tight animate-fade-in-up" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
+        <div className="relative container-max pt-36 pb-4 md:py-36">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 md:mb-8 leading-tight animate-fade-in-up" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                 Adopt AI.<br />
                 <span className="text-green-400" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>Scale with Confidence.</span>
               </h1>
-              <p className="text-xl md:text-2xl text-white mb-10 leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s', textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
+              <p className="text-lg md:text-2xl text-white mb-6 md:mb-10 leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s', textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
                 From strategy to production — we help organizations adopt and scale AI through consulting, custom development, and seamless system integration. Business-driven AI that aligns with your existing IT ecosystem.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-                <Link href="/contact" className="btn-primary text-lg px-8 py-4">
+              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: '0.3s' }}>
+                <Link href="/contact" className="btn-primary text-base md:text-lg px-6 md:px-8 py-3 md:py-4">
                   Get AI readiness assessment
                 </Link>
-                <Link href="/solutions" className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-dark-900 transition-all text-lg">
+                <Link href="/solutions" className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-dark-900 transition-all text-base md:text-lg">
                   View AI solutions
                 </Link>
               </div>
             </div>
-            <div className="mt-8 lg:mt-0">
+            <div className="mt-2 lg:mt-0 transform scale-[0.75] md:scale-100 origin-top -mb-16 md:mb-0">
               <HeroLeverageVisual />
             </div>
           </div>
@@ -196,13 +196,13 @@ export default function LeverageAI() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-12">
             {services.map((service, index) => (
-              <div key={index} className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-lg p-4 hover:border-[#00A651] hover:shadow-md transition-all duration-300">
-                <div className="w-10 h-10 bg-primary-500/10 rounded-lg flex items-center justify-center text-primary-500 mb-3">
+              <div key={index} className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-lg p-4 hover:border-[#00A651] hover:shadow-md transition-all duration-300 text-center md:text-left">
+                <div className="w-10 h-10 bg-primary-500/10 rounded-lg flex items-center justify-center text-primary-500 mb-3 mx-auto md:mx-0">
                   {service.icon}
                 </div>
                 <h3 className="text-base font-semibold text-dark-900 mb-1">{service.title}</h3>
                 <p className="text-dark-500 text-sm mb-3 line-clamp-2">{service.description}</p>
-                <div className="flex flex-wrap gap-1">
+                <div className="flex flex-wrap gap-1 justify-center md:justify-start">
                   {service.deliverables.slice(0, 3).map((item, i) => (
                     <span key={i} className="text-[10px] bg-white text-dark-600 px-1.5 py-0.5 rounded">
                       {item}

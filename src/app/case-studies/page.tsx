@@ -96,7 +96,7 @@ const caseStudies = [
     solution: 'Deployed conversational AI handling 70% of inquiries, with smart routing for complex issues.',
     results: [
       { metric: '70%', label: 'Tickets auto-resolved' },
-      { metric: '2 min', label: 'Average response time' },
+      { metric: '2 minutes', label: 'Average response time' },
       { metric: '94%', label: 'Customer satisfaction' },
       { metric: '3 weeks', label: 'Initial deployment' },
     ],
@@ -149,7 +149,7 @@ export default function CaseStudiesPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[auto] md:min-h-[85vh] flex items-center overflow-hidden">
         {/* Saudi Riyadh Background */}
         <div
           className="absolute inset-0"
@@ -160,17 +160,17 @@ export default function CaseStudiesPage() {
           }}
         />
         {/* Dark overlay for contrast */}
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/70 md:bg-black/60" />
         <NetworkBackground />
-        <div className="relative z-10 container-max py-20 md:py-28">
-          <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
+        <div className="relative z-10 container-max pt-36 pb-4 md:py-36">
+          <div className="max-w-4xl text-center md:text-left mx-auto md:mx-0">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
               Real Results from{' '}
               <span className="text-green-400" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                 Real Projects
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
+            <p className="text-lg md:text-2xl text-white/90 leading-relaxed max-w-3xl" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
               See how we've helped organizations across industries deploy AI that works in production. No experiments — measurable business impact.
             </p>
           </div>
@@ -180,16 +180,16 @@ export default function CaseStudiesPage() {
       {/* Stats Bar */}
       <section className="border-y border-neutral-200" style={{ background: 'var(--cream)' }}>
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-16">
             {[
               { number: '300+', label: 'Projects delivered' },
               { number: '98%', label: 'Success rate' },
               { number: '$500M+', label: 'Client value generated' },
               { number: '3 weeks', label: 'Average time to production' },
             ].map((stat, index) => (
-              <div key={index} className="text-center px-4">
-                <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3" style={{ color: 'var(--green)' }}>{stat.number}</div>
-                <div className="text-sm md:text-base lg:text-lg font-medium" style={{ color: 'var(--gray-700)' }}>{stat.label}</div>
+              <div key={index} className="text-center px-2 md:px-4">
+                <div className="text-2xl md:text-4xl lg:text-5xl font-bold mb-1 md:mb-3" style={{ color: 'var(--green)' }}>{stat.number}</div>
+                <div className="text-xs md:text-base lg:text-lg font-medium" style={{ color: 'var(--gray-700)' }}>{stat.label}</div>
               </div>
             ))}
           </div>
@@ -225,9 +225,9 @@ export default function CaseStudiesPage() {
                   <p className="text-dark-600 mb-6 text-base md:text-lg flex-1">{study.challenge}</p>
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     {study.results.slice(0, 2).map((result, idx) => (
-                      <div key={idx} className="text-center p-4 bg-white rounded-xl">
-                        <div className="text-2xl md:text-3xl font-bold text-primary-600">{result.metric}</div>
-                        <div className="text-sm md:text-base text-dark-500">{result.label}</div>
+                      <div key={idx} className="text-center p-2 sm:p-4 bg-white rounded-xl">
+                        <div className="text-xl sm:text-2xl md:text-3xl font-bold text-primary-600">{result.metric}</div>
+                        <div className="text-xs sm:text-sm md:text-base text-dark-500">{result.label}</div>
                       </div>
                     ))}
                   </div>
@@ -300,11 +300,11 @@ export default function CaseStudiesPage() {
                   <p className="text-dark-600 text-base md:text-lg">{study.solution}</p>
                 </div>
 
-                <div className="grid grid-cols-4 gap-4 mb-6">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4 mb-6">
                   {study.results.map((result, idx) => (
-                    <div key={idx} className="text-center p-3 bg-neutral-50 rounded-xl">
-                      <div className="text-xl md:text-2xl font-bold text-primary-600">{result.metric}</div>
-                      <div className="text-sm text-dark-500">{result.label}</div>
+                    <div key={idx} className="text-center p-2 sm:p-3 bg-neutral-50 rounded-xl">
+                      <div className="text-lg sm:text-xl md:text-2xl font-bold text-primary-600">{result.metric}</div>
+                      <div className="text-xs sm:text-sm text-dark-500">{result.label}</div>
                     </div>
                   ))}
                 </div>

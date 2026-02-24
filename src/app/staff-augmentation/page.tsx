@@ -134,7 +134,7 @@ export default function StaffAugmentation() {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero */}
-      <section className="relative overflow-hidden min-h-[85vh] flex items-center">
+      <section className="relative overflow-hidden min-h-[auto] md:min-h-[85vh] flex items-center">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -161,54 +161,54 @@ export default function StaffAugmentation() {
         <AnimatedBackground />
         <NetworkBackground nodeCount={50} maxDistance={120} />
 
-        <div className="relative container-max py-20 md:py-28">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
+        <div className="relative container-max pt-36 pb-4 md:py-36">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                 AI Staff{' '}
                 <span className="text-green-400" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                   Augmentation
                 </span>
               </h1>
 
-              <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
+              <p className="text-lg md:text-2xl text-white mb-6 md:mb-8 leading-relaxed" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
                 Scale your AI capabilities with pre-vetted specialists who integrate seamlessly into your existing teams
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 mb-12">
+              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-8 md:mb-12">
                 <Link
                   href="/build-scale-ai"
-                  className="btn-primary text-lg px-8 py-4"
+                  className="btn-primary text-base md:text-lg px-6 md:px-8 py-3 md:py-4"
                 >
                   Get Started
                 </Link>
                 <Link
                   href="/how-we-vet"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-dark-900 transition-all duration-300"
+                  className="inline-flex items-center justify-center gap-2 px-6 md:px-8 py-3 md:py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-dark-900 transition-all duration-300 text-base md:text-lg"
                 >
                   Our Vetting Process
                 </Link>
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-8">
-                <div>
-                  <div className="text-3xl md:text-4xl font-bold text-green-400">80K+</div>
-                  <div className="text-white/80 text-sm">AI Specialists</div>
+              <div className="grid grid-cols-3 gap-4 md:gap-8">
+                <div className="text-center lg:text-left">
+                  <div className="text-2xl md:text-4xl font-bold text-green-400">80K+</div>
+                  <div className="text-white/80 text-xs md:text-sm">AI Specialists</div>
                 </div>
-                <div>
-                  <div className="text-3xl md:text-4xl font-bold text-green-400">Top 1%</div>
-                  <div className="text-white/80 text-sm">Vetted Talent</div>
+                <div className="text-center lg:text-left">
+                  <div className="text-2xl md:text-4xl font-bold text-green-400">Top 1%</div>
+                  <div className="text-white/80 text-xs md:text-sm">Vetted Talent</div>
                 </div>
-                <div>
-                  <div className="text-3xl md:text-4xl font-bold text-green-400">3 weeks</div>
-                  <div className="text-white/80 text-sm">Deployment</div>
+                <div className="text-center lg:text-left">
+                  <div className="text-2xl md:text-4xl font-bold text-green-400 whitespace-nowrap">3 weeks</div>
+                  <div className="text-white/80 text-xs md:text-sm">Deployment</div>
                 </div>
               </div>
             </div>
 
-            {/* Hero Visual */}
-            <div className="mt-8 lg:mt-0">
+            {/* Hero Visual - scaled on mobile */}
+            <div className="mt-2 lg:mt-0 transform scale-[0.75] md:scale-100 origin-top -mb-16 md:mb-0">
               <HeroStaffVisual />
             </div>
           </div>
@@ -229,7 +229,7 @@ export default function StaffAugmentation() {
             </div>
             <div>
               <p className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-primary-500">3 weeks</p>
-              <p className="text-dark-500 mt-2">Avg. Deployment</p>
+              <p className="text-dark-500 mt-2">Average Deployment</p>
             </div>
             <div>
               <p className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-primary-500">Top 1%</p>
@@ -278,8 +278,8 @@ export default function StaffAugmentation() {
             <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>Benefits of FSIT Staff Augmentation</h2>
           </div>
 
-          {/* Flowing line animation with branches */}
-          <div className="relative mb-8">
+          {/* Flowing line animation with branches - hidden on mobile */}
+          <div className="relative mb-8 hidden md:block">
             <style jsx>{`
               @keyframes flowBenefitDown1 {
                 0% { stroke-dashoffset: 0; }
@@ -316,7 +316,7 @@ export default function StaffAugmentation() {
             </svg>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 -mt-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:-mt-4">
             {benefits.map((benefit, index) => (
               <div
                 key={index}
@@ -362,12 +362,12 @@ export default function StaffAugmentation() {
             {engagementModels.map((model, index) => (
               <div
                 key={index}
-                className="group relative p-8 rounded-2xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+                className="group relative p-6 md:p-8 rounded-2xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1 text-center md:text-left"
                 style={{ background: 'var(--cream)', border: '1px solid var(--gray-100)' }}
               >
                 {/* Icon */}
                 <div
-                  className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110"
+                  className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110 mx-auto md:mx-0"
                   style={{ background: 'rgba(0, 166, 81, 0.1)' }}
                 >
                   {model.icon}
@@ -378,7 +378,7 @@ export default function StaffAugmentation() {
                 </h3>
                 <p className="text-base mb-6" style={{ color: 'var(--gray-600)' }}>{model.description}</p>
 
-                <div className="space-y-2">
+                <div className="space-y-2 inline-block text-left">
                   {model.features.map((feature, i) => (
                     <div key={i} className="flex items-center gap-3 py-2">
                       <div className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: 'var(--green)' }} />
@@ -405,8 +405,8 @@ export default function StaffAugmentation() {
             <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>How Staff Augmentation Works</h2>
           </div>
 
-          {/* Flowing line animation with branches */}
-          <div className="relative mb-8">
+          {/* Flowing line animation with branches - hidden on mobile */}
+          <div className="relative mb-8 hidden md:block">
             <style jsx>{`
               @keyframes flowHowDown {
                 0% { stroke-dashoffset: 0; }
@@ -440,7 +440,7 @@ export default function StaffAugmentation() {
             </svg>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-6 -mt-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:-mt-4">
             {[
               {
                 title: 'Define Requirements',

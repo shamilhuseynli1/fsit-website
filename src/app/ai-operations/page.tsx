@@ -79,7 +79,7 @@ const operationsSolutions: OperationsSolution[] = [
     platforms: ['K8s', 'Docker', 'AWS'],
     features: ['Container orchestration', 'Auto-scaling', 'Blue-green deploys', 'A/B testing'],
     metric: 'Deployment Time',
-    metricValue: '<5 min',
+    metricValue: '<5 minutes',
   },
   {
     title: 'Monitoring & Observability',
@@ -103,7 +103,7 @@ const operationsSolutions: OperationsSolution[] = [
     platforms: ['Airflow', 'Spark', 'Kafka'],
     features: ['ETL automation', 'Quality checks', 'Feature stores', 'Streaming'],
     metric: 'Data Freshness',
-    metricValue: '<1 min',
+    metricValue: '<1 minute',
   },
   {
     title: 'Model Optimization',
@@ -191,7 +191,7 @@ export default function AIOperations() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] overflow-hidden">
+      <section className="relative min-h-[auto] md:min-h-[85vh] overflow-hidden">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -217,11 +217,10 @@ export default function AIOperations() {
 
         {/* Animated particles */}
         <AnimatedBackground />
-
         <NetworkBackground nodeCount={50} maxDistance={120} />
 
-        <div className="relative container-max py-20 md:py-28">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="relative container-max pt-36 pb-4 md:py-36">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Left content */}
             <div className="relative z-10">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
@@ -245,7 +244,7 @@ export default function AIOperations() {
               </div>
 
               {/* Stats row */}
-              <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4">
+              <div className="mt-12 grid grid-cols-4 gap-2 md:gap-4">
                 {[
                   { value: '99.9%', label: 'Uptime' },
                   { value: '98%', label: 'Accuracy' },
@@ -253,17 +252,17 @@ export default function AIOperations() {
                   { value: '5x', label: 'Faster' },
                 ].map((stat, i) => (
                   <div key={i} className="text-center">
-                    <p className="text-xl md:text-2xl font-bold text-green-400">
+                    <p className="text-lg md:text-2xl font-bold text-green-400">
                       {stat.value}
                     </p>
-                    <p className="text-sm text-white/80">{stat.label}</p>
+                    <p className="text-xs md:text-sm text-white/80">{stat.label}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Right visual */}
-            <div className="relative mt-8 lg:mt-0">
+            {/* Right visual - scaled down on mobile */}
+            <div className="relative mt-2 lg:mt-0 transform scale-[0.75] md:scale-100 origin-top -mb-16 md:mb-0">
               <HeroOperationsVisual />
             </div>
           </div>
@@ -400,8 +399,8 @@ export default function AIOperations() {
             </p>
           </div>
 
-          {/* Horizontal line with flowing animation */}
-          <div className="relative">
+          {/* Horizontal line with flowing animation - hidden on mobile */}
+          <div className="relative hidden md:block">
             <style jsx>{`
               @keyframes flowTrust {
                 0% { stroke-dashoffset: 1000; }
@@ -418,15 +417,15 @@ export default function AIOperations() {
           {/* Cards grid with gap separators */}
           <div className="relative pt-8">
             {/* First row */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-0">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-0">
               {trustSafety.slice(0, 3).map((item, index) => (
                 <div
                   key={index}
-                  className="group relative p-6 rounded-2xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-white z-10"
+                  className="group relative p-6 rounded-2xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-white z-10 text-center md:text-left"
                   style={{ border: '1px solid var(--gray-100)' }}
                 >
                   {/* Icon */}
-                  <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 overflow-hidden flex-shrink-0" style={{ background: 'rgba(0, 166, 81, 0.1)', minWidth: '56px', maxWidth: '56px', minHeight: '56px', maxHeight: '56px' }}>
+                  <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 overflow-hidden flex-shrink-0 mx-auto md:mx-0" style={{ background: 'rgba(0, 166, 81, 0.1)', minWidth: '56px', maxWidth: '56px', minHeight: '56px', maxHeight: '56px' }}>
                     {item.icon}
                   </div>
                   <h3 className="text-xl font-bold mb-2 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
@@ -447,15 +446,15 @@ export default function AIOperations() {
             </div>
 
             {/* Second row */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {trustSafety.slice(3, 6).map((item, index) => (
                 <div
                   key={index}
-                  className="group relative p-6 rounded-2xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-white z-10"
+                  className="group relative p-6 rounded-2xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-white z-10 text-center md:text-left"
                   style={{ border: '1px solid var(--gray-100)' }}
                 >
                   {/* Icon */}
-                  <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 overflow-hidden flex-shrink-0" style={{ background: 'rgba(0, 166, 81, 0.1)', minWidth: '56px', maxWidth: '56px', minHeight: '56px', maxHeight: '56px' }}>
+                  <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 overflow-hidden flex-shrink-0 mx-auto md:mx-0" style={{ background: 'rgba(0, 166, 81, 0.1)', minWidth: '56px', maxWidth: '56px', minHeight: '56px', maxHeight: '56px' }}>
                     {item.icon}
                   </div>
                   <h3 className="text-xl font-bold mb-2 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
@@ -481,8 +480,8 @@ export default function AIOperations() {
             </p>
           </div>
 
-          {/* Horizontal line with flowing animation */}
-          <div className="relative">
+          {/* Horizontal line with flowing animation - hidden on mobile */}
+          <div className="relative hidden md:block">
             <style jsx>{`
               @keyframes flowPlatforms {
                 0% { stroke-dashoffset: 1000; }
@@ -556,8 +555,8 @@ export default function AIOperations() {
             <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>From Assessment to Operations</h2>
           </div>
 
-          {/* Horizontal line with flowing animation */}
-          <div className="relative">
+          {/* Horizontal line with flowing animation - hidden on mobile */}
+          <div className="relative hidden md:block">
             <style jsx>{`
               @keyframes flowProcess {
                 0% { stroke-dashoffset: 1000; }
@@ -579,7 +578,7 @@ export default function AIOperations() {
             <div className="hidden lg:block absolute top-0 left-[62.5%] w-px h-8" style={{ background: '#00A651' }} />
             <div className="hidden lg:block absolute top-0 left-[87.5%] w-px h-8" style={{ background: '#00A651' }} />
 
-            <div className="grid md:grid-cols-4 gap-6 pt-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:pt-8">
               {[
                 { phase: 'Assess', title: 'Infrastructure Assessment', desc: 'Evaluate current AI infrastructure and identify gaps' },
                 { phase: 'Design', title: 'Architecture Design', desc: 'Design scalable, reliable MLOps architecture' },
@@ -588,7 +587,7 @@ export default function AIOperations() {
               ].map((step, index) => (
                 <div
                   key={index}
-                  className="group relative p-6 rounded-2xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-white"
+                  className="group relative p-6 rounded-2xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-white text-center md:text-left"
                   style={{ border: '1px solid var(--gray-100)' }}
                 >
                   <p className="text-sm font-semibold uppercase tracking-wide mb-2" style={{ color: 'var(--green)' }}>{step.phase}</p>

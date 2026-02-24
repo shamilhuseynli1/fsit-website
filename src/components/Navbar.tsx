@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -103,13 +104,12 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 md:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <span
-              className="text-xl font-bold tracking-tight"
-              style={{ color: 'var(--black)' }}
-            >
-              FSIT
-            </span>
+          <Link href="/" className="flex-shrink-0">
+            <img
+              src="/fsit-logo.svg"
+              alt="FSIT - Kingdom's preferred choice for AI"
+              className="h-14 md:h-16 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -304,7 +304,7 @@ export default function Navbar() {
         {isOpen && (
           <div className="lg:hidden mt-4 pb-4 animate-fade-in">
             <div
-              className="rounded-2xl p-6 space-y-1"
+              className="rounded-2xl p-4 space-y-0 max-h-[70vh] overflow-y-auto"
               style={{
                 background: 'var(--white)',
                 boxShadow: '0 20px 40px -12px rgba(0, 0, 0, 0.15)',
@@ -313,85 +313,113 @@ export default function Navbar() {
             >
               {navLinks.map((link) => {
                 const hasDropdown = link.dropdown || link.megaDropdown;
+                const isExpanded = mobileExpanded === link.name;
+
                 return (
-                  <div key={link.name}>
-                    <Link
-                      href={link.href}
-                      className="block px-4 py-3 font-medium rounded-xl transition-colors"
-                      style={{ color: 'var(--black)' }}
-                      onClick={() => !hasDropdown && setIsOpen(false)}
-                    >
-                      {link.name}
-                    </Link>
-                    {/* Mega dropdown items for mobile */}
-                    {link.megaDropdown && (
-                      <div className="pl-4 space-y-4">
-                        {link.megaDropdown.sections.map((section, sectionIdx) => (
-                          <div key={sectionIdx}>
-                            <p
-                              className="px-4 py-2 text-sm font-bold uppercase tracking-wider"
-                              style={{ color: 'var(--gray-500)' }}
-                            >
-                              {section.title}
-                            </p>
-                            {section.items.map((item) => (
-                              <Link
-                                key={item.name}
-                                href={item.href}
-                                className="block px-4 py-3 text-base font-medium rounded-lg transition-colors"
-                                style={{ color: 'var(--gray-700)' }}
-                                onClick={() => setIsOpen(false)}
-                              >
-                                {item.name}
-                              </Link>
-                            ))}
+                  <div key={link.name} className="border-b border-gray-100 last:border-b-0">
+                    {hasDropdown ? (
+                      <>
+                        <button
+                          onClick={() => setMobileExpanded(isExpanded ? null : link.name)}
+                          className="w-full flex justify-between items-center px-4 py-3 font-medium"
+                          style={{ color: 'var(--black)' }}
+                        >
+                          {link.name}
+                          <svg
+                            className={`w-4 h-4 transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </button>
+
+                        {isExpanded && (
+                          <div className="pb-3 animate-fade-in">
+                            {/* Mega dropdown items for mobile */}
+                            {link.megaDropdown && (
+                              <div className="pl-4 space-y-3">
+                                {link.megaDropdown.sections.map((section, sectionIdx) => (
+                                  <div key={sectionIdx}>
+                                    <p
+                                      className="px-3 py-1 text-xs font-bold uppercase tracking-wider"
+                                      style={{ color: 'var(--green)' }}
+                                    >
+                                      {section.title}
+                                    </p>
+                                    {section.items.map((item) => (
+                                      <Link
+                                        key={item.name}
+                                        href={item.href}
+                                        className="block px-3 py-2 text-sm font-medium rounded-lg transition-colors"
+                                        style={{ color: 'var(--gray-600)' }}
+                                        onClick={() => { setIsOpen(false); setMobileExpanded(null); }}
+                                      >
+                                        {item.name}
+                                      </Link>
+                                    ))}
+                                  </div>
+                                ))}
+                              </div>
+                            )}
+                            {/* Regular dropdown items for mobile */}
+                            {link.dropdown && (
+                              <div className="pl-4 space-y-0">
+                                {link.dropdown.map((item) => {
+                                  const hasHash = item.href.includes('#');
+                                  return hasHash ? (
+                                    <a
+                                      key={item.name}
+                                      href={item.href}
+                                      onClick={(e) => {
+                                        e.preventDefault();
+                                        const [path, hash] = item.href.split('#');
+                                        if (window.location.pathname === path || window.location.pathname === path + '/') {
+                                          window.location.hash = hash;
+                                          window.dispatchEvent(new HashChangeEvent('hashchange'));
+                                        } else {
+                                          window.location.href = item.href;
+                                        }
+                                        setIsOpen(false);
+                                        setMobileExpanded(null);
+                                      }}
+                                      className="block px-3 py-2 text-sm font-medium rounded-lg transition-colors cursor-pointer"
+                                      style={{ color: 'var(--gray-600)' }}
+                                    >
+                                      {item.name}
+                                    </a>
+                                  ) : (
+                                    <Link
+                                      key={item.name}
+                                      href={item.href}
+                                      className="block px-3 py-2 text-sm font-medium rounded-lg transition-colors"
+                                      style={{ color: 'var(--gray-600)' }}
+                                      onClick={() => { setIsOpen(false); setMobileExpanded(null); }}
+                                    >
+                                      {item.name}
+                                    </Link>
+                                  );
+                                })}
+                              </div>
+                            )}
                           </div>
-                        ))}
-                      </div>
-                    )}
-                    {/* Regular dropdown items for mobile */}
-                    {link.dropdown && (
-                      <div className="pl-4 space-y-1">
-                        {link.dropdown.map((item) => {
-                          const hasHash = item.href.includes('#');
-                          return hasHash ? (
-                            <a
-                              key={item.name}
-                              href={item.href}
-                              onClick={(e) => {
-                                e.preventDefault();
-                                const [path, hash] = item.href.split('#');
-                                if (window.location.pathname === path || window.location.pathname === path + '/') {
-                                  window.location.hash = hash;
-                                  window.dispatchEvent(new HashChangeEvent('hashchange'));
-                                } else {
-                                  window.location.href = item.href;
-                                }
-                                setIsOpen(false);
-                              }}
-                              className="block px-4 py-3 text-base font-medium rounded-lg transition-colors cursor-pointer"
-                              style={{ color: 'var(--gray-700)' }}
-                            >
-                              {item.name}
-                            </a>
-                          ) : (
-                            <Link
-                              key={item.name}
-                              href={item.href}
-                              className="block px-4 py-3 text-base font-medium rounded-lg transition-colors"
-                              style={{ color: 'var(--gray-700)' }}
-                              onClick={() => setIsOpen(false)}
-                            >
-                              {item.name}
-                            </Link>
-                          );
-                        })}
-                      </div>
+                        )}
+                      </>
+                    ) : (
+                      <Link
+                        href={link.href}
+                        className="block px-4 py-3 font-medium"
+                        style={{ color: 'var(--black)' }}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {link.name}
+                      </Link>
                     )}
                   </div>
                 );
               })}
-              <div className="pt-4 mt-4" style={{ borderTop: '1px solid var(--gray-100)' }}>
+              <div className="pt-3 mt-2" style={{ borderTop: '1px solid var(--gray-100)' }}>
                 <Link
                   href="/build-scale-ai"
                   className="block btn-primary text-center"

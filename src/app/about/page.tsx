@@ -78,21 +78,21 @@ export default function About() {
   return (
     <>
       {/* 1. Hero - Vision Statement */}
-      <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[auto] md:min-h-[85vh] flex items-center overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1694018359679-49465b4c0d61?auto=format&fit=crop&w=1920&q=80"
           alt="FSIT Team"
           className="absolute inset-0 w-full h-full object-cover object-top"
         />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="container-max relative py-20 md:py-28">
-          <div className="max-w-3xl">
-            <p className="text-green-400 font-semibold text-lg mb-4" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>About FSIT</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[1.1]" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
+        <div className="absolute inset-0 bg-black/70 md:bg-black/60" />
+        <div className="container-max relative pt-36 pb-4 md:py-36">
+          <div className="max-w-3xl text-center md:text-left mx-auto md:mx-0">
+            <p className="text-green-400 font-semibold text-base md:text-lg mb-3 md:mb-4" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>About FSIT</p>
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-[1.1]" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
               Closing the gap between{' '}
               <span className="text-green-400">AI ambition and execution</span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 max-w-2xl" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
+            <p className="text-lg md:text-2xl text-white/90 max-w-2xl" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
               We exist to help organizations build, scale, and operationalize AI through augmented intelligence — combining elite expertise, delivery teams, and managed services embedded directly into operations.
             </p>
           </div>
@@ -106,11 +106,11 @@ export default function About() {
             <p className="text-green-600 font-semibold text-lg mb-2">FSIT at a Glance</p>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold" style={{ color: 'var(--black)' }}>Future Systems for Information Technology</h2>
           </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center p-6 rounded-2xl bg-white">
-                <p className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3" style={{ color: 'var(--green)' }}>{stat.value}</p>
-                <p className="text-lg md:text-xl font-medium" style={{ color: 'var(--gray-700)' }}>{stat.label}</p>
+              <div key={index} className="text-center p-4 md:p-6 rounded-2xl bg-white">
+                <p className="text-2xl md:text-5xl lg:text-6xl font-bold mb-2 md:mb-3" style={{ color: 'var(--green)' }}>{stat.value}</p>
+                <p className="text-sm md:text-xl font-medium" style={{ color: 'var(--gray-700)' }}>{stat.label}</p>
               </div>
             ))}
           </div>
@@ -675,9 +675,9 @@ export default function About() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { city: 'Riyadh', type: 'Headquarters', image: 'https://images.unsplash.com/photo-1672257694085-3a5c603cda1a?auto=format&fit=crop&w=1920&q=80' },
+              { city: 'Riyadh', type: 'Headquarters', image: '/riyadh.jpg' },
               { city: 'Jeddah', type: 'Regional Office', image: 'https://images.unsplash.com/photo-1641935886235-d5deab1625f5?auto=format&fit=crop&w=1920&q=80' },
-              { city: 'NEOM', type: 'Future Projects', image: 'https://images.unsplash.com/photo-1682687221080-5cb261c645cb?auto=format&fit=crop&w=1920&q=80' },
+              { city: 'And beyond', type: 'Future Projects', image: 'https://images.unsplash.com/photo-1682687221080-5cb261c645cb?auto=format&fit=crop&w=1920&q=80' },
             ].map((location, index) => (
               <div key={index} className="relative rounded-2xl overflow-hidden group h-72">
                 <img
@@ -685,7 +685,7 @@ export default function About() {
                   alt={location.city}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-green-600/90 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-green-600/60 to-transparent" />
                 <div className="absolute bottom-6 left-6">
                   <p className="text-white font-bold text-2xl md:text-3xl">{location.city}</p>
                   <p className="text-white/90 text-lg">{location.type}</p>

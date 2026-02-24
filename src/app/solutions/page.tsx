@@ -161,7 +161,7 @@ export default function Solutions() {
   return (
     <div style={{ background: 'var(--white)' }} className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden min-h-[85vh] flex items-center">
+      <section className="relative overflow-hidden min-h-[auto] md:min-h-[85vh] flex items-center">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1590959914819-b767b9fe4cfb?auto=format&fit=crop&w=1920&q=80)' }}
@@ -171,8 +171,8 @@ export default function Solutions() {
 
         <AnimatedBackground />
 
-        <div className="container-max relative py-20 md:py-28">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="container-max relative pt-36 pb-4 md:py-36">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
             <div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
@@ -196,23 +196,24 @@ export default function Solutions() {
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-8">
-                <div>
-                  <div className="text-3xl md:text-4xl font-bold text-green-400">50+</div>
-                  <div className="text-sm text-white/80">AI Systems Built</div>
+              <div className="grid grid-cols-3 gap-4 md:gap-8">
+                <div className="text-center md:text-left">
+                  <div className="text-2xl md:text-4xl font-bold text-green-400">50+</div>
+                  <div className="text-xs md:text-sm text-white/80">AI Systems Built</div>
                 </div>
-                <div>
-                  <div className="text-3xl md:text-4xl font-bold text-green-400">98%</div>
-                  <div className="text-sm text-white/80">Success Rate</div>
+                <div className="text-center md:text-left">
+                  <div className="text-2xl md:text-4xl font-bold text-green-400">98%</div>
+                  <div className="text-xs md:text-sm text-white/80">Success Rate</div>
                 </div>
-                <div>
-                  <div className="text-3xl md:text-4xl font-bold text-green-400">24/7</div>
-                  <div className="text-sm text-white/80">Production Ready</div>
+                <div className="text-center md:text-left">
+                  <div className="text-2xl md:text-4xl font-bold text-green-400">24/7</div>
+                  <div className="text-xs md:text-sm text-white/80">Production Ready</div>
                 </div>
               </div>
             </div>
 
-            <div className="hidden lg:block">
+            {/* Hero Visual - scaled down on mobile */}
+            <div className="transform scale-[0.75] md:scale-100 origin-top -mb-16 md:mb-0">
               <HeroSolutionsVisual />
             </div>
           </div>
@@ -229,8 +230,8 @@ export default function Solutions() {
             </p>
           </div>
 
-          {/* Flowing line animation with branches to each item */}
-          <div className="relative">
+          {/* Flowing line animation with branches to each item - hidden on mobile */}
+          <div className="relative hidden md:block">
             <style jsx>{`
               @keyframes flowDown1 {
                 0% { stroke-dashoffset: 0; }
@@ -292,7 +293,7 @@ export default function Solutions() {
           </div>
 
           {/* Items grid with dividing lines - 5 columns for 5 services */}
-          <div className="grid grid-cols-2 lg:grid-cols-5 gap-px bg-[#00A651]/20 rounded-2xl overflow-hidden -mt-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-px bg-[#00A651]/20 rounded-2xl overflow-hidden md:-mt-4">
             {coreServices.map((item, index) => (
               <div key={index} className="group text-center p-8 bg-white hover:bg-[#F5F3F0] transition-all duration-300">
                 <h3 className="text-xl font-bold mb-4 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
@@ -328,11 +329,11 @@ export default function Solutions() {
             {generalModels.map((model, index) => (
               <div
                 key={index}
-                className="group relative p-10 bg-white hover:bg-[#F5F3F0] transition-all duration-300"
+                className="group relative p-6 md:p-10 bg-white hover:bg-[#F5F3F0] transition-all duration-300 text-center md:text-left"
               >
                 {/* Icon */}
                 <div
-                  className="w-16 h-16 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110"
+                  className="w-16 h-16 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110 mx-auto md:mx-0"
                   style={{ background: 'rgba(0, 166, 81, 0.1)' }}
                 >
                   {index === 0 && (
@@ -365,10 +366,10 @@ export default function Solutions() {
                   <p className="text-sm font-semibold uppercase tracking-wider mb-4" style={{ color: 'var(--green)' }}>
                     Use Cases
                   </p>
-                  <div className="space-y-3">
+                  <div className="space-y-3 inline-block text-left">
                     {model.useCases.map((uc, i) => (
                       <div key={i} className="flex items-center gap-3">
-                        <div className="w-2 h-2 rounded-full" style={{ background: 'var(--green)' }} />
+                        <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: 'var(--green)' }} />
                         <span className="text-base" style={{ color: 'var(--gray-700)' }}>{uc}</span>
                       </div>
                     ))}
@@ -377,7 +378,7 @@ export default function Solutions() {
 
                 {/* Platforms */}
                 <div className="pt-5" style={{ borderTop: '1px solid var(--gray-100)' }}>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 justify-center md:justify-start">
                     {model.platforms.map((platform, i) => (
                       <span
                         key={i}
@@ -409,7 +410,7 @@ export default function Solutions() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
             {targetedModels.map((vertical, index) => {
               const icons = [
                 // Government
@@ -532,8 +533,8 @@ export default function Solutions() {
               }
             `}</style>
 
-            {/* SVG with branching lines */}
-            <svg className="w-full h-44" viewBox="0 0 1000 180" preserveAspectRatio="xMidYMid meet">
+            {/* SVG with branching lines - hidden on mobile */}
+            <svg className="hidden md:block w-full h-44" viewBox="0 0 1000 180" preserveAspectRatio="xMidYMid meet">
               {/* Center node */}
               <circle cx="500" cy="12" r="8" fill="#00A651" />
               <circle cx="500" cy="12" r="14" fill="none" stroke="#00A651" strokeWidth="1.5" opacity="0.3" />
@@ -568,7 +569,7 @@ export default function Solutions() {
             </svg>
 
             {/* Category blocks with titles */}
-            <div className="grid grid-cols-4 gap-4 -mt-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:-mt-2">
               {capabilities.map((cap, index) => (
                 <div key={index} className="relative">
                   {/* Title block */}
@@ -650,14 +651,14 @@ export default function Solutions() {
             </div>
             <div className="relative">
               <div className="flex items-start">
-                {/* Spacer for SVG width */}
-                <div className="w-44 flex-shrink-0"></div>
+                {/* Spacer for SVG width - hidden on mobile */}
+                <div className="w-44 flex-shrink-0 hidden md:block"></div>
                 <p className="flex-1 font-semibold mb-6 text-center text-lg" style={{ color: 'var(--black)' }}>AI Components Deployed</p>
               </div>
 
               <div className="flex items-start">
-                {/* SVG with curved branches - height matches items */}
-                <svg className="w-44 flex-shrink-0 h-[280px]" viewBox="0 0 180 280" preserveAspectRatio="none" style={{ marginRight: '-8px' }}>
+                {/* SVG with curved branches - height matches items - hidden on mobile */}
+                <svg className="hidden md:block w-44 flex-shrink-0 h-[280px]" viewBox="0 0 180 280" preserveAspectRatio="none" style={{ marginRight: '-8px' }}>
                   {/* Center node - positioned at middle (item 3) */}
                   <circle cx="12" cy="140" r="6" fill="#00A651" />
                   <circle cx="12" cy="140" r="10" fill="none" stroke="#00A651" strokeWidth="1.5" opacity="0.3" />

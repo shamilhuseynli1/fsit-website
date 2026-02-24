@@ -96,7 +96,7 @@ export default function BuildInnovate() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[auto] md:min-h-[85vh] flex items-center overflow-hidden">
         <div
           className="absolute inset-0"
           style={{
@@ -106,30 +106,30 @@ export default function BuildInnovate() {
           }}
         />
         {/* Dark overlay for contrast */}
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/70 md:bg-black/60" />
         <NetworkBackground nodeCount={60} maxDistance={120} />
 
-        <div className="relative container-max py-20 md:py-28">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-green-400 font-semibold text-sm tracking-wider uppercase mb-4">Build & Innovate</p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[1.1]" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
+        <div className="relative container-max pt-36 pb-4 md:py-36">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <p className="text-green-400 font-semibold text-sm tracking-wider uppercase mb-3 md:mb-4">Build & Innovate</p>
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-[1.1]" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                 Build AI Systems
                 <span className="block text-green-400" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>That Actually Work</span>
               </h1>
-              <p className="text-xl text-white mb-8 max-w-lg" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
+              <p className="text-lg md:text-xl text-white mb-6 md:mb-8 max-w-lg mx-auto lg:mx-0" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
                 Operationalize AI at scale, not just experiment with it. We embed AI into mission-critical systems with strong governance, security, and industry compliance.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Link href="/contact" className="btn-primary text-lg px-8 py-4">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 justify-center lg:justify-start">
+                <Link href="/contact" className="btn-primary text-base md:text-lg px-6 md:px-8 py-3 md:py-4">
                   Start your AI project
                 </Link>
-                <Link href="/solutions" className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-dark-900 transition-all text-lg">
+                <Link href="/solutions" className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-dark-900 transition-all text-base md:text-lg">
                   Explore solutions
                 </Link>
               </div>
             </div>
-            <div className="hidden lg:block">
+            <div className="mt-2 lg:mt-0 transform scale-[0.75] md:scale-100 origin-top -mb-16 md:mb-0">
               <HeroBuildVisual />
             </div>
           </div>
@@ -161,10 +161,10 @@ export default function BuildInnovate() {
             </p>
           </div>
 
-          <div className="grid-modern-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {capabilities.map((cap, index) => (
-              <div key={index} className="card-feature group">
-                <div className="icon-modern mb-4">
+              <div key={index} className="card-feature group text-center md:text-left">
+                <div className="icon-modern mb-4 mx-auto md:mx-0">
                   {cap.icon}
                 </div>
                 <h3 className="text-lg font-semibold text-dark-900 mb-2 group-hover:text-green-600 transition-colors">
@@ -217,14 +217,14 @@ export default function BuildInnovate() {
             </p>
           </div>
 
-          <div className="grid-modern-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {useCases.map((useCase, index) => (
-              <div key={index} className="card-glass group">
+              <div key={index} className="card-glass group text-center md:text-left">
                 <h3 className="text-base font-semibold text-dark-900 mb-2 group-hover:text-green-600 transition-colors">
                   {useCase.title}
                 </h3>
                 <p className="text-sm text-gray-600 mb-4">{useCase.description}</p>
-                <div className="flex items-center gap-2 text-green-600">
+                <div className="flex items-center justify-center md:justify-start gap-2 text-green-600">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                   </svg>
@@ -247,13 +247,13 @@ export default function BuildInnovate() {
             </p>
           </div>
 
-          <div className="grid-modern-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {techStack.map((tech, index) => (
-              <div key={index} className="card-feature">
+              <div key={index} className="card-feature text-center md:text-left">
                 <h3 className="font-semibold text-dark-900 mb-4">{tech.category}</h3>
                 <div className="space-y-2">
                   {tech.tools.map((tool, i) => (
-                    <div key={i} className="flex items-center gap-2 p-2 rounded-lg bg-white/50 border border-gray-100">
+                    <div key={i} className="flex items-center justify-center md:justify-start gap-2 p-2 rounded-lg bg-white/50 border border-gray-100">
                       <div className="w-1.5 h-1.5 rounded-full bg-green-500" />
                       <span className="text-sm text-gray-700">{tool}</span>
                     </div>

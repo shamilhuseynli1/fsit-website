@@ -107,21 +107,21 @@ export default function Contact() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[auto] md:min-h-[85vh] flex items-center overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1694018359679-49465b4c0d61?auto=format&fit=crop&w=1920&q=80"
           alt="Riyadh Skyline"
           className="absolute inset-0 w-full h-full object-cover object-top"
         />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="relative container-max py-20 md:py-28">
-          <div className="max-w-3xl">
-            <p className="text-green-400 font-bold text-lg tracking-wide uppercase mb-4" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>Contact Us</p>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
+        <div className="absolute inset-0 bg-black/70 md:bg-black/60" />
+        <div className="relative container-max pt-36 pb-4 md:py-36">
+          <div className="max-w-3xl text-center md:text-left mx-auto md:mx-0">
+            <p className="text-green-400 font-bold text-base md:text-lg tracking-wide uppercase mb-3 md:mb-4" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>Contact Us</p>
+            <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-4 md:mb-6" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
               Let&apos;s build AI that{' '}
               <span className="text-green-400">actually runs</span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/90" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
+            <p className="text-lg md:text-2xl text-white/90" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
               Whether you are exploring your first AI initiative or scaling existing systems, FSIT works with organisations ready to move from intent to execution
             </p>
           </div>

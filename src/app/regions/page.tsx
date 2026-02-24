@@ -75,26 +75,26 @@ export default function Regions() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[85vh] flex items-center bg-cream-50 overflow-hidden">
+      <section className="relative min-h-[auto] md:min-h-[85vh] flex items-center bg-cream-50 overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1682687219573-3fd75f982217?auto=format&fit=crop&w=1920&q=80"
             alt="Aerial view of city"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-primary-500/40" />
+          <div className="absolute inset-0 bg-primary-500/50 md:bg-primary-500/40" />
         </div>
         <NetworkBackground nodeCount={60} />
-        <div className="relative container-max py-20 md:py-28">
-          <div className="max-w-3xl">
-            <h1 className="hero-title text-white">
+        <div className="relative container-max pt-36 pb-4 md:py-36">
+          <div className="max-w-3xl text-center md:text-left mx-auto md:mx-0">
+            <h1 className="hero-title text-white !text-3xl md:!text-4xl lg:!text-5xl">
               Regional execution.<br />
               <span className="text-primary-500">Global delivery.</span>
             </h1>
-            <p className="hero-subtitle">
+            <p className="hero-subtitle !text-base md:!text-xl">
               Our teams and projects operate across multiple regions, working seamlessly across time zones and markets. This global presence allows us to deliver locally informed, internationally aligned solutions.
             </p>
-            <p className="text-lg text-white/90 mt-6 font-medium">
+            <p className="text-sm md:text-lg text-white/90 mt-4 md:mt-6 font-medium">
               Riyadh · Doha · Dubai · Bangalore · Ho Chi Minh City · Singapore · Manila · Amman · Lebanon · Barcelona · Milan · London · Berlin · Zagreb
             </p>
           </div>
@@ -103,13 +103,13 @@ export default function Regions() {
       </section>
 
       {/* Cities Carousel */}
-      <section className="py-6 overflow-hidden border-y border-neutral-200" style={{ background: 'var(--cream)' }}>
+      <section className="py-4 md:py-6 overflow-hidden border-y border-neutral-200" style={{ background: 'var(--cream)' }}>
         <div className="relative">
           <div className="flex animate-scroll-cities whitespace-nowrap">
             {['Riyadh', 'Doha', 'Dubai', 'Bangalore', 'Ho Chi Minh City', 'Singapore', 'Manila', 'Amman', 'Lebanon', 'Barcelona', 'Milan', 'London', 'Berlin', 'Zagreb', 'Riyadh', 'Doha', 'Dubai', 'Bangalore', 'Ho Chi Minh City', 'Singapore', 'Manila', 'Amman', 'Lebanon', 'Barcelona', 'Milan', 'London', 'Berlin', 'Zagreb'].map((city, index) => (
-              <span key={index} className="text-dark-700 text-lg font-medium mx-8 inline-block">
+              <span key={index} className="text-dark-700 text-sm md:text-lg font-medium mx-4 md:mx-8 inline-block">
                 {city}
-                <span className="text-primary-500 mx-4">·</span>
+                <span className="text-primary-500 mx-2 md:mx-4">·</span>
               </span>
             ))}
           </div>
@@ -117,9 +117,9 @@ export default function Regions() {
       </section>
 
       {/* Value Statement */}
-      <section className="py-12" style={{ background: 'var(--cream)' }}>
+      <section className="py-8 md:py-12" style={{ background: 'var(--cream)' }}>
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <p className="text-xl md:text-2xl text-dark-900 font-medium">
+          <p className="text-lg md:text-2xl text-dark-900 font-medium">
             This model allows us to combine regional understanding with global scale, speed, and specialised AI expertise
           </p>
         </div>
@@ -128,31 +128,31 @@ export default function Regions() {
       {/* Regions Grid */}
       <section className="section bg-white">
         <div className="container-max">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10 md:mb-16">
             <h2 className="h2">Where We Operate</h2>
           </div>
-          <div className="space-y-12">
+          <div className="space-y-8 md:space-y-12">
             {regions.map((region, index) => (
-              <div key={index} className="border-b border-neutral-100 pb-12 last:border-b-0">
-                <div className="flex flex-col md:flex-row gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-14 h-14 bg-primary-500/10 rounded-xl flex items-center justify-center text-primary-500">
+              <div key={index} className="border-b border-neutral-100 pb-8 md:pb-12 last:border-b-0">
+                <div className="flex flex-col md:flex-row gap-4 md:gap-6">
+                  <div className="flex-shrink-0 flex justify-center md:justify-start">
+                    <div className="w-12 h-12 md:w-14 md:h-14 bg-primary-500/10 rounded-xl flex items-center justify-center text-primary-500">
                       {region.icon}
                     </div>
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl md:text-2xl font-bold text-dark-900 mb-3">{region.name}</h3>
-                    <p className="text-dark-500 mb-6">{region.description}</p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
+                  <div className="flex-1 text-center md:text-left">
+                    <h3 className="text-lg md:text-2xl font-bold text-dark-900 mb-2 md:mb-3">{region.name}</h3>
+                    <p className="text-dark-500 mb-4 md:mb-6 text-sm md:text-base">{region.description}</p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-3 mb-4">
                       {region.focus.map((item, i) => (
-                        <div key={i} className="flex items-center gap-3">
+                        <div key={i} className="flex items-center gap-2 md:gap-3 justify-center md:justify-start">
                           <span className="w-1.5 h-1.5 bg-primary-500 rounded-full flex-shrink-0"></span>
-                          <span className="text-dark-700">{item}</span>
+                          <span className="text-dark-700 text-sm md:text-base">{item}</span>
                         </div>
                       ))}
                     </div>
                     {region.note && (
-                      <p className="text-dark-500 text-sm italic border-l-2 border-primary-500 pl-4 mt-4">{region.note}</p>
+                      <p className="text-dark-500 text-xs md:text-sm italic border-l-2 border-primary-500 pl-3 md:pl-4 mt-4 text-left">{region.note}</p>
                     )}
                   </div>
                 </div>
@@ -165,11 +165,11 @@ export default function Regions() {
       {/* Global Statement */}
       <section className="section" style={{ background: 'var(--cream)' }}>
         <div className="container-max text-center">
-          <h2 className="h2 mb-6">Global team, one delivery standard</h2>
-          <p className="text-xl text-dark-600 mb-6 max-w-3xl mx-auto">
+          <h2 className="h2 mb-4 md:mb-6">Global team, one delivery standard</h2>
+          <p className="text-base md:text-xl text-dark-600 mb-4 md:mb-6 max-w-3xl mx-auto">
             AI transformation requires both local understanding and global capability
           </p>
-          <p className="text-3xl font-bold text-primary-500">
+          <p className="text-2xl md:text-3xl font-bold text-primary-500">
             FSIT delivers both
           </p>
         </div>

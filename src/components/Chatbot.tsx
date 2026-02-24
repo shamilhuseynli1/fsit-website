@@ -92,16 +92,16 @@ export default function Chatbot() {
       {/* Chat Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
+        className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 w-12 h-12 md:w-14 md:h-14 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
         style={{ background: 'var(--green)' }}
         aria-label="Open chat"
       >
         {isOpen ? (
-          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
         ) : (
-          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
           </svg>
         )}
@@ -110,7 +110,7 @@ export default function Chatbot() {
       {/* Chat Window */}
       {isOpen && (
         <div
-          className="fixed bottom-24 right-6 z-50 w-80 sm:w-96 rounded-2xl shadow-2xl overflow-hidden animate-fade-in"
+          className="fixed bottom-20 md:bottom-24 right-2 left-2 md:left-auto md:right-6 z-50 w-auto md:w-96 rounded-2xl shadow-2xl overflow-hidden animate-fade-in max-h-[80vh] md:max-h-none"
           style={{ background: 'var(--white)', border: '1px solid var(--gray-100)' }}
           dir={isRtl ? 'rtl' : 'ltr'}
         >
@@ -136,7 +136,7 @@ export default function Chatbot() {
           </div>
 
           {/* Chat Body */}
-          <div className="p-4 min-h-[280px] max-h-[400px] overflow-y-auto">
+          <div className="p-3 md:p-4 min-h-[240px] md:min-h-[280px] max-h-[50vh] md:max-h-[400px] overflow-y-auto">
             {step === 'welcome' && (
               <div className="space-y-4">
                 <div className="bg-gray-100 rounded-2xl rounded-tl-none p-3 max-w-[85%]">

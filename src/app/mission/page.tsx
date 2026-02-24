@@ -39,21 +39,21 @@ export default function Mission() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[85vh] flex items-center bg-cream-50 overflow-hidden">
+      <section className="relative min-h-[auto] md:min-h-[85vh] flex items-center bg-cream-50 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1682695796795-cc287af78a2b?auto=format&fit=crop&w=1920&q=80"
           alt="Mission"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/50 to-white/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/80 md:from-white/70 via-white/60 md:via-white/50 to-white/40 md:to-white/30" />
         <NetworkBackground nodeCount={60} />
-        <div className="relative container-max py-20 md:py-28">
+        <div className="relative container-max pt-36 pb-4 md:py-36">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="hero-title text-dark-900 !text-3xl md:!text-4xl lg:!text-5xl">
+            <h1 className="hero-title text-dark-900 !text-2xl md:!text-4xl lg:!text-5xl">
               We exist to close the gap between AI ambition and{' '}
               <span className="text-primary-500">real-world execution</span>
             </h1>
-            <p className="hero-subtitle !text-center mx-auto">
+            <p className="hero-subtitle !text-center mx-auto !text-base md:!text-xl">
               We enable organizations to access trusted AI capacity that delivers measurable outcomes
             </p>
           </div>
@@ -74,14 +74,14 @@ export default function Mission() {
       {/* Stats */}
       <section className="section bg-neutral-150">
         <div className="container-max">
-          <p className="text-center text-dark-500 mb-12">
+          <p className="text-center text-dark-500 mb-8 md:mb-12 text-sm md:text-base">
             We are working extensively to build a vetted network of talents available at short notice
           </p>
-          <div className="grid-4 stagger-children">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <p className="stat-number">{stat.number}</p>
-                <p className="stat-label">{stat.label}</p>
+                <p className="text-2xl md:text-4xl lg:text-5xl font-bold text-primary-600 mb-1 md:mb-2">{stat.number}</p>
+                <p className="text-xs md:text-sm text-dark-500">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -91,22 +91,22 @@ export default function Mission() {
       {/* Our Leadership */}
       <section className="section bg-white">
         <div className="container-max">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 md:mb-12">
             <h2 className="h2">Our Leadership</h2>
           </div>
-          <div className="max-w-4xl mx-auto space-y-6">
-            <div className="border-l-4 border-primary-500 pl-6">
-              <p className="text-dark-600 text-lg">
+          <div className="max-w-4xl mx-auto space-y-4 md:space-y-6">
+            <div className="border-l-4 border-primary-500 pl-4 md:pl-6">
+              <p className="text-dark-600 text-base md:text-lg">
                 Founded in 2012 and headquartered in Riyadh, Future Systems for Information Technology (FSIT) is an AI-first augmented intelligence partner supporting enterprises and government entities across Saudi Arabia, the MENA region, and beyond
               </p>
             </div>
-            <div className="border-l-4 border-primary-500/50 pl-6">
-              <p className="text-dark-600 text-lg">
+            <div className="border-l-4 border-primary-500/50 pl-4 md:pl-6">
+              <p className="text-dark-600 text-base md:text-lg">
                 Long before AI became mainstream, FSIT recognised that real transformation would require more than traditional consulting or staffing models. Organisations would need trusted AI expertise embedded directly into their operations — focused on execution, governance, and measurable outcomes
               </p>
             </div>
-            <div className="bg-cream-50 rounded-2xl p-6 md:p-8">
-              <p className="text-dark-900 font-medium text-lg">
+            <div className="bg-cream-50 rounded-2xl p-5 md:p-8">
+              <p className="text-dark-900 font-medium text-base md:text-lg">
                 Today, FSIT operates one of the region&apos;s most selective AI talent networks, with over 80,000 carefully vetted professionals across AI engineering, machine learning, data science, AI product delivery, digital transformation, and enterprise technology
               </p>
             </div>
@@ -126,18 +126,18 @@ export default function Mission() {
       {/* AI with Purpose */}
       <section className="section bg-white">
         <div className="container-max">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 md:mb-12">
             <h2 className="h2">We Stand for AI with Purpose</h2>
-            <p className="text-body mx-auto">
+            <p className="text-body mx-auto text-sm md:text-base">
               AI should deliver tangible value — not remain trapped in pilots or proofs of concept. Every FSIT engagement is designed around real operational impact
             </p>
           </div>
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <span className="tag">Production-ready AI systems</span>
-            <span className="tag">Secure, governed deployments</span>
-            <span className="tag">Long-term sustainability</span>
+          <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-6 md:mb-8">
+            <span className="tag text-sm md:text-base">Production-ready AI systems</span>
+            <span className="tag text-sm md:text-base">Secure, governed deployments</span>
+            <span className="tag text-sm md:text-base">Long-term sustainability</span>
           </div>
-          <p className="text-center text-xl font-bold text-dark-900 italic">
+          <p className="text-center text-lg md:text-xl font-bold text-dark-900 italic">
             No hype. No experimentation theatre.
           </p>
         </div>
@@ -161,11 +161,11 @@ export default function Mission() {
         <div className="container-lg">
           <div className="text-center mb-6">
             <h2 className="h2">End-to-End AI Enablement</h2>
-            <p className="text-body mx-auto">FSIT supports the full AI lifecycle</p>
+            <p className="text-body mx-auto text-sm md:text-base">FSIT supports the full AI lifecycle</p>
           </div>
 
           {/* Simple horizontal line animation */}
-          <div className="relative mb-8">
+          <div className="relative mb-6 md:mb-8 hidden md:block">
             <svg className="w-full h-8 pointer-events-none" viewBox="0 0 1000 32" preserveAspectRatio="none">
               <defs>
                 <linearGradient id="missionLifecycleLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -189,16 +189,16 @@ export default function Mission() {
             </svg>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {lifecycle.map((item, index) => (
-              <div key={index} className="group text-center p-4 rounded-xl hover:bg-neutral-50 transition-all duration-300">
-                <h3 className="text-sm font-bold group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+              <div key={index} className="group text-center p-3 md:p-4 rounded-xl hover:bg-neutral-50 transition-all duration-300 bg-neutral-50 md:bg-transparent">
+                <h3 className="text-xs md:text-sm font-bold group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
                   {item.title}
                 </h3>
               </div>
             ))}
           </div>
-          <p className="text-center text-dark-500 mt-8 max-w-3xl mx-auto">
+          <p className="text-center text-dark-500 mt-6 md:mt-8 max-w-3xl mx-auto text-sm md:text-base">
             Whether embedding AI experts into existing teams or delivering managed AI services, we ensure continuity, accountability, and long-term value
           </p>
         </div>
@@ -212,7 +212,7 @@ export default function Mission() {
           </div>
 
           {/* Simple horizontal line animation */}
-          <div className="relative mb-8">
+          <div className="relative mb-6 md:mb-8 hidden md:block">
             <svg className="w-full h-8 pointer-events-none" viewBox="0 0 1000 32" preserveAspectRatio="none">
               <defs>
                 <linearGradient id="missionCommitLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -236,16 +236,16 @@ export default function Mission() {
             </svg>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-12">
             {commitments.map((item, index) => (
-              <div key={index} className="group text-center p-4 rounded-xl hover:bg-white transition-all duration-300">
-                <h3 className="text-sm font-bold group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+              <div key={index} className="group text-center p-3 md:p-4 rounded-xl hover:bg-white transition-all duration-300 bg-white md:bg-transparent">
+                <h3 className="text-xs md:text-sm font-bold group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
                   {item}
                 </h3>
               </div>
             ))}
           </div>
-          <p className="text-center text-xl text-primary-500 font-semibold">
+          <p className="text-center text-lg md:text-xl text-primary-500 font-semibold">
             We measure success by impact — not headcount, buzzwords, or slide decks
           </p>
         </div>
@@ -254,13 +254,13 @@ export default function Mission() {
       {/* Looking Ahead */}
       <section className="section bg-neutral-150">
         <div className="container-max text-center">
-          <h2 className="h2 mb-6">Looking Ahead</h2>
-          <p className="text-xl text-dark-500 max-w-3xl mx-auto mb-8">
+          <h2 className="h2 mb-4 md:mb-6">Looking Ahead</h2>
+          <p className="text-base md:text-xl text-dark-500 max-w-3xl mx-auto mb-6 md:mb-8">
             As AI reshapes industries and governments, FSIT&apos;s mission remains clear: to serve as a trusted augmented intelligence partner enabling organisations to execute AI confidently, securely, and at scale
           </p>
-          <div className="bg-cream-50 rounded-2xl p-6 md:p-8 max-w-3xl mx-auto border-l-4 border-primary-500">
-            <p className="text-lg text-dark-600 mb-4">We don&apos;t just help organisations adopt AI</p>
-            <p className="text-xl font-bold text-primary-500">
+          <div className="bg-cream-50 rounded-2xl p-5 md:p-8 max-w-3xl mx-auto border-l-4 border-primary-500">
+            <p className="text-base md:text-lg text-dark-600 mb-3 md:mb-4">We don&apos;t just help organisations adopt AI</p>
+            <p className="text-lg md:text-xl font-bold text-primary-500">
               We help them operate with it — with purpose, precision, and lasting capability
             </p>
           </div>

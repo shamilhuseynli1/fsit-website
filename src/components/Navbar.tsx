@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
 export default function Navbar() {
@@ -92,8 +93,8 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'py-3'
-          : 'py-5'
+          ? 'py-2'
+          : 'py-4'
       }`}
       style={{
         background: 'rgba(255, 255, 255, 0.98)',
@@ -105,12 +106,11 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
-            <span
-              className="text-2xl md:text-3xl font-bold"
-              style={{ color: 'var(--black)' }}
-            >
-              FSIT
-            </span>
+            <img
+              src="/logo.png"
+              alt="FSIT"
+              className="w-auto max-w-[100px] md:max-w-[120px]"
+            />
           </Link>
 
           {/* Desktop Navigation */}

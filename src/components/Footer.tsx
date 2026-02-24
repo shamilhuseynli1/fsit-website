@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   const footerLinks = {
@@ -31,15 +32,14 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-8">
           {/* Brand Column */}
           <div className="col-span-2 text-center md:text-left lg:col-span-2 mb-4 md:mb-0">
-            <Link href="/" className="inline-block mb-4 md:mb-6">
-              <span
-                className="text-4xl md:text-5xl font-bold"
-                style={{ color: 'var(--black)' }}
-              >
-                FSIT
-              </span>
+            <Link href="/" className="inline-block -mt-2">
+              <img
+                src="/logo.png"
+                alt="FSIT"
+                className="w-auto max-w-[280px] md:max-w-[320px]"
+              />
             </Link>
-            <p className="mb-6 md:mb-8 max-w-sm mx-auto md:mx-0 leading-relaxed text-sm" style={{ color: 'var(--gray-500)' }}>
+            <p className="mt-8 md:mt-3 mb-6 md:mb-8 max-w-sm mx-auto md:mx-0 leading-relaxed text-sm" style={{ color: 'var(--gray-500)' }}>
               On-Site AI. Real Results. Built Capability. Pioneering AI transformation across Saudi Arabia and the Middle East.
             </p>
             <div className="flex gap-3 justify-center md:justify-start">

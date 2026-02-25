@@ -93,8 +93,8 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'py-2'
-          : 'py-4'
+          ? 'py-1'
+          : 'py-2'
       }`}
       style={{
         background: 'rgba(255, 255, 255, 0.98)',
@@ -109,7 +109,7 @@ export default function Navbar() {
             <img
               src="/logo.png"
               alt="FSIT"
-              className="w-auto max-w-[120px] md:max-w-[150px]"
+              className="h-16 w-auto"
             />
           </Link>
 

@@ -109,7 +109,7 @@ export default function Navbar() {
             <img
               src="/logo.png"
               alt="FSIT"
-              className="w-auto max-w-[100px] md:max-w-[120px]"
+              className="w-auto max-w-[120px] md:max-w-[150px]"
             />
           </Link>
 

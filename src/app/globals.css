@@ -595,9 +595,49 @@ svg:not([width]):not([class*="w-"]) {
   }
 }
 
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+/* Logo Marquee */
+.animate-marquee {
+  -webkit-animation: marqueeScroll 35s linear infinite;
+  animation: marqueeScroll 35s linear infinite;
+}
+
+.animate-marquee-mobile {
+  -webkit-animation: marqueeScroll 15s linear infinite;
+  animation: marqueeScroll 15s linear infinite;
+}
+
+/* Horizontal bounce for scroll indicator */
+.animate-bounce-x {
+  animation: bounceX 1s ease-in-out infinite;
+}
+
+@keyframes bounceX {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+}
+
+@-webkit-keyframes marqueeScroll {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes drawPath {

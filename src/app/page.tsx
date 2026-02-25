@@ -12,6 +12,15 @@ export default function Home() {
   const [expertFilter, setExpertFilter] = useState('saudi');
   const [heroImage, setHeroImage] = useState('/hero-riyadh.jpg');
   const [isNight, setIsNight] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect mobile screen
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Automatic day/night image switching based on local time
   useEffect(() => {
@@ -362,7 +371,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div className="relative overflow-hidden">
+        <div className="logo-marquee-wrapper">
           {filteredClients.length <= 5 ? (
             /* Static centered layout for few clients */
             <div className="flex justify-center flex-wrap gap-6 md:gap-14 px-4">
@@ -385,32 +394,82 @@ export default function Home() {
               ))}
             </div>
           ) : (
-            /* Scrolling animation for many clients - faster on mobile */
-            <div
-              className="flex"
-              style={{
-                animation: 'scroll 26s linear infinite',
-                width: 'max-content'
-              }}
-            >
-              {[...filteredClients, ...filteredClients].map((client, index) => (
-                <a
-                  key={index}
-                  href={client.url || '#'}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-shrink-0 mx-4 md:mx-14 flex items-center justify-center h-20 md:h-28 w-32 md:w-64 logo-item"
+            <>
+              {/* Mobile: Manual scroll with fade edges */}
+              <div className="md:hidden relative overflow-hidden">
+                {/* Scrollable content */}
+                <div
+                  className="overflow-x-auto scrollbar-hide"
+                  onScroll={(e) => {
+                    const arrow = e.currentTarget.parentElement?.querySelector('.scroll-arrow');
+                    if (arrow) {
+                      if (e.currentTarget.scrollLeft > 10) {
+                        arrow.classList.add('opacity-0');
+                      } else {
+                        arrow.classList.remove('opacity-0');
+                      }
+                    }
+                  }}
                 >
-                  <Image
-                    src={client.logo}
-                    alt={client.name}
-                    width={256}
-                    height={112}
-                    className="object-contain max-h-16 md:max-h-24"
-                  />
-                </a>
-              ))}
-            </div>
+                  <div className="flex flex-row flex-nowrap gap-6 px-4" style={{ width: 'max-content' }}>
+                    {filteredClients.map((client, index) => (
+                      <a
+                        key={index}
+                        href={client.url || '#'}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-shrink-0 flex items-center justify-center"
+                        style={{ width: '90px', height: '45px' }}
+                      >
+                        <Image
+                          src={client.logo}
+                          alt={client.name}
+                          width={90}
+                          height={45}
+                          className="object-contain"
+                          style={{ maxWidth: '90px', maxHeight: '45px' }}
+                        />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+                {/* Right fade */}
+                <div
+                  className="absolute right-0 top-0 bottom-0 w-16 pointer-events-none"
+                  style={{ background: 'linear-gradient(to left, rgba(245,245,243,1) 0%, rgba(245,245,243,0) 100%)' }}
+                />
+                {/* Scroll arrow indicator */}
+                <div className="scroll-arrow absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none transition-opacity duration-300">
+                  <div className="animate-bounce-x flex items-center gap-1 text-gray-400">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M9 18l6-6-6-6" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              {/* Desktop: Auto scroll */}
+              <div className="hidden md:block overflow-hidden w-full">
+                <div className="flex gap-16 w-fit animate-marquee">
+                  {[...filteredClients, ...filteredClients].map((client, index) => (
+                    <a
+                      key={index}
+                      href={client.url || '#'}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-shrink-0 w-40 h-16 flex items-center justify-center"
+                    >
+                      <Image
+                        src={client.logo}
+                        alt={client.name}
+                        width={160}
+                        height={64}
+                        className="object-contain w-full h-full"
+                      />
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </>
           )}
         </div>
         {/* Client Stats Counter */}

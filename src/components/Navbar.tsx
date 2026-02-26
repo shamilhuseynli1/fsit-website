@@ -107,9 +107,9 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <img
-              src="/logo.png"
-              alt="FSIT"
-              className="h-16 w-auto"
+              src="/logo-full-cropped.png"
+              alt="FSIT - Kingdom's preferred choice for AI"
+              className="h-14 w-auto"
             />
           </Link>
 

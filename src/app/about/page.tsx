@@ -161,7 +161,7 @@ export default function About() {
                   Founded in 2012 and headquartered in Riyadh, Future Systems for Information Technology (FSIT) began as an IT staffing and consulting company serving enterprises across Saudi Arabia.
                 </p>
                 <p className="text-lg md:text-xl text-gray-600">
-                  Long before AI became mainstream, we recognised that real transformation would require more than traditional consulting or staffing models. Organizations would need trusted AI expertise embedded directly into their operations — focused on execution, governance, and measurable outcomes.
+                  Long before AI became mainstream, we recognized that real transformation would require more than traditional consulting or staffing models. Organizations would need trusted AI expertise embedded directly into their operations — focused on execution, governance, and measurable outcomes.
                 </p>
                 <p className="text-lg md:text-xl text-gray-600">
                   Today, FSIT operates as an AI-first augmented intelligence partner, with one of the region's most selective talent networks spanning over 80,000 carefully vetted professionals across AI engineering, machine learning, data science, and enterprise technology.
@@ -169,7 +169,7 @@ export default function About() {
               </div>
               <div className="mt-8 p-6 bg-gradient-to-br from-green-50 to-white rounded-2xl border border-green-100">
                 <p className="text-xl md:text-2xl font-medium text-gray-900">
-                  "Embed the right AI expertise, at the right time, inside your organisation — to reduce execution risk, accelerate delivery, and build lasting internal capability."
+                  "Embed the right AI expertise, at the right time, inside your organization — to reduce execution risk, accelerate delivery, and build lasting internal capability."
                 </p>
               </div>
             </div>
@@ -561,7 +561,7 @@ export default function About() {
             <p className="text-green-600 font-semibold text-lg mb-4">Global Presence</p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4" style={{ color: 'var(--black)' }}>Regional execution. Global delivery.</h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-              Headquartered in Riyadh with distributed teams across Europe, Asia, and the United States. This model combines regional understanding with global scale and specialised AI expertise.
+              Headquartered in Riyadh with distributed teams across Europe, Asia, and the United States. This model combines regional understanding with global scale and specialized AI expertise.
             </p>
           </div>
 
@@ -727,7 +727,7 @@ export default function About() {
             It's about <span className="text-green-600">execution</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-            We don't just help organisations adopt AI. We help them operate with it — with purpose, precision, and lasting capability.
+            We don't just help organizations adopt AI. We help them operate with it — with purpose, precision, and lasting capability.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/contact" className="btn-primary text-lg px-8 py-4">

@@ -736,6 +736,19 @@ svg:not([width]):not([class*="w-"]) {
   }
 }
 
+@keyframes float {
+  0%, 100% {
+    transform: translate(45px, -5px);
+  }
+  50% {
+    transform: translate(45px, -9px);
+  }
+}
+
+.animate-float {
+  animation: float 2s ease-in-out infinite;
+}
+
 .animate-draw-path {
   stroke-dasharray: 400;
   stroke-dashoffset: 400;

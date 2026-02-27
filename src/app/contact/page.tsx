@@ -7,10 +7,21 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
+    organization: '',
     phone: '',
     email: '',
+    inquiryType: '',
     message: '',
   });
+
+  const inquiryTypes = [
+    'Outsourcing Request',
+    'Staffing/Recruitment',
+    'Partnership',
+    'General Inquiry',
+    'Careers',
+    'Support',
+  ];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -18,7 +29,7 @@ export default function Contact() {
     alert('Thank you for your message. We will get back to you soon!');
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -122,7 +133,7 @@ export default function Contact() {
               <span className="text-green-400">actually runs</span>
             </h1>
             <p className="text-lg md:text-2xl text-white/90" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
-              Whether you are exploring your first AI initiative or scaling existing systems, FSIT works with organisations ready to move from intent to execution
+              Whether you are exploring your first AI initiative or scaling existing systems, FSIT works with organizations ready to move from intent to execution
             </p>
           </div>
         </div>
@@ -221,6 +232,21 @@ export default function Contact() {
                     />
                   </div>
                 </div>
+                <div>
+                  <label htmlFor="organization" className="block text-base font-medium text-dark-700 mb-2">
+                    Organization / Entity Name*
+                  </label>
+                  <input
+                    type="text"
+                    id="organization"
+                    name="organization"
+                    required
+                    placeholder="Company, Government Entity, or Individual"
+                    value={formData.organization}
+                    onChange={handleChange}
+                    className="w-full px-4 py-4 text-base border border-neutral-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
+                  />
+                </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div>
                     <label htmlFor="phone" className="block text-base font-medium text-dark-700 mb-2">
@@ -252,6 +278,24 @@ export default function Contact() {
                   </div>
                 </div>
                 <div>
+                  <label htmlFor="inquiryType" className="block text-base font-medium text-dark-700 mb-2">
+                    Inquiry Type*
+                  </label>
+                  <select
+                    id="inquiryType"
+                    name="inquiryType"
+                    required
+                    value={formData.inquiryType}
+                    onChange={handleChange}
+                    className="w-full px-4 py-4 text-base border border-neutral-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all bg-white"
+                  >
+                    <option value="">Select inquiry type...</option>
+                    {inquiryTypes.map((type) => (
+                      <option key={type} value={type}>{type}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
                   <label htmlFor="message" className="block text-base font-medium text-dark-700 mb-2">
                     Message*
                   </label>
@@ -266,7 +310,7 @@ export default function Contact() {
                   />
                 </div>
                 <button type="submit" className="btn-primary w-full text-lg px-8 py-4">
-                  Submit
+                  Get Your AI Strategy Call
                 </button>
               </form>
             </div>
@@ -301,7 +345,7 @@ export default function Contact() {
             Talk to our AI delivery team today
           </p>
           <Link href="/build-scale-ai" className="btn-primary text-lg px-8 py-4">
-            Book a free consultation
+            Request a Pilot Roadmap
           </Link>
         </div>
       </section>

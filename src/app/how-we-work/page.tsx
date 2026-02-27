@@ -47,39 +47,25 @@ export default function HowWeWork() {
 
   const steps = [
     {
-      step: 'Define',
-      title: 'Align on outcomes',
-      description: 'We align on business outcomes, system constraints, data readiness, and operational realities. AI use cases are prioritised based on impact, feasibility, and time to value.',
+      step: 'Week 1',
+      title: 'Discover & Plan',
+      description: 'We assess your needs, define success metrics, align on business outcomes, and create a clear roadmap. AI use cases are prioritized based on impact, feasibility, and time to value.',
       icon: StepIcons.define,
       color: 'from-primary-500 to-primary-400',
     },
     {
-      step: 'Embed',
-      title: 'Deploy AI teams',
-      description: 'We deploy dedicated AI engineers, data scientists, and delivery leads who work as an extension of your internal teams.',
-      icon: StepIcons.embed,
+      step: 'Week 2',
+      title: 'Build & Deploy',
+      description: 'Our team builds your AI solution and integrates it with your existing systems, platforms, and data sources. We deploy dedicated AI engineers who work as an extension of your team.',
+      icon: StepIcons.build,
       color: 'from-primary-500 to-green-500',
     },
     {
-      step: 'Build',
-      title: 'Develop integrated systems',
-      description: 'AI systems are developed to integrate with existing platforms, workflows, and data sources — not as standalone experiments.',
-      icon: StepIcons.build,
-      color: 'from-primary-600 to-primary-500',
-    },
-    {
-      step: 'Operate',
-      title: 'Ensure reliability',
-      description: 'We support deployment, monitoring, optimisation, and human-in-the-loop workflows to ensure reliability, accuracy, and compliance in production.',
+      step: 'Week 3',
+      title: 'Launch & Optimize',
+      description: 'Go live with support, monitoring, and continuous improvement. We ensure reliability, accuracy, and compliance in production with ongoing optimization.',
       icon: StepIcons.operate,
-      color: 'from-gold-500 to-orange-500',
-    },
-    {
-      step: 'Scale',
-      title: 'Expand with governance',
-      description: 'Successful systems are expanded across teams, functions, or regions with performance, governance, and security in place.',
-      icon: StepIcons.scale,
-      color: 'from-primary-500 to-primary-400',
+      color: 'from-primary-600 to-primary-500',
     },
   ];
 
@@ -177,12 +163,12 @@ export default function HowWeWork() {
                   <div className="text-white/80 text-xs md:text-base mt-1">Success Rate</div>
                 </div>
                 <div className="text-center lg:text-left">
-                  <div className="text-2xl md:text-4xl font-bold text-green-400 whitespace-nowrap">3 weeks</div>
-                  <div className="text-white/80 text-xs md:text-base mt-1">To Deploy</div>
+                  <div className="text-2xl md:text-4xl font-bold text-green-400 whitespace-nowrap">3 Weeks</div>
+                  <div className="text-white/80 text-xs md:text-base mt-1">To Production</div>
                 </div>
                 <div className="text-center lg:text-left">
-                  <div className="text-2xl md:text-4xl font-bold text-green-400 whitespace-nowrap">5 Steps</div>
-                  <div className="text-white/80 text-xs md:text-base mt-1">Process</div>
+                  <div className="text-2xl md:text-4xl font-bold text-green-400 whitespace-nowrap">3 Steps</div>
+                  <div className="text-white/80 text-xs md:text-base mt-1">Simple Journey</div>
                 </div>
               </div>
             </div>
@@ -199,7 +185,7 @@ export default function HowWeWork() {
       <section className="section" style={{ background: 'var(--cream)' }}>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-xl text-dark-500 mb-4">
-            Most organisations don&apos;t fail at AI because of lack of ambition
+            Most organizations don&apos;t fail at AI because of lack of ambition
           </p>
           <p className="text-xl md:text-2xl text-dark-900 font-semibold mb-12">
             They fail because AI is treated as a side project, disconnected from real systems, data, and operations
@@ -220,16 +206,14 @@ export default function HowWeWork() {
       <section className="section" style={{ background: 'var(--white)' }}>
         <div className="container-lg">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold" style={{ color: 'var(--black)' }}>Our 5-Step Process</h2>
+            <h2 className="text-4xl md:text-5xl font-bold" style={{ color: 'var(--black)' }}>Your 3-Week Journey</h2>
           </div>
 
           <div className="mb-4">
             <ProcessFlow steps={[
-              { num: '01', title: 'Define', desc: 'Align on outcomes' },
-              { num: '02', title: 'Embed', desc: 'Deploy AI teams' },
-              { num: '03', title: 'Build', desc: 'Develop systems' },
-              { num: '04', title: 'Operate', desc: 'Ensure reliability' },
-              { num: '05', title: 'Scale', desc: 'Expand with governance' },
+              { num: 'Week 1', title: 'Discover & Plan', desc: 'Assess & roadmap' },
+              { num: 'Week 2', title: 'Build & Deploy', desc: 'Develop & integrate' },
+              { num: 'Week 3', title: 'Launch & Optimize', desc: 'Go live & improve' },
             ]} />
           </div>
 
@@ -335,24 +319,22 @@ export default function HowWeWork() {
             </div>
 
             {/* Connecting lines SVG */}
-            <div className="relative w-20 h-[280px] flex-shrink-0">
+            <div className="relative w-20 h-[180px] flex-shrink-0">
               {/* Center node on video edge */}
               <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 z-10">
                 <div className="w-4 h-4 rounded-full bg-[#00A651]" />
                 <div className="absolute inset-0 w-6 h-6 -m-1 rounded-full border-2 border-[#00A651] opacity-30" />
               </div>
-              <svg className="w-full h-full" viewBox="0 0 80 280" preserveAspectRatio="none">
-                <path d="M0,140 Q40,140 78,28" stroke="#00A651" strokeWidth="2" fill="none" />
-                <path d="M0,140 Q40,140 78,84" stroke="#00A651" strokeWidth="2" fill="none" />
-                <path d="M0,140 L78,140" stroke="#00A651" strokeWidth="2" fill="none" />
-                <path d="M0,140 Q40,140 78,196" stroke="#00A651" strokeWidth="2" fill="none" />
-                <path d="M0,140 Q40,140 78,252" stroke="#00A651" strokeWidth="2" fill="none" />
+              <svg className="w-full h-full" viewBox="0 0 80 180" preserveAspectRatio="none">
+                <path d="M0,90 Q40,90 78,30" stroke="#00A651" strokeWidth="2" fill="none" />
+                <path d="M0,90 L78,90" stroke="#00A651" strokeWidth="2" fill="none" />
+                <path d="M0,90 Q40,90 78,150" stroke="#00A651" strokeWidth="2" fill="none" />
               </svg>
             </div>
 
             {/* Blocks */}
             <div className="w-[40%] space-y-2">
-              {['Define clear business outcomes', 'Embed specialized AI teams', 'Build integrated systems', 'Operate with reliability', 'Scale with governance'].map((item, i) => (
+              {['Week 1: Assess needs & create roadmap', 'Week 2: Build & integrate AI systems', 'Week 3: Launch & continuously optimize'].map((item, i) => (
                 <div
                   key={i}
                   className="px-4 py-3 rounded-lg border transition-all hover:border-[#00A651] hover:shadow-sm"
@@ -373,7 +355,7 @@ export default function HowWeWork() {
               thumbnailUrl="/hero-solutions.jpg"
             />
             <div className="space-y-2">
-              {['Define clear business outcomes', 'Embed specialized AI teams', 'Build integrated systems', 'Operate with reliability', 'Scale with governance'].map((item, i) => (
+              {['Week 1: Assess needs & create roadmap', 'Week 2: Build & integrate AI systems', 'Week 3: Launch & continuously optimize'].map((item, i) => (
                 <div
                   key={i}
                   className="px-4 py-3 rounded-lg border"
@@ -440,7 +422,7 @@ export default function HowWeWork() {
 
           <div className="text-center mt-10">
             <Link href="/build-scale-ai" className="btn-primary">
-              Start your project
+              Request a Pilot Roadmap
             </Link>
           </div>
         </div>
@@ -530,16 +512,16 @@ export default function HowWeWork() {
             <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-neutral-100">
               <div className="grid grid-cols-3 gap-4 md:gap-8 text-center">
                 <div>
-                  <p className="text-xl md:text-3xl font-bold text-primary-500">98%</p>
-                  <p className="text-dark-500 text-xs md:text-sm mt-1">Success Rate</p>
+                  <p className="text-xl md:text-3xl font-bold text-primary-500">Week 1</p>
+                  <p className="text-dark-500 text-xs md:text-sm mt-1">Discover & Plan</p>
                 </div>
                 <div>
-                  <p className="text-xl md:text-3xl font-bold text-primary-500 whitespace-nowrap">3 weeks</p>
-                  <p className="text-dark-500 text-xs md:text-sm mt-1">To Deploy</p>
+                  <p className="text-xl md:text-3xl font-bold text-primary-500 whitespace-nowrap">Week 2</p>
+                  <p className="text-dark-500 text-xs md:text-sm mt-1">Build & Deploy</p>
                 </div>
                 <div>
-                  <p className="text-xl md:text-3xl font-bold text-primary-500">Prod</p>
-                  <p className="text-dark-500 text-xs md:text-sm mt-1">Focus</p>
+                  <p className="text-xl md:text-3xl font-bold text-primary-500">Week 3</p>
+                  <p className="text-dark-500 text-xs md:text-sm mt-1">Launch & Optimize</p>
                 </div>
               </div>
             </div>
@@ -556,8 +538,8 @@ export default function HowWeWork() {
           <p className="text-xl md:text-2xl mx-auto mb-8" style={{ maxWidth: '42rem', color: 'var(--gray-600)' }}>
             Talk to FSIT&apos;s delivery team
           </p>
-          <Link href="/build-scale-ai" className="btn-primary">
-            Book a free consultation
+          <Link href="/contact" className="btn-primary">
+            Get Your AI Strategy Call
           </Link>
         </div>
       </section>

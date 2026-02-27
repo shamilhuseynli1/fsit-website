@@ -10,7 +10,7 @@ export default function Regions() {
   const regions = [
     {
       name: 'Saudi Arabia & Middle East',
-      description: 'FSIT works closely with organisations across Saudi Arabia and the wider Middle East, supporting AI-driven transformation aligned with regional priorities.',
+      description: 'FSIT works closely with organizations across Saudi Arabia and the wider Middle East, supporting AI-driven transformation aligned with regional priorities.',
       focus: [
         'Government and public sector initiatives',
         'Enterprise AI modernisation',
@@ -120,7 +120,7 @@ export default function Regions() {
       <section className="py-8 md:py-12" style={{ background: 'var(--cream)' }}>
         <div className="max-w-4xl mx-auto px-4 text-center">
           <p className="text-lg md:text-2xl text-dark-900 font-medium">
-            This model allows us to combine regional understanding with global scale, speed, and specialised AI expertise
+            This model allows us to combine regional understanding with global scale, speed, and specialized AI expertise
           </p>
         </div>
       </section>

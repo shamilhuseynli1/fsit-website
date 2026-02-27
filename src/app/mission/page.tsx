@@ -19,7 +19,7 @@ export default function Mission() {
     'Responsible AI adoption aligned with ethical, security, and governance standards',
     'Measurable outcomes tied to business and operational KPIs',
     'Long-term partnerships, not short-term engagements',
-    'Knowledge transfer and capability building within client organisations',
+    'Knowledge transfer and capability building within client organizations',
   ];
 
   const lifecycle = [
@@ -102,7 +102,7 @@ export default function Mission() {
             </div>
             <div className="border-l-4 border-primary-500/50 pl-4 md:pl-6">
               <p className="text-dark-600 text-base md:text-lg">
-                Long before AI became mainstream, FSIT recognised that real transformation would require more than traditional consulting or staffing models. Organisations would need trusted AI expertise embedded directly into their operations — focused on execution, governance, and measurable outcomes
+                Long before AI became mainstream, FSIT recognized that real transformation would require more than traditional consulting or staffing models. Organizations would need trusted AI expertise embedded directly into their operations — focused on execution, governance, and measurable outcomes
               </p>
             </div>
             <div className="bg-cream-50 rounded-2xl p-5 md:p-8">
@@ -118,7 +118,7 @@ export default function Mission() {
       <section className="py-16" style={{ background: 'var(--cream)' }}>
         <div className="max-w-4xl mx-auto px-4 text-center">
           <p className="text-xl md:text-2xl text-dark-900 font-medium">
-            Our model is simple: embed the right AI expertise, at the right time, inside your organisation — to reduce execution risk, accelerate delivery, and build lasting internal capability
+            Our model is simple: embed the right AI expertise, at the right time, inside your organization — to reduce execution risk, accelerate delivery, and build lasting internal capability
           </p>
         </div>
       </section>
@@ -256,10 +256,10 @@ export default function Mission() {
         <div className="container-max text-center">
           <h2 className="h2 mb-4 md:mb-6">Looking Ahead</h2>
           <p className="text-base md:text-xl text-dark-500 max-w-3xl mx-auto mb-6 md:mb-8">
-            As AI reshapes industries and governments, FSIT&apos;s mission remains clear: to serve as a trusted augmented intelligence partner enabling organisations to execute AI confidently, securely, and at scale
+            As AI reshapes industries and governments, FSIT&apos;s mission remains clear: to serve as a trusted augmented intelligence partner enabling organizations to execute AI confidently, securely, and at scale
           </p>
           <div className="bg-cream-50 rounded-2xl p-5 md:p-8 max-w-3xl mx-auto border-l-4 border-primary-500">
-            <p className="text-base md:text-lg text-dark-600 mb-3 md:mb-4">We don&apos;t just help organisations adopt AI</p>
+            <p className="text-base md:text-lg text-dark-600 mb-3 md:mb-4">We don&apos;t just help organizations adopt AI</p>
             <p className="text-lg md:text-xl font-bold text-primary-500">
               We help them operate with it — with purpose, precision, and lasting capability
             </p>

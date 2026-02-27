@@ -10,6 +10,7 @@ export default function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
+  const [showExploreTooltip, setShowExploreTooltip] = useState(true);
   const pathname = usePathname();
 
   // Check if a link is active
@@ -315,19 +316,77 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 transition-colors"
-            style={{ color: 'var(--black)' }}
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {isOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
+          <div className="lg:hidden flex items-center">
+            {/* Explore FSIT Tooltip - Only shows on first load */}
+            {showExploreTooltip && (
+              <div className="relative animate-float ml-12">
+                <div
+                  className="px-2 py-1 rounded-md text-xs font-medium whitespace-nowrap"
+                  style={{
+                    background: 'var(--green)',
+                    color: 'white',
+                  }}
+                >
+                  Explore FSIT
+                </div>
+                {/* Green Arrow exiting the box */}
+                <div
+                  className="absolute top-1/2 -translate-y-1/2 -right-2"
+                  style={{
+                    width: 0,
+                    height: 0,
+                    borderTop: '6px solid transparent',
+                    borderBottom: '6px solid transparent',
+                    borderLeft: '8px solid var(--green)',
+                  }}
+                />
+              </div>
+            )}
+
+            {/* Cascading Hamburger - Right Aligned, 20% bigger */}
+            <button
+              onClick={() => {
+                setIsOpen(!isOpen);
+                setShowExploreTooltip(false);
+              }}
+              className="p-2 transition-all duration-300"
+              style={{ transform: 'translate(-4px, 3px)' }}
+              aria-label="Toggle menu"
+            >
+              <div className="w-8 h-5 flex flex-col justify-between items-end">
+                {isOpen ? (
+                  <div className="w-6 h-5 relative">
+                    <span
+                      className="block h-0.5 w-5 rounded-full transition-all duration-300 absolute top-1/2 -translate-y-1/2 rotate-45"
+                      style={{ background: 'var(--green)' }}
+                    />
+                    <span
+                      className="block h-0.5 w-5 rounded-full transition-all duration-300 absolute top-1/2 -translate-y-1/2 -rotate-45"
+                      style={{ background: 'var(--green)' }}
+                    />
+                  </div>
+                ) : (
+                  <>
+                    {/* Long line - top */}
+                    <span
+                      className="block h-0.5 rounded-full"
+                      style={{ background: 'var(--green)', width: '24px' }}
+                    />
+                    {/* Middle line */}
+                    <span
+                      className="block h-0.5 rounded-full"
+                      style={{ background: 'var(--green)', width: '17px' }}
+                    />
+                    {/* Short line - bottom */}
+                    <span
+                      className="block h-0.5 rounded-full"
+                      style={{ background: 'var(--green)', width: '10px' }}
+                    />
+                  </>
+                )}
+              </div>
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}

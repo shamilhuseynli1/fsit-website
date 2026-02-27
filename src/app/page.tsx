@@ -263,6 +263,32 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Why FSIT */}
+      <section className="py-10 md:py-14" style={{ background: 'var(--cream)' }}>
+        <div className="container-lg">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8" style={{ color: 'var(--black)' }}>
+              Why FSIT?
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {whyFsit.map((item, index) => (
+                <div
+                  key={index}
+                  className="flex items-center gap-4 p-4 rounded-xl bg-white border border-[#00A651]/20 hover:border-[#00A651] hover:shadow-md transition-all duration-300"
+                >
+                  <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: 'var(--green)' }}>
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span className="text-base font-medium" style={{ color: 'var(--black)' }}>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Client Logos */}
       <section className="py-8 border-y" style={{ background: '#F5F5F3', borderColor: 'var(--gray-100)' }}>
         <div className="container-lg mb-4">

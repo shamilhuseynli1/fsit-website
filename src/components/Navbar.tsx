@@ -3,12 +3,33 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+
+  // Check if a link is active
+  const isActive = (href: string) => {
+    if (href === '/') return pathname === '/';
+    return pathname.startsWith(href);
+  };
+
+  // Check if any dropdown item is active (for Services, Industries, etc.)
+  const isDropdownActive = (link: any) => {
+    if (link.megaDropdown) {
+      return link.megaDropdown.sections.some((section: any) =>
+        section.items.some((item: any) => isActive(item.href))
+      );
+    }
+    if (link.dropdown) {
+      return link.dropdown.some((item: any) => isActive(item.href));
+    }
+    return false;
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -126,10 +147,11 @@ export default function Navbar() {
                 >
                   <Link
                     href={link.href}
-                    className="px-3 py-2 text-sm font-medium transition-colors duration-200 flex items-center gap-1 rounded-lg"
-                    style={{ color: 'var(--gray-600)' }}
-                    onMouseEnter={(e) => e.currentTarget.style.color = 'var(--black)'}
-                    onMouseLeave={(e) => e.currentTarget.style.color = 'var(--gray-600)'}
+                    className={`px-3 py-2 text-sm font-medium transition-all duration-200 flex items-center gap-1 rounded-lg relative ${
+                      isActive(link.href) || isDropdownActive(link)
+                        ? 'text-green-600'
+                        : 'text-gray-600 hover:text-black hover:bg-gray-50'
+                    }`}
                   >
                     {link.name}
                     {hasDropdown && (
@@ -143,6 +165,13 @@ export default function Navbar() {
                       >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
+                    )}
+                    {/* Active indicator */}
+                    {(isActive(link.href) || isDropdownActive(link)) && (
+                      <span
+                        className="absolute bottom-0 left-3 right-3 h-0.5 rounded-full"
+                        style={{ background: 'var(--green)' }}
+                      />
                     )}
                   </Link>
 
@@ -322,8 +351,10 @@ export default function Navbar() {
                       <>
                         <button
                           onClick={() => setMobileExpanded(isExpanded ? null : link.name)}
-                          className="w-full flex justify-between items-center px-4 py-3 font-medium"
-                          style={{ color: 'var(--black)' }}
+                          className={`w-full flex justify-between items-center px-4 py-3 font-medium ${
+                            isDropdownActive(link) ? 'text-green-600' : ''
+                          }`}
+                          style={{ color: isDropdownActive(link) ? 'var(--green)' : 'var(--black)' }}
                         >
                           {link.name}
                           <svg
@@ -410,8 +441,10 @@ export default function Navbar() {
                     ) : (
                       <Link
                         href={link.href}
-                        className="block px-4 py-3 font-medium"
-                        style={{ color: 'var(--black)' }}
+                        className={`block px-4 py-3 font-medium ${
+                          isActive(link.href) ? 'text-green-600 bg-green-50' : ''
+                        }`}
+                        style={{ color: isActive(link.href) ? 'var(--green)' : 'var(--black)' }}
                         onClick={() => setIsOpen(false)}
                       >
                         {link.name}

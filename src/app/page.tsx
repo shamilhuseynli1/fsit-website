@@ -189,7 +189,7 @@ export default function Home() {
         <div className="container-lg">
           {/* Hero headline with proof */}
           <div className="max-w-4xl mb-10">
-            <p className="text-sm font-semibold uppercase tracking-wider mb-3" style={{ color: 'var(--green)' }}>What is FSIT</p>
+            <p className="text-lg md:text-xl font-bold uppercase tracking-wider mb-4" style={{ color: 'var(--green)' }}>What is FSIT</p>
             <h2 className="text-3xl md:text-5xl font-bold mb-4" style={{ color: 'var(--black)' }}>
               Get AI Into Production,<br />
               <span style={{ color: 'var(--green)' }}>Not Stuck in Pilots</span>

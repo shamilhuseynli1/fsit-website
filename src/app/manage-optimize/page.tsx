@@ -152,7 +152,7 @@ export default function ManageOptimize() {
                 </Link>
               </div>
             </div>
-            <div className="mt-2 lg:mt-0 transform scale-[0.75] md:scale-100 origin-top -mb-16 md:mb-0">
+            <div className="mt-0 lg:mt-0 transform scale-[0.65] md:scale-90 origin-center -my-20 md:-my-10">
               <HeroOptimizeVisual />
             </div>
           </div>

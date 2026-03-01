@@ -140,7 +140,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Options */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="container-max">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold" style={{ color: 'var(--black)' }}>How can we help?</h2>
@@ -189,7 +189,7 @@ export default function Contact() {
       </section>
 
       {/* Form and Map */}
-      <section className="py-20 md:py-28 bg-white" id="contact-form">
+      <section className="py-12 md:py-20 bg-white" id="contact-form">
         <div className="container-max">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4" style={{ color: 'var(--black)' }}>Get in Touch</h2>
@@ -336,7 +336,7 @@ export default function Contact() {
       </section>
 
       {/* CTA */}
-      <section className="py-24" style={{ background: 'var(--cream)' }}>
+      <section className="py-12 md:py-20" style={{ background: 'var(--cream)' }}>
         <div className="container-max text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>
             Ready to start your <span className="text-green-600">AI transformation</span>?

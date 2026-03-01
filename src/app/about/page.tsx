@@ -118,7 +118,7 @@ export default function About() {
       </section>
 
       {/* 3. Mission & Vision */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="container-max">
           <div className="grid lg:grid-cols-2 gap-12">
             <div className="p-10 rounded-2xl bg-neutral-50 shadow-lg">
@@ -149,7 +149,7 @@ export default function About() {
       </section>
 
       {/* 4. Our Story */}
-      <section className="py-20 md:py-28 bg-subtle">
+      <section className="py-12 md:py-12 md:py-16 bg-subtle">
         <div className="container-max">
           <div className="flex flex-col lg:flex-row lg:items-stretch gap-8 lg:gap-0">
             {/* Left Content */}
@@ -224,7 +224,7 @@ export default function About() {
       </section>
 
       {/* 5. The Problem We Solve */}
-      <section className="py-20 md:py-28 bg-white border-b border-gray-100">
+      <section className="py-12 md:py-20 bg-white border-b border-gray-100">
         <div className="container-max">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -265,7 +265,7 @@ export default function About() {
       </section>
 
       {/* 6. What We Are / Are NOT */}
-      <section className="py-20 bg-subtle">
+      <section className="py-12 md:py-16 bg-subtle">
         <div className="container-max">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-lg md:text-xl text-gray-500 mb-6">FSIT is not a traditional consultancy. Not a generic outsourcing provider. Not a staffing marketplace.</p>
@@ -287,7 +287,7 @@ export default function About() {
       </section>
 
       {/* 7. What We Believe - Values */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="container-max">
           <div className="text-center mb-16">
             <p className="text-green-600 font-semibold text-lg mb-4">Our Values</p>
@@ -313,7 +313,7 @@ export default function About() {
       </section>
 
       {/* 8. Why Choose FSIT */}
-      <section className="py-20 md:py-28 bg-subtle">
+      <section className="py-12 md:py-12 md:py-16 bg-subtle">
         <div className="container-max">
           <div className="text-center mb-16">
             <p className="text-green-600 font-semibold text-lg mb-4">Why FSIT</p>
@@ -392,7 +392,7 @@ export default function About() {
       </section>
 
       {/* 9. Our Approach */}
-      <section className="py-20 md:py-28 bg-white overflow-hidden">
+      <section className="py-12 md:py-20 bg-white overflow-hidden">
         <div className="container-max">
           <div className="text-center mb-16">
             <p className="text-green-600 font-semibold text-lg mb-4">Our Approach</p>
@@ -496,7 +496,7 @@ export default function About() {
       </section>
 
       {/* 10. Industry Expertise */}
-      <section className="py-20 md:py-28 bg-subtle">
+      <section className="py-12 md:py-12 md:py-16 bg-subtle">
         <div className="container-max">
           <div className="text-center mb-16">
             <p className="text-green-600 font-semibold text-lg mb-4">Industry Expertise</p>
@@ -555,7 +555,7 @@ export default function About() {
       </section>
 
       {/* 11. Global Presence - Map */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="container-max">
           <div className="text-center mb-12">
             <p className="text-green-600 font-semibold text-lg mb-4">Global Presence</p>
@@ -605,7 +605,7 @@ export default function About() {
       </section>
 
       {/* 13. Leadership Team */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="container-max">
           <div className="text-center mb-16">
             <p className="text-green-600 font-semibold text-lg mb-4">Leadership</p>
@@ -634,7 +634,7 @@ export default function About() {
       </section>
 
       {/* 14. Vision 2030 Alignment */}
-      <section className="py-20 md:py-28 bg-subtle">
+      <section className="py-12 md:py-12 md:py-16 bg-subtle">
         <div className="container-max">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
@@ -668,7 +668,7 @@ export default function About() {
       </section>
 
       {/* 15. Saudi Presence */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="container-max">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold" style={{ color: 'var(--black)' }}>Across the Kingdom</h2>
@@ -697,7 +697,7 @@ export default function About() {
       </section>
 
       {/* 16. Commitment */}
-      <section className="py-20 bg-subtle">
+      <section className="py-12 md:py-16 bg-subtle">
         <div className="container-max">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-green-600 font-semibold text-lg mb-4">Our Commitment</p>
@@ -720,7 +720,7 @@ export default function About() {
       </section>
 
       {/* 17. CTA */}
-      <section className="py-24" style={{ background: 'var(--cream)' }}>
+      <section className="py-12 md:py-20" style={{ background: 'var(--cream)' }}>
         <div className="container-max text-center">
           <p className="text-xl md:text-2xl text-gray-500 mb-4">AI success is not about intent</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8" style={{ color: 'var(--black)' }}>

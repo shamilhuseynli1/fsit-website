@@ -115,7 +115,7 @@ export default function Mission() {
       </section>
 
       {/* Our Model */}
-      <section className="py-16" style={{ background: 'var(--cream)' }}>
+      <section className="py-10 md:py-16" style={{ background: 'var(--cream)' }}>
         <div className="max-w-4xl mx-auto px-4 text-center">
           <p className="text-xl md:text-2xl text-dark-900 font-medium">
             Our model is simple: embed the right AI expertise, at the right time, inside your organization — to reduce execution risk, accelerate delivery, and build lasting internal capability
@@ -144,7 +144,7 @@ export default function Mission() {
       </section>
 
       {/* Augmented Intelligence */}
-      <section className="py-16 bg-neutral-150">
+      <section className="py-10 md:py-16 bg-neutral-150">
         <div className="container-lg">
           <div className="text-center mb-2">
             <h2 className="h2">Augmented Intelligence, Not Outsourcing</h2>

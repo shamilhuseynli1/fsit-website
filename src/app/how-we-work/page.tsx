@@ -530,7 +530,7 @@ export default function HowWeWork() {
       </section>
 
       {/* CTA */}
-      <section className="relative py-24 bg-white">
+      <section className="relative py-12 md:py-20 bg-white">
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>
             Build AI systems that actually run your business

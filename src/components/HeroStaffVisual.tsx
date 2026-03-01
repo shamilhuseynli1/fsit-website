@@ -192,14 +192,14 @@ export default function HeroStaffVisual() {
         <rect x="377" y="280" width="8" height="8" fill="none" stroke="#f59e0b" strokeWidth="1" transform="rotate(45 381 284)" className="pulse-animation" style={{ animationDelay: '1s' }} />
       </svg>
 
-      {/* Floating metric labels */}
-      <div className="absolute left-0 top-[15%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow shadow-sm">
+      {/* Floating metric labels - positioned outside SVG */}
+      <div className="absolute left-[-5%] md:left-[-8%] top-[20%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow shadow-sm">
         <span className="text-xs text-gray-700 font-mono">Vetted Talent</span>
       </div>
-      <div className="absolute right-0 top-[30%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow float-delay-1 shadow-sm">
+      <div className="absolute right-[-5%] md:right-[-8%] top-[35%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow float-delay-1 shadow-sm">
         <span className="text-xs text-gray-700 font-mono">Full Integration</span>
       </div>
-      <div className="absolute left-[5%] bottom-[28%] px-3 py-1.5 bg-[#F5F3F0] border border-purple-500/50 rounded-md backdrop-blur-sm transition-all hover:border-purple-500 hover:scale-105 float-slow float-delay-2 shadow-sm">
+      <div className="absolute left-[-5%] md:left-[-8%] bottom-[32%] px-3 py-1.5 bg-[#F5F3F0] border border-purple-500/50 rounded-md backdrop-blur-sm transition-all hover:border-purple-500 hover:scale-105 float-slow float-delay-2 shadow-sm">
         <span className="text-xs text-gray-700 font-mono">Dedicated</span>
       </div>
     </div>

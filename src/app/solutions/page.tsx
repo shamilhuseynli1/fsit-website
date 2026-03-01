@@ -213,7 +213,7 @@ export default function Solutions() {
             </div>
 
             {/* Hero Visual - scaled down on mobile */}
-            <div className="transform scale-[0.65] md:scale-90 origin-center -my-20 md:-my-10">
+            <div className="transform scale-[0.8] md:scale-100 origin-center -my-8 md:my-0">
               <HeroSolutionsVisual />
             </div>
           </div>

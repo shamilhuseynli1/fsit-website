@@ -277,7 +277,7 @@ export default function AIAgents() {
             </div>
 
             {/* Right visual - scaled down on mobile */}
-            <div className="relative mt-0 lg:mt-0 transform scale-[0.65] md:scale-90 origin-center -my-20 md:-my-10">
+            <div className="relative mt-0 lg:mt-0 transform scale-[0.8] md:scale-100 origin-center -my-8 md:my-0">
               <HeroAgentVisual />
             </div>
           </div>

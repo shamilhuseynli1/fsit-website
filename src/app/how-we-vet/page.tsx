@@ -139,7 +139,7 @@ export default function HowWeVet() {
             </div>
 
             {/* Hero Visual */}
-            <div className="mt-0 lg:mt-0 transform scale-[0.65] md:scale-90 origin-center -my-20 md:-my-10">
+            <div className="mt-0 lg:mt-0 transform scale-[0.8] md:scale-100 origin-center -my-8 md:my-0">
               <HeroVettingVisual />
             </div>
           </div>

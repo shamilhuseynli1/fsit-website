@@ -530,7 +530,7 @@ export default function MLModelsPage() {
             </div>
 
             {/* Right - 3D Isometric Stack Visual */}
-            <div className="mt-4 lg:mt-0 transform scale-[0.65] md:scale-100 origin-top -mb-24 md:mb-0">
+            <div className="mt-4 lg:mt-0 transform scale-[0.8] md:scale-100 origin-center -my-8 md:my-0">
               <HeroModelStack />
             </div>
           </div>

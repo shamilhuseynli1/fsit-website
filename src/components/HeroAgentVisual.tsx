@@ -2,7 +2,7 @@
 
 export default function HeroAgentVisual() {
   return (
-    <div className="relative w-full h-[500px]">
+    <div className="relative w-full h-[380px]">
       {/* CSS Animations */}
       <style jsx>{`
         @keyframes float {

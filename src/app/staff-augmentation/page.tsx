@@ -240,7 +240,7 @@ export default function StaffAugmentation() {
       </section>
 
       {/* Available Specialists */}
-      <section className="relative py-24 bg-white">
+      <section className="relative py-12 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>
@@ -347,7 +347,7 @@ export default function StaffAugmentation() {
       </section>
 
       {/* Engagement Models */}
-      <section className="relative py-24 bg-white">
+      <section className="relative py-12 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>
@@ -507,7 +507,7 @@ export default function StaffAugmentation() {
       </section>
 
       {/* CTA */}
-      <section className="relative py-24 bg-gradient-to-b from-cream-50 to-white">
+      <section className="relative py-12 md:py-20 bg-gradient-to-b from-cream-50 to-white">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-500/10 rounded-full blur-3xl" />
         </div>

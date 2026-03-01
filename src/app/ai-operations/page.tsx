@@ -304,7 +304,7 @@ export default function AIOperations() {
       </section>
 
       {/* Human in the Loop Section */}
-      <section className="relative py-24 bg-white overflow-hidden">
+      <section className="relative py-12 md:py-20 bg-white overflow-hidden">
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -603,7 +603,7 @@ export default function AIOperations() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-24 bg-neutral-150 overflow-hidden">
+      <section className="relative py-12 md:py-20 bg-neutral-150 overflow-hidden">
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>
             Ready to operationalize your AI?

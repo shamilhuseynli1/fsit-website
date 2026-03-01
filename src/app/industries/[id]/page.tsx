@@ -529,7 +529,7 @@ export default function IndustryPage() {
       </section>
 
       {/* Saudi Arabia Focus Section */}
-      <section className="py-12 md:py-24 relative overflow-hidden">
+      <section className="py-12 md:py-20 relative overflow-hidden">
         {/* Saudi Background */}
         <div
           className="absolute inset-0"
@@ -577,7 +577,7 @@ export default function IndustryPage() {
       </section>
 
       {/* Case Studies Section */}
-      <section className="py-12 md:py-24 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 md:mb-16">
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6" style={{ color: 'var(--black)' }}>
@@ -614,7 +614,7 @@ export default function IndustryPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 md:py-24 relative overflow-hidden">
+      <section className="py-12 md:py-20 relative overflow-hidden">
         {/* Saudi Background */}
         <div
           className="absolute inset-0"

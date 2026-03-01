@@ -151,7 +151,7 @@ export default function BuildInnovate() {
       </section>
 
       {/* Capabilities Section */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="container-max">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <p className="label mb-3">What We Do</p>
@@ -185,7 +185,7 @@ export default function BuildInnovate() {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 md:py-28 bg-subtle">
+      <section className="py-12 md:py-20 bg-subtle">
         <div className="container-max">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <p className="label mb-3">Our Process</p>
@@ -207,7 +207,7 @@ export default function BuildInnovate() {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="container-max">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <p className="label mb-3">Real Results</p>
@@ -237,7 +237,7 @@ export default function BuildInnovate() {
       </section>
 
       {/* Tech Stack Section */}
-      <section className="py-20 md:py-28 bg-subtle">
+      <section className="py-12 md:py-20 bg-subtle">
         <div className="container-max">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <p className="label mb-3">Technology</p>
@@ -266,7 +266,7 @@ export default function BuildInnovate() {
       </section>
 
       {/* Why Us Section */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="container-max">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <p className="label mb-3">Why FSIT</p>
@@ -291,7 +291,7 @@ export default function BuildInnovate() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-28 bg-subtle">
+      <section className="py-12 md:py-20 bg-subtle">
         <div className="container-max">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>

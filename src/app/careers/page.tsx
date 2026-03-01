@@ -155,7 +155,7 @@ export default function CareersPage() {
       </section>
 
       {/* Values Section */}
-      <section className="py-24 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-4">
@@ -179,7 +179,7 @@ export default function CareersPage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-24 bg-neutral-50">
+      <section className="py-12 md:py-20 bg-neutral-50">
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-4">
@@ -203,7 +203,7 @@ export default function CareersPage() {
       </section>
 
       {/* Open Positions */}
-      <section className="py-24 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-4">
@@ -296,7 +296,7 @@ export default function CareersPage() {
       </section>
 
       {/* Don't See Your Role */}
-      <section className="py-24 bg-gradient-to-br from-primary-50 to-neutral-50">
+      <section className="py-12 md:py-20 bg-gradient-to-br from-primary-50 to-neutral-50">
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-6">
@@ -313,7 +313,7 @@ export default function CareersPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24" style={{ background: 'var(--cream)' }}>
+      <section className="py-12 md:py-20" style={{ background: 'var(--cream)' }}>
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-6">
             Ready to Build the Future of AI?

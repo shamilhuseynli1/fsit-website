@@ -133,7 +133,7 @@ export default function IndustriesPage() {
       </section>
 
       {/* Industries Grid */}
-      <section className="py-24 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>
@@ -175,7 +175,7 @@ export default function IndustriesPage() {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20" style={{ background: 'var(--cream)' }}>
+      <section className="py-12 md:py-16" style={{ background: 'var(--cream)' }}>
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>
@@ -279,7 +279,7 @@ export default function IndustriesPage() {
       </section>
 
       {/* The FSIT Difference */}
-      <section className="py-20" style={{ background: 'var(--cream)' }}>
+      <section className="py-12 md:py-16" style={{ background: 'var(--cream)' }}>
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold" style={{ color: 'var(--black)' }}>The FSIT Difference</h3>
@@ -302,7 +302,7 @@ export default function IndustriesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24" style={{ background: 'var(--cream)' }}>
+      <section className="py-12 md:py-20" style={{ background: 'var(--cream)' }}>
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>
             Ready to Transform Your Industry?

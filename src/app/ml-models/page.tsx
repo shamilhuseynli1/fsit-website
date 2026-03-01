@@ -657,7 +657,7 @@ export default function MLModelsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 md:py-24 relative overflow-hidden" style={{ background: 'var(--cream)' }}>
+      <section className="py-12 md:py-20 relative overflow-hidden" style={{ background: 'var(--cream)' }}>
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6" style={{ color: 'var(--black)' }}>
             Ready to Deploy{' '}

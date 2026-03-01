@@ -204,31 +204,31 @@ export default function HeroOperationsVisual() {
         <rect x="25" y="390" width="10" height="10" fill="#f59e0b" transform="rotate(45 30 395)" className="fade-animation" style={{ animationDelay: '0.5s' }} />
       </svg>
 
-      {/* Floating metric labels - positioned outside SVG */}
-      <div className="absolute left-[-5%] md:left-[-8%] top-[18%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow shadow-sm">
+      {/* Floating metric labels - hidden on mobile to avoid overlap */}
+      <div className="hidden md:block absolute left-[-12%] top-[18%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow shadow-sm">
         <span className="text-xs text-gray-700 font-mono">99.9% Uptime</span>
       </div>
-      <div className="absolute right-[-5%] md:right-[-8%] top-[38%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow float-delay-1 shadow-sm">
+      <div className="hidden md:block absolute right-[-15%] top-[38%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow float-delay-1 shadow-sm">
         <span className="text-xs text-gray-700 font-mono">Auto-scale</span>
       </div>
-      <div className="absolute left-[-5%] md:left-[-8%] bottom-[28%] px-3 py-1.5 bg-[#F5F3F0] border border-orange-500/50 rounded-md backdrop-blur-sm transition-all hover:border-orange-500 hover:scale-105 float-slow float-delay-2 shadow-sm">
+      <div className="hidden md:block absolute left-[-12%] bottom-[28%] px-3 py-1.5 bg-[#F5F3F0] border border-orange-500/50 rounded-md backdrop-blur-sm transition-all hover:border-orange-500 hover:scale-105 float-slow float-delay-2 shadow-sm">
         <span className="text-xs text-gray-700 font-mono">Real-time</span>
       </div>
 
-      {/* Platform logos - positioned outside SVG */}
-      <div className="absolute left-[-2%] md:left-[-5%] top-[5%] w-10 h-10 rounded-lg bg-[#FF9900] flex items-center justify-center shadow-lg shadow-[#FF9900]/30 float-animation transition-transform hover:scale-110">
+      {/* Platform logos - hidden on mobile to avoid overlap */}
+      <div className="hidden md:flex absolute left-[-8%] top-[5%] w-10 h-10 rounded-lg bg-[#FF9900] items-center justify-center shadow-lg shadow-[#FF9900]/30 float-animation transition-transform hover:scale-110">
         <span className="text-white font-bold text-xs">AWS</span>
       </div>
 
-      <div className="absolute right-[-2%] md:right-[-5%] top-[8%] w-10 h-10 rounded-lg bg-[#0078D4] flex items-center justify-center shadow-lg shadow-[#0078D4]/30 float-animation float-delay-1 transition-transform hover:scale-110">
+      <div className="hidden md:flex absolute right-[-8%] top-[8%] w-10 h-10 rounded-lg bg-[#0078D4] items-center justify-center shadow-lg shadow-[#0078D4]/30 float-animation float-delay-1 transition-transform hover:scale-110">
         <span className="text-white font-bold text-[10px]">Azure</span>
       </div>
 
-      <div className="absolute right-[-2%] md:right-[-5%] bottom-[22%] w-10 h-10 rounded-lg bg-[#4285F4] flex items-center justify-center shadow-lg shadow-[#4285F4]/30 float-animation float-delay-2 transition-transform hover:scale-110">
+      <div className="hidden md:flex absolute right-[-8%] bottom-[22%] w-10 h-10 rounded-lg bg-[#4285F4] items-center justify-center shadow-lg shadow-[#4285F4]/30 float-animation float-delay-2 transition-transform hover:scale-110">
         <span className="text-white font-bold text-xs">GCP</span>
       </div>
 
-      <div className="absolute left-[-2%] md:left-[-5%] bottom-[40%] w-10 h-10 rounded-lg bg-[#E34F26] flex items-center justify-center shadow-lg shadow-[#E34F26]/30 float-animation float-delay-3 transition-transform hover:scale-110">
+      <div className="hidden md:flex absolute left-[-8%] bottom-[40%] w-10 h-10 rounded-lg bg-[#E34F26] items-center justify-center shadow-lg shadow-[#E34F26]/30 float-animation float-delay-3 transition-transform hover:scale-110">
         <span className="text-white font-bold text-[9px]">K8s</span>
       </div>
     </div>

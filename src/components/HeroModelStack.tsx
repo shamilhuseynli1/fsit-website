@@ -166,48 +166,49 @@ export default function HeroModelStack() {
         <rect x="60" y="400" width="12" height="12" fill="#f472b6" transform="rotate(45 66 406)" className="fade-animation" style={{ animationDelay: '1s' }} />
       </svg>
 
-      {/* Floating metric labels with hover effects */}
-      <div className="absolute left-0 top-[18%] px-4 py-2 bg-black/80 border border-green-400/50 rounded-lg transition-all hover:scale-105 float-slow shadow-lg shadow-green-500/20">
+      {/* Floating metric labels - hidden on mobile to avoid overlap */}
+      <div className="hidden md:block absolute left-[-12%] top-[18%] px-4 py-2 bg-black/80 border border-green-400/50 rounded-lg transition-all hover:scale-105 float-slow shadow-lg shadow-green-500/20">
         <span className="text-sm text-green-400 font-mono font-semibold">200 TPS</span>
       </div>
-      <div className="absolute right-0 top-[38%] px-4 py-2 bg-black/80 border border-green-400/50 rounded-lg transition-all hover:scale-105 float-slow float-delay-1 shadow-lg shadow-green-500/20">
+      <div className="hidden md:block absolute right-[-15%] top-[38%] px-4 py-2 bg-black/80 border border-green-400/50 rounded-lg transition-all hover:scale-105 float-slow float-delay-1 shadow-lg shadow-green-500/20">
         <span className="text-sm text-green-400 font-mono font-semibold">12MS TTFT</span>
       </div>
-      <div className="absolute left-[5%] top-[55%] px-4 py-2 bg-black/80 border border-green-400/50 rounded-lg transition-all hover:scale-105 float-slow float-delay-2 shadow-lg shadow-green-500/20">
+      <div className="hidden md:block absolute left-[-12%] top-[55%] px-4 py-2 bg-black/80 border border-green-400/50 rounded-lg transition-all hover:scale-105 float-slow float-delay-2 shadow-lg shadow-green-500/20">
         <span className="text-sm text-green-400 font-mono font-semibold">110 REQ/M</span>
       </div>
 
-      {/* Floating AI brand logos - OpenAI - positioned outside SVG */}
-      <div className="absolute left-[-2%] md:left-[-5%] top-[12%] w-14 h-14 rounded-full bg-black flex items-center justify-center shadow-xl shadow-black/50 float-animation transition-transform hover:scale-110 border-2 border-white/20">
+      {/* Floating AI brand logos - hidden on mobile to avoid overlap */}
+      {/* OpenAI */}
+      <div className="hidden md:flex absolute left-[-8%] top-[12%] w-14 h-14 rounded-full bg-black items-center justify-center shadow-xl shadow-black/50 float-animation transition-transform hover:scale-110 border-2 border-white/20">
         <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
           <path d="M22.282 9.821a5.985 5.985 0 0 0-.516-4.91 6.046 6.046 0 0 0-6.51-2.9A6.065 6.065 0 0 0 4.981 4.18a5.985 5.985 0 0 0-3.998 2.9 6.046 6.046 0 0 0 .743 7.097 5.98 5.98 0 0 0 .51 4.911 6.051 6.051 0 0 0 6.515 2.9A5.985 5.985 0 0 0 13.26 24a6.056 6.056 0 0 0 5.772-4.206 5.99 5.99 0 0 0 3.997-2.9 6.056 6.056 0 0 0-.747-7.073zM13.26 22.43a4.476 4.476 0 0 1-2.876-1.04l.141-.081 4.779-2.758a.795.795 0 0 0 .392-.681v-6.737l2.02 1.168a.071.071 0 0 1 .038.052v5.583a4.504 4.504 0 0 1-4.494 4.494zM3.6 18.304a4.47 4.47 0 0 1-.535-3.014l.142.085 4.783 2.759a.771.771 0 0 0 .78 0l5.843-3.369v2.332a.08.08 0 0 1-.033.062L9.74 19.95a4.5 4.5 0 0 1-6.14-1.646zM2.34 7.896a4.485 4.485 0 0 1 2.366-1.973V11.6a.766.766 0 0 0 .388.676l5.815 3.355-2.02 1.168a.076.076 0 0 1-.071 0l-4.83-2.786A4.504 4.504 0 0 1 2.34 7.872zm16.597 3.855l-5.833-3.387L15.119 7.2a.076.076 0 0 1 .071 0l4.83 2.791a4.494 4.494 0 0 1-.676 8.105v-5.678a.79.79 0 0 0-.407-.667zm2.01-3.023l-.141-.085-4.774-2.782a.776.776 0 0 0-.785 0L9.409 9.23V6.897a.066.066 0 0 1 .028-.061l4.83-2.787a4.5 4.5 0 0 1 6.68 4.66zm-12.64 4.135l-2.02-1.164a.08.08 0 0 1-.038-.057V6.075a4.5 4.5 0 0 1 7.375-3.453l-.142.08L8.704 5.46a.795.795 0 0 0-.393.681zm1.097-2.365l2.602-1.5 2.607 1.5v2.999l-2.597 1.5-2.607-1.5z"/>
         </svg>
       </div>
 
       {/* Anthropic Claude */}
-      <div className="absolute right-[-2%] md:right-[-5%] top-[50%] w-14 h-14 rounded-full bg-[#D4A27F] flex items-center justify-center shadow-xl shadow-[#D4A27F]/50 float-animation float-delay-2 transition-transform hover:scale-110 border-2 border-white/20">
+      <div className="hidden md:flex absolute right-[-8%] top-[50%] w-14 h-14 rounded-full bg-[#D4A27F] items-center justify-center shadow-xl shadow-[#D4A27F]/50 float-animation float-delay-2 transition-transform hover:scale-110 border-2 border-white/20">
         <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
           <path d="M17.304 3.541h-3.672l6.696 16.918h3.672l-6.696-16.918zm-10.608 0l-6.696 16.918h3.78l1.344-3.514h6.468l1.344 3.514h3.78l-6.696-16.918h-3.324zm-.072 10.676l2.16-5.639 2.16 5.639h-4.32z"/>
         </svg>
       </div>
 
       {/* Hugging Face */}
-      <div className="absolute left-[-2%] md:left-[-5%] bottom-[18%] w-14 h-14 rounded-full overflow-hidden shadow-xl shadow-[#FFD21E]/50 float-animation float-delay-1 transition-transform hover:scale-110 border-2 border-white/20">
+      <div className="hidden md:block absolute left-[-8%] bottom-[18%] w-14 h-14 rounded-full overflow-hidden shadow-xl shadow-[#FFD21E]/50 float-animation float-delay-1 transition-transform hover:scale-110 border-2 border-white/20">
         <img src="/logos/hf-logo.png" alt="Hugging Face" className="w-full h-full object-cover" />
       </div>
 
       {/* Google Gemini */}
-      <div className="absolute right-[-2%] md:right-[-5%] bottom-[30%] w-14 h-14 rounded-full overflow-hidden shadow-xl float-animation float-delay-3 transition-transform hover:scale-110 bg-white p-1 border-2 border-white/20">
+      <div className="hidden md:block absolute right-[-8%] bottom-[30%] w-14 h-14 rounded-full overflow-hidden shadow-xl float-animation float-delay-3 transition-transform hover:scale-110 bg-white p-1 border-2 border-white/20">
         <img src="/logos/google-gemini-icon.webp" alt="Google Gemini" className="w-full h-full object-contain" />
       </div>
 
       {/* Meta AI */}
-      <div className="absolute right-[-2%] md:right-[-5%] top-[15%] w-14 h-14 rounded-full overflow-hidden shadow-xl shadow-primary-500/50 float-animation float-delay-2 transition-transform hover:scale-110 border-2 border-white/20">
+      <div className="hidden md:block absolute right-[-8%] top-[15%] w-14 h-14 rounded-full overflow-hidden shadow-xl shadow-primary-500/50 float-animation float-delay-2 transition-transform hover:scale-110 border-2 border-white/20">
         <img src="/logos/Meta-ai-logo.webp" alt="Meta AI" className="w-full h-full object-cover" />
       </div>
 
       {/* Mistral AI */}
-      <div className="absolute left-[-2%] md:left-[-5%] top-[35%] w-14 h-14 rounded-full overflow-hidden shadow-xl shadow-orange-500/50 float-animation float-delay-3 transition-transform hover:scale-110 bg-black p-2 border-2 border-white/20">
+      <div className="hidden md:block absolute left-[-8%] top-[35%] w-14 h-14 rounded-full overflow-hidden shadow-xl shadow-orange-500/50 float-animation float-delay-3 transition-transform hover:scale-110 bg-black p-2 border-2 border-white/20">
         <img src="/logos/Mistral_AI_logo_(2025–).svg.png" alt="Mistral AI" className="w-full h-full object-contain" />
       </div>
     </div>

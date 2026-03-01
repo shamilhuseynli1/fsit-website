@@ -502,13 +502,13 @@ export default function MLModelsPage() {
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             {/* Left - Text Content */}
             <div className="text-center lg:text-left">
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 md:mb-6" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                 AI Models That{' '}
                 <span className="text-green-400" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                   Deliver Results
                 </span>
               </h1>
-              <p className="text-lg md:text-2xl text-white leading-relaxed mb-8 md:mb-12" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
+              <p className="text-xl md:text-3xl text-white leading-relaxed mb-8 md:mb-12" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
                 Production-ready ML solutions powered by leading AI platforms.
               </p>
 
@@ -575,7 +575,7 @@ export default function MLModelsPage() {
                 </div>
               </div>
 
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-3 md:mb-4" style={{ color: 'var(--black)' }}>
+              <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-3 md:mb-4" style={{ color: 'var(--black)' }}>
                 {activeData.name}
               </h2>
               <p className="text-xl md:text-3xl text-primary-500 font-semibold">
@@ -659,14 +659,14 @@ export default function MLModelsPage() {
       {/* CTA Section */}
       <section className="py-12 md:py-20 relative overflow-hidden" style={{ background: 'var(--cream)' }}>
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6" style={{ color: 'var(--black)' }}>
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6" style={{ color: 'var(--black)' }}>
             Ready to Deploy{' '}
             <span className="text-gradient">
               ML Solutions
             </span>
             ?
           </h2>
-          <p className="text-lg md:text-2xl mb-8 md:mb-10 max-w-2xl mx-auto" style={{ color: 'var(--gray-600)' }}>
+          <p className="text-xl md:text-3xl mb-8 md:mb-10 max-w-2xl mx-auto" style={{ color: 'var(--gray-600)' }}>
             Our team delivers production-ready models tailored to your business challenges.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">

@@ -113,7 +113,7 @@ export default function BuildInnovate() {
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="text-center lg:text-left">
               <p className="text-green-400 font-semibold text-sm tracking-wider uppercase mb-3 md:mb-4">Build & Innovate</p>
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-[1.1]" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 md:mb-6 leading-[1.1]" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                 Build AI Systems
                 <span className="block text-green-400" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>That Actually Work</span>
               </h1>
@@ -298,7 +298,7 @@ export default function BuildInnovate() {
               Ready to build
               <span className="block text-gradient">AI that works?</span>
             </h2>
-            <p className="text-xl md:text-2xl mb-8" style={{ color: 'var(--gray-600)' }}>
+            <p className="text-2xl md:text-3xl mb-8" style={{ color: 'var(--gray-600)' }}>
               Let's discuss your challenges and design an AI solution that delivers real results
             </p>
             <div className="flex flex-wrap gap-4 justify-center">

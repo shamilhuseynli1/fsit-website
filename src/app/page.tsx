@@ -164,7 +164,7 @@ export default function Home() {
               AI Transformation Partner
             </p>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-10 leading-[1.05] tracking-tight text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5), 0 4px 12px rgba(0,0,0,0.3)' }}>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-10 leading-[1.05] tracking-tight text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5), 0 4px 12px rgba(0,0,0,0.3)' }}>
               Augmented Intelligence
               <br />
               <span style={{ color: 'var(--green)', textShadow: '0 2px 4px rgba(0,0,0,0.5), 0 4px 12px rgba(0,0,0,0.3)' }}>Human + Machine</span>
@@ -172,7 +172,7 @@ export default function Home() {
 
             <div className="mb-14 max-w-4xl">
               <p className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5), 0 4px 12px rgba(0,0,0,0.3)' }}>Pioneering AI transformation across Saudi Arabia and the Middle East</p>
-              <p className="text-xl md:text-2xl lg:text-3xl font-medium text-white/90" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5), 0 3px 8px rgba(0,0,0,0.3)' }}>AI-native teams delivering production-ready systems across government and enterprise since 2012</p>
+              <p className="text-2xl md:text-3xl lg:text-4xl font-medium text-white/90" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5), 0 3px 8px rgba(0,0,0,0.3)' }}>AI-native teams delivering production-ready systems across government and enterprise since 2012</p>
             </div>
 
             <div className="flex flex-row gap-3 sm:gap-4 items-center justify-center md:justify-start">

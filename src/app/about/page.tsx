@@ -88,11 +88,11 @@ export default function About() {
         <div className="container-max relative pt-36 pb-4 md:py-36">
           <div className="max-w-3xl text-center md:text-left mx-auto md:mx-0">
             <p className="text-green-400 font-semibold text-base md:text-lg mb-3 md:mb-4" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>About FSIT</p>
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-[1.1]" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 md:mb-6 leading-[1.1]" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
               Closing the gap between{' '}
               <span className="text-green-400">AI ambition and execution</span>
             </h1>
-            <p className="text-lg md:text-2xl text-white/90 max-w-2xl" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
+            <p className="text-xl md:text-3xl text-white/90 max-w-2xl" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
               We exist to help organizations build, scale, and operationalize AI through augmented intelligence — combining elite expertise, delivery teams, and managed services embedded directly into operations.
             </p>
           </div>

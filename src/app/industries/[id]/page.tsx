@@ -369,10 +369,10 @@ export default function IndustryPage() {
         <div className="absolute inset-0 bg-black/70 md:bg-black/60" />
         <div className="relative z-10 container-max pt-36 pb-4 md:py-36 w-full">
           <div className="max-w-4xl text-center md:text-left mx-auto md:mx-0">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-4 md:mb-6" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5), 0 4px 12px rgba(0,0,0,0.3)' }}>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-4 md:mb-6" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5), 0 4px 12px rgba(0,0,0,0.3)' }}>
               {industry.headline}
             </h1>
-            <p className="text-lg md:text-2xl text-white/90 leading-relaxed max-w-3xl font-medium mx-auto md:mx-0" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
+            <p className="text-xl md:text-3xl text-white/90 leading-relaxed max-w-3xl font-medium mx-auto md:mx-0" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
               {industry.description}
             </p>
           </div>
@@ -518,7 +518,7 @@ export default function IndustryPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#00A651]/20 rounded-2xl overflow-hidden">
             {industry.solutions.map((solution, index) => (
               <div key={index} className="group text-center p-6 md:p-10 bg-white hover:bg-[#F5F3F0] transition-all duration-300">
-                <h3 className="text-lg md:text-2xl font-bold mb-2 md:mb-4 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
+                <h3 className="text-xl md:text-3xl font-bold mb-2 md:mb-4 group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
                   {solution.title}
                 </h3>
                 <p className="text-sm md:text-lg" style={{ color: 'var(--gray-600)' }}>{solution.desc}</p>
@@ -583,7 +583,7 @@ export default function IndustryPage() {
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6" style={{ color: 'var(--black)' }}>
               {industry.name} Success Stories
             </h2>
-            <p className="text-lg md:text-2xl max-w-3xl mx-auto" style={{ color: 'var(--gray-600)' }}>
+            <p className="text-xl md:text-3xl max-w-3xl mx-auto" style={{ color: 'var(--gray-600)' }}>
               Real results from real projects in {industry.name.toLowerCase()}.
             </p>
           </div>
@@ -592,7 +592,7 @@ export default function IndustryPage() {
             {industry.useCases.map((useCase, index) => (
               <div key={index} className="bg-neutral-50 rounded-2xl overflow-hidden flex flex-col">
                 <div className="bg-gradient-to-br from-primary-600 to-primary-800 p-5 md:p-8">
-                  <h3 className="text-lg md:text-2xl font-bold text-white">{useCase.title}</h3>
+                  <h3 className="text-xl md:text-3xl font-bold text-white">{useCase.title}</h3>
                 </div>
                 <div className="p-5 md:p-8 flex flex-col flex-1">
                   <p className="text-base md:text-lg text-dark-600 mb-4 md:mb-6 min-h-[48px] md:min-h-[60px]">{useCase.desc}</p>
@@ -630,7 +630,7 @@ export default function IndustryPage() {
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
             Ready to Transform Your {industry.name} Operations?
           </h2>
-          <p className="text-lg md:text-2xl text-white/90 mb-8 md:mb-10 max-w-2xl mx-auto" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
+          <p className="text-xl md:text-3xl text-white/90 mb-8 md:mb-10 max-w-2xl mx-auto" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
             Let's discuss how AI can solve your specific challenges. Our team includes specialists with deep {industry.name.toLowerCase()} experience.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">

@@ -223,7 +223,7 @@ export default function AIOperations() {
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Left content */}
             <div className="relative z-10">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                 AI That Runs<br />
                 <span className="text-green-400" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                   In Production
@@ -252,7 +252,7 @@ export default function AIOperations() {
                   { value: '5x', label: 'Faster' },
                 ].map((stat, i) => (
                   <div key={i} className="text-center">
-                    <p className="text-lg md:text-2xl font-bold text-green-400">
+                    <p className="text-xl md:text-3xl font-bold text-green-400">
                       {stat.value}
                     </p>
                     <p className="text-xs md:text-sm text-white/80">{stat.label}</p>

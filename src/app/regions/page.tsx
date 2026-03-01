@@ -119,7 +119,7 @@ export default function Regions() {
       {/* Value Statement */}
       <section className="py-8 md:py-12" style={{ background: 'var(--cream)' }}>
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <p className="text-lg md:text-2xl text-dark-900 font-medium">
+          <p className="text-xl md:text-3xl text-dark-900 font-medium">
             This model allows us to combine regional understanding with global scale, speed, and specialized AI expertise
           </p>
         </div>
@@ -141,7 +141,7 @@ export default function Regions() {
                     </div>
                   </div>
                   <div className="flex-1 text-center md:text-left">
-                    <h3 className="text-lg md:text-2xl font-bold text-dark-900 mb-2 md:mb-3">{region.name}</h3>
+                    <h3 className="text-xl md:text-3xl font-bold text-dark-900 mb-2 md:mb-3">{region.name}</h3>
                     <p className="text-dark-500 mb-4 md:mb-6 text-sm md:text-base">{region.description}</p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-3 mb-4">
                       {region.focus.map((item, i) => (

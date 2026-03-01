@@ -175,14 +175,14 @@ export default function Solutions() {
           <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
             <div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                 AI Systems &{' '}
                 <span className="text-green-400" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                   Solutions
                 </span>
               </h1>
 
-              <p className="text-xl md:text-2xl mb-8 text-white leading-relaxed max-w-xl" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
+              <p className="text-2xl md:text-3xl mb-8 text-white leading-relaxed max-w-xl" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
                 From general-purpose LLMs to industry-specific AI models — we build, deploy, and operate production-grade AI systems tailored to your vertical
               </p>
 

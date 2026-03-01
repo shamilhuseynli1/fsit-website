@@ -136,11 +136,11 @@ export default function ManageOptimize() {
         <div className="relative container-max pt-36 pb-4 md:py-36">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="text-center lg:text-left">
-              <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 md:mb-8 leading-tight animate-fade-in-up" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
+              <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-7xl font-bold text-white mb-6 md:mb-8 leading-tight animate-fade-in-up" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                 Keep AI Running<br />
                 <span className="text-green-400" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>At Peak Performance</span>
               </h1>
-              <p className="text-lg md:text-2xl text-white mb-6 md:mb-10 leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s', textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
+              <p className="text-xl md:text-3xl text-white mb-6 md:mb-10 leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s', textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
                 Continuous management and optimization of your AI systems. We ensure your AI stays accurate, fast, and cost-effective as your business evolves.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: '0.3s' }}>
@@ -445,7 +445,7 @@ export default function ManageOptimize() {
             <br />
             <span style={{ color: 'var(--green)' }}>your AI?</span>
           </h2>
-          <p className="text-xl md:text-2xl mb-10 max-w-xl mx-auto" style={{ color: 'var(--gray-600)' }}>
+          <p className="text-2xl md:text-3xl mb-10 max-w-xl mx-auto" style={{ color: 'var(--gray-600)' }}>
             Let's discuss how we can improve the performance and reliability of your AI
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

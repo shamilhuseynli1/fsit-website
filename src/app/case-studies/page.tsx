@@ -180,13 +180,13 @@ export default function CaseStudiesPage() {
         <NetworkBackground />
         <div className="relative z-10 container-max pt-36 pb-4 md:py-36">
           <div className="max-w-4xl text-center md:text-left mx-auto md:mx-0">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 md:mb-6" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
               Real Results from{' '}
               <span className="text-green-400" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                 Real Projects
               </span>
             </h1>
-            <p className="text-lg md:text-2xl text-white/90 leading-relaxed max-w-3xl" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
+            <p className="text-xl md:text-3xl text-white/90 leading-relaxed max-w-3xl" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
               See how we've helped organizations across industries deploy AI that works in production. No experiments — measurable business impact.
             </p>
           </div>
@@ -344,7 +344,7 @@ export default function CaseStudiesPage() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>
             Ready to Be Our Next Success Story?
           </h2>
-          <p className="text-xl md:text-2xl mb-10 max-w-2xl mx-auto" style={{ color: 'var(--gray-600)' }}>
+          <p className="text-2xl md:text-3xl mb-10 max-w-2xl mx-auto" style={{ color: 'var(--gray-600)' }}>
             Let's discuss how we can deliver similar results for your organization. Our team is ready to share relevant case studies and proven approaches for your industry.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

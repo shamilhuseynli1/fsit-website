@@ -110,14 +110,14 @@ export default function HowWeVet() {
         <div className="relative container-max pt-36 pb-4 md:py-36">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="text-center lg:text-left">
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 md:mb-6 leading-tight" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                 How We Vet{' '}
                 <span className="text-green-400" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                   Elite AI Talent
                 </span>
               </h1>
 
-              <p className="text-lg md:text-2xl text-white mb-6 md:mb-8 leading-relaxed" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
+              <p className="text-xl md:text-3xl text-white mb-6 md:mb-8 leading-relaxed" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
                 At FSIT, our vetting process ensures only top-tier AI professionals become part of our augmented intelligence network
               </p>
 
@@ -460,7 +460,7 @@ export default function HowWeVet() {
           <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>
             Ready to access elite AI talent?
           </h2>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto" style={{ color: 'var(--gray-600)' }}>
+          <p className="text-2xl md:text-3xl mb-8 max-w-3xl mx-auto" style={{ color: 'var(--gray-600)' }}>
             Start your AI transformation with vetted experts
           </p>
           <Link

@@ -122,7 +122,7 @@ export default function CareersPage() {
         <NetworkBackground />
         <div className="relative z-10 container-max pt-36 pb-4 md:py-36">
           <div className="max-w-4xl text-center md:text-left mx-auto md:mx-0">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-dark-900 mb-4 md:mb-6">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-dark-900 mb-4 md:mb-6">
               Build AI That{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-gold-500">
                 Actually Works

@@ -105,13 +105,13 @@ export default function IndustriesPage() {
         <div className="absolute inset-0 bg-black/70 md:bg-black/50" />
         <div className="relative z-10 container-max pt-36 pb-4 md:py-36 w-full">
           <div className="max-w-4xl text-center md:text-left mx-auto md:mx-0">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-4 md:mb-6" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-4 md:mb-6" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
               AI Solutions for{' '}
               <span style={{ color: 'var(--green)', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
                 Every Industry
               </span>
             </h1>
-            <p className="text-lg md:text-2xl text-white/90 leading-relaxed max-w-3xl font-medium" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
+            <p className="text-xl md:text-3xl text-white/90 leading-relaxed max-w-3xl font-medium" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
               Deep domain expertise combined with AI-native development. We understand the unique challenges, regulations, and opportunities in your industry — delivering solutions that work in production.
             </p>
           </div>
@@ -286,15 +286,15 @@ export default function IndustriesPage() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3" style={{ color: 'var(--green)' }}>98%</div>
+              <div className="text-5xl md:text-6xl lg:text-7xl font-bold mb-3" style={{ color: 'var(--green)' }}>98%</div>
               <p className="text-lg md:text-xl" style={{ color: 'var(--gray-600)' }}>Project success rate (vs 59% industry average)</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3" style={{ color: 'var(--green)' }}>3 weeks</div>
+              <div className="text-5xl md:text-6xl lg:text-7xl font-bold mb-3" style={{ color: 'var(--green)' }}>3 weeks</div>
               <p className="text-lg md:text-xl" style={{ color: 'var(--gray-600)' }}>Average time to production deployment</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3" style={{ color: 'var(--green)' }}>80K+</div>
+              <div className="text-5xl md:text-6xl lg:text-7xl font-bold mb-3" style={{ color: 'var(--green)' }}>80K+</div>
               <p className="text-lg md:text-xl" style={{ color: 'var(--gray-600)' }}>Vetted AI specialists in our network</p>
             </div>
           </div>
@@ -307,7 +307,7 @@ export default function IndustriesPage() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>
             Ready to Transform Your Industry?
           </h2>
-          <p className="text-xl md:text-2xl mb-10 max-w-2xl mx-auto" style={{ color: 'var(--gray-600)' }}>
+          <p className="text-2xl md:text-3xl mb-10 max-w-2xl mx-auto" style={{ color: 'var(--gray-600)' }}>
             Let's discuss how AI can solve your industry's specific challenges. Our experts are ready to share relevant case studies and proven approaches.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

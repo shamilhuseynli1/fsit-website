@@ -239,7 +239,7 @@ export default function AIAgents() {
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center md:min-h-[70vh]">
             {/* Left content */}
             <div className="relative z-10">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                 Autonomous AI<br />
                 <span className="text-green-400" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                   That Takes Action
@@ -610,7 +610,7 @@ export default function AIAgents() {
             <br />
             <span style={{ color: 'var(--green)' }}>AI agents?</span>
           </h2>
-          <p className="text-xl md:text-2xl mb-10 max-w-2xl mx-auto" style={{ color: 'var(--gray-600)' }}>
+          <p className="text-2xl md:text-3xl mb-10 max-w-2xl mx-auto" style={{ color: 'var(--gray-600)' }}>
             Tell us about your workflow challenges and we'll design agents that solve them
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

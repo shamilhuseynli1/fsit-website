@@ -132,7 +132,7 @@ export default function Contact() {
               Let&apos;s build AI that{' '}
               <span className="text-green-400">actually runs</span>
             </h1>
-            <p className="text-lg md:text-2xl text-white/90" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
+            <p className="text-xl md:text-3xl text-white/90" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
               Whether you are exploring your first AI initiative or scaling existing systems, FSIT works with organizations ready to move from intent to execution
             </p>
           </div>

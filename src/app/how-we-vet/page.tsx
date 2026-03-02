@@ -87,7 +87,7 @@ export default function HowWeVet() {
           style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1682695796795-cc287af78a2b?auto=format&fit=crop&w=1920&q=80)' }}
         />
         {/* Dark overlay for contrast */}
-        <div className="absolute inset-0 bg-black/70 md:bg-black/60" />
+        <div className="absolute inset-0 bg-black/50 md:bg-black/45" />
 
         {/* Network pattern overlay */}
         <div className="absolute inset-0 opacity-30">
@@ -450,27 +450,21 @@ export default function HowWeVet() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="relative py-12 md:py-20 bg-gradient-to-b from-cream-50 to-white">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-500/10 rounded-full blur-3xl" />
-        </div>
-
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>
-            Ready to access elite AI talent?
+      {/* CTA Section */}
+      <section className="py-12 md:py-16" style={{ background: 'var(--green)' }}>
+        <div className="container-md text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            Ready to build AI that actually runs?
           </h2>
-          <p className="text-2xl md:text-3xl mb-8 max-w-3xl mx-auto" style={{ color: 'var(--gray-600)' }}>
-            Start your AI transformation with vetted experts
+          <p className="text-lg md:text-xl mb-8 max-w-xl mx-auto text-white/80">
+            Talk to our delivery team and start your transformation today.
           </p>
           <Link
-            href="/build-scale-ai"
-            className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-400 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-primary-500/30 transition-all duration-300"
+            href="/contact"
+            className="inline-block px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 bg-white hover:bg-gray-100"
+            style={{ color: 'var(--green)' }}
           >
-            Build & Scale AI
-            <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
+            Get Your AI Strategy Call
           </Link>
         </div>
       </section>

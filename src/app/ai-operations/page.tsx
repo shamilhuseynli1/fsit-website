@@ -198,7 +198,7 @@ export default function AIOperations() {
           style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1629667051607-e412f1c493c0?auto=format&fit=crop&w=1920&q=80)' }}
         />
         {/* Dark overlay for contrast */}
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/45" />
 
         {/* Network pattern overlay */}
         <div className="absolute inset-0 opacity-30">
@@ -603,22 +603,21 @@ export default function AIOperations() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-12 md:py-20 bg-neutral-150 overflow-hidden">
-        <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>
-            Ready to operationalize your AI?
+      <section className="py-12 md:py-16" style={{ background: 'var(--green)' }}>
+        <div className="container-md text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            Ready to build AI that actually runs?
           </h2>
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-8" style={{ color: 'var(--gray-600)' }}>
-            Let's discuss how we can help you deploy, monitor, and scale your AI systems
+          <p className="text-lg md:text-xl mb-8 max-w-xl mx-auto text-white/80">
+            Talk to our delivery team and start your transformation today.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-primary">
-              Talk to our operations team
-            </Link>
-            <Link href="/staff-augmentation" className="btn-secondary">
-              Build your AI team
-            </Link>
-          </div>
+          <Link
+            href="/contact"
+            className="inline-block px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 bg-white hover:bg-gray-100"
+            style={{ color: 'var(--green)' }}
+          >
+            Get Your AI Strategy Call
+          </Link>
         </div>
       </section>
     </>

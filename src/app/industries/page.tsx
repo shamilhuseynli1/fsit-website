@@ -102,7 +102,7 @@ export default function IndustriesPage() {
           }}
         />
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/70 md:bg-black/50" />
+        <div className="absolute inset-0 bg-black/50 md:bg-black/35" />
         <div className="relative z-10 container-max pt-36 pb-4 md:py-36 w-full">
           <div className="max-w-4xl text-center md:text-left mx-auto md:mx-0">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-4 md:mb-6" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
@@ -163,10 +163,16 @@ export default function IndustriesPage() {
                 <p className="text-base md:text-lg mb-6 line-clamp-2" style={{ color: 'var(--gray-600)' }}>
                   {industry.description}
                 </p>
-                <div className="flex items-center gap-4 text-lg font-semibold">
-                  <span style={{ color: 'var(--green)' }}>{industry.stats.projects}</span>
-                  <span style={{ color: 'var(--gray-300)' }}>|</span>
-                  <span style={{ color: 'var(--gray-600)' }}>{industry.stats.accuracy}</span>
+                <div className="flex items-center gap-6 text-sm">
+                  <div>
+                    <span className="block text-lg font-bold" style={{ color: 'var(--green)' }}>{industry.stats.projects}</span>
+                    <span style={{ color: 'var(--gray-500)' }}>Projects Delivered</span>
+                  </div>
+                  <div className="w-px h-10 bg-gray-200" />
+                  <div>
+                    <span className="block text-lg font-bold" style={{ color: 'var(--green)' }}>{industry.stats.accuracy}</span>
+                    <span style={{ color: 'var(--gray-500)' }}>Success Rate</span>
+                  </div>
                 </div>
               </Link>
             ))}
@@ -301,23 +307,86 @@ export default function IndustriesPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-12 md:py-20" style={{ background: 'var(--cream)' }}>
-        <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>
-            Ready to Transform Your Industry?
-          </h2>
-          <p className="text-2xl md:text-3xl mb-10 max-w-2xl mx-auto" style={{ color: 'var(--gray-600)' }}>
-            Let's discuss how AI can solve your industry's specific challenges. Our experts are ready to share relevant case studies and proven approaches.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/build-scale-ai" className="btn-primary text-lg px-8 py-4">
-              Schedule a Consultation
-            </Link>
-            <Link href="/case-studies" className="btn-secondary text-lg px-8 py-4">
-              View Case Studies
-            </Link>
+      {/* Compliance & Governance Block */}
+      <section className="py-12 md:py-16" style={{ background: 'var(--white)' }}>
+        <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4" style={{ color: 'var(--black)' }}>
+              Enterprise Compliance, Built In
+            </h3>
+            <p className="text-lg md:text-xl max-w-3xl mx-auto" style={{ color: 'var(--gray-600)' }}>
+              We operationalize security and compliance standards from day one—not as an afterthought.
+            </p>
           </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                standard: 'SOC2 Type II',
+                desc: 'Audited security controls with continuous monitoring and annual certification.'
+              },
+              {
+                standard: 'HIPAA',
+                desc: 'Healthcare-grade data protection with BAA agreements and PHI safeguards.'
+              },
+              {
+                standard: 'GDPR',
+                desc: 'EU data privacy compliance with data residency options and consent management.'
+              },
+              {
+                standard: 'PCI-DSS',
+                desc: 'Payment card security for financial services with encrypted data handling.'
+              },
+            ].map((item, index) => (
+              <div key={index} className="bg-[#F5F3F0] rounded-xl p-6 border border-gray-200">
+                <div className="text-lg font-bold mb-2" style={{ color: 'var(--green)' }}>{item.standard}</div>
+                <p className="text-sm" style={{ color: 'var(--gray-600)' }}>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10 bg-[#F5F3F0] rounded-2xl p-8 border border-[#00A651]/20">
+            <h4 className="text-xl font-bold mb-4" style={{ color: 'var(--black)' }}>How We Operationalize Compliance</h4>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div>
+                <div className="font-semibold mb-2" style={{ color: 'var(--green)' }}>Data Residency</div>
+                <p className="text-sm" style={{ color: 'var(--gray-600)' }}>
+                  Deploy AI systems within Saudi Arabia or your required jurisdiction. Full control over where your data lives.
+                </p>
+              </div>
+              <div>
+                <div className="font-semibold mb-2" style={{ color: 'var(--green)' }}>On-Premise Deployment</div>
+                <p className="text-sm" style={{ color: 'var(--gray-600)' }}>
+                  Air-gapped and on-premise options for sensitive government and enterprise workloads.
+                </p>
+              </div>
+              <div>
+                <div className="font-semibold mb-2" style={{ color: 'var(--green)' }}>Governance Model</div>
+                <p className="text-sm" style={{ color: 'var(--gray-600)' }}>
+                  Role-based access, audit trails, model versioning, and approval workflows built into every deployment.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-12 md:py-16" style={{ background: 'var(--green)' }}>
+        <div className="container-md text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            Ready to build AI that actually runs?
+          </h2>
+          <p className="text-lg md:text-xl mb-8 max-w-xl mx-auto text-white/80">
+            Talk to our delivery team and start your transformation today.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-block px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 bg-white hover:bg-gray-100"
+            style={{ color: 'var(--green)' }}
+          >
+            Get Your AI Strategy Call
+          </Link>
         </div>
       </section>
     </main>

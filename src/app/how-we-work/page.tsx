@@ -122,7 +122,7 @@ export default function HowWeWork() {
           style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1682695796795-cc287af78a2b?auto=format&fit=crop&w=1920&q=80)' }}
         />
         {/* Dark overlay for contrast */}
-        <div className="absolute inset-0 bg-black/70 md:bg-black/60" />
+        <div className="absolute inset-0 bg-black/50 md:bg-black/45" />
 
         {/* Network pattern overlay */}
         <div className="absolute inset-0 opacity-30">

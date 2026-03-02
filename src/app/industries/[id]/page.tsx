@@ -614,33 +614,21 @@ export default function IndustryPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 md:py-20 relative overflow-hidden">
-        {/* Saudi Background */}
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `url(${industry.heroImage})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        />
-        {/* Dark overlay for contrast */}
-        <div className="absolute inset-0 bg-black/70" />
-        <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
-            Ready to Transform Your {industry.name} Operations?
+      <section className="py-12 md:py-16" style={{ background: 'var(--green)' }}>
+        <div className="container-md text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            Ready to build AI that actually runs?
           </h2>
-          <p className="text-xl md:text-3xl text-white/90 mb-8 md:mb-10 max-w-2xl mx-auto" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
-            Let's discuss how AI can solve your specific challenges. Our team includes specialists with deep {industry.name.toLowerCase()} experience.
+          <p className="text-lg md:text-xl mb-8 max-w-xl mx-auto text-white/80">
+            Talk to our delivery team and start your transformation today.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
-            <Link href="/build-scale-ai" className="btn-primary text-base md:text-lg px-6 md:px-8 py-3 md:py-4">
-              Schedule a Consultation
-            </Link>
-            <Link href="/industries" className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-dark-900 transition-all text-base md:text-lg">
-              Explore Other Industries
-            </Link>
-          </div>
+          <Link
+            href="/contact"
+            className="inline-block px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 bg-white hover:bg-gray-100"
+            style={{ color: 'var(--green)' }}
+          >
+            Get Your AI Strategy Call
+          </Link>
         </div>
       </section>
     </main>

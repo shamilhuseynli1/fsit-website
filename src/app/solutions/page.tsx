@@ -167,7 +167,7 @@ export default function Solutions() {
           style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1590959914819-b767b9fe4cfb?auto=format&fit=crop&w=1920&q=80)' }}
         />
         {/* Dark overlay for better text visibility */}
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/45" />
 
         <AnimatedBackground />
 
@@ -786,15 +786,21 @@ export default function Solutions() {
         </div>
       )}
 
-      {/* CTA */}
-      <section className="section" style={{ background: 'var(--cream)' }}>
+      {/* CTA Section */}
+      <section className="py-12 md:py-16" style={{ background: 'var(--green)' }}>
         <div className="container-md text-center">
-          <h2 className="h2 mb-6">Ready to build production AI?</h2>
-          <p className="text-body max-w-xl mx-auto mb-10">
-            Talk to our AI delivery team about your requirements
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            Ready to build AI that actually runs?
+          </h2>
+          <p className="text-lg md:text-xl mb-8 max-w-xl mx-auto text-white/80">
+            Talk to our delivery team and start your transformation today.
           </p>
-          <Link href="/build-scale-ai" className="btn-primary">
-            Start Building
+          <Link
+            href="/contact"
+            className="inline-block px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 bg-white hover:bg-gray-100"
+            style={{ color: 'var(--green)' }}
+          >
+            Get Your AI Strategy Call
           </Link>
         </div>
       </section>

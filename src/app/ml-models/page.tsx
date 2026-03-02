@@ -657,29 +657,21 @@ export default function MLModelsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 md:py-20 relative overflow-hidden" style={{ background: 'var(--cream)' }}>
-        <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6" style={{ color: 'var(--black)' }}>
-            Ready to Deploy{' '}
-            <span className="text-gradient">
-              ML Solutions
-            </span>
-            ?
+      <section className="py-12 md:py-16" style={{ background: 'var(--green)' }}>
+        <div className="container-md text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            Ready to build AI that actually runs?
           </h2>
-          <p className="text-xl md:text-3xl mb-8 md:mb-10 max-w-2xl mx-auto" style={{ color: 'var(--gray-600)' }}>
-            Our team delivers production-ready models tailored to your business challenges.
+          <p className="text-lg md:text-xl mb-8 max-w-xl mx-auto text-white/80">
+            Talk to our delivery team and start your transformation today.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
-            <Link href="/contact" className="btn-primary text-base md:text-lg px-6 md:px-8 py-3 md:py-4">
-              Schedule Consultation
-            </Link>
-            <Link
-              href="/case-studies"
-              className="btn-secondary text-base md:text-lg px-6 md:px-8 py-3 md:py-4"
-            >
-              View Case Studies
-            </Link>
-          </div>
+          <Link
+            href="/contact"
+            className="inline-block px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 bg-white hover:bg-gray-100"
+            style={{ color: 'var(--green)' }}
+          >
+            Get Your AI Strategy Call
+          </Link>
         </div>
       </section>
     </main>

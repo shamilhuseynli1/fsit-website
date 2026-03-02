@@ -3,24 +3,12 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import BranchingList from '@/components/BranchingList';
-import BranchingFromTitle from '@/components/BranchingFromTitle';
 import ProcessFlow from '@/components/ProcessFlow';
 
 export default function Home() {
   const [activeFilter, setActiveFilter] = useState('all');
-  const [expertFilter, setExpertFilter] = useState('saudi');
   const [heroImage, setHeroImage] = useState('/hero-riyadh.jpg');
   const [isNight, setIsNight] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-
-  // Detect mobile screen
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
 
   // Automatic day/night image switching based on local time
   useEffect(() => {
@@ -41,52 +29,6 @@ export default function Home() {
     const interval = setInterval(updateHeroImage, 60000);
     return () => clearInterval(interval);
   }, []);
-
-  const capabilities = [
-    {
-      title: 'Cut Costs by 40%+',
-      desc: 'Automate repetitive tasks and reduce manual processing time',
-      icon: (
-        <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-        </svg>
-      )
-    },
-    {
-      title: 'Deploy in Weeks, Not Months',
-      desc: 'Get AI into production faster with our proven frameworks',
-      icon: (
-        <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-      )
-    },
-    {
-      title: 'Scale Without Hiring',
-      desc: 'Access 80K+ pre-vetted AI experts on demand',
-      icon: (
-        <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-        </svg>
-      )
-    },
-    {
-      title: 'Enterprise-Grade Security',
-      desc: 'Meet compliance requirements with built-in governance',
-      icon: (
-        <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-        </svg>
-      )
-    },
-  ];
-
-  const stats = [
-    { number: '80K+', label: 'Elite talent in network' },
-    { number: '50+', label: 'Businesses served' },
-    { number: '100%', label: 'Vetted experts' },
-    { number: '98%', label: 'Client retention' },
-  ];
 
   const processSteps = [
     { num: 'Week 1', title: 'Discover & Plan', desc: 'We assess your needs, define success metrics, and create a roadmap' },
@@ -124,27 +66,6 @@ export default function Home() {
     ? clients
     : clients.filter(c => c.category === activeFilter);
 
-  const experts = [
-    // Saudi Experts
-    { name: 'Mohammed Al-Anazi', nameAr: 'محمد العنزي', role: 'AI Strategy Lead', location: 'Riyadh', specialty: 'NLP & Machine Learning', image: '/experts/amir.jpg', isSaudi: true },
-    { name: 'Sarah Haddad', nameAr: 'سارة حداد', role: 'Data Science Manager', location: 'Jeddah', specialty: 'Predictive Analytics', image: '/experts/sarah.jpg', isSaudi: true },
-    { name: 'Khalid Rahman', nameAr: 'خالد رحمان', role: 'ML Solutions Architect', location: 'Riyadh', specialty: 'Python, PyTorch', image: '/experts/james.jpg', isSaudi: true },
-    { name: 'Nora Al-Shehri', nameAr: 'نورة الشهري', role: 'AI Product Lead', location: 'KAUST', specialty: 'Computer Vision', image: '/experts/leila.jpg', isSaudi: true },
-    // International Experts
-    { name: 'Daniel Kim', nameAr: '', role: 'Principal AI Research Scientist', location: 'Singapore', specialty: 'Deep Learning, NLP', image: '/experts/daniel.jpg', isSaudi: false },
-    { name: 'Sofia Petrović', nameAr: '', role: 'Senior AI UX Designer', location: 'Berlin', specialty: 'AI/ML Design, UX', image: '/experts/sofia.jpg', isSaudi: false },
-    { name: 'Hannah Nguyen', nameAr: '', role: 'AI Infrastructure & MLOps Director', location: 'London', specialty: 'MLOps, Cloud', image: '/experts/hannah.jpg', isSaudi: false },
-    { name: 'Mateo Rossi', nameAr: '', role: 'Computer Vision Lead', location: 'Milan', specialty: 'Computer Vision, PyTorch', image: '/experts/mateo.jpg', isSaudi: false },
-  ];
-
-  const whyFsit = [
-    'AI-first augmented intelligence model',
-    'Proven delivery in enterprise and government',
-    'Hybrid approach with embedded talent',
-    'Faster execution than consulting firms',
-    'Focus on measurable outcomes',
-  ];
-
   return (
     <>
       {/* Hero Section */}
@@ -159,11 +80,6 @@ export default function Home() {
 
         <div className="container-lg relative py-32 lg:py-40">
           <div className="max-w-5xl">
-            {/* Small tagline */}
-            <p className="text-sm md:text-base font-bold tracking-widest uppercase mb-6" style={{ color: 'var(--green)' }}>
-              AI Transformation Partner
-            </p>
-
             <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-10 leading-[1.05] tracking-tight text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5), 0 4px 12px rgba(0,0,0,0.3)' }}>
               Augmented Intelligence
               <br />
@@ -260,32 +176,6 @@ export default function Home() {
             <Link href="/solutions" className="btn-primary">
               Explore all services
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Why FSIT */}
-      <section className="py-10 md:py-14" style={{ background: 'var(--cream)' }}>
-        <div className="container-lg">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8" style={{ color: 'var(--black)' }}>
-              Why FSIT?
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {whyFsit.map((item, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-4 p-4 rounded-xl bg-white border border-[#00A651]/20 hover:border-[#00A651] hover:shadow-md transition-all duration-300"
-                >
-                  <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: 'var(--green)' }}>
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <span className="text-base font-medium" style={{ color: 'var(--black)' }}>{item}</span>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
@@ -512,32 +402,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What You Get */}
-      <section className="py-10 md:py-14" style={{ background: 'var(--white)' }}>
-        <div className="container-lg">
-          <div className="text-center mb-6">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: 'var(--black)' }}>
-              Real Results for Your Business
-            </h2>
-            <p className="text-lg max-w-2xl mx-auto" style={{ color: 'var(--gray-600)' }}>
-              Our clients see measurable impact within the first quarter.
-            </p>
-          </div>
-
-          {/* Branching animation with cards */}
-          <BranchingFromTitle
-            items={capabilities.map(cap => ({ title: cap.title, desc: cap.desc }))}
-          />
-
-          {/* CTA Button */}
-          <div className="text-center mt-8">
-            <Link href="/solutions" className="btn-primary">
-              Explore our services
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Your Journey - Client-Focused 3-Week Process */}
       <section className="py-10 md:py-14" style={{ background: 'var(--cream)' }}>
         <div className="container-lg">
@@ -553,80 +417,6 @@ export default function Home() {
           <div className="text-center">
             <Link href="/contact" className="btn-primary">
               Get Your AI Strategy Call
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Meet Our Experts */}
-      <section className="py-10 md:py-14" style={{ background: 'var(--white)' }}>
-        <div className="container-lg">
-          <div className="text-center mb-6">
-            <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ color: 'var(--black)' }}>Your Future Team</h2>
-            <p className="text-lg max-w-2xl mx-auto" style={{ color: 'var(--gray-600)' }}>
-              Access senior AI talent immediately—no lengthy hiring process, no training required.
-            </p>
-          </div>
-
-          {/* Saudi Talent Filter */}
-          <div className="flex justify-center gap-2 mb-8">
-            <button
-              onClick={() => setExpertFilter('all')}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                expertFilter === 'all' ? 'text-white' : ''
-              }`}
-              style={{
-                background: expertFilter === 'all' ? 'var(--green)' : 'white',
-                color: expertFilter === 'all' ? 'white' : 'var(--gray-500)',
-                border: expertFilter === 'all' ? 'none' : '1px solid var(--gray-200)'
-              }}
-            >
-              All
-            </button>
-            <button
-              onClick={() => setExpertFilter('saudi')}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                expertFilter === 'saudi' ? 'text-white' : ''
-              }`}
-              style={{
-                background: expertFilter === 'saudi' ? 'var(--green)' : 'white',
-                color: expertFilter === 'saudi' ? 'white' : 'var(--gray-500)',
-                border: expertFilter === 'saudi' ? 'none' : '1px solid var(--gray-200)'
-              }}
-            >
-              Saudi Talent
-            </button>
-          </div>
-
-          <div className="grid-4 mb-8">
-            {experts.filter(e => expertFilter === 'all' || e.isSaudi).map((expert, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden img-zoom" style={{ border: expert.isSaudi ? '4px solid var(--green)' : '4px solid var(--gray-200)' }}>
-                  <img
-                    src={expert.image}
-                    alt={expert.name}
-                    className="w-full h-full object-cover object-top"
-                  />
-                </div>
-                <h3 className="font-semibold mb-0.5" style={{ color: 'var(--black)' }}>{expert.name}</h3>
-                {expert.nameAr && <p className="text-sm mb-1 font-medium" style={{ color: 'var(--green)', direction: 'rtl' }}>{expert.nameAr}</p>}
-                <p className="text-sm font-medium" style={{ color: 'var(--gray-600)' }}>{expert.role}</p>
-                <p className="text-xs mt-1" style={{ color: 'var(--gray-500)' }}>{expert.location}</p>
-                {/* Specialty Tags */}
-                <div className="mt-3 flex flex-wrap justify-center gap-1">
-                  {expert.specialty.split(', ').map((skill, i) => (
-                    <span key={i} className="text-xs px-2 py-1 rounded-full bg-gray-100" style={{ color: 'var(--gray-600)' }}>
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <Link href="/staff-augmentation" className="btn-primary">
-              View all experts
             </Link>
           </div>
         </div>
@@ -670,110 +460,6 @@ export default function Home() {
                 className="w-full aspect-[4/3] object-cover"
               />
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Consulting & Talent Outsourcing Section */}
-      <section className="py-10 md:py-14" style={{ background: 'var(--white)' }}>
-        <div className="container-lg">
-          <div className="text-center mb-10">
-            <p className="text-sm font-semibold uppercase tracking-wider mb-2" style={{ color: 'var(--green)' }}>Consulting & Talent Outsourcing</p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: 'var(--black)' }}>
-              Scale Your AI Capabilities Fast
-            </h2>
-            <p className="text-lg max-w-2xl mx-auto" style={{ color: 'var(--gray-600)' }}>
-              Whether you need strategic guidance, embedded teams, or on-demand experts—we deliver talent that ships.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-            {/* AI Strategy Consulting */}
-            <div className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-2xl p-6 hover:border-[#00A651] hover:shadow-lg transition-all duration-300 flex flex-col h-full">
-              <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4" style={{ background: 'var(--green)', color: 'white' }}>
-                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2" style={{ color: 'var(--black)' }}>AI Strategy Consulting</h3>
-              <p className="text-base mb-4 flex-1" style={{ color: 'var(--gray-600)' }}>
-                Expert guidance to define your AI roadmap, prioritize use cases, and align technology with business goals.
-              </p>
-              <ul className="space-y-2 text-sm" style={{ color: 'var(--gray-600)' }}>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="var(--green)" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  AI readiness assessments
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="var(--green)" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  Use case prioritization
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="var(--green)" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  Technology architecture planning
-                </li>
-              </ul>
-            </div>
-
-            {/* Embedded AI Teams */}
-            <div className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-2xl p-6 hover:border-[#00A651] hover:shadow-lg transition-all duration-300 flex flex-col h-full">
-              <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4" style={{ background: 'var(--green)', color: 'white' }}>
-                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2" style={{ color: 'var(--black)' }}>Embedded AI Teams</h3>
-              <p className="text-base mb-4 flex-1" style={{ color: 'var(--gray-600)' }}>
-                Full-stack AI teams that integrate with your organization and deliver production-ready systems.
-              </p>
-              <ul className="space-y-2 text-sm" style={{ color: 'var(--gray-600)' }}>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="var(--green)" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  Data scientists & ML engineers
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="var(--green)" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  MLOps & infrastructure experts
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="var(--green)" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  AI product managers
-                </li>
-              </ul>
-            </div>
-
-            {/* On-Demand Talent */}
-            <div className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-2xl p-6 hover:border-[#00A651] hover:shadow-lg transition-all duration-300 flex flex-col h-full">
-              <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4" style={{ background: 'var(--green)', color: 'white' }}>
-                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2" style={{ color: 'var(--black)' }}>On-Demand Talent</h3>
-              <p className="text-base mb-4 flex-1" style={{ color: 'var(--gray-600)' }}>
-                Access 80K+ pre-vetted AI specialists for project-based or fractional engagements.
-              </p>
-              <ul className="space-y-2 text-sm" style={{ color: 'var(--gray-600)' }}>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="var(--green)" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  Flexible engagement models
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="var(--green)" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  48-hour talent matching
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="var(--green)" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  Saudi & global specialists
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <Link href="/staff-augmentation" className="btn-primary">
-              Explore Talent Solutions
-            </Link>
           </div>
         </div>
       </section>

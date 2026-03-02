@@ -160,26 +160,26 @@ export default function HeroSolutionsVisual() {
       </svg>
 
       {/* Floating metric labels - hidden on mobile to avoid overlap */}
-      <div className="hidden md:block absolute left-[-12%] top-[30%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow shadow-sm">
+      <div className="hidden md:block absolute left-[2%] top-[30%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow shadow-sm">
         <span className="text-xs text-gray-700 font-mono">98% Success</span>
       </div>
-      <div className="hidden md:block absolute right-[-15%] top-[45%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow float-delay-1 shadow-sm">
+      <div className="hidden md:block absolute right-[2%] top-[45%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow float-delay-1 shadow-sm">
         <span className="text-xs text-gray-700 font-mono">Production Ready</span>
       </div>
-      <div className="hidden md:block absolute left-[-12%] bottom-[30%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow float-delay-2 shadow-sm">
+      <div className="hidden md:block absolute left-[2%] bottom-[30%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow float-delay-2 shadow-sm">
         <span className="text-xs text-gray-700 font-mono">Enterprise</span>
       </div>
 
       {/* Platform logos - hidden on mobile to avoid overlap */}
-      <div className="hidden md:flex absolute left-[-8%] top-[8%] w-10 h-10 rounded-lg bg-black items-center justify-center shadow-lg shadow-black/30 float-animation transition-transform hover:scale-110">
+      <div className="hidden md:flex absolute left-[5%] top-[8%] w-10 h-10 rounded-lg bg-black items-center justify-center shadow-lg shadow-black/30 float-animation transition-transform hover:scale-110">
         <span className="text-white font-bold text-xs">GPT</span>
       </div>
 
-      <div className="hidden md:flex absolute right-[-8%] top-[12%] w-10 h-10 rounded-lg bg-[#D4A27F] items-center justify-center shadow-lg shadow-[#D4A27F]/30 float-animation float-delay-1 transition-transform hover:scale-110">
+      <div className="hidden md:flex absolute right-[5%] top-[12%] w-10 h-10 rounded-lg bg-[#D4A27F] items-center justify-center shadow-lg shadow-[#D4A27F]/30 float-animation float-delay-1 transition-transform hover:scale-110">
         <span className="text-white font-bold text-xs">Claude</span>
       </div>
 
-      <div className="hidden md:flex absolute right-[-8%] bottom-[35%] w-10 h-10 rounded-lg bg-[#4285F4] items-center justify-center shadow-lg shadow-[#4285F4]/30 float-animation float-delay-2 transition-transform hover:scale-110">
+      <div className="hidden md:flex absolute right-[5%] bottom-[35%] w-10 h-10 rounded-lg bg-[#4285F4] items-center justify-center shadow-lg shadow-[#4285F4]/30 float-animation float-delay-2 transition-transform hover:scale-110">
         <span className="text-white font-bold text-[9px]">Gemini</span>
       </div>
     </div>

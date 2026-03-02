@@ -176,7 +176,7 @@ export default function CaseStudiesPage() {
           }}
         />
         {/* Dark overlay for contrast */}
-        <div className="absolute inset-0 bg-black/70 md:bg-black/60" />
+        <div className="absolute inset-0 bg-black/50 md:bg-black/45" />
         <NetworkBackground />
         <div className="relative z-10 container-max pt-36 pb-4 md:py-36">
           <div className="max-w-4xl text-center md:text-left mx-auto md:mx-0">
@@ -339,22 +339,21 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 md:py-20" style={{ background: 'var(--cream)' }}>
-        <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>
-            Ready to Be Our Next Success Story?
+      <section className="py-12 md:py-16" style={{ background: 'var(--green)' }}>
+        <div className="container-md text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            Ready to build AI that actually runs?
           </h2>
-          <p className="text-2xl md:text-3xl mb-10 max-w-2xl mx-auto" style={{ color: 'var(--gray-600)' }}>
-            Let's discuss how we can deliver similar results for your organization. Our team is ready to share relevant case studies and proven approaches for your industry.
+          <p className="text-lg md:text-xl mb-8 max-w-xl mx-auto text-white/80">
+            Talk to our delivery team and start your transformation today.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/build-scale-ai" className="btn-primary text-lg px-8 py-4">
-              Request a Pilot Roadmap
-            </Link>
-            <Link href="/contact" className="btn-secondary text-lg px-8 py-4">
-              Get Your AI Strategy Call
-            </Link>
-          </div>
+          <Link
+            href="/contact"
+            className="inline-block px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 bg-white hover:bg-gray-100"
+            style={{ color: 'var(--green)' }}
+          >
+            Get Your AI Strategy Call
+          </Link>
         </div>
       </section>
     </main>

@@ -385,7 +385,7 @@ export default function IndustriesPage() {
             className="inline-block px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 bg-white hover:bg-gray-100"
             style={{ color: 'var(--green)' }}
           >
-            Get Your AI Strategy Call
+            Book a strategy call
           </Link>
         </div>
       </section>

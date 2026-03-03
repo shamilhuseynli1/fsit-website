@@ -310,7 +310,7 @@ export default function Contact() {
                   />
                 </div>
                 <button type="submit" className="btn-primary w-full text-lg px-8 py-4">
-                  Get Your AI Strategy Call
+                  Book a strategy call
                 </button>
               </form>
             </div>

@@ -539,7 +539,7 @@ export default function HowWeWork() {
             Talk to FSIT&apos;s delivery team
           </p>
           <Link href="/contact" className="btn-primary">
-            Get Your AI Strategy Call
+            Book a strategy call
           </Link>
         </div>
       </section>

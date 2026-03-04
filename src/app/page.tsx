@@ -93,7 +93,7 @@ export default function Home() {
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center justify-center md:justify-start">
               <Link href="/contact" className="btn-primary text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4 text-center">
-                Book a consultation
+                Book a strategy call
               </Link>
             </div>
           </div>

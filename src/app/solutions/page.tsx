@@ -1,14 +1,10 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
 import HeroSolutionsVisual from '@/components/HeroSolutionsVisual';
 import AnimatedBackground from '@/components/AnimatedBackground';
-import BranchingList from '@/components/BranchingList';
-import BranchingFromTitle from '@/components/BranchingFromTitle';
 
 export default function Solutions() {
-  const [selectedIndustry, setSelectedIndustry] = useState<string | null>(null);
 
   const coreServices = [
     {
@@ -59,44 +55,6 @@ export default function Solutions() {
     },
   ];
 
-  const targetedModels = [
-    {
-      vertical: 'Government & Public Sector',
-      models: [
-        { name: 'Document Processing AI', desc: 'Automated classification, extraction, and routing of government documents' },
-        { name: 'Citizen Services Copilot', desc: 'AI assistants for citizen inquiries aligned with government policies' },
-        { name: 'Policy Analysis Engine', desc: 'NLP models fine-tuned on regulatory and policy documents' },
-      ],
-      outcomes: ['40% faster document processing', 'Vision 2030 aligned', 'Arabic/English bilingual'],
-    },
-    {
-      vertical: 'Banking & Financial Services',
-      models: [
-        { name: 'Transaction Analysis AI', desc: 'Fraud detection and anomaly identification in financial data' },
-        { name: 'Risk Assessment Models', desc: 'Credit scoring and risk evaluation with explainable AI' },
-        { name: 'Compliance Automation', desc: 'Regulatory compliance checking and reporting automation' },
-      ],
-      outcomes: ['Real-time fraud detection', 'Regulatory compliant', 'Audit-ready outputs'],
-    },
-    {
-      vertical: 'Healthcare',
-      models: [
-        { name: 'Clinical NLP', desc: 'Medical record understanding and clinical text extraction' },
-        { name: 'Diagnostic Support AI', desc: 'Image analysis for radiology and pathology support' },
-        { name: 'Patient Engagement Copilot', desc: 'AI assistants for appointment scheduling and health queries' },
-      ],
-      outcomes: ['HIPAA compliant', 'Clinical validation', 'EHR integration'],
-    },
-    {
-      vertical: 'Manufacturing & Logistics',
-      models: [
-        { name: 'Predictive Maintenance AI', desc: 'Equipment failure prediction and maintenance scheduling' },
-        { name: 'Quality Control Vision', desc: 'Computer vision for defect detection and quality assurance' },
-        { name: 'Supply Chain Optimizer', desc: 'Demand forecasting and inventory optimization models' },
-      ],
-      outcomes: ['30% reduction in downtime', 'Real-time monitoring', 'IoT integration'],
-    },
-  ];
 
   const capabilities = [
     {
@@ -117,46 +75,6 @@ export default function Solutions() {
     },
   ];
 
-  const industryUseCases: Record<string, { useCases: string[]; description: string }> = {
-    'Government & Public Sector': {
-      description: 'AI solutions aligned with Vision 2030 for digital government transformation',
-      useCases: ['Document processing & classification', 'Citizen services automation', 'Policy analysis & compliance', 'Arabic/English bilingual AI'],
-    },
-    'Consulting Firms & System Integrators': {
-      description: 'AI capabilities to enhance consulting deliverables and client solutions',
-      useCases: ['AI strategy & roadmap development', 'Solution architecture design', 'Implementation acceleration', 'Knowledge management systems'],
-    },
-    'Healthcare': {
-      description: 'Clinical AI solutions for improved patient outcomes and operational efficiency',
-      useCases: ['Clinical documentation AI', 'Diagnostic support systems', 'Patient engagement copilots', 'Medical imaging analysis'],
-    },
-    'Banking & Financial Services': {
-      description: 'Secure, compliant AI for financial operations and customer experience',
-      useCases: ['Fraud detection & prevention', 'Risk assessment models', 'Regulatory compliance automation', 'Customer service AI'],
-    },
-    'Manufacturing': {
-      description: 'AI-driven operational excellence and quality assurance',
-      useCases: ['Predictive maintenance', 'Quality control vision systems', 'Production optimization', 'Supply chain forecasting'],
-    },
-    'Logistics & Supply Chain': {
-      description: 'End-to-end supply chain visibility and optimization',
-      useCases: ['Route optimization', 'Demand forecasting', 'Warehouse automation', 'Fleet management AI'],
-    },
-    'Real Estate': {
-      description: 'AI for property management, valuation, and customer experience',
-      useCases: ['Property valuation models', 'Tenant management automation', 'Market analysis & prediction', 'Virtual property assistants'],
-    },
-    'Retail': {
-      description: 'Personalized customer experiences and operational efficiency',
-      useCases: ['Product recommendations', 'Inventory optimization', 'Customer behavior analytics', 'Dynamic pricing models'],
-    },
-    'Energy': {
-      description: 'Smart energy management and sustainability solutions',
-      useCases: ['Grid optimization', 'Energy consumption forecasting', 'Asset monitoring & maintenance', 'ESG reporting automation'],
-    },
-  };
-
-  const allIndustries = Object.keys(industryUseCases);
 
   return (
     <div style={{ background: 'var(--white)' }} className="min-h-screen">
@@ -314,6 +232,86 @@ export default function Solutions() {
         </div>
       </section>
 
+      {/* Compliance & Security */}
+      <section className="section-sm" style={{ background: 'var(--white)' }}>
+        <div className="container-lg">
+          <div className="text-center mb-8 md:mb-12">
+            <p className="text-sm md:text-base font-bold uppercase tracking-wider mb-3" style={{ color: 'var(--green)' }}>Compliance & Security</p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4" style={{ color: 'var(--black)' }}>
+              Enterprise-Grade Standards, <span style={{ color: 'var(--green)' }}>Operationalized</span>
+            </h2>
+            <p className="text-base md:text-lg max-w-3xl mx-auto" style={{ color: 'var(--gray-600)' }}>
+              Built for government and enterprise clients with strict compliance requirements
+            </p>
+          </div>
+
+          {/* Compliance Badges */}
+          <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-10 md:mb-12">
+            {['SOC2', 'HIPAA', 'GDPR', 'PCI-DSS'].map((standard, i) => (
+              <div
+                key={i}
+                className="px-4 md:px-6 py-2 md:py-3 rounded-lg border-2 bg-white"
+                style={{ borderColor: 'var(--green)' }}
+              >
+                <span className="text-sm md:text-base font-bold" style={{ color: 'var(--green)' }}>{standard}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Operationalization Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            {/* Data Residency */}
+            <div className="p-6 md:p-8 rounded-xl border transition-all duration-300 hover:shadow-lg" style={{ background: 'var(--cream)', borderColor: 'var(--gray-200)' }}>
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl flex items-center justify-center mb-4 md:mb-5" style={{ background: 'var(--green-light)' }}>
+                <svg className="w-6 h-6 md:w-7 md:h-7" style={{ color: 'var(--green)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold mb-3" style={{ color: 'var(--black)' }}>Data Residency</h3>
+              <p className="text-sm md:text-base leading-relaxed" style={{ color: 'var(--gray-600)' }}>
+                Saudi-based data centers with regional deployment options. Your data stays in-country, meeting local regulations and Vision 2030 digital sovereignty requirements.
+              </p>
+            </div>
+
+            {/* On-Premise Deployment */}
+            <div className="p-6 md:p-8 rounded-xl border transition-all duration-300 hover:shadow-lg" style={{ background: 'var(--cream)', borderColor: 'var(--gray-200)' }}>
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl flex items-center justify-center mb-4 md:mb-5" style={{ background: 'var(--green-light)' }}>
+                <svg className="w-6 h-6 md:w-7 md:h-7" style={{ color: 'var(--green)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                </svg>
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold mb-3" style={{ color: 'var(--black)' }}>On-Premise Options</h3>
+              <p className="text-sm md:text-base leading-relaxed" style={{ color: 'var(--gray-600)' }}>
+                Deploy AI systems directly on your infrastructure. Air-gapped installations available for sensitive government workloads with full control over data flow.
+              </p>
+            </div>
+
+            {/* Governance Model */}
+            <div className="p-6 md:p-8 rounded-xl border transition-all duration-300 hover:shadow-lg" style={{ background: 'var(--cream)', borderColor: 'var(--gray-200)' }}>
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl flex items-center justify-center mb-4 md:mb-5" style={{ background: 'var(--green-light)' }}>
+                <svg className="w-6 h-6 md:w-7 md:h-7" style={{ color: 'var(--green)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold mb-3" style={{ color: 'var(--black)' }}>Governance Model</h3>
+              <p className="text-sm md:text-base leading-relaxed" style={{ color: 'var(--gray-600)' }}>
+                Complete audit trails, compliance documentation, and regular security assessments. Quarterly compliance reports and dedicated support for government audits.
+              </p>
+            </div>
+          </div>
+
+          {/* Government Focus Note */}
+          <div className="mt-8 md:mt-10 p-5 md:p-6 rounded-xl border-l-4" style={{ background: 'var(--green-light)', borderColor: 'var(--green)' }}>
+            <p className="text-sm md:text-base font-semibold mb-2" style={{ color: 'var(--green)' }}>
+              ✓ Trusted by Government Entities
+            </p>
+            <p className="text-sm md:text-base" style={{ color: 'var(--gray-700)' }}>
+              Our compliance framework has been validated by multiple Saudi government ministries and PIF entities. We maintain active certifications and work closely with regulatory bodies to ensure continued adherence.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* General Models */}
       <section className="section" style={{ background: 'var(--cream)' }}>
         <div className="container-lg">
@@ -400,99 +398,67 @@ export default function Solutions() {
         </div>
       </section>
 
-      {/* Targeted Models */}
+      {/* Industry Solutions Teaser */}
       <section className="section" style={{ background: 'var(--white)' }}>
         <div className="container-lg">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>Targeted Models for Verticals</h2>
-            <p className="text-xl max-w-3xl mx-auto" style={{ color: 'var(--gray-600)' }}>
-              Fine-tuned and purpose-built AI models designed for specific industry requirements
+          <div className="text-center mb-8 md:mb-10">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4" style={{ color: 'var(--black)' }}>
+              Industry-Specific AI Solutions
+            </h2>
+            <p className="text-base md:text-xl max-w-3xl mx-auto" style={{ color: 'var(--gray-600)' }}>
+              From healthcare to financial services, we deliver AI models fine-tuned for your industry's unique requirements and regulatory standards
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
-            {targetedModels.map((vertical, index) => {
-              const icons = [
-                // Government
-                <svg key="gov" className="w-6 h-6" fill="none" stroke="#00A651" strokeWidth="1.5" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
-                </svg>,
-                // Banking
-                <svg key="bank" className="w-6 h-6" fill="none" stroke="#00A651" strokeWidth="1.5" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
-                </svg>,
-                // Healthcare
-                <svg key="health" className="w-6 h-6" fill="none" stroke="#00A651" strokeWidth="1.5" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                </svg>,
-                // Manufacturing
-                <svg key="mfg" className="w-6 h-6" fill="none" stroke="#00A651" strokeWidth="1.5" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" />
-                </svg>,
-              ];
-
-              return (
-                <div
-                  key={index}
-                  className="group relative p-4 rounded-lg transition-all duration-300 hover:shadow-md"
-                  style={{
-                    background: 'var(--cream)',
-                    border: '1px solid var(--gray-100)'
-                  }}
-                >
-                  {/* Header with icon */}
-                  <div className="flex items-start gap-2 mb-3 min-h-[56px]">
-                    <div
-                      className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
-                      style={{ background: 'rgba(0, 166, 81, 0.1)' }}
-                    >
-                      {icons[index]}
-                    </div>
-                    <h3 className="text-base font-bold group-hover:text-green-600 transition-colors" style={{ color: 'var(--black)' }}>
-                      {vertical.vertical}
-                    </h3>
-                  </div>
-
-                  {/* Models */}
-                  <div className="space-y-2 mb-3">
-                    {vertical.models.slice(0, 2).map((model, i) => (
-                      <div
-                        key={i}
-                        className="p-2 rounded-lg"
-                        style={{ background: 'rgba(255,255,255,0.5)' }}
-                      >
-                        <p className="text-base font-semibold mb-1" style={{ color: 'var(--green)' }}>{model.name}</p>
-                        <p className="text-sm line-clamp-2" style={{ color: 'var(--gray-600)' }}>{model.desc}</p>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Outcomes */}
-                  <div className="pt-2" style={{ borderTop: '1px solid var(--gray-200)' }}>
-                    <div className="flex flex-wrap gap-1">
-                      {vertical.outcomes.slice(0, 2).map((outcome, i) => (
-                        <span
-                          key={i}
-                          className="px-3 py-1 text-xs font-medium rounded-full"
-                          style={{
-                            background: 'rgba(0, 166, 81, 0.1)',
-                            color: 'var(--green)'
-                          }}
-                        >
-                          {outcome}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
+          {/* Industry Icons Grid */}
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-8 md:mb-10">
+            {[
+              { name: 'Government', icon: '🏛️' },
+              { name: 'Financial Services', icon: '🏦' },
+              { name: 'Healthcare', icon: '🏥' },
+              { name: 'Manufacturing', icon: '🏭' },
+              { name: 'Technology', icon: '💻' },
+              { name: 'Logistics', icon: '🚚' },
+              { name: 'Energy', icon: '⚡' },
+              { name: 'Retail', icon: '🛒' },
+              { name: 'Sports & Entertainment', icon: '🏟️' },
+            ].map((industry, i) => (
+              <div
+                key={i}
+                className="flex flex-col items-center gap-2 p-4 rounded-xl transition-all duration-300 hover:scale-105"
+                style={{ background: 'var(--cream)', border: '1px solid var(--gray-200)' }}
+              >
+                <div className="text-3xl md:text-4xl">{industry.icon}</div>
+                <span className="text-xs md:text-sm font-semibold text-center" style={{ color: 'var(--gray-700)' }}>
+                  {industry.name}
+                </span>
+              </div>
+            ))}
           </div>
 
-          <div className="text-center mt-16">
-            <p className="text-lg mb-6" style={{ color: 'var(--gray-600)' }}>Need AI solutions for a different vertical?</p>
-            <Link href="/build-scale-ai" className="btn-primary">
-              Discuss your requirements
+          {/* Key highlights */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-10 max-w-4xl mx-auto">
+            <div className="text-center p-4">
+              <div className="text-2xl md:text-3xl font-bold mb-2" style={{ color: 'var(--green)' }}>9+</div>
+              <p className="text-sm md:text-base" style={{ color: 'var(--gray-600)' }}>Industries Served</p>
+            </div>
+            <div className="text-center p-4">
+              <div className="text-2xl md:text-3xl font-bold mb-2" style={{ color: 'var(--green)' }}>300+</div>
+              <p className="text-sm md:text-base" style={{ color: 'var(--gray-600)' }}>Projects Delivered</p>
+            </div>
+            <div className="text-center p-4">
+              <div className="text-2xl md:text-3xl font-bold mb-2" style={{ color: 'var(--green)' }}>98%</div>
+              <p className="text-sm md:text-base" style={{ color: 'var(--gray-600)' }}>Success Rate</p>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="text-center">
+            <Link href="/industries" className="btn-primary text-lg px-8 py-4 inline-flex items-center gap-2">
+              Explore All Industries
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
             </Link>
           </div>
         </div>
@@ -707,84 +673,6 @@ export default function Solutions() {
         </div>
       </section>
 
-      {/* Industries */}
-      <section className="section" style={{ background: 'var(--white)' }}>
-        <div className="container-lg">
-          <div className="text-center mb-16">
-            <h2 className="h2 mb-6">Solutions Across Verticals</h2>
-            <p className="text-small">Click on any industry to see AI use cases</p>
-          </div>
-          <div className="flex flex-wrap justify-center gap-3">
-            {allIndustries.map((industry, index) => (
-              <button
-                key={index}
-                onClick={() => setSelectedIndustry(industry)}
-                className="px-5 py-3 rounded-full font-medium text-sm transition-all duration-300"
-                style={{
-                  background: 'var(--gray-100)',
-                  color: 'var(--gray-700)'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = 'var(--green)';
-                  e.currentTarget.style.color = 'white';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = 'var(--gray-100)';
-                  e.currentTarget.style.color = 'var(--gray-700)';
-                }}
-              >
-                {industry}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Modal */}
-      {selectedIndustry && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4"
-          style={{ background: 'rgba(0, 0, 0, 0.5)', backdropFilter: 'blur(4px)' }}
-          onClick={() => setSelectedIndustry(null)}
-        >
-          <div
-            className="rounded-2xl max-w-lg w-full p-8 relative shadow-2xl animate-fade-in"
-            style={{ background: 'var(--white)' }}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              onClick={() => setSelectedIndustry(null)}
-              className="absolute top-4 right-4 transition-colors"
-              style={{ color: 'var(--gray-400)' }}
-              onMouseEnter={(e) => e.currentTarget.style.color = 'var(--black)'}
-              onMouseLeave={(e) => e.currentTarget.style.color = 'var(--gray-400)'}
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-
-            <h3 className="h4 mb-2">{selectedIndustry}</h3>
-            <p className="text-small mb-8">{industryUseCases[selectedIndustry]?.description}</p>
-
-            <p className="label-muted mb-4">AI Use Cases</p>
-            <div className="list-lines mb-8">
-              {industryUseCases[selectedIndustry]?.useCases.map((useCase, i) => (
-                <div key={i} className="list-lines-item">
-                  <span className="font-medium" style={{ color: 'var(--gray-700)' }}>{useCase}</span>
-                </div>
-              ))}
-            </div>
-
-            <Link
-              href="/build-scale-ai"
-              className="btn-primary w-full justify-center"
-            >
-              Discuss {selectedIndustry} Solutions
-            </Link>
-          </div>
-        </div>
-      )}
 
       {/* CTA Section */}
       <section className="py-12 md:py-16" style={{ background: 'var(--green)' }}>

@@ -56,6 +56,11 @@ export default function HeroProcessVisual() {
         .flow-animation {
           animation: flowRight 2s linear infinite;
         }
+        @media (max-width: 768px) {
+          .stat-text {
+            font-size: 10px;
+          }
+        }
       `}</style>
 
       {/* Main SVG Illustration - Process Flow */}
@@ -163,7 +168,7 @@ export default function HeroProcessVisual() {
         {/* Bottom stats */}
         <g className="float-slow float-delay-2">
           <rect x="140" y="410" width="120" height="30" rx="4" fill="#F5F3F0" stroke="#00A651" strokeWidth="1" />
-          <text x="200" y="430" textAnchor="middle" fill="#00A651" fontSize="9" fontFamily="monospace">
+          <text x="200" y="430" textAnchor="middle" fill="#00A651" fontSize="9" fontFamily="monospace" className="stat-text">
             PRODUCTION FOCUSED
           </text>
         </g>
@@ -176,13 +181,13 @@ export default function HeroProcessVisual() {
       </svg>
 
       {/* Floating metric labels - hidden on mobile to avoid overlap */}
-      <div className="hidden md:block absolute left-[-12%] top-[25%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/40 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow shadow-sm">
+      <div className="hidden md:block absolute left-[8%] top-[25%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/40 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow shadow-sm">
         <span className="text-xs text-gray-700 font-mono">Strategy</span>
       </div>
-      <div className="hidden md:block absolute right-[-15%] top-[40%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/40 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow float-delay-1 shadow-sm">
+      <div className="hidden md:block absolute right-[8%] top-[40%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/40 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow float-delay-1 shadow-sm">
         <span className="text-xs text-gray-700 font-mono">Execution</span>
       </div>
-      <div className="hidden md:block absolute left-[-12%] bottom-[28%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/40 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow float-delay-2 shadow-sm">
+      <div className="hidden md:block absolute left-[8%] bottom-[28%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/40 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow float-delay-2 shadow-sm">
         <span className="text-xs text-gray-700 font-mono">Operations</span>
       </div>
     </div>

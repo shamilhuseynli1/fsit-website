@@ -48,7 +48,7 @@ export default function ProcessFlow({ steps }: ProcessFlowProps) {
   return (
     <div ref={containerRef} className="relative">
       {/* Scrollable on mobile, flex row on desktop */}
-      <div className="flex items-stretch gap-3 md:gap-4 overflow-x-auto pb-4 md:pb-0 scrollbar-hide md:overflow-visible">
+      <div className="flex items-stretch gap-4 md:gap-4 overflow-x-auto pb-4 md:pb-0 scrollbar-hide md:overflow-visible px-2 md:px-0">
         {steps.map((step, index) => {
           const isActive = index <= activeStep;
           const isCurrent = index === activeStep;
@@ -61,7 +61,7 @@ export default function ProcessFlow({ steps }: ProcessFlowProps) {
               }`}
               style={{
                 transitionDelay: `${index * 0.1}s`,
-                minWidth: '140px',
+                minWidth: '280px',
               }}
             >
               {/* Connector line between boxes - hidden on mobile */}
@@ -77,7 +77,7 @@ export default function ProcessFlow({ steps }: ProcessFlowProps) {
 
               {/* Box */}
               <div
-                className="relative z-10 p-5 md:p-6 rounded-xl text-center transition-all duration-300 h-full"
+                className="relative z-10 p-6 md:p-6 rounded-xl text-center transition-all duration-300 h-full"
                 style={{
                   background: isActive ? 'var(--green)' : 'var(--white)',
                   border: `2px solid ${isActive ? 'var(--green)' : 'var(--gray-200)'}`,
@@ -87,7 +87,7 @@ export default function ProcessFlow({ steps }: ProcessFlowProps) {
               >
                 {/* Title */}
                 <p
-                  className="text-lg md:text-xl font-bold mb-1 transition-colors duration-300"
+                  className="text-base sm:text-lg md:text-xl font-bold mb-2 transition-colors duration-300"
                   style={{ color: isActive ? 'white' : 'var(--black)' }}
                 >
                   {step.title}
@@ -95,7 +95,7 @@ export default function ProcessFlow({ steps }: ProcessFlowProps) {
 
                 {/* Description */}
                 <p
-                  className="text-sm md:text-base transition-colors duration-300"
+                  className="text-sm md:text-base transition-colors duration-300 leading-relaxed"
                   style={{ color: isActive ? 'rgba(255,255,255,0.9)' : 'var(--gray-500)' }}
                 >
                   {step.desc}
@@ -106,11 +106,11 @@ export default function ProcessFlow({ steps }: ProcessFlowProps) {
         })}
       </div>
       {/* Mobile scroll indicator */}
-      <div className="md:hidden flex justify-center mt-2 gap-1">
+      <div className="md:hidden flex justify-center mt-3 gap-1.5">
         {steps.map((_, index) => (
           <div
             key={index}
-            className="w-1.5 h-1.5 rounded-full transition-all duration-300"
+            className="w-2 h-2 rounded-full transition-all duration-300"
             style={{
               background: index <= activeStep ? 'var(--green)' : 'var(--gray-300)',
             }}

@@ -78,21 +78,21 @@ export default function Home() {
         {/* Overlay for text contrast - darker on mobile for readability */}
         <div className={`absolute inset-0 transition-colors duration-1000 ${isNight ? 'bg-black/60 md:bg-black/60' : 'bg-black/65 md:bg-black/50'}`} />
 
-        <div className="container-lg relative py-32 lg:py-40">
+        <div className="container-lg relative py-20 md:py-32 lg:py-40">
           <div className="max-w-5xl">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-10 leading-[1.05] tracking-tight text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5), 0 4px 12px rgba(0,0,0,0.3)' }}>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-6 md:mb-10 leading-[1.05] tracking-tight text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5), 0 4px 12px rgba(0,0,0,0.3)' }}>
               Augmented Intelligence
               <br />
               <span style={{ color: 'var(--green)', textShadow: '0 2px 4px rgba(0,0,0,0.5), 0 4px 12px rgba(0,0,0,0.3)' }}>Human + Machine</span>
             </h1>
 
-            <div className="mb-14 max-w-4xl">
-              <p className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5), 0 4px 12px rgba(0,0,0,0.3)' }}>Pioneering AI transformation across Saudi Arabia and the Middle East</p>
-              <p className="text-2xl md:text-3xl lg:text-4xl font-medium text-white/90" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5), 0 3px 8px rgba(0,0,0,0.3)' }}>AI-native teams delivering production-ready systems across government and enterprise since 2012</p>
+            <div className="mb-8 md:mb-14 max-w-4xl">
+              <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 md:mb-6 leading-tight text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5), 0 4px 12px rgba(0,0,0,0.3)' }}>Pioneering AI transformation across Saudi Arabia and the Middle East</p>
+              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium text-white/90" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5), 0 3px 8px rgba(0,0,0,0.3)' }}>AI-native teams delivering production-ready systems across government and enterprise since 2012</p>
             </div>
 
-            <div className="flex flex-row gap-3 sm:gap-4 items-center justify-center md:justify-start">
-              <Link href="/contact" className="btn-primary text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center justify-center md:justify-start">
+              <Link href="/contact" className="btn-primary text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4 text-center">
                 Book a consultation
               </Link>
             </div>
@@ -101,27 +101,71 @@ export default function Home() {
       </section>
 
       {/* What is FSIT - Strong Sales Narrative */}
-      <section id="what-is-fsit" className="py-10 md:py-14" style={{ background: 'var(--white)' }}>
+      <section id="what-is-fsit" className="py-12 md:py-14 lg:py-16" style={{ background: 'var(--white)' }}>
         <div className="container-lg">
-          {/* Hero headline with proof */}
-          <div className="max-w-4xl mb-10">
-            <p className="text-lg md:text-xl font-bold uppercase tracking-wider mb-4" style={{ color: 'var(--green)' }}>What is FSIT</p>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4" style={{ color: 'var(--black)' }}>
+          {/* Hero headline */}
+          <div className="text-center max-w-4xl mx-auto mb-8 md:mb-10">
+            <p className="text-base md:text-lg lg:text-xl font-bold uppercase tracking-wider mb-3 md:mb-4" style={{ color: 'var(--green)' }}>What is FSIT</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 leading-tight" style={{ color: 'var(--black)' }}>
               Get AI Into Production,<br />
               <span style={{ color: 'var(--green)' }}>Not Stuck in Pilots</span>
             </h2>
-            <p className="text-lg md:text-xl" style={{ color: 'var(--gray-600)' }}>
-              We build, scale, and operate AI systems that deliver measurable business results—backed by <strong>50+ successful deployments</strong> across Saudi Arabia and the Middle East.
+            <p className="text-base sm:text-lg md:text-xl leading-relaxed" style={{ color: 'var(--gray-600)' }}>
+              We build, scale, and operate AI systems that deliver measurable business results
             </p>
           </div>
 
-          {/* 3 Core Services */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+          {/* Proof Points - Badges */}
+          <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-10 md:mb-12">
+            <div className="px-5 py-3 rounded-full border-2 flex items-center gap-2" style={{ borderColor: 'var(--green)', background: 'var(--green-light)' }}>
+              <svg className="w-5 h-5" style={{ color: 'var(--green)' }} fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+              <span className="text-sm md:text-base font-bold" style={{ color: 'var(--green)' }}>98% Success Rate</span>
+            </div>
+            <div className="px-5 py-3 rounded-full border-2 flex items-center gap-2" style={{ borderColor: 'var(--green)', background: 'var(--green-light)' }}>
+              <svg className="w-5 h-5" style={{ color: 'var(--green)' }} fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clipRule="evenodd" />
+                <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
+              </svg>
+              <span className="text-sm md:text-base font-bold" style={{ color: 'var(--green)' }}>Enterprise-Grade</span>
+            </div>
+            <div className="px-5 py-3 rounded-full border-2 flex items-center gap-2" style={{ borderColor: 'var(--green)', background: 'var(--green-light)' }}>
+              <svg className="w-5 h-5" style={{ color: 'var(--green)' }} fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
+              </svg>
+              <span className="text-sm md:text-base font-bold" style={{ color: 'var(--green)' }}>Production Ready</span>
+            </div>
+          </div>
+
+          {/* Stats */}
+          <div className="text-center mb-10 md:mb-12">
+            <p className="text-sm md:text-base font-semibold mb-2" style={{ color: 'var(--gray-500)' }}>Proven Track Record</p>
+            <p className="text-3xl md:text-4xl font-bold" style={{ color: 'var(--green)' }}>50+ Successful Deployments</p>
+            <p className="text-sm md:text-base" style={{ color: 'var(--gray-500)' }}>Across Saudi Arabia and the Middle East</p>
+          </div>
+
+          {/* AI Solutions Model - 3 Core Services */}
+          <div className="mb-6 md:mb-8">
+            <h3 className="text-xl md:text-2xl font-bold text-center mb-6 md:mb-8" style={{ color: 'var(--black)' }}>Our AI Solutions Model</h3>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6 mb-8 md:mb-10">
             {[
               {
-                title: 'AI Systems & Solutions',
+                title: 'Data Platforms',
+                outcome: 'Build scalable data infrastructure',
+                desc: 'Enterprise data warehouses, pipelines, and analytics platforms that power your AI initiatives with clean, accessible data.',
+                icon: (
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+                  </svg>
+                )
+              },
+              {
+                title: 'Custom AI',
                 outcome: 'Go from idea to production in weeks',
-                desc: 'Custom AI applications, ML models, and intelligent automation that integrate with your existing systems.',
+                desc: 'Tailored AI solutions built specifically for your business needs—from intelligent automation to predictive analytics.',
                 icon: (
                   <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -129,30 +173,19 @@ export default function Home() {
                 )
               },
               {
-                title: 'Consulting & Talent',
-                outcome: 'Scale your team without hiring delays',
-                desc: 'Pre-vetted AI engineers, data scientists, and ML specialists ready to embed in your organization.',
+                title: 'Model Fine-Tuning',
+                outcome: 'Optimize models for your domain',
+                desc: 'Customize foundation models with your proprietary data to achieve superior accuracy and performance for specialized tasks.',
                 icon: (
                   <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                  </svg>
-                )
-              },
-              {
-                title: 'AI Operations',
-                outcome: 'Keep AI running reliably 24/7',
-                desc: 'Managed services, monitoring, and optimization to ensure your AI delivers continuous value.',
-                icon: (
-                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
                   </svg>
                 )
               }
             ].map((service, i) => (
               <div
                 key={i}
-                className="group p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1 border"
+                className="group p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1 border"
                 style={{
                   background: 'var(--white)',
                   borderColor: 'var(--gray-200)',
@@ -164,9 +197,9 @@ export default function Home() {
                 >
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-2" style={{ color: 'var(--black)' }}>{service.title}</h3>
+                <h3 className="text-lg sm:text-xl font-bold mb-2 leading-snug" style={{ color: 'var(--black)' }}>{service.title}</h3>
                 <p className="text-sm font-semibold mb-3" style={{ color: 'var(--green)' }}>{service.outcome}</p>
-                <p className="text-sm" style={{ color: 'var(--gray-600)' }}>{service.desc}</p>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--gray-600)' }}>{service.desc}</p>
               </div>
             ))}
           </div>
@@ -181,16 +214,16 @@ export default function Home() {
       </section>
 
       {/* Client Logos */}
-      <section className="py-8 border-y" style={{ background: '#F5F5F3', borderColor: 'var(--gray-100)' }}>
+      <section className="py-8 md:py-10 border-y" style={{ background: '#F5F5F3', borderColor: 'var(--gray-100)' }}>
         <div className="container-lg mb-4">
-          <p className="text-lg font-semibold text-center mb-4" style={{ color: 'var(--gray-600)' }}>Trusted by leading organizations</p>
+          <p className="text-base sm:text-lg font-semibold text-center mb-4" style={{ color: 'var(--gray-600)' }}>Trusted by leading organizations</p>
           {/* Filter Tabs */}
-          <div className="flex flex-wrap justify-center gap-2 mb-8">
+          <div className="flex flex-wrap justify-center gap-2 mb-6 md:mb-8 px-4">
             {filterTabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveFilter(tab.id)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                className={`px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 ${
                   activeFilter === tab.id
                     ? 'text-white'
                     : 'text-gray-600 hover:bg-gray-200'
@@ -307,34 +340,34 @@ export default function Home() {
         </div>
         {/* Client Stats Counter */}
         <div className="container-lg mt-6">
-          <div className="flex flex-row justify-center items-center gap-6 md:gap-12 text-center">
-            <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-2">
-              <span className="text-2xl md:text-4xl font-bold" style={{ color: 'var(--green)' }}>50+</span>
-              <span className="text-xs md:text-base" style={{ color: 'var(--gray-500)' }}>Clients</span>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 md:gap-12 text-center">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
+              <span className="text-3xl sm:text-2xl md:text-4xl font-bold" style={{ color: 'var(--green)' }}>50+</span>
+              <span className="text-sm sm:text-xs md:text-base" style={{ color: 'var(--gray-500)' }}>Clients</span>
             </div>
-            <div className="w-px h-8 bg-gray-300 hidden md:block" />
-            <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-2">
-              <span className="text-2xl md:text-4xl font-bold" style={{ color: 'var(--green)' }}>50+</span>
-              <span className="text-xs md:text-base" style={{ color: 'var(--gray-500)' }}>PIF Entities</span>
+            <div className="w-full sm:w-px h-px sm:h-8 bg-gray-300" />
+            <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
+              <span className="text-3xl sm:text-2xl md:text-4xl font-bold" style={{ color: 'var(--green)' }}>50+</span>
+              <span className="text-sm sm:text-xs md:text-base" style={{ color: 'var(--gray-500)' }}>PIF Entities</span>
             </div>
-            <div className="w-px h-8 bg-gray-300 hidden md:block" />
-            <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-2 text-center">
-              <span className="text-2xl md:text-4xl font-bold whitespace-nowrap" style={{ color: 'var(--green)' }}>5B+ SAR</span>
-              <span className="text-xs md:text-base" style={{ color: 'var(--gray-500)' }}>Project Value</span>
+            <div className="w-full sm:w-px h-px sm:h-8 bg-gray-300" />
+            <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-center">
+              <span className="text-3xl sm:text-2xl md:text-4xl font-bold whitespace-nowrap" style={{ color: 'var(--green)' }}>5B+ SAR</span>
+              <span className="text-sm sm:text-xs md:text-base" style={{ color: 'var(--gray-500)' }}>Project Value</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Globally Recognized Technologies */}
-      <section className="py-10 md:py-12" style={{ background: 'var(--cream)' }}>
+      <section className="py-12 md:py-14 lg:py-16" style={{ background: 'var(--cream)' }}>
         <div className="container-lg">
-          <div className="text-center mb-6">
-            <h2 className="text-2xl md:text-3xl font-bold" style={{ color: 'var(--black)' }}>Technologies We Use</h2>
+          <div className="text-center mb-6 md:mb-8">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold" style={{ color: 'var(--black)' }}>Technologies We Use</h2>
           </div>
 
           {/* Technology Categories */}
-          <div className="flex flex-wrap justify-center gap-3 md:grid md:grid-cols-3 lg:grid-cols-5 md:gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
             {[
               {
                 title: 'Cloud & AI Platforms',
@@ -378,14 +411,14 @@ export default function Home() {
                 ]
               }
             ].map((category, index) => (
-              <div key={index} className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl p-3 md:p-5 hover:border-[#00A651] hover:shadow-lg transition-all duration-300 flex flex-col items-center w-[calc(50%-6px)] md:w-auto min-h-[100px] md:min-h-0">
-                <h3 className="text-xs md:text-base font-semibold text-dark-900 mb-2 md:mb-4 text-center">
-                  <span className="md:hidden">{category.title}</span>
-                  <span className="hidden md:inline whitespace-nowrap">{category.titleFull || category.title}</span>
+              <div key={index} className="bg-[#F5F3F0] border border-[#00A651]/20 rounded-xl p-4 md:p-5 hover:border-[#00A651] hover:shadow-lg transition-all duration-300 flex flex-col items-center">
+                <h3 className="text-sm sm:text-xs md:text-base font-semibold text-dark-900 mb-3 md:mb-4 text-center min-h-[2.5rem] sm:min-h-0 flex items-center">
+                  <span className="sm:hidden">{category.title}</span>
+                  <span className="hidden sm:inline">{category.titleFull || category.title}</span>
                 </h3>
-                <div className="flex justify-center gap-3 md:gap-4">
+                <div className="flex justify-center gap-2 sm:gap-3 md:gap-4">
                   {category.logos.map((logo, i) => (
-                    <div key={i} className="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-white flex items-center justify-center shadow-sm p-1.5 md:p-2" title={logo.name}>
+                    <div key={i} className="w-12 h-12 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-lg bg-white flex items-center justify-center shadow-sm p-2 sm:p-1.5 md:p-2" title={logo.name}>
                       <Image
                         src={logo.src}
                         alt={logo.name}
@@ -403,14 +436,15 @@ export default function Home() {
       </section>
 
       {/* Your Journey - Client-Focused 3-Week Process */}
-      <section className="py-10 md:py-14" style={{ background: 'var(--cream)' }}>
+      <section className="py-12 md:py-14 lg:py-16" style={{ background: 'var(--cream)' }}>
         <div className="container-lg">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ color: 'var(--black)' }}>Your AI Journey</h2>
-            <p className="text-lg" style={{ color: 'var(--gray-600)' }}>From first call to production in 3 weeks</p>
+          <div className="text-center mb-6 md:mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-3" style={{ color: 'var(--black)' }}>Your AI Journey</h2>
+            <p className="text-base sm:text-lg mb-2" style={{ color: 'var(--gray-600)' }}>From mobilization to production in 3 weeks</p>
+            <p className="text-sm sm:text-base max-w-2xl mx-auto" style={{ color: 'var(--gray-500)' }}>Our AI specialists work onsite, hybrid, or embedded within your team for seamless collaboration and knowledge transfer</p>
           </div>
 
-          <div className="mb-8">
+          <div className="mb-6 md:mb-8">
             <ProcessFlow steps={processSteps} />
           </div>
 
@@ -423,29 +457,31 @@ export default function Home() {
       </section>
 
       {/* Success Story */}
-      <section className="py-10 md:py-14" style={{ background: 'var(--cream)' }}>
+      <section className="py-12 md:py-14 lg:py-16" style={{ background: 'var(--cream)' }}>
         <div className="container-lg">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-stretch">
             <div className="flex flex-col justify-between">
-              <p className="text-sm font-semibold uppercase tracking-wider mb-2" style={{ color: 'var(--green)' }}>Success Story</p>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: 'var(--black)' }}>45% Faster Processing</h2>
-              <p className="text-lg mb-6" style={{ color: 'var(--gray-600)' }}>
-                A Saudi government entity cut manual processing time by 45% using our AI Operations Copilot—deployed in just 6 weeks.
-              </p>
+              <div>
+                <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider mb-2" style={{ color: 'var(--green)' }}>Success Story</p>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4" style={{ color: 'var(--black)' }}>45% Faster Processing</h2>
+                <p className="text-base sm:text-lg mb-6 leading-relaxed" style={{ color: 'var(--gray-600)' }}>
+                  A Saudi government entity cut manual processing time by 45% using our AI Operations Copilot—deployed in just 6 weeks.
+                </p>
+              </div>
 
-              <div className="flex items-center justify-center md:justify-start gap-4 mb-6">
-                <div className="text-center md:text-left">
-                  <span className="text-3xl md:text-4xl font-bold block" style={{ color: 'var(--green)' }}>45%</span>
+              <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 sm:gap-6 mb-6">
+                <div className="text-center sm:text-left">
+                  <span className="text-4xl sm:text-3xl md:text-4xl font-bold block" style={{ color: 'var(--green)' }}>45%</span>
                   <span className="text-sm" style={{ color: 'var(--gray-500)' }}>Time saved</span>
                 </div>
-                <div className="w-px h-12 bg-gray-300" />
-                <div className="text-center md:text-left">
-                  <span className="text-3xl md:text-4xl font-bold block" style={{ color: 'var(--green)' }}>6 weeks</span>
+                <div className="w-full sm:w-px h-px sm:h-12 bg-gray-300" />
+                <div className="text-center sm:text-left">
+                  <span className="text-4xl sm:text-3xl md:text-4xl font-bold block" style={{ color: 'var(--green)' }}>6 weeks</span>
                   <span className="text-sm" style={{ color: 'var(--gray-500)' }}>To production</span>
                 </div>
               </div>
 
-              <Link href="/case-studies" className="btn-text text-lg">
+              <Link href="/case-studies" className="btn-text text-base sm:text-lg justify-center md:justify-start">
                 See more success stories
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -453,7 +489,7 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="relative rounded-2xl overflow-hidden shadow-xl lg:-mr-12 xl:-mr-20">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl lg:-mr-12 xl:-mr-20 order-first lg:order-last">
               <img
                 src="https://images.unsplash.com/photo-1733757361453-5f493624a734?auto=format&fit=crop&w=1200&q=80"
                 alt="GOSI Case Study"
@@ -465,17 +501,17 @@ export default function Home() {
       </section>
 
       {/* CTA Section - Primary Call to Action */}
-      <section className="py-12 md:py-16" style={{ background: 'var(--green)' }}>
-        <div className="container-md text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+      <section className="py-12 md:py-16 lg:py-20" style={{ background: 'var(--green)' }}>
+        <div className="container-md text-center px-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4 text-white leading-tight">
             Ready to build AI that actually runs?
           </h2>
-          <p className="text-lg md:text-xl mb-8 max-w-xl mx-auto text-white/80">
+          <p className="text-base sm:text-lg md:text-xl mb-6 md:mb-8 max-w-xl mx-auto text-white/90 leading-relaxed">
             Talk to our delivery team and start your transformation today.
           </p>
           <Link
             href="/contact"
-            className="inline-block px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 bg-white hover:bg-gray-100"
+            className="inline-block px-8 py-4 rounded-full text-base sm:text-lg font-semibold transition-all duration-300 bg-white hover:bg-gray-100"
             style={{ color: 'var(--green)' }}
           >
             Book a strategy call

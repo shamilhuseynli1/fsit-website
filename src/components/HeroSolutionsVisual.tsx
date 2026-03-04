@@ -56,6 +56,11 @@ export default function HeroSolutionsVisual() {
         .breathe {
           animation: scaleBreath 4s ease-in-out infinite;
         }
+        @media (max-width: 768px) {
+          .stat-text {
+            font-size: 10px;
+          }
+        }
       `}</style>
 
       {/* Main SVG Illustration - AI Solutions Hub */}
@@ -148,7 +153,7 @@ export default function HeroSolutionsVisual() {
         {/* Bottom capabilities */}
         <g className="float-slow float-delay-2">
           <rect x="80" y="400" width="240" height="30" rx="4" fill="#F5F3F0" stroke="#22c55e" strokeWidth="1" opacity="0.8" />
-          <text x="200" y="420" textAnchor="middle" fill="#22c55e" fontSize="9" fontFamily="monospace">
+          <text x="200" y="420" textAnchor="middle" fill="#22c55e" fontSize="9" fontFamily="monospace" className="stat-text">
             BUILD • DEPLOY • MONITOR • SCALE
           </text>
         </g>
@@ -159,27 +164,30 @@ export default function HeroSolutionsVisual() {
         <rect x="180" y="380" width="8" height="8" fill="none" stroke="#f59e0b" strokeWidth="1" transform="rotate(45 184 384)" className="pulse-animation" style={{ animationDelay: '0.5s' }} />
       </svg>
 
-      {/* Floating metric labels - hidden on mobile to avoid overlap */}
-      <div className="hidden md:block absolute left-[2%] top-[30%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow shadow-sm">
-        <span className="text-xs text-gray-700 font-mono">98% Success</span>
+      {/* Floating metric labels - positioned closer to center */}
+      <div className="absolute left-[8%] top-[30%] px-2 md:px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow shadow-sm">
+        <span className="block text-[10px] md:text-xs text-green-600 font-mono font-semibold">98% Success</span>
+        <span className="block text-[9px] md:text-xs text-gray-600">Success Rate</span>
       </div>
-      <div className="hidden md:block absolute right-[2%] top-[45%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow float-delay-1 shadow-sm">
-        <span className="text-xs text-gray-700 font-mono">Production Ready</span>
+      <div className="absolute right-[8%] top-[45%] px-2 md:px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow float-delay-1 shadow-sm">
+        <span className="block text-[10px] md:text-xs text-green-600 font-mono font-semibold">Production Ready</span>
+        <span className="block text-[9px] md:text-xs text-gray-600">Live Systems</span>
       </div>
-      <div className="hidden md:block absolute left-[2%] bottom-[30%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow float-delay-2 shadow-sm">
-        <span className="text-xs text-gray-700 font-mono">Enterprise</span>
+      <div className="absolute left-[8%] bottom-[30%] px-2 md:px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow float-delay-2 shadow-sm">
+        <span className="block text-[10px] md:text-xs text-green-600 font-mono font-semibold">Enterprise</span>
+        <span className="block text-[9px] md:text-xs text-gray-600">Grade Quality</span>
       </div>
 
-      {/* Platform logos - hidden on mobile to avoid overlap */}
-      <div className="hidden md:flex absolute left-[5%] top-[8%] w-10 h-10 rounded-lg bg-black items-center justify-center shadow-lg shadow-black/30 float-animation transition-transform hover:scale-110">
+      {/* Platform logos - positioned close but avoiding overlap with metric labels */}
+      <div className="hidden md:flex absolute left-[13%] top-[5%] w-10 h-10 rounded-lg bg-black items-center justify-center shadow-lg shadow-black/30 float-animation transition-transform hover:scale-110">
         <span className="text-white font-bold text-xs">GPT</span>
       </div>
 
-      <div className="hidden md:flex absolute right-[5%] top-[12%] w-10 h-10 rounded-lg bg-[#D4A27F] items-center justify-center shadow-lg shadow-[#D4A27F]/30 float-animation float-delay-1 transition-transform hover:scale-110">
+      <div className="hidden md:flex absolute right-[13%] top-[8%] w-10 h-10 rounded-lg bg-[#D4A27F] items-center justify-center shadow-lg shadow-[#D4A27F]/30 float-animation float-delay-1 transition-transform hover:scale-110">
         <span className="text-white font-bold text-xs">Claude</span>
       </div>
 
-      <div className="hidden md:flex absolute right-[5%] bottom-[35%] w-10 h-10 rounded-lg bg-[#4285F4] items-center justify-center shadow-lg shadow-[#4285F4]/30 float-animation float-delay-2 transition-transform hover:scale-110">
+      <div className="hidden md:flex absolute right-[13%] bottom-[25%] w-10 h-10 rounded-lg bg-[#4285F4] items-center justify-center shadow-lg shadow-[#4285F4]/30 float-animation float-delay-2 transition-transform hover:scale-110">
         <span className="text-white font-bold text-[9px]">Gemini</span>
       </div>
     </div>

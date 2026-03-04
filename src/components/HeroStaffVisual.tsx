@@ -56,6 +56,14 @@ export default function HeroStaffVisual() {
         .connect-pulse {
           animation: connectPulse 3s ease-in-out infinite;
         }
+        @media (max-width: 768px) {
+          .stat-number {
+            font-size: 20px;
+          }
+          .stat-label {
+            font-size: 9px;
+          }
+        }
       `}</style>
 
       {/* Main SVG Illustration - Team Network */}
@@ -177,12 +185,12 @@ export default function HeroStaffVisual() {
         {/* Bottom stats bar */}
         <g className="float-slow float-delay-2">
           <rect x="60" y="380" width="280" height="50" rx="8" fill="#1e293b" stroke="#22c55e" strokeWidth="1" opacity="0.95" />
-          <text x="120" y="400" textAnchor="middle" fill="#22c55e" fontSize="18" fontFamily="monospace" fontWeight="700">80K+</text>
-          <text x="120" y="418" textAnchor="middle" fill="#94a3b8" fontSize="8" fontFamily="monospace">Specialists</text>
-          <text x="200" y="400" textAnchor="middle" fill="#3b82f6" fontSize="18" fontFamily="monospace" fontWeight="700">98%</text>
-          <text x="200" y="418" textAnchor="middle" fill="#94a3b8" fontSize="8" fontFamily="monospace">Success</text>
-          <text x="280" y="400" textAnchor="middle" fill="#8b5cf6" fontSize="18" fontFamily="monospace" fontWeight="700">3wk</text>
-          <text x="280" y="418" textAnchor="middle" fill="#94a3b8" fontSize="8" fontFamily="monospace">Deploy</text>
+          <text x="120" y="400" textAnchor="middle" fill="#22c55e" fontSize="18" fontFamily="monospace" fontWeight="700" className="stat-number">80K+</text>
+          <text x="120" y="418" textAnchor="middle" fill="#94a3b8" fontSize="8" fontFamily="monospace" className="stat-label">Specialists</text>
+          <text x="200" y="400" textAnchor="middle" fill="#3b82f6" fontSize="18" fontFamily="monospace" fontWeight="700" className="stat-number">98%</text>
+          <text x="200" y="418" textAnchor="middle" fill="#94a3b8" fontSize="8" fontFamily="monospace" className="stat-label">Success</text>
+          <text x="280" y="400" textAnchor="middle" fill="#8b5cf6" fontSize="18" fontFamily="monospace" fontWeight="700" className="stat-number">3wk</text>
+          <text x="280" y="418" textAnchor="middle" fill="#94a3b8" fontSize="8" fontFamily="monospace" className="stat-label">Deploy</text>
         </g>
 
         {/* Floating decorations */}
@@ -193,13 +201,13 @@ export default function HeroStaffVisual() {
       </svg>
 
       {/* Floating metric labels - hidden on mobile to avoid overlap */}
-      <div className="hidden md:block absolute left-[-12%] top-[20%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow shadow-sm">
+      <div className="hidden md:block absolute left-[6%] top-[20%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow shadow-sm">
         <span className="text-xs text-gray-700 font-mono">Vetted Talent</span>
       </div>
-      <div className="hidden md:block absolute right-[-15%] top-[35%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow float-delay-1 shadow-sm">
+      <div className="hidden md:block absolute right-[-4%] top-[35%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow float-delay-1 shadow-sm">
         <span className="text-xs text-gray-700 font-mono">Full Integration</span>
       </div>
-      <div className="hidden md:block absolute left-[-12%] bottom-[32%] px-3 py-1.5 bg-[#F5F3F0] border border-purple-500/50 rounded-md backdrop-blur-sm transition-all hover:border-purple-500 hover:scale-105 float-slow float-delay-2 shadow-sm">
+      <div className="hidden md:block absolute left-[8%] bottom-[32%] px-3 py-1.5 bg-[#F5F3F0] border border-purple-500/50 rounded-md backdrop-blur-sm transition-all hover:border-purple-500 hover:scale-105 float-slow float-delay-2 shadow-sm">
         <span className="text-xs text-gray-700 font-mono">Dedicated</span>
       </div>
     </div>

@@ -57,6 +57,11 @@ export default function HeroVettingVisual() {
         .funnel-flow {
           animation: funnelFlow 2s ease-in-out infinite;
         }
+        @media (max-width: 768px) {
+          .stat-text {
+            font-size: 9px;
+          }
+        }
       `}</style>
 
       {/* Main SVG Illustration - Vetting Funnel */}
@@ -181,7 +186,7 @@ export default function HeroVettingVisual() {
         {/* Bottom bar */}
         <g className="float-slow float-delay-2">
           <rect x="100" y="420" width="200" height="25" rx="4" fill="#1e293b" stroke="#22c55e" strokeWidth="1" opacity="0.8" />
-          <text x="200" y="437" textAnchor="middle" fill="#22c55e" fontSize="8" fontFamily="monospace">
+          <text x="200" y="437" textAnchor="middle" fill="#22c55e" fontSize="8" fontFamily="monospace" className="stat-text">
             99% FILTERED • TOP 1% SELECTED
           </text>
         </g>
@@ -194,13 +199,13 @@ export default function HeroVettingVisual() {
       </svg>
 
       {/* Floating metric labels - hidden on mobile to avoid overlap */}
-      <div className="hidden md:block absolute left-[-12%] top-[18%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow shadow-sm">
+      <div className="hidden md:block absolute left-[8%] top-[18%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow shadow-sm">
         <span className="text-xs text-gray-700 font-mono">5 Steps</span>
       </div>
-      <div className="hidden md:block absolute right-[-15%] top-[30%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow float-delay-1 shadow-sm">
+      <div className="hidden md:block absolute right-[8%] top-[30%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow float-delay-1 shadow-sm">
         <span className="text-xs text-gray-700 font-mono">Rigorous</span>
       </div>
-      <div className="hidden md:block absolute left-[-12%] bottom-[25%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow float-delay-2 shadow-sm">
+      <div className="hidden md:block absolute left-[8%] bottom-[25%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow float-delay-2 shadow-sm">
         <span className="text-xs text-gray-700 font-mono">99% Filter</span>
       </div>
     </div>

@@ -63,6 +63,11 @@ export default function HeroAgentVisual() {
         .breathe {
           animation: scaleBreath 4s ease-in-out infinite;
         }
+        @media (max-width: 768px) {
+          .stat-text {
+            font-size: 11px;
+          }
+        }
       `}</style>
 
       {/* Main SVG Illustration - Agent Network */}
@@ -189,7 +194,7 @@ export default function HeroAgentVisual() {
         {/* Bottom capabilities */}
         <g className="float-slow float-delay-2">
           <rect x="100" y="380" width="200" height="30" rx="4" fill="#1e293b" stroke="#22c55e" strokeWidth="1" opacity="0.95" />
-          <text x="200" y="400" textAnchor="middle" fill="#22c55e" fontSize="10" fontFamily="monospace">
+          <text x="200" y="400" textAnchor="middle" fill="#22c55e" fontSize="10" fontFamily="monospace" className="stat-text">
             REASON • PLAN • ACT • LEARN
           </text>
         </g>
@@ -202,34 +207,34 @@ export default function HeroAgentVisual() {
       </svg>
 
       {/* Floating metric labels - hidden on mobile to avoid overlap */}
-      <div className="hidden md:block absolute left-[-12%] top-[20%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow shadow-sm">
+      <div className="hidden md:block absolute left-[6.3%] top-[20%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow shadow-sm">
         <span className="text-xs text-gray-700 font-mono">24/7 Active</span>
       </div>
-      <div className="hidden md:block absolute right-[-15%] top-[40%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow float-delay-1 shadow-sm">
+      <div className="hidden md:block absolute right-[1%] top-[40%] px-3 py-1.5 bg-[#F5F3F0] border border-green-500/50 rounded-md backdrop-blur-sm transition-all hover:border-green-500 hover:scale-105 float-slow float-delay-1 shadow-sm">
         <span className="text-xs text-gray-700 font-mono">98% Accuracy</span>
       </div>
-      <div className="hidden md:block absolute left-[-12%] bottom-[30%] px-3 py-1.5 bg-[#F5F3F0] border border-purple-500/50 rounded-md backdrop-blur-sm transition-all hover:border-purple-500 hover:scale-105 float-slow float-delay-2 shadow-sm">
+      <div className="hidden md:block absolute left-[8%] bottom-[30%] px-3 py-1.5 bg-[#F5F3F0] border border-purple-500/50 rounded-md backdrop-blur-sm transition-all hover:border-purple-500 hover:scale-105 float-slow float-delay-2 shadow-sm">
         <span className="text-xs text-gray-700 font-mono">Multi-step</span>
       </div>
 
       {/* Floating AI brand logos - hidden on mobile to avoid overlap */}
-      <div className="hidden md:flex absolute left-[-8%] top-[8%] w-11 h-11 rounded-full bg-black items-center justify-center shadow-lg shadow-black/30 float-animation transition-transform hover:scale-110">
+      <div className="hidden md:flex absolute left-[3%] top-[8%] w-11 h-11 rounded-full bg-black items-center justify-center shadow-lg shadow-black/30 float-animation transition-transform hover:scale-110">
         <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
           <path d="M22.282 9.821a5.985 5.985 0 0 0-.516-4.91 6.046 6.046 0 0 0-6.51-2.9A6.065 6.065 0 0 0 4.981 4.18a5.985 5.985 0 0 0-3.998 2.9 6.046 6.046 0 0 0 .743 7.097 5.98 5.98 0 0 0 .51 4.911 6.051 6.051 0 0 0 6.515 2.9A5.985 5.985 0 0 0 13.26 24a6.056 6.056 0 0 0 5.772-4.206 5.99 5.99 0 0 0 3.997-2.9 6.056 6.056 0 0 0-.747-7.073z"/>
         </svg>
       </div>
 
-      <div className="hidden md:flex absolute right-[-8%] top-[55%] w-11 h-11 rounded-full bg-[#D4A27F] items-center justify-center shadow-lg shadow-[#D4A27F]/30 float-animation float-delay-2 transition-transform hover:scale-110">
+      <div className="hidden md:flex absolute right-[3%] top-[55%] w-11 h-11 rounded-full bg-[#D4A27F] items-center justify-center shadow-lg shadow-[#D4A27F]/30 float-animation float-delay-2 transition-transform hover:scale-110">
         <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
           <path d="M17.304 3.541h-3.672l6.696 16.918h3.672l-6.696-16.918zm-10.608 0l-6.696 16.918h3.78l1.344-3.514h6.468l1.344 3.514h3.78l-6.696-16.918h-3.324zm-.072 10.676l2.16-5.639 2.16 5.639h-4.32z"/>
         </svg>
       </div>
 
-      <div className="hidden md:block absolute right-[-8%] top-[12%] w-11 h-11 rounded-full overflow-hidden shadow-lg float-animation float-delay-1 transition-transform hover:scale-110 bg-white p-1">
+      <div className="hidden md:block absolute right-[3%] top-[12%] w-11 h-11 rounded-full overflow-hidden shadow-lg float-animation float-delay-1 transition-transform hover:scale-110 bg-white p-1">
         <img src="/logos/google-gemini-icon.webp" alt="Google Gemini" className="w-full h-full object-contain" />
       </div>
 
-      <div className="hidden md:block absolute left-[-8%] bottom-[15%] w-11 h-11 rounded-full overflow-hidden shadow-lg shadow-[#FFD21E]/30 float-animation float-delay-3 transition-transform hover:scale-110">
+      <div className="hidden md:block absolute left-[3%] bottom-[15%] w-11 h-11 rounded-full overflow-hidden shadow-lg shadow-[#FFD21E]/30 float-animation float-delay-3 transition-transform hover:scale-110">
         <img src="/logos/hf-logo.png" alt="Hugging Face" className="w-full h-full object-cover" />
       </div>
     </div>

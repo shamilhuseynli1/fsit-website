@@ -43,13 +43,23 @@ export default function About() {
     { year: 'Today', event: '80,000+ vetted AI professionals serving 50+ organizations' },
   ];
 
-  const leadership = [
-    { name: 'Haitham Saead', role: 'Chief Executive Officer', image: '/team/Haitam Said.jpg', position: 'center top' },
-    { name: 'Rula Jouhar', role: 'Chief Operating Officer', image: '/team/Rula.png', position: 'center top' },
-    { name: 'Fahed Alenezi', role: 'Managing Director', image: '/team/Fahed Alenezi.png', position: 'center top' },
-    { name: 'Ritesh Raj', role: 'Executive Director', image: '/team/Ritesh Raj.png', position: 'center 15%' },
-    { name: 'Khalil Jaouni', role: 'Executive Director', image: '/team/Khalil Jaouni.png', position: 'center top' },
-    { name: 'Ismail Katanani', role: 'Senior Director', image: '/team/Ismail Katanani.png', position: 'center top' },
+  const capabilities = [
+    {
+      area: 'AI Strategy & Architecture',
+      skills: ['LLM Integration', 'AI Product Design', 'Solution Architecture', 'Technical Roadmapping'],
+    },
+    {
+      area: 'Data & ML Engineering',
+      skills: ['MLOps Pipelines', 'Data Platforms', 'Model Training', 'Feature Engineering'],
+    },
+    {
+      area: 'Enterprise AI Delivery',
+      skills: ['Government Programs', 'Enterprise Integration', 'Change Management', 'Stakeholder Alignment'],
+    },
+    {
+      area: 'AI Operations & Governance',
+      skills: ['Production Monitoring', 'Compliance & Security', 'Performance Optimization', 'Risk Management'],
+    },
   ];
 
   const regions = [
@@ -604,31 +614,43 @@ export default function About() {
         </div>
       </section>
 
-      {/* 13. Leadership Team */}
+      {/* 13. Leadership & Capabilities */}
       <section className="py-12 md:py-20 bg-white">
         <div className="container-max">
-          <div className="text-center mb-16">
-            <p className="text-green-600 font-semibold text-lg mb-4">Leadership</p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold" style={{ color: 'var(--black)' }}>Our leadership team</h2>
+          <div className="text-center mb-12">
+            <p className="text-green-600 font-semibold text-lg mb-4">Leadership & Expertise</p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6" style={{ color: 'var(--black)' }}>
+              Deep experience, trusted execution
+            </h2>
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+              Our leadership team brings deep experience across Saudi enterprise and government programs, backed by specialist advisors engaged based on client needs. We focus on accountable delivery, measurable outcomes, and trusted execution across strategy, delivery, and talent.
+            </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {leadership.map((member, index) => (
-              <div key={index} className="text-center group">
-                <div
-                  className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden shadow-lg transition-transform duration-300 group-hover:scale-105 border-4 border-white"
-                  style={{ background: 'var(--gray-100)' }}
-                >
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover"
-                    style={{ objectPosition: member.position }}
-                  />
-                </div>
-                <h3 className="font-semibold text-gray-900 text-base md:text-lg">{member.name}</h3>
-                <p className="text-gray-500 text-sm md:text-base">{member.role}</p>
+
+          {/* Capabilities Matrix */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+            {capabilities.map((capability, index) => (
+              <div key={index} className="p-6 rounded-2xl bg-neutral-50 hover:shadow-lg transition-all duration-300">
+                <h3 className="text-xl font-bold mb-4 text-gray-900">{capability.area}</h3>
+                <ul className="space-y-2">
+                  {capability.skills.map((skill, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <svg className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span className="text-gray-700 text-sm md:text-base">{skill}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
+          </div>
+
+          {/* Saudization Statement */}
+          <div className="mt-12 p-6 rounded-xl bg-green-50 border border-green-100 max-w-3xl mx-auto">
+            <p className="text-gray-700 text-base md:text-lg text-center">
+              <span className="font-semibold text-green-700">Saudization-aligned delivery model</span> with local leadership presence on KSA engagements.
+            </p>
           </div>
         </div>
       </section>

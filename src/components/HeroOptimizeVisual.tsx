@@ -32,6 +32,20 @@ export default function HeroOptimizeVisual() {
         .glow-animation { animation: glow 2s ease-in-out infinite; }
         .grow-animation { animation: grow 2s ease-in-out infinite; }
         .sweep-animation { animation: sweep 3s ease-in-out infinite; }
+        @media (max-width: 768px) {
+          .stat-number {
+            font-size: 22px;
+          }
+          .stat-label {
+            font-size: 11px;
+          }
+          .gauge-number {
+            font-size: 35px;
+          }
+          .gauge-label {
+            font-size: 13px;
+          }
+        }
       `}</style>
 
       <svg viewBox="0 0 450 500" className="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -68,8 +82,8 @@ export default function HeroOptimizeVisual() {
             <circle cx="225" cy="220" r="12" fill="#fbbf24" />
           </g>
 
-          <text x="225" y="265" textAnchor="middle" fill="#4ade80" fontSize="32" fontFamily="monospace" fontWeight="bold">99%</text>
-          <text x="225" y="290" textAnchor="middle" fill="#e2e8f0" fontSize="12" fontFamily="monospace" fontWeight="600">OPTIMIZED</text>
+          <text x="225" y="265" textAnchor="middle" fill="#4ade80" fontSize="32" fontFamily="monospace" fontWeight="bold" className="gauge-number">99%</text>
+          <text x="225" y="290" textAnchor="middle" fill="#e2e8f0" fontSize="12" fontFamily="monospace" fontWeight="600" className="gauge-label">OPTIMIZED</text>
         </g>
 
         {/* Performance bars */}
@@ -100,14 +114,14 @@ export default function HeroOptimizeVisual() {
         {/* Metric cards */}
         <g className="float-animation">
           <rect x="40" y="80" width="110" height="55" rx="10" fill="#0f172a" stroke="#4ade80" strokeWidth="3" filter="url(#greenGlow)" />
-          <text x="95" y="108" textAnchor="middle" fill="#4ade80" fontSize="20" fontFamily="monospace" fontWeight="bold">99.9%</text>
-          <text x="95" y="125" textAnchor="middle" fill="#e2e8f0" fontSize="10" fontFamily="monospace" fontWeight="600">Uptime</text>
+          <text x="95" y="108" textAnchor="middle" fill="#4ade80" fontSize="20" fontFamily="monospace" fontWeight="bold" className="stat-number">99.9%</text>
+          <text x="95" y="125" textAnchor="middle" fill="#e2e8f0" fontSize="10" fontFamily="monospace" fontWeight="600" className="stat-label">Uptime</text>
         </g>
 
         <g className="float-animation float-delay-2">
           <rect x="300" y="80" width="110" height="55" rx="10" fill="#0f172a" stroke="#60a5fa" strokeWidth="3" filter="url(#blueGlow)" />
-          <text x="355" y="108" textAnchor="middle" fill="#60a5fa" fontSize="20" fontFamily="monospace" fontWeight="bold">85ms</text>
-          <text x="355" y="125" textAnchor="middle" fill="#e2e8f0" fontSize="10" fontFamily="monospace" fontWeight="600">Latency</text>
+          <text x="355" y="108" textAnchor="middle" fill="#60a5fa" fontSize="20" fontFamily="monospace" fontWeight="bold" className="stat-number">85ms</text>
+          <text x="355" y="125" textAnchor="middle" fill="#e2e8f0" fontSize="10" fontFamily="monospace" fontWeight="600" className="stat-label">Latency</text>
         </g>
 
         {/* Decorative elements */}

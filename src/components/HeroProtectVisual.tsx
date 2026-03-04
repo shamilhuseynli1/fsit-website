@@ -27,6 +27,11 @@ export default function HeroProtectVisual() {
         .pulse-animation { animation: pulse 3s ease-in-out infinite; }
         .shield-animation { animation: shield 3s ease-in-out infinite; }
         .scan-animation { animation: scan 2s ease-in-out infinite; }
+        @media (max-width: 768px) {
+          .stat-text {
+            font-size: 10px;
+          }
+        }
       `}</style>
 
       <svg viewBox="0 0 450 500" className="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -116,7 +121,7 @@ export default function HeroProtectVisual() {
         {/* Stats bar */}
         <g className="float-animation float-delay-2">
           <rect x="140" y="455" width="170" height="30" rx="6" fill="#1e293b" stroke="#22c55e" strokeWidth="1" />
-          <text x="225" y="475" textAnchor="middle" fill="#22c55e" fontSize="9" fontFamily="monospace">99.99% UPTIME</text>
+          <text x="225" y="475" textAnchor="middle" fill="#22c55e" fontSize="9" fontFamily="monospace" className="stat-text">99.99% UPTIME</text>
         </g>
       </svg>
     </div>
